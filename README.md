@@ -1,4 +1,4 @@
-# Hack Club Theme Starter
+# 👀
 
 A sample [Next.js] project for getting started with [MDX], [Theme UI], & [Hack Club Theme].
 
@@ -23,13 +23,6 @@ A sample [Next.js] project for getting started with [MDX], [Theme UI], & [Hack C
 We’ve included an example theme switcher component at `components/color-switcher.js`,
 which is included on every page through its inclusion in `pages/_app.js`.
 Feel free to change it.
-
-### Hack Club fonts
-
-If you’re making a Hack Club HQ project, you’re allowed to use Hack Club’s font,
-[Phantom Sans](https://www.futurefonts.xyz/phantom-foundry/phantom-sans).
-To load it, simply uncomment the `import '@hackclub/theme/fonts/reg-bold.css'`
-line in `_app.js`.
 
 ### Custom theme
 
