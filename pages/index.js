@@ -167,6 +167,7 @@ export default function Home() {
                         margin: "8%",
                         fontSize: ["1.2em", "1.4em"],
                         textTransform: "inherit!important",
+                        paddingY: ["15px", "0px"]
                     }}>Sign up to run a scrapyard event</Heading>
                 </Box>
                 </Link>
