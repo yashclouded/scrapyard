@@ -1,13 +1,13 @@
-<svg width="1899" height="2376" viewBox="0 0 1899 2376" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="244" y="1060" width="100" height="100" fill="url(#pattern0_247_25)"/>
-<rect x="1559" width="100" height="100" fill="url(#pattern1_247_25)"/>
-<rect x="1729" y="852" width="100" height="100" fill="url(#pattern2_247_25)"/>
-<rect x="1709" y="124" width="140" height="140" fill="url(#pattern3_247_25)"/>
-<rect x="1744" y="1614" width="140" height="140" fill="url(#pattern4_247_25)"/>
-<rect y="990" width="140" height="140" fill="url(#pattern5_247_25)"/>
-<rect x="23" y="2236" width="140" height="140" fill="url(#pattern6_247_25)"/>
-<rect x="53" y="166" width="130" height="130" fill="url(#pattern7_247_25)"/>
-<rect x="1759" y="1044" width="140" height="140" fill="url(#pattern8_247_25)"/>
+<svg width="1796" height="1052" viewBox="0 0 1796 1052" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="80" y="952" width="100" height="100" fill="url(#pattern0_247_25)"/>
+<rect x="1506" width="100" height="100" fill="url(#pattern1_247_25)"/>
+<rect x="1676" y="852" width="100" height="100" fill="url(#pattern2_247_25)"/>
+<rect x="1656" y="124" width="140" height="140" fill="url(#pattern3_247_25)"/>
+<rect x="1556" y="625" width="140" height="140" fill="url(#pattern4_247_25)"/>
+<rect x="180" y="695" width="140" height="140" fill="url(#pattern5_247_25)"/>
+<rect x="515" y="194" width="140" height="140" fill="url(#pattern6_247_25)"/>
+<rect y="166" width="130" height="130" fill="url(#pattern7_247_25)"/>
+<rect x="1072" y="882" width="140" height="140" fill="url(#pattern8_247_25)"/>
 <defs>
 <pattern id="pattern0_247_25" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_247_25" transform="translate(-0.2547) scale(0.00239808)"/>

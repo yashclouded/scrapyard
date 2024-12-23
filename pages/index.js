@@ -103,7 +103,7 @@ export default function Home() {
                             whiteSpace: "nowrap",
                             width: "max-content",
                             fontSize: ["1.2em", "1.4em"]
-                        }}>100+&nbsp;Cities&nbsp;worldwide&nbsp;March&nbsp;13-14</Heading>
+                        }}>100+&nbsp;Cities&nbsp;worldwide&nbsp;March&nbsp;15-16</Heading>
                         <Heading as="h2" sx={{
                             fontFamily: "p22-stanyan",
                             mx: "8%",
