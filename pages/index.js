@@ -305,7 +305,7 @@ export default function Home() {
                     </Heading>
                 </Box>
                 <Grid columns={[1, 2, 3]} gap={4} sx={{ maxWidth: "min(1000px, calc(100vw - 60px))", mx: "auto", mb: 5 }}>
-                    {["New York, NY", "Columbus, OH", "Ottawa, ON", "Tampa, FL", "San Francisco, CA", "London, UK", "Bangalore, IN", "Singapore, SG", "Auckland, NZ"].map(city => (
+                    {["New York, NY", "Columbus, OH", "Ottawa, ON", "Tampa, FL", "San Francisco, CA", "London, UK", "Bengaluru, IN", "Singapore, SG", "Auckland, NZ"].map(city => (
                         <Box sx={{
                             display: "flex",
                             alignItems: "center",
