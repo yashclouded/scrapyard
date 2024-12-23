@@ -17,6 +17,7 @@ export default class App extends NextApp {
           <link rel="shortcut icon" href="/favicon.png" />
           <link rel="apple-touch-icon" href="/favicon.png" />
           <link rel="icon" type="image/png" href="/favicon.png" />
+          <script defer data-domain="scrapyard.hackclub.com" src="https://plausible.io/js/script.outbound-links.js"></script>
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>

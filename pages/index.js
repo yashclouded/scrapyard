@@ -77,7 +77,7 @@ export default function Home() {
                             fontFamily: "moonblossom",
                             textAlign: "center",
                             margin: "8%"
-                        }}>Build stupid projects, get stupid prizes.</Heading>
+                        }}>Build stupid s#!t, get stupid prizes.</Heading>
                     </Box>
                     <Box sx={{
                         zIndex: 1,
