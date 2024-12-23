@@ -71,9 +71,9 @@ export default function Map({full}) {
             key={idx}
             icon={event.flagship ? starIcon : pinIcon}
           >
-        {/* <Popup className="custom-popup" style={{ position: 'absolute', top: '10px', right: '10px', transform: 'none' }}>
-              {event.description}
-            </Popup> */}
+        <Popup className="custom-popup" style={{ position: 'absolute', top: '10px', right: '10px', transform: 'none' }}>
+            <IndexCard title={event.name} children={event.description} url={event.lat} />
+        </Popup>
             <Tooltip>{event.name}</Tooltip>
           </Marker>
         ))}

@@ -1,6 +1,12 @@
 import Head from "next/head";
 import { Box, Card, Grid, Heading, Image, Link, Text } from "theme-ui";
 
+const Nonprofit501c3 = () => {
+    return (
+        <span style={{ fontVariantLigatures: "none" }}>501(c)(3)</span>
+    )
+}
+
 const Flag = () => (
     <Link
       href="https://hackclub.com/"
@@ -25,6 +31,8 @@ export default function Home() {
             backgroundSize: ["1100px", "1100px", "1100px", "contain"],
             backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
+            width: "100%",
+            overflowX: "hidden"
         }}>
             <Head>
                 <title>Scrapyard</title>
@@ -32,7 +40,7 @@ export default function Home() {
             <Flag />
             <Box sx={{
                 width: "100%",
-                height: "100vh",
+                height: ["80vh", "80vh", "90vh"],
                 bg: "transparent",
                 display: "flex",
                 justifyContent: "center",
@@ -61,7 +69,9 @@ export default function Home() {
                         display: "block",
 
                         width: "min(500px, calc(100vw - 30px))",
-                        filter: "drop-shadow(5px 5px 5px #000000AA)"
+                        filter: "drop-shadow(5px 5px 5px #000000AA)",
+                        position: "relative",
+                        zIndex: 20
                     }}>
                         <Heading as="h2" sx={{
                             fontFamily: "moonblossom",
@@ -77,6 +87,7 @@ export default function Home() {
                         backgroundSize: "100% 100%",
                         width: "75%",
                         position: "relative",
+                        zIndex: 30,
                         top: "-15%",
                         display: "flex",
                         flexDirection: "column",
@@ -90,7 +101,8 @@ export default function Home() {
                             p: 0,
                             wordBreak: "keep-all",
                             whiteSpace: "nowrap",
-                            width: "max-content"
+                            width: "max-content",
+                            fontSize: ["1.2em", "1.4em"]
                         }}>100+&nbsp;Cities&nbsp;worldwide&nbsp;March&nbsp;13-14</Heading>
                         <Heading as="h2" sx={{
                             fontFamily: "p22-stanyan",
@@ -99,14 +111,14 @@ export default function Home() {
                             p: 0,
                             wordBreak: "keep-all",
                             whiteSpace: "nowrap",
-                            width: "min-content"
-
+                            width: "min-content",
+                            fontSize: ["1.2em", "1.4em"]
                         }}>Los&nbsp;Angeles&nbsp;February&nbsp;15-16</Heading>
                     </Box>
                 </Box>
                 <Box sx={{
                     position: "absolute",
-                    width: "100vw",
+                    width: "100%",
                     height: "100vw"
                 }}>
                     <Image sx={{
@@ -131,24 +143,33 @@ export default function Home() {
                         zIndex: 2,
                         position: "absolute",
                         top: "70%",
-                        left: "20%"
+                        left: "20%",
+                        transform: "rotate(180deg)"
                     }} src="/elements/stars/pink.png" alt="Pink paper star" />
                 </Box>
-                <Box as="a" href="https://forms.hackclub.com/t/eWz6Un4TLUus" sx={{
+                <Link href="https://forms.hackclub.com/run-scrapyard-near-you?utm_source=corner" target="_blank">
+                <Box sx={{
                     backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "100% 100%",
-                    position: "absolute",
-                    right: "2%",
-                    top: "4%",
-                    filter: "drop-shadow(5px 5px 5px #000)"
+                    position: ["relative", "relative", "absolute"],
+                    right: ["unset", "unset", "2%"],
+                    top: ["unset", "unset", "4%"],
+                    filter: "drop-shadow(5px 5px 5px #000)",
+                    transition: "transform 0.2s",
+                                                    ":hover": {
+                                                        transform: "scale(1.1)" 
+                                                    }
                 }}>
                     <Heading as="h2" sx={{
                         fontFamily: "moonblossom",
                         textAlign: "center",
-                        margin: "8%"
+                        margin: "8%",
+                        fontSize: ["1.2em", "1.4em"],
+                        textTransform: "inherit!important",
                     }}>Sign up to run a scrapyard event</Heading>
                 </Box>
+                </Link>
             </Box>
 
             <Box sx={{
@@ -207,9 +228,9 @@ export default function Home() {
                             textDecoration: "underline"
                         }}>What's Scrapyard?</Heading>
                         <p style={{
-                            fontSize: "1.25em"
-                        }}>Scrapyard is a global hackathon by high schoolers running in Los Angeles and over 100+ other cities,
-                            with a "scrappy" theme of stupid inventions! It's organized by Hack Club, a 501c(3) nonprofit that supports
+                            fontSize: "1.5em"
+                        }}>Scrapyard is a global hackathon organized by high schoolers. Our flagship (the largest Scrapyard event) will run in Los Angeles on February 15th-16th. Following the flagship, our distributed events will run in 100+ cities worldwide on the weekend of March 15th. Scrapyard is a hackathon
+                            with a "scrappy" theme of stupid inventions! It's organized by Hack Club, a <Nonprofit501c3 /> nonprofit that supports
                             a global community of over 48,000 high school makers.
                         </p>
                     </Box>
@@ -218,7 +239,8 @@ export default function Home() {
                     position: "absolute",
                     width: "100%",
                     height: "100%",
-                    zIndex: 1
+                    zIndex: 1,
+                    display: ["none", "none", "block"]
                 }}>
                     <Image src="/elements/doodles/arrow.svg" sx={{ position: "absolute", left: "5%", top: "0%" }} />
                     <Image src="/elements/doodles/pinkcircle.svg" sx={{ position: "absolute", left: "20%", top: "0%" }} />
@@ -232,10 +254,10 @@ export default function Home() {
             </Box>
 
             <Box sx={{
-                width: "100%",
+                width: "100vw",
                 background: "url('/backgrounds/ripped-paper-bottom.png')",
                 backgroundSize: "cover",
-                transform: "scale(1.05)",
+
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -436,13 +458,13 @@ export default function Home() {
             <Box sx={{
                 width: "100%",
                 background: "url('/backgrounds/lined-paper.png')",
-                backgroundSize: "cover!important",
+                backgroundSize: ["contain", "contain", "cover!important"],
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
                 gap: "20px",
-                p: 5,
+                p: [4, 4, 5],
                 pt: 6,
                 position: "relative",
             }}>
@@ -462,11 +484,11 @@ export default function Home() {
                 }}>
                     {Object.entries({
                         "What is Scrapyard?": <>
-                            Scrapyard is a global <Link href="https://hackclub.com/hackathons/" target="_blank">hackathon</Link>  running in Los Angeles and 100+ other cities by high schoolers (like <Link href="https://counterspell.hackclub.com/" target="_blank">Counterspell</Link>)  with a “scrappy” theme of stupid inventions! It's organized by <Link href="https://hackclub.com/" target="_blank">Hack Club</Link>, a 501(<span style={{ fontVariantLigatures: "none" }}>c</span>)(3) nonprofit that supports a global community of 48k high school makers.
+                            Scrapyard is a global <Link href="https://hackclub.com/hackathons/" target="_blank">hackathon</Link>  running in Los Angeles and 100+ other cities by high schoolers (like <Link href="https://counterspell.hackclub.com/" target="_blank">Counterspell</Link>)  with a “scrappy” theme of stupid inventions! It's organized by <Link href="https://hackclub.com/" target="_blank">Hack Club</Link>, a <Nonprofit501c3 /> nonprofit that supports a global community of 48k high school makers.
                         </>,
 
                         "Where is Scrapyard hosted?": <>
-                            The Scrapyard flagship will be hosted in Los Angeles, tentatively on February 15-16 (Location TBD). Find the closest satellite event to you or even organize one yourself on March 15-16!
+                            The Scrapyard flagship will be hosted in Los Angeles, tentatively on February 15-16 (Location TBD). Find the closest distributed event to you or even organize one yourself on March 15-16!
                         </>,
                         "Who can participate in Scrapyard?": <>
                             All high-school & upper-middle-school aged students are welcome to come! You don't have to be a member of the Hack Club community or be a Hack Club leader.
@@ -491,19 +513,20 @@ export default function Home() {
                             Hack Club has run an <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">overnight hackathon</Link> in San Francisco, a <Link href="https://www.youtube.com/watch?v=H5RPsCMl3uM" target="_blank">Game Jam</Link> across 50 cities, a hackathon on a <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">Train</Link> from Vermont to Los Angeles, and much more!
                         </>,
                         "What if my parents are concerned?": <>
-                            We’re here to help! Refer to the parents guide[link] or reach out to us at scrapyard@hackclub.com for further questions. [security measures/supervision?]
+                            We’re here to help! Refer to the parents guide[link] or reach out to us at <Link href="mailto:scrapyard@hackclub.com">scrapyard@hackclub.com</Link> for further questions. [security measures/supervision?]
                         </>,
                         "What if I have more questions?": <>
-                            Contact us! Feel free to reach out to us in the [slack channel] on the Hack Club slack or email us at scrapyard@hackclub.com.
+                            Contact us! Feel free to reach out to us in the [slack channel] on the Hack Club slack or email us at <Link href="mailto:scrapyard@hackclub.com">scrapyard@hackclub.com</Link>.
                         </>
                     }).map(([question, answer], i) => {
                         return (
                             <Card sx={{
-                                background: `url('/elements/doodles/boxes/${i % 6 + 1}.svg')`,
-                                backgroundSize: "100% 100%",
+                                background: ["transparent", `url('/elements/doodles/boxes/${i % 6 + 1}.svg')`],
+                                backgroundSize: [null, "100% 100%"],
                                 backgroundRepeat: "no-repeat",
                                 boxShadow: "none",
                                 padding: "48px!important",
+                                border: ["2px solid black", "none"],
                             }}>
                                 <Heading as="h2" mb={4} sx={{
                                     position: "relative",
@@ -535,13 +558,15 @@ export default function Home() {
                 </Heading>
                 <Text sx={{
                     fontFamily: "moonblossom",
-                    mb: -2
+                    mb: -2,
+                    textAlign: "center"
                 }}>
                     Made with ♡ by teenagers, for teenagers at Hack Club
                 </Text>
                 <Text sx={{
                     fontFamily: "moonblossom",
-                    mt: 0
+                    mt: 0,
+                    textAlign: "center"
                 }}>
                     <Link href="https://hackclub.com">Hack Club</Link>{' '}<span sx={{ transform: "scale(2)" }}>・</span>{' '}<Link href="https://hackclub.com/slack">Slack</Link>{' '}<span sx={{ transform: "scale(2)" }}>・</span>{' '}<Link href="https://hackclub.com/clubs">Clubs</Link>{' '}<span sx={{ transform: "scale(2)" }}>・</span>{' '}<Link href="https://hackclub.com/hackathons">Hackathons</Link>
                 </Text>
