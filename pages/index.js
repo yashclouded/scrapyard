@@ -513,10 +513,10 @@ export default function Home() {
                             Hack Club has run an <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">overnight hackathon</Link> in San Francisco, a <Link href="https://www.youtube.com/watch?v=H5RPsCMl3uM" target="_blank">Game Jam</Link> across 50 cities, a hackathon on a <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">Train</Link> from Vermont to Los Angeles, and much more!
                         </>,
                         "What if my parents are concerned?": <>
-                            We’re here to help! Refer to the parents guide[link] or reach out to us at <Link href="mailto:scrapyard@hackclub.com">scrapyard@hackclub.com</Link> for further questions. [security measures/supervision?]
+                            We’re here to help! Our parents guide will be released soon, but they can reach out to us at <Link href="mailto:scrapyard@hackclub.com">scrapyard@hackclub.com</Link> for questions.
                         </>,
                         "What if I have more questions?": <>
-                            Contact us! Feel free to reach out to us in the [slack channel] on the Hack Club slack or email us at <Link href="mailto:scrapyard@hackclub.com">scrapyard@hackclub.com</Link>.
+                            Contact us! Feel free to reach out to us in the #scrapyard channel on the Hack Club slack or email us at <Link href="mailto:scrapyard@hackclub.com">scrapyard@hackclub.com</Link>.
                         </>
                     }).map(([question, answer], i) => {
                         return (
