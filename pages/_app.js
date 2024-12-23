@@ -5,12 +5,19 @@ import NextApp from 'next/app'
 import theme from '../lib/theme'
 import { ThemeProvider } from 'theme-ui'
 import '../styles/globals.css'
+import Head from 'next/head'
 
 export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={theme}>
+        <Head>
+          <link rel="favicon" href="/favicon.png" />
+          <link rel="shortcut icon" href="/favicon.png" />
+          <link rel="apple-touch-icon" href="/favicon.png" />
+          <link rel="icon" type="image/png" href="/favicon.png" />
+        </Head>
         <Component {...pageProps} />
       </ThemeProvider>
     )
