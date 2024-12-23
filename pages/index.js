@@ -297,7 +297,11 @@ export default function Home() {
                         fontWeight: "lighter",
                         textAlign: "center",
 
-                    }}>FIND AN EVENT NEAR YOU, OR START ONE!</Heading>
+                    }}>
+                        {/* FIND AN EVENT NEAR YOU, OR START ONE! */}
+                        START AN EVENT NEAR YOU!
+                        {/* ^ just for launch */}
+                    </Heading>
                 </Box>
                 <Grid columns={[1, 2, 3]} gap={4} sx={{ maxWidth: "min(1000px, calc(100vw - 60px))", mx: "auto", mb: 5 }}>
                     {["New York, NY", "Columbus, OH", "Ottawa, ON", "Tampa, FL", "San Francisco, CA", "London, UK", "Bangalore, IN", "Singapore, SG", "Auckland, NZ"].map(city => (
