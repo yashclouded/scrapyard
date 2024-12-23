@@ -19,8 +19,10 @@ export default class App extends NextApp {
           <link rel="icon" type="image/png" href="/favicon.png" />
           <meta
             name="description"
+            property="og:description"
             content="Hack Club's global winter hackathon - build stupid s#!t, get stupid prizes!"
           />
+          <meta property="og:image" content="/announcement.png" />
           <script
             defer
             data-domain="scrapyard.hackclub.com"
