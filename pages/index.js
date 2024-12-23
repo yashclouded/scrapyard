@@ -1,130 +1,551 @@
 import Head from "next/head";
-import { Box, Card, Grid, Heading } from "theme-ui";
+import { Box, Card, Grid, Heading, Image, Link, Text } from "theme-ui";
+
+const Flag = () => (
+    <Link
+      href="https://hackclub.com/"
+      target="_blank"
+      aria-label="Hack Club's homepage"
+      sx={{ position: 'absolute', top: 4, left: 0, zIndex: 2 }}
+    >
+      <Image
+        src="/elements/orpheus-flag.svg"
+        alt="Hack Club flag"
+        sx={{ width: [120, 128, 180], transformOrigin: "0% 0%", transition: 'transform 0.1s', ':hover': {
+            transform: 'rotate(0.03turn) scale(1.2) translateY(-4px)'
+        } }}
+      />
+    </Link>
+  )
 
 export default function Home() {
     return (
-        <>
+        <Box sx={{
+            background: "url('/backgrounds/cutting-mat.png'), linear-gradient(#337D78, #337D78)",
+            backgroundSize: ["1100px", "1100px", "1100px", "contain"],
+            backgroundPosition: "top",
+            backgroundRepeat: "no-repeat",
+        }}>
             <Head>
                 <title>Scrapyard</title>
             </Head>
+            <Flag />
             <Box sx={{
                 width: "100%",
                 height: "100vh",
-                background: "url('https://cloud-itwtbqgju-hack-club-bot.vercel.app/0group_19.svg')",
-                backgroundSize: "cover",
-                backgroundPosition: "-13px -13px",
+                bg: "transparent",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
                 gap: "20px",
             }}>
-                <img src="/brt.png" alt="BRT" />
+                <Image sx={{
+                    width: "600px",
+
+                    maxWidth: "70vw",
+
+                    objectFit: "contain",
+                }} src="/elements/wordmark.svg" alt="BRT" />
                 <Box sx={{
-                    background: "url('/note.png')",
-                    backgroundSize: "cover",
-                    padding: "40px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center"
                 }}>
-                    <Heading as="h1">February 15-16, 2024</Heading>
+                    <Box sx={{
+                        background: "url('/elements/ripped-paper.png')",
+                        backgroundSize: "cover",
+                        // aspectRatio: "1080/338.4",
+                        // padding: "8%",
+                        // paddingLeft: "7%",
+                        display: "block",
+
+                        width: "min(500px, calc(100vw - 30px))",
+                        filter: "drop-shadow(5px 5px 5px #000000AA)"
+                    }}>
+                        <Heading as="h2" sx={{
+                            fontFamily: "moonblossom",
+                            textAlign: "center",
+                            margin: "8%"
+                        }}>Build stupid projects, get stupid prizes.</Heading>
+                    </Box>
+                    <Box sx={{
+                        zIndex: 1,
+                        width: "max-content",
+                        backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "100% 100%",
+                        width: "75%",
+                        position: "relative",
+                        top: "-15%",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        pt: "3%",
+                        filter: "drop-shadow(5px 5px 5px #00000099)"
+                    }}>
+                        <Heading as="h2" sx={{
+                            fontFamily: "p22-stanyan",
+                            mx: "8%",
+                            p: 0,
+                            wordBreak: "keep-all",
+                            whiteSpace: "nowrap",
+                            width: "max-content"
+                        }}>100+&nbsp;Cities&nbsp;worldwide&nbsp;March&nbsp;13-14</Heading>
+                        <Heading as="h2" sx={{
+                            fontFamily: "p22-stanyan",
+                            mx: "8%",
+                            my: "3%",
+                            p: 0,
+                            wordBreak: "keep-all",
+                            whiteSpace: "nowrap",
+                            width: "min-content"
+
+                        }}>Los&nbsp;Angeles&nbsp;February&nbsp;15-16</Heading>
+                    </Box>
                 </Box>
-                Scrapyard!
+                <Box sx={{
+                    position: "absolute",
+                    width: "100vw",
+                    height: "100vw"
+                }}>
+                    <Image sx={{
+                        width: "10%",
+                        height: "10%",
+                        zIndex: 2,
+                        position: "absolute",
+                        top: "50%",
+                        left: "10%"
+                    }} src="/elements/stars/blue.png" alt="Blue paper star" />
+                    <Image sx={{
+                        width: "10%",
+                        height: "10%",
+                        zIndex: 2,
+                        position: "absolute",
+                        top: "55%",
+                        right: "15%"
+                    }} src="/elements/stars/yellow.png" alt="Yellow paper star" />
+                    <Image sx={{
+                        width: "10%",
+                        height: "10%",
+                        zIndex: 2,
+                        position: "absolute",
+                        top: "70%",
+                        left: "20%"
+                    }} src="/elements/stars/pink.png" alt="Pink paper star" />
+                </Box>
+                <Box as="a" href="https://forms.hackclub.com/t/eWz6Un4TLUus" sx={{
+                    backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100% 100%",
+                    position: "absolute",
+                    right: "2%",
+                    top: "4%",
+                    filter: "drop-shadow(5px 5px 5px #000)"
+                }}>
+                    <Heading as="h2" sx={{
+                        fontFamily: "moonblossom",
+                        textAlign: "center",
+                        margin: "8%"
+                    }}>Sign up to run a scrapyard event</Heading>
+                </Box>
             </Box>
+
             <Box sx={{
                 width: "100%",
-                background: "url('/papercrump.svg')",
-                backgroundSize: "cover",
+                background: "url('/elements/paper-top.png')",
+                backgroundSize: "contain",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
                 gap: "20px",
-                py: 6,
                 position: "relative",
-                paddingTop: "600px"
+                height: "23vw"
             }}>
-                <img src="/trash.png" style={{
+                <img src="/elements/trash-can.png" style={{
                     position: "absolute",
                     top: "0px",
                     right: "0px",
-                    width: "25vw",
-                    transform: "translateY(-20%)",
+                    width: "70vw",
+                    transform: "translateY(-40%)",
                     zIndex: 7
                 }} />
-                <img src="/2.png" style={{ // post it note
-                    position: "absolute",
-                    top: "0px",
-                    left: "max(12vw, 20px)",
-                    transform: "translateY(-20%)",
-                    width: "max(40vw, 300px)",
-                    zIndex: 9
-                }} />
-                <img src="/paperball1.svg" style={{
-                    position: "absolute",
-                    top: "10vw",
-                    left: "-2vw",
-                    width: "20vw",
-                    zIndex: 6
-                }} />
-                <img src="/paperball2.svg" style={{
-                    position: "absolute",
-                    top: "10vw",
-                    left: "48vw",
-                    width: "26vw",
-                    zIndex: 6
-                }} />
-                <Box sx={{
-                    background: "url('/note.png')",
-                    backgroundSize: "cover",
-                }}>
-                    <Heading as="h1">February 15-16, 2024</Heading>
-                </Box>
-                Scrapyard!
             </Box>
             <Box sx={{
                 width: "100%",
-                background: "url('/navy_paper_bg.svg')",
+                // background: "linear-gradient(#F5F5F5, #F2F2F2)",
+                background: "url(/backgrounds/ripped-paper.png)",
                 backgroundSize: "cover",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
                 gap: "20px",
-                py: 6,
+                pt: 6,
                 px: 4,
                 position: "relative",
             }}>
-                <Heading as="h1" sx={{
-                    color: "white"
-                }}>Scrapyard FAQs</Heading>
-                <Grid columns={[1, 2, 3]} gap={4}>
-                    <Card sx={{
+                <Box sx={{
+                    display: "flex",
+                    flexDirection: ["column", "column", "row"],
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "100%"
+                }}>
+                    <Image src="/elements/orpheus-doodle.svg" />
+                    <Box sx={{
+                        maxWidth: ["80vw", "60vw", "40vw"],
+                        padding: "40px",
+                        zIndex: 1,
+                        backgroundImage: "url(/elements/sticky-note.svg)",
+                        backgroundSize: "cover",
+                        filter: "drop-shadow(5px 5px 5px #000000AA)"
+                    }}>
+                        <Heading sx={{
+                            textDecoration: "underline"
+                        }}>What's Scrapyard?</Heading>
+                        <p style={{
+                            fontSize: "1.25em"
+                        }}>Scrapyard is a global hackathon by high schoolers running in Los Angeles and over 100+ other cities,
+                            with a "scrappy" theme of stupid inventions! It's organized by Hack Club, a 501c(3) nonprofit that supports
+                            a global community of over 48,000 high school makers.
+                        </p>
+                    </Box>
+                </Box>
+                <Box sx={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    zIndex: 1
+                }}>
+                    <Image src="/elements/doodles/arrow.svg" sx={{ position: "absolute", left: "5%", top: "0%" }} />
+                    <Image src="/elements/doodles/pinkcircle.svg" sx={{ position: "absolute", left: "20%", top: "0%" }} />
+                    <Image src="/elements/doodles/yellowcircle.svg" sx={{ position: "absolute", left: "8%", top: "70%" }} />
+                    <Image src="/elements/doodles/bluesquiggle.svg" sx={{ position: "absolute", left: "8%", top: "84%" }} />
+                    <Image src="/elements/doodles/yellowlines.svg" sx={{ position: "absolute", left: "37%", top: "80%" }} />
+                    <Image src="/elements/doodles/bluecircle.svg" sx={{ position: "absolute", right: "30%", top: "78%" }} />
+                    <Image src="/elements/doodles/pinksquiggle.svg" sx={{ position: "absolute", right: "10%", top: "80%" }} />
+                    <Image src="/elements/doodles/bluedrops.svg" sx={{ position: "absolute", right: "10%", top: "0%" }} />
+                </Box>
+            </Box>
+
+            <Box sx={{
+                width: "100%",
+                background: "url('/backgrounds/ripped-paper-bottom.png')",
+                backgroundSize: "cover",
+                transform: "scale(1.05)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+
+                height: "17.03212647vw",
+                position: "relative",
+            }}>
+            </Box>
+
+            <Box>
+            </Box>
+
+            <Box sx={{
+                // backgroundImage: "url(/backgrounds/confetti.png)",
+                alignItems: "center",
+                display: "flex",
+                flexDirection: "column",
+            }}>
+                {/* map */}
+                <Box sx={{
+                    backgroundImage: "url(/elements/ripped-paper-strip.svg)",
+                    // backgroundSize: "cover!important",
+                    // display: "block",
+                    // width: "30vw",
+                    height: "30vh",
+                    width: ["90vw", "70vw", "46.8vw"],
+                    alignItems: "center",
+                    justifyContent: "center",
+                    margin: "0vh",
+                    
+
+                }}>
+                    <Heading as="h1" sx={{
+                        mt: "14vh",
+                        mx: "1vw",
+                        fontWeight: "lighter",
+                        textAlign: "center",
+
+                    }}>FIND AN EVENT NEAR YOU, OR START ONE!</Heading>
+                </Box>
+                <Grid columns={[1, 2, 3]} gap={4} sx={{ maxWidth: "min(1000px, calc(100vw - 60px))", mx: "auto", mb: 5 }}>
+                    {["New York, NY", "Columbus, OH", "Ottawa, ON", "Tampa, FL", "San Francisco, CA", "London, UK", "Bangalore, IN", "Singapore, SG", "Auckland, NZ"].map(city => (
+                        <Box sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}>
+                        <Heading as="h2" sx={{ fontWeight: "bold", textAlign: "center",
+                            background: "url('/elements/yellow-strip@stretch.svg')",
+                            backgroundSize: "100% 100%",
+                            p: 3
+                         }}>
+                            {city}
+                        </Heading>
+                        </Box>
+                    ))}
+                    <Box sx={{ gridColumn: [null, "1 / span 2", "1 / span 3"], display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center", }}>
+                                <Link href="https://forms.hackclub.com/run-scrapyard-near-you?utm_source=note" target="_blank">
+                    <Heading as="h2" sx={{ fontWeight: "bold", textAlign: "center",
+                                                    background: "url('/elements/yellow-strip@stretch.svg')",
+                                                    backgroundSize: "100% 100%",
+                                                    p: 4, px: 5,
+                                                    transition: "transform 0.2s",
+                                                    ":hover": {
+                                                        transform: "scale(1.1)" 
+                                                    }
+                        
+                     }}>
+                        ...Your hometown? Start an event!
+                    </Heading>
+                    </Link>
+                    </Box>
+                </Grid>
+                <Box sx={{
+
+                }}>
+                    {/* <Map /> */}
+
+
+                </Box>
+            </Box>
+
+
+            <Box sx={{
+                width: "100%",
+                background: ["url('/backgrounds/bulletin@vertical.svg')", "url('/backgrounds/bulletin@vertical.svg')", "url('/backgrounds/bulletin.svg')"],
+                backgroundSize: "cover!important",
+                display: "block",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                overflow: "visible",
+                gap: "20px",
+                height: ["151.37794951vw", "151.37794951vw", "64.45447188vw"],
+                position: "relative",
+            }}>
+                <Box sx={{
+                    display: "flex", width: "100%", height: "100%", flexWrap: "wrap",
+                    p: "4vw", position: "relative",
+                    overflow: "visible",
+                    justifyContent: ["space-around", "space-around", null],
+                    pb: "12vw"
+                }}>
+                    <Box sx={{
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "start",
+                        height: "min-content",
+                    }}>
+                        <Box sx={{
+                            background: "url('/elements/stapled-paper.png')",
+                            backgroundSize: "contain",
+                            backgroundRepeat: "no-repeat",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            height: "100px",
+                            width: "400px"
+                        }}>
+                            <Heading as="h2" sx={{
+                                textAlign: "center"
+                            }}>Here's what we've done in the past</Heading>
+                        </Box>
+                    </Box>
+                    <Box as="a" href="https://assemble.hackclub.com" target="_blank" sx={{
+                        background: "url('/elements/polaroids/1.svg')",
+                        width: ["35.5vw", "35.5vw", "22.5vw"],
+                        height: ["35.5vw", "35.5vw", "22.5vw"],
+                        transform: ["scale(1.4)", "scale(1.4)", "scale(1.2)"],
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        display: "block"
 
                     }}>
-                        <Heading as="h2">What is Scrapyard?</Heading>
-                        <p>Scrapyard is a hackathon for high school students, organized by the students of the BRT High School.</p>
-                    </Card>
-                    <Card>
-                        <Heading as="h2">When is Scrapyard?</Heading>
-                        <p>Scrapyard will be held on February 15-16, 2024.</p>
-                    </Card>
-                    <Card>
-                        <Heading as="h2">Where is Scrapyard?</Heading>
-                        <p>Scrapyard will be held at the BRT High School.</p>
-                    </Card>
-                    <Card>
-                        <Heading as="h2">How can I participate?</Heading>
-                        <p>Participation details will be announced soon.</p>
-                    </Card>
-                    <Card>
-                        <Heading as="h2">What are the prizes?</Heading>
-                        <p>Prizes will be announced soon.</p>
-                    </Card>
-                    <Card>
-                        <Heading as="h2">How can I sponsor Scrapyard?</Heading>
-                        <p>Contact us at <a href="mailto:scrapyard@hackclub.com">scrapyard@hackclub.com</a></p>
-                    </Card>
-                </Grid>
+                    </Box>
+                    <Box as="a" href="https://outernet.hackclub.com" target="_blank" sx={{
+                        background: "url('/elements/polaroids/2.svg')",
+                        width: ["35.5vw", "35.5vw", "22.5vw"],
+                        height: ["35.5vw", "35.5vw", "22.5vw"],
+                        transform: ["scale(1.4)", "scale(1.4)", "scale(1.2)"],
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        display: "block",
+                        marginTop: "7vw"
+
+                    }}>
+                    </Box>
+                    <Box as="a" href="https://wonderland.hackclub.com" target="_blank" sx={{
+                        background: "url('/elements/polaroids/3.svg')",
+                        width: ["35.5vw", "35.5vw", "22.5vw"],
+                        height: ["35.5vw", "35.5vw", "22.5vw"],
+                        transform: ["scale(1.4)", "scale(1.4)", "scale(1.2)"],
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        display: "block"
+
+                    }}>
+                    </Box>
+                    <Box as="a" href="https://apocalypse.hackclub.com" target="_blank" sx={{
+                        background: "url('/elements/polaroids/4.svg')",
+                        width: ["35.5vw", "35.5vw", "22.5vw"],
+                        height: ["35.5vw", "35.5vw", "22.5vw"],
+                        transform: ["scale(1.4)", "scale(1.4)", "scale(1.2)"],
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        display: "block",
+                        marginTop: "7vw"
+
+                    }}>
+                    </Box>
+                    <Box as="a" href="https://counterspell.hackclub.com" target="_blank" sx={{
+                        background: "url('/elements/polaroids/falling.svg')",
+                        width: ["38.5vw", "38.5vw", "25vw"],
+                        height: ["38.5vw", "38.5vw", "25vw"],
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        display: "block",
+                        position: "absolute",
+                        bottom: "0",
+                        right: "10vw",
+                        transform: "translateY(50%)",
+                        zIndex: 10
+
+
+                    }}>
+                    </Box>
+                </Box>
             </Box>
-        </>
+
+            {/* sam here, I can't access the preview but I am doing my best. */
+            }
+
+
+            <Box sx={{
+                width: "100%",
+                background: "url('/backgrounds/lined-paper.png')",
+                backgroundSize: "cover!important",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                gap: "20px",
+                p: 5,
+                pt: 6,
+                position: "relative",
+            }}>
+                <Heading as="h1" sx={{
+                    mb: 5,
+                    position: "relative"
+                }}>Frequently Asked Questions
+                    <Image src="/elements/doodles/blue-underline.svg" sx={{
+                        position: "absolute",
+                        bottom: "0",
+                        left: "50%",
+                        transform: "translateX(-50%) translateY(75%)",
+                    }} />
+                </Heading>
+                <Grid columns={[1, 1, 1, 2]} gap={4} sx={{
+                    maxWidth: "1200px"
+                }}>
+                    {Object.entries({
+                        "What is Scrapyard?": <>
+                            Scrapyard is a global <Link href="https://hackclub.com/hackathons/" target="_blank">hackathon</Link>  running in Los Angeles and 100+ other cities by high schoolers (like <Link href="https://counterspell.hackclub.com/" target="_blank">Counterspell</Link>)  with a “scrappy” theme of stupid inventions! It's organized by <Link href="https://hackclub.com/" target="_blank">Hack Club</Link>, a 501(<span style={{ fontVariantLigatures: "none" }}>c</span>)(3) nonprofit that supports a global community of 48k high school makers.
+                        </>,
+
+                        "Where is Scrapyard hosted?": <>
+                            The Scrapyard flagship will be hosted in Los Angeles, tentatively on February 15-16 (Location TBD). Find the closest satellite event to you or even organize one yourself on March 15-16!
+                        </>,
+                        "Who can participate in Scrapyard?": <>
+                            All high-school & upper-middle-school aged students are welcome to come! You don't have to be a member of the Hack Club community or be a Hack Club leader.
+                        </>,
+                        "There are no events happening near me? How do I organize one?": <>
+                            That’s awesome! Fill out the <Link href="https://forms.hackclub.com/run-scrapyard-near-you?utm_source=faq" target="_blank">organizer form </Link>
+                            to organize your very own Scrapyard in your city!
+                        </>,
+                        "All this, for free?": <>
+                            Yep! Food, swag and good vibes are all included. Plus, if you’re joining us from afar, we’ll cover the cost of gas or a bus / train ticket. Information about travel stipends for our Los Angeles flagship will be released soon.
+                        </>,
+                        "What do I need?": <>
+                            Your laptop, chargers, toiletries, sleeping bags, and an open mind! If you plan to work on a hardware project, bring the tools you'll need.
+                        </>,
+                        "I’m not good at coding. Can I still participate?": <>
+                            This hackathon is for creatives of all skill levels! We'll have workshops and other events so join us and let's learn together. If you'd like to start exploring some introductory projects, check out Hack Club Workshops.
+                        </>,
+                        "What can I make at Scrapyard?": <>
+                            The scrappiest thing you can imagine –- jank is encouraged. Games? Apps? Websites? Programming languages? <em>Hardware?</em> You name it! We’ll have a bunch of resources and mentors to help you out.
+                        </>,
+                        "What has Hack Club done before?": <>
+                            Hack Club has run an <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">overnight hackathon</Link> in San Francisco, a <Link href="https://www.youtube.com/watch?v=H5RPsCMl3uM" target="_blank">Game Jam</Link> across 50 cities, a hackathon on a <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">Train</Link> from Vermont to Los Angeles, and much more!
+                        </>,
+                        "What if my parents are concerned?": <>
+                            We’re here to help! Refer to the parents guide[link] or reach out to us at scrapyard@hackclub.com for further questions. [security measures/supervision?]
+                        </>,
+                        "What if I have more questions?": <>
+                            Contact us! Feel free to reach out to us in the [slack channel] on the Hack Club slack or email us at scrapyard@hackclub.com.
+                        </>
+                    }).map(([question, answer], i) => {
+                        return (
+                            <Card sx={{
+                                background: `url('/elements/doodles/boxes/${i % 6 + 1}.svg')`,
+                                backgroundSize: "100% 100%",
+                                backgroundRepeat: "no-repeat",
+                                boxShadow: "none",
+                                padding: "48px!important",
+                            }}>
+                                <Heading as="h2" mb={4} sx={{
+                                    position: "relative",
+                                }}>{question}
+                                    <Image src="/elements/doodles/yellow-underline.svg" sx={{
+                                        position: "absolute",
+                                        bottom: "0",
+                                        left: "50%",
+                                        transform: "translateX(-50%) translateY(75%)",
+                                    }} /></Heading>
+                                <Text sx={{
+                                    fontSize: 3,
+                                    fontWeight: "bold"
+                                }}>{answer}</Text>
+                            </Card>
+                        );
+                    })}
+                </Grid>
+                <Heading as="h2" sx={{
+                    mt: 6,
+                    position: "relative"
+                }}>Scrapyard
+                    <Image src="/elements/doodles/pink-underline.svg" sx={{
+                        position: "absolute",
+                        bottom: "0",
+                        left: "50%",
+                        transform: "translateX(-50%) translateY(75%)",
+                    }} />
+                </Heading>
+                <Text sx={{
+                    fontFamily: "moonblossom",
+                    mb: -2
+                }}>
+                    Made with ♡ by teenagers, for teenagers at Hack Club
+                </Text>
+                <Text sx={{
+                    fontFamily: "moonblossom",
+                    mt: 0
+                }}>
+                    <Link href="https://hackclub.com">Hack Club</Link>{' '}<span sx={{ transform: "scale(2)" }}>・</span>{' '}<Link href="https://hackclub.com/slack">Slack</Link>{' '}<span sx={{ transform: "scale(2)" }}>・</span>{' '}<Link href="https://hackclub.com/clubs">Clubs</Link>{' '}<span sx={{ transform: "scale(2)" }}>・</span>{' '}<Link href="https://hackclub.com/hackathons">Hackathons</Link>
+                </Text>
+            </Box>
+        </Box>
     )
 }
