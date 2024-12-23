@@ -289,8 +289,8 @@ export default function Home() {
                     alignItems: "center",
                     justifyContent: "center",
                     margin: "0vh",
-                    
-
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover"
                 }}>
                     <Heading as="h1" sx={{
                         mt: "14vh",
