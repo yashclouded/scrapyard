@@ -389,7 +389,7 @@ export default function Home() {
         }}
       >
         {/* map */}
-        <Box
+{/*   <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
             // backgroundSize: "cover!important",
@@ -428,6 +428,7 @@ export default function Home() {
         >
           <Map />
         </Box>
+        */}
       </Box>
 
       <Box
