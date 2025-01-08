@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
+import dynamic from 'next/dynamic'
+const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Nonprofit501c3 = () => {
   return <span style={{ fontVariantLigatures: 'none' }}>501(c)(3)</span>
@@ -65,7 +67,7 @@ export default function Home() {
             objectFit: 'contain'
           }}
           src="/elements/wordmark.svg"
-          alt="BRT"
+          alt="Scrapyard"
         />
         <Box
           sx={{
@@ -405,92 +407,27 @@ export default function Home() {
           <Heading
             as="h1"
             sx={{
-              mt: '14vh',
+              mt: '13vh',
               mx: '1vw',
               fontWeight: 'lighter',
               textAlign: 'center'
             }}
           >
-            {/* FIND AN EVENT NEAR YOU, OR START ONE! */}
-            START AN EVENT NEAR YOU!
-            {/* ^ just for launch */}
+            FIND AN EVENT NEAR YOU!
           </Heading>
         </Box>
-        <Grid
-          columns={[1, 2, 3]}
-          gap={4}
+        <Box
           sx={{
-            maxWidth: 'min(1000px, calc(100vw - 60px))',
-            mx: 'auto',
-            mb: 5
+            width: '80%',
+            height: '75vh',
+            alignItems: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            mb: '10vh'
           }}
         >
-          {[
-            'New York, NY',
-            'Columbus, OH',
-            'Ottawa, ON',
-            'Tampa, FL',
-            'San Francisco, CA',
-            'London, UK',
-            'Bengaluru, IN',
-            'Singapore, SG',
-            'Auckland, NZ'
-          ].map(city => (
-            <Box
-              key={city}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <Heading
-                as="h2"
-                sx={{
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  background: "url('/elements/yellow-strip@stretch.svg')",
-                  backgroundSize: '100% 100%',
-                  p: 3
-                }}
-              >
-                {city}
-              </Heading>
-            </Box>
-          ))}
-          <Box
-            sx={{
-              gridColumn: [null, '1 / span 2', '1 / span 3'],
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            <Link
-              href="https://forms.hackclub.com/run-scrapyard-near-you?utm_source=note"
-              target="_blank"
-            >
-              <Heading
-                as="h2"
-                sx={{
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  background: "url('/elements/yellow-strip@stretch.svg')",
-                  backgroundSize: '100% 100%',
-                  p: 4,
-                  px: 5,
-                  transition: 'transform 0.2s',
-                  ':hover': {
-                    transform: 'scale(1.1)'
-                  }
-                }}
-              >
-                ...Your hometown? Start an event!
-              </Heading>
-            </Link>
-          </Box>
-        </Grid>
-        <Box sx={{}}>{/* <Map /> */}</Box>
+          <Map />
+        </Box>
       </Box>
 
       <Box

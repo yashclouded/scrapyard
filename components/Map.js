@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Box } from 'theme-ui'
-import { IndexCard } from './IndexCard'
+import IndexCard from './IndexCard'
 import {
   MapContainer,
   TileLayer,
@@ -22,45 +21,54 @@ const starIcon = new L.Icon({
   iconSize: new L.Point(60, 60),
   popupAnchor: [0, 0]
 })
-//placeholder icon
+
 const pinIcon = new L.Icon({
-  iconUrl: `/elements/sticky-note.svg`,
+  iconUrl: `/elements/thumbtack.png`,
   iconAnchor: null,
   popupAnchor: null,
   shadowUrl: null,
   shadowSize: null,
   shadowAnchor: null,
-  iconSize: new L.Point(20, 20),
+  iconSize: new L.Point(30, 30),
   popupAnchor: [0, 0]
 })
 const StyledMapContainer = MapContainer
+
+const flagshipEvent = {
+  name: 'Flagship',
+  location: 'Los Angeles',
+  lat: 34.0522,
+  lng: -118.2437,
+  description: 'yada yada yada',
+  format: '48-hour',
+  slug: '',
+  flagship: true
+}
 
 export default function Map({ full }) {
   const [center, setCenter] = useState(
     window.innerWidth > 767.98 ? [35.683, -25.099] : [55, -100]
   )
-  const [events, setEvents] = useState([
-    {
-      name: 'Flagship',
-      location: 'Los Angeles',
-      lat: 34.0522,
-      lng: -118.2437,
-      description: 'yada yada yada',
-      flagship: true
-    },
-    {
-      name: 'Flagship',
-      location: 'New York',
-      lat: 40.7128,
-      lng: -74.006,
-      description: 'yada yada yada'
-    }
-  ])
+  const [events, setEvents] = useState([flagshipEvent])
 
   const bounds = [
     [-85, -Infinity],
     [85, Infinity]
   ]
+
+  useEffect(() => {
+    async function fetchEvents() {
+      try {
+        const response = await fetch('/api/locations')
+        const data = await response.json()
+        setEvents([flagshipEvent, ...data])
+      } catch (error) {
+        console.error('Error fetching events:', error)
+      }
+    }
+
+    fetchEvents()
+  }, [])
 
   return (
     <>
@@ -92,15 +100,16 @@ export default function Map({ full }) {
               className="custom-popup"
               style={{
                 position: 'absolute',
-                top: '10px',
-                right: '10px',
+                top: '0px',
+                right: '0px',
                 transform: 'none'
               }}
             >
               <IndexCard
                 title={event.name}
-                children={event.description}
-                url={event.lat}
+                slug={event.slug}
+                format={event.format}
+                location={event.location}
               />
             </Popup>
             <Tooltip>{event.name}</Tooltip>
