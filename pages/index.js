@@ -498,7 +498,7 @@ export default function Home() {
             href="https://assemble.hackclub.com"
             target="_blank"
             sx={{
-              background: "url('/elements/polaroids/1.svg')",
+              background: "url('/elements/polaroids/assemble.png')",
               width: ['35.5vw', '35.5vw', '22.5vw'],
               height: ['35.5vw', '35.5vw', '22.5vw'],
               transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
@@ -512,7 +512,7 @@ export default function Home() {
             href="https://outernet.hackclub.com"
             target="_blank"
             sx={{
-              background: "url('/elements/polaroids/2.svg')",
+              background: "url('/elements/polaroids/outernet.png')",
               width: ['35.5vw', '35.5vw', '22.5vw'],
               height: ['35.5vw', '35.5vw', '22.5vw'],
               transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
@@ -527,7 +527,7 @@ export default function Home() {
             href="https://wonderland.hackclub.com"
             target="_blank"
             sx={{
-              background: "url('/elements/polaroids/3.svg')",
+              background: "url('/elements/polaroids/wonderland.png')",
               width: ['35.5vw', '35.5vw', '22.5vw'],
               height: ['35.5vw', '35.5vw', '22.5vw'],
               transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
@@ -541,7 +541,7 @@ export default function Home() {
             href="https://apocalypse.hackclub.com"
             target="_blank"
             sx={{
-              background: "url('/elements/polaroids/4.svg')",
+              background: "url('/elements/polaroids/apocalypse.png')",
               width: ['35.5vw', '35.5vw', '22.5vw'],
               height: ['35.5vw', '35.5vw', '22.5vw'],
               transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
@@ -556,7 +556,7 @@ export default function Home() {
             href="https://counterspell.hackclub.com"
             target="_blank"
             sx={{
-              background: "url('/elements/polaroids/falling.svg')",
+              background: "url('/elements/polaroids/counterspell.png')",
               width: ['38.5vw', '38.5vw', '25vw'],
               height: ['38.5vw', '38.5vw', '25vw'],
               backgroundSize: 'contain',
