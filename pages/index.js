@@ -196,7 +196,7 @@ export default function Home() {
             alt="Pink paper star"
           />
         </Box>
-        <Link
+        {/* <Link
           href="https://forms.hackclub.com/run-scrapyard-near-you?utm_source=corner"
           target="_blank"
         >
@@ -229,7 +229,7 @@ export default function Home() {
               Sign up to run a scrapyard event
             </Heading>
           </Box>
-        </Link>
+        </Link> */}
       </Box>
 
       <Box
@@ -639,8 +639,7 @@ export default function Home() {
               <>
                 The Scrapyard flagship will be hosted in Los Angeles,
                 tentatively on February 15-16 (Location TBD). Find the closest
-                distributed event to you or even organize one yourself on March
-                15-16!
+                distributed event to you on March 15-16!
               </>
             ),
             'Who can participate in Scrapyard?': (
@@ -648,18 +647,6 @@ export default function Home() {
                 All high-school & upper-middle-school aged students are welcome
                 to come! You don't have to be a member of the Hack Club
                 community or be a Hack Club leader.
-              </>
-            ),
-            'There are no events happening near me? How do I organize one?': (
-              <>
-                That’s awesome! Fill out the{' '}
-                <Link
-                  href="https://forms.hackclub.com/run-scrapyard-near-you?utm_source=faq"
-                  target="_blank"
-                >
-                  organizer form{' '}
-                </Link>
-                to organize your very own Scrapyard in your city!
               </>
             ),
             'All this, for free?': (
