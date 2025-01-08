@@ -196,8 +196,8 @@ export default function Home() {
             alt="Pink paper star"
           />
         </Box>
-        {/* <Link
-          href="https://forms.hackclub.com/run-scrapyard-near-you?utm_source=corner"
+        <Link
+          href="https://forms.hackclub.com/scrapyard-signup"
           target="_blank"
         >
           <Box
@@ -226,10 +226,10 @@ export default function Home() {
                 paddingY: ['15px', '0px']
               }}
             >
-              Sign up to run a scrapyard event
+              Sign up for a scrapyard event near you!
             </Heading>
           </Box>
-        </Link> */}
+        </Link>
       </Box>
 
       <Box
@@ -571,8 +571,6 @@ export default function Home() {
           ></Box>
         </Box>
       </Box>
-
-      {/* sam here, I can't access the preview but I am doing my best. */}
 
       <Box
         sx={{

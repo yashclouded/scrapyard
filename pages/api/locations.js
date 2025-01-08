@@ -12,6 +12,7 @@ export default async function handler(req, res) {
   })
 
   const eventsInfo = events.map(event => ({
+    id: event.id,
     name: event.fields['Identifier'],
     location: event.fields['Event location'],
     slug: event.fields['Slug'],

@@ -106,6 +106,7 @@ export default function Map({ full }) {
               }}
             >
               <IndexCard
+                id={event.id}
                 title={event.name}
                 slug={event.slug}
                 format={event.format}

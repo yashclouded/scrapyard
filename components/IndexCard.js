@@ -1,6 +1,13 @@
 import { Box, Heading, Link } from 'theme-ui'
 
-export default function IndexCard({ title, slug, format, location, children }) {
+export default function IndexCard({
+  id,
+  title,
+  slug,
+  format,
+  location,
+  children
+}) {
   return (
     <Box
       sx={{
@@ -49,7 +56,10 @@ export default function IndexCard({ title, slug, format, location, children }) {
         >
           WEBSITE
         </Link>
-        <span sx={{ transform: 'scale(2)' }}>・</span> <Link>SIGNUP</Link>
+        <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
+        <Link href={`https://forms.hackclub.com/scrapyard-signup?event=${id}`}>
+          SIGNUP
+        </Link>
       </Box>
       {children}
     </Box>
