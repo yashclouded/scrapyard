@@ -35,7 +35,8 @@ export default function IndexCard({
           fontWeight: 'bold',
           minWidth: 'max-content',
           textAlign: 'center',
-          backgroundColor: 'white'
+          backgroundColor: 'white',
+          fontFamily: 'moonblossom'
         }}
       >
         {format.toUpperCase()} EVENT IN {location.toUpperCase()}
@@ -54,7 +55,8 @@ export default function IndexCard({
             textAlign: 'center',
             display: 'block',
             fontWeight: 'bold',
-            backgroundColor: 'white'
+            backgroundColor: 'white',
+            fontFamily: 'moonblossom'
           }}
         >
           WEBSITE
