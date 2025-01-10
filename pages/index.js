@@ -196,7 +196,7 @@ export default function Home() {
             alt="Pink paper star"
           />
         </Box>
-        <Link
+        {/* <Link
           href="https://forms.hackclub.com/scrapyard-signup"
           target="_blank"
         >
@@ -229,7 +229,7 @@ export default function Home() {
               Sign up for a scrapyard event near you!
             </Heading>
           </Box>
-        </Link>
+        </Link> */}
       </Box>
 
       <Box
@@ -388,8 +388,7 @@ export default function Home() {
           flexDirection: 'column'
         }}
       >
-        {/* map */}
-{/*   <Box
+        <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
             // backgroundSize: "cover!important",
@@ -428,7 +427,6 @@ export default function Home() {
         >
           <Map />
         </Box>
-        */}
       </Box>
 
       <Box

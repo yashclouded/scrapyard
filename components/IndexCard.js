@@ -34,7 +34,8 @@ export default function IndexCard({
         style={{
           fontWeight: 'bold',
           minWidth: 'max-content',
-          textAlign: 'center'
+          textAlign: 'center',
+          backgroundColor: 'white'
         }}
       >
         {format.toUpperCase()} EVENT IN {location.toUpperCase()}
@@ -51,15 +52,25 @@ export default function IndexCard({
           href={`/${slug}`}
           sx={{
             textAlign: 'center',
-            display: 'block'
+            display: 'block',
+            fontWeight: 'bold',
+            backgroundColor: 'white'
           }}
         >
           WEBSITE
         </Link>
-        <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-        <Link href={`https://forms.hackclub.com/scrapyard-signup?event=${id}`}>
+        {/* <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
+        <Link
+          href={`https://forms.hackclub.com/scrapyard-signup?event=${id}`}
+          sx={{
+            textAlign: 'center',
+            display: 'block',
+            fontWeight: 'bold',
+            backgroundColor: 'white'
+          }}
+        >
           SIGNUP
-        </Link>
+        </Link> */}
       </Box>
       {children}
     </Box>
