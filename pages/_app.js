@@ -1,9 +1,8 @@
 import * as React from 'react'
 import NextApp from 'next/app'
 
-// import '@hackclub/theme/fonts/reg-bold.css'
 import theme from '../lib/theme'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 import '../styles/globals.css'
 import Head from 'next/head'
 
@@ -11,7 +10,7 @@ export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeUIProvider theme={theme}>
         <Head>
           <link rel="favicon" href="/favicon.png" />
           <link rel="shortcut icon" href="/favicon.png" />
@@ -30,7 +29,7 @@ export default class App extends NextApp {
           ></script>
         </Head>
         <Component {...pageProps} />
-      </ThemeProvider>
+      </ThemeUIProvider>
     )
   }
 }
