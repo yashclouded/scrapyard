@@ -16,7 +16,7 @@
     "@hackclub/theme": "^0.3.3",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^2.3.0",
-    "@next/mdx": "^13.1.1",
+    "@next/mdx": "^15.1.4",
     "airtable-plus": "^1.0.4",
     "leaflet": "^1.9.4",
     "next": "^15.1.3",
