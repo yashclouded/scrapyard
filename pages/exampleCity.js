@@ -474,7 +474,7 @@ export default function ExampleCity() {
             alignItems: 'center',
             width: ['90%', '70%'],
             fontSize: '2em',
-            gap: '0.1em',
+            gap: '0.2em',
             color: 'black',
             my: 5,
             background: "url('/backgrounds/lined-paper.png')",
@@ -497,7 +497,6 @@ export default function ExampleCity() {
                 as="p"
                 sx={{
                   display: 'inline',
-                  lineHeight: '1em',
                   width: ['min-content', 'max-content'],
                   fontSize: '2rem',
                   fontFamily: 'p22-stanyan'
@@ -517,9 +516,7 @@ export default function ExampleCity() {
                   height: 1
                 }}
               ></Box>
-              <p style={{ display: 'inline', py: 0, lineHeight: '1em' }}>
-                {item.time}
-              </p>
+              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
             </div>
           ))}
         </Box>
