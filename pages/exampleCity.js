@@ -110,21 +110,6 @@ export default function ExampleCity() {
             src="/elements/wordmark.svg"
             alt="Scrapyard"
           />
-          <Heading
-            sx={{
-              position: 'absolute',
-              bottom: '1em',
-              right: '-0.5em',
-              display: 'block',
-              textAlign: 'center',
-              width: '100%',
-              fontFamily: 'Galindo',
-              fontSize: '3em'
-            }}
-          >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            [EXAMPLECITY]
-          </Heading>
         </Box>
         <Box
           sx={{
