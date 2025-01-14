@@ -108,20 +108,6 @@ export default function ExampleCity() {
             src="/elements/wordmark.svg"
             alt="Scrapyard"
           />
-          <Heading
-            sx={{
-              position: 'absolute',
-              bottom: '1.2em',
-              right: '-0.5em',
-              display: 'block',
-              textAlign: 'center',
-              width: '100%',
-              fontFamily: 'Galindo',
-              fontSize: '3em'
-            }}
-          >
-            Tampa
-          </Heading>
         </Box>
         <Box
           sx={{
