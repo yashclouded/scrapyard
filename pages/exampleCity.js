@@ -235,14 +235,16 @@ export default function ExampleCity() {
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100% 100%',
               position: 'fixed',
-              right: ['unset', 'unset', '2%'],
-              top: ['unset', 'unset', '4%'],
+              right: ['2%'],
+              top: ['4%'],
               filter: 'drop-shadow(5px 5px 5px #000)',
               transition: 'transform 0.2s',
               ':hover': {
                 transform: 'scale(1.1)'
               },
-              zIndex: 20
+              zIndex: 30,
+              minWidth: '8em',
+              padding: '15px'
             }}
           >
             <Heading
@@ -250,14 +252,13 @@ export default function ExampleCity() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%',
+                padding: ['2%', '8%'],
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
-                paddingY: ['15px', '0px']
+                width: '100%'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD [EXAMPLECITY]
+              SIGN&nbsp;UP
             </Heading>
           </Box>
         </Link>
@@ -434,13 +435,15 @@ export default function ExampleCity() {
             justifyContent: 'center',
             margin: '0vh',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
           }}
         >
           <Heading
             as="h1"
             sx={{
-              mt: '13vh',
               mx: '1vw',
               fontWeight: 'lighter',
               textAlign: 'center'
@@ -455,7 +458,8 @@ export default function ExampleCity() {
           sx={{
             fontSize: '1.5em',
             fontFamily: 'moonblossom',
-            color: 'white'
+            color: 'white',
+            textAlign: 'center'
           }}
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
@@ -468,7 +472,7 @@ export default function ExampleCity() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            width: '70%',
+            width: ['90%', '70%'],
             fontSize: '2em',
             gap: '0.1em',
             color: 'black',
@@ -489,9 +493,18 @@ export default function ExampleCity() {
               }}
               key={i}
             >
-              <p style={{ display: 'inline', lineHeight: '0em' }}>
+              <Heading
+                as="p"
+                sx={{
+                  display: 'inline',
+                  lineHeight: '1em',
+                  width: ['min-content', 'max-content'],
+                  fontSize: '2rem',
+                  fontFamily: 'p22-stanyan'
+                }}
+              >
                 {item.event}
-              </p>
+              </Heading>
               <Box
                 sx={{
                   mx: 2,
@@ -504,7 +517,7 @@ export default function ExampleCity() {
                   height: 1
                 }}
               ></Box>
-              <p style={{ display: 'inline', py: 0, lineHeight: '0em' }}>
+              <p style={{ display: 'inline', py: 0, lineHeight: '1em' }}>
                 {item.time}
               </p>
             </div>
@@ -532,13 +545,15 @@ export default function ExampleCity() {
             justifyContent: 'center',
             margin: '0vh',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
           }}
         >
           <Heading
             as="h1"
             sx={{
-              mt: '13vh',
               mx: '1vw',
               fontWeight: 'lighter',
               textAlign: 'center'
@@ -553,14 +568,16 @@ export default function ExampleCity() {
           sx={{
             fontSize: '1.5em',
             fontFamily: 'moonblossom',
-            color: 'white'
+            color: 'white',
+            textAlign: 'center',
+            mx: '5vw'
           }}
         >
           THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
         </Heading>
         <Box
           sx={{
-            width: '80%',
+            width: ['100%', '80%'],
             height: '75vh',
             alignItems: 'center',
             display: 'flex',
