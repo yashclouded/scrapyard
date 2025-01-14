@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   const eventsTable = new AirtablePlus({
     baseID: process.env.AIRTABLE_BASE_ID,
     apiKey: process.env.AIRTABLE_API_KEY,
-    tableName: 'Event Signups'
+    tableName: 'Events'
   })
 
   const events = await eventsTable.read({
@@ -14,10 +14,10 @@ export default async function handler(req, res) {
   const eventsInfo = events.map(event => {
     const lat = +event.fields['Coordinates'].split(', ')[0]
     const lng = +event.fields['Coordinates'].split(', ')[1]
-    
+
     return {
       id: event.id,
-      name: event.fields['Identifier'],
+      name: event.fields['Name'],
       location: event.fields['Event location'],
       slug: event.fields['Slug'],
       lat: Math.round(lat * 100) / 100,
