@@ -78,7 +78,7 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        {/* TODO: Change [EXAMPLECITY] to your event's city */}
+        {/* TODO: Change Vidisha to your event's city */}
         <title>Scrapyard Vidisha</title>
       </Head>
       <Flag />
@@ -174,7 +174,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              {/* TODO: Change Vidisha to your event's city */}
               Vidisha - March&nbsp;15-16
             </Heading>
           </Box>
@@ -332,26 +332,26 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              What's Scrapyard [EXAMPLECITY]?
+              {/* TODO: Change Vidisha to your event's city */}
+              What's Scrapyard Vidisha?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard [EXAMPLECITY] is a hackathon for high schoolers
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in [EXAMPLECITY], where you can make the stupidest
+              {/* TODO: Change Vidisha to your event's city */}
+              Scrapyard Vidisha is a hackathon for high schoolers
+              {/* TODO: Change Vidisha to your event's city */}
+              happening in Vidisha, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [EXAMPLECITY] needs you and your scrappy ideas!
+              {/* TODO: Change Vidisha to your event's city */}
+              Vidisha needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -449,8 +449,8 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD [EXAMPLECITY]?
+            {/* TODO: Change Vidisha to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD VIDISHA?
           </Heading>
         </Box>
         <Heading
@@ -462,9 +462,9 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change [EXAMPLECITY] to your event's city */}
+          {/* TODO: Change Vidisha to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard [EXAMPLECITY] is a [DURATION] event - HERE'S THE ROUGH
+          Scrapyard Vidisha is a 24 hour event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -556,8 +556,8 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO [EXAMPLECITY]?
+            {/* TODO: Change Vidisha to your event's city */}
+            CAN'T MAKE IT TO VIDISHA?
           </Heading>
         </Box>
         <Heading
@@ -791,8 +791,8 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD [EXAMPLECITY]
+              {/* TODO: Change Vidisha to your event's city */}
+              SIGN UP FOR SCRAPYARD Vidisha
             </Heading>
           </Box>
         </Link>
