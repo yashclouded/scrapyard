@@ -1282,8 +1282,8 @@ export default function SiliconValley() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=[EVENTID]"
+          // TODO: Interest form
+          href="https://forms.hackclub.com/scrapyardsv"
           target="_blank"
         >
           <Box
