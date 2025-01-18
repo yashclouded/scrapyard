@@ -605,54 +605,58 @@ export default function ExampleCity() {
         >
           <Box
             sx={{
-              textAlign: "center"
+              textAlign: 'center'
             }}
           >
-            <Link href="https://busanforeignschool.org/"><Image
-              src="/city/busan/sponsors/bfs.png"
-              sx={{
-                maxHeight: '150px'
-              }}
-            />
+            <Link href="https://busanforeignschool.org/">
+              <Image
+                src="/city/busan/sponsors/bfs.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
             </Link>
           </Box>
           <Box
             sx={{
-              textAlign: "center"
+              textAlign: 'center'
             }}
           >
-            <Link href="https://hackclub.com/"><Image
-              src="/city/busan/sponsors/hackclub.png"
-              sx={{
-                maxHeight: '150px'
-              }}
-            />
+            <Link href="https://hackclub.com/">
+              <Image
+                src="/city/busan/sponsors/hackclub.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
             </Link>
           </Box>
           <Box
             sx={{
-              textAlign: "center"
+              textAlign: 'center'
             }}
           >
-            <Link href="https://algoverseairesearch.org/"><Image
-              src="/city/busan/sponsors/algoverse.png"
-              sx={{
-                maxHeight: '150px'
-              }}
-            />
+            <Link href="https://algoverseairesearch.org/">
+              <Image
+                src="/city/busan/sponsors/algoverse.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
             </Link>
           </Box>
           <Box
             sx={{
-              textAlign: "center"
+              textAlign: 'center'
             }}
           >
-            <Link href="https://www.tkbend.co.kr/eng/main/main.php"><Image
-              src="/city/busan/sponsors/tk.png"
-              sx={{
-                maxHeight: '150px'
-              }}
-            />
+            <Link href="https://www.tkbend.co.kr/eng/main/main.php">
+              <Image
+                src="/city/busan/sponsors/tk.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
             </Link>
           </Box>
         </Grid>
