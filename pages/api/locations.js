@@ -1,6 +1,10 @@
 import AirtablePlus from 'airtable-plus'
 
 export default async function handler(req, res) {
+  if (!process.env.AIRTABLE_API_KEY) {
+    return res.status(200).json([])
+  }
+
   const eventsTable = new AirtablePlus({
     baseID: process.env.AIRTABLE_BASE_ID,
     apiKey: process.env.AIRTABLE_API_KEY,

@@ -61,18 +61,19 @@ export default function IndexCard({
         >
           WEBSITE
         </Link>
-        {/* <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
+        <span sx={{ transform: 'scale(2)' }}>・</span>
         <Link
           href={`https://forms.hackclub.com/scrapyard-signup?event=${id}`}
           sx={{
             textAlign: 'center',
             display: 'block',
             fontWeight: 'bold',
-            backgroundColor: 'white'
+            backgroundColor: 'white',
+            fontFamily: 'moonblossom'
           }}
         >
           SIGNUP
-        </Link> */}
+        </Link>
       </Box>
       {children}
     </Box>
