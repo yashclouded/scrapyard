@@ -109,7 +109,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/cluj-napoca/logo.png"
+            src="/city/cluj-napoca/logo.png"
             alt="Scrapyard Cluj-Napoca"
           />
         </Box>
