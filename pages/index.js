@@ -196,7 +196,7 @@ export default function Home() {
             alt="Pink paper star"
           />
         </Box>
-        {/* <Link
+        <Link
           href="https://forms.hackclub.com/scrapyard-signup"
           target="_blank"
         >
@@ -205,14 +205,17 @@ export default function Home() {
               backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100% 100%',
-              position: ['relative', 'relative', 'absolute'],
-              right: ['unset', 'unset', '2%'],
-              top: ['unset', 'unset', '4%'],
+              position: 'fixed',
+              right: ['2%'],
+              top: ['4%'],
               filter: 'drop-shadow(5px 5px 5px #000)',
               transition: 'transform 0.2s',
               ':hover': {
                 transform: 'scale(1.1)'
-              }
+              },
+              zIndex: 30,
+              minWidth: '8em',
+              padding: '15px'
             }}
           >
             <Heading
@@ -220,16 +223,16 @@ export default function Home() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%',
+                padding: ['2%', '8%'],
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
-                paddingY: ['15px', '0px']
+                width: '100%'
               }}
             >
-              Sign up for a scrapyard event near you!
+              SIGN&nbsp;UP
             </Heading>
           </Box>
-        </Link> */}
+        </Link>
       </Box>
 
       <Box
