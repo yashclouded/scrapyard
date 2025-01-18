@@ -107,8 +107,8 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
-            alt="Scrapyard"
+            src="/city/vidisha/vidisha.svg"
+            alt="Scrapyard_vidisha_logo"
           />
         </Box>
         <Box
