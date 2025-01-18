@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
-import dynamic from 'next/dynamic'
 
 const schedule = [
   { time: '11:00 AM', event: 'Doors open' },
@@ -17,8 +16,6 @@ const schedule = [
   { time: '10:30 AM', event: 'Demos!' },
   { time: '12:00 PM', event: 'Closing ceremony' }
 ]
-
-const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -526,7 +523,7 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO BUSAN?
+            HOW TO FIND US?
           </Heading>
         </Box>
         <Heading
@@ -539,7 +536,7 @@ export default function ExampleCity() {
             mx: '5vw'
           }}
         >
-          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
+          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호 48084
         </Heading>
         <Box
           sx={{
@@ -552,8 +549,7 @@ export default function ExampleCity() {
             mt: 5
           }}
         >
-          <Map />
-        </Box>
+        <iframe width="80%" height="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765" style={{border: "1px solid black"}}></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a></small>        </Box>
       </Box>
 
       <Box
