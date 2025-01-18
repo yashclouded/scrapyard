@@ -681,8 +681,8 @@ export default function Calgary() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:shuflduf.calgary@scrapyard.hackclub.com">
-                  shuflduf.calgary@scrapyard.hackclub.com
+                <Link href="mailto:scrapyardyyc@gmail.com">
+                  scrapyardyyc@gmail.com
                 </Link>{' '}
                 for questions.
               </>
@@ -691,8 +691,8 @@ export default function Calgary() {
               <>
                 Contact us! Feel free to reach out to us in the #scrapyard
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:shuflduf.calgary@scrapyard.hackclub.com">
-                  shuflduf.calgary@scrapyard.hackclub.com
+                <Link href="mailto:scrapyardyyc@gmail.com">
+                  scrapyardyyc@gmail.com
                 </Link>
                 .
               </>
