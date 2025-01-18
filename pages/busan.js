@@ -149,10 +149,10 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              <Link
-                href='https://busanforeignschool.org/'
-                target='blank'
-              >Busan Foreign School</Link> - March&nbsp;15-16
+              <Link href="https://busanforeignschool.org/" target="blank">
+                Busan Foreign School
+              </Link>{' '}
+              - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -315,13 +315,15 @@ export default function ExampleCity() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Busan is a hackathon for high schoolers happening in Busan, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              Scrapyard Busan is a hackathon for high schoolers happening in
+              Busan, where you can make the stupidest things you can think of!
+              Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Busan needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Busan
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -431,8 +433,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Busan is a 24-hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Busan is a 24-hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -536,7 +537,8 @@ export default function ExampleCity() {
             mx: '5vw'
           }}
         >
-          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호 48084
+          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호
+          48084
         </Heading>
         <Box
           sx={{
@@ -545,11 +547,21 @@ export default function ExampleCity() {
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            mb: '10vh',
+            mb: '5vh',
             mt: 5
           }}
         >
-        <iframe width="80%" height="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765" style={{border: "1px solid black"}}></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a></small>        </Box>
+          <iframe
+            width="80%"
+            height="100%"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765"
+            style={{ border: '1px solid black' }}
+          ></iframe>
+          <br />
+          <small>
+            <a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a>
+          </small>{' '}
+        </Box> 
       </Box>
 
       <Box
