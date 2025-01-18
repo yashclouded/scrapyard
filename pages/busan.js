@@ -561,7 +561,101 @@ export default function ExampleCity() {
           <small>
             <a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a>
           </small>{' '}
-        </Box> 
+        </Box>
+      </Box>
+
+      <Box
+        sx={{
+          width: '100%',
+          background: 'white',
+          backgroundSize: ['contain', 'contain', 'cover!important'],
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          gap: '20px',
+          p: [4, 4, 5],
+          pt: 6,
+          position: 'relative'
+        }}
+      >
+        <Heading
+          as="h1"
+          sx={{
+            position: 'relative',
+            mb: '-20px'
+          }}
+        >
+          OUR SPONSORS
+        </Heading>
+        <p
+          style={{
+            fontSize: '1.5em'
+          }}
+        >
+          Without their support, Scrapyard Busan wouldn't be possible.
+        </p>
+
+        <Grid
+          columns={[1, 1, 1, 2]}
+          gap={4}
+          sx={{
+            maxWidth: '1200px'
+          }}
+        >
+          <Box
+            sx={{
+              textAlign: "center"
+            }}
+          >
+            <Link href="https://busanforeignschool.org/"><Image
+              src="/city/busan/sponsors/bfs.png"
+              sx={{
+                maxHeight: '150px'
+              }}
+            />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: "center"
+            }}
+          >
+            <Link href="https://hackclub.com/"><Image
+              src="/city/busan/sponsors/hackclub.png"
+              sx={{
+                maxHeight: '150px'
+              }}
+            />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: "center"
+            }}
+          >
+            <Link href="https://algoverseairesearch.org/"><Image
+              src="/city/busan/sponsors/algoverse.png"
+              sx={{
+                maxHeight: '150px'
+              }}
+            />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: "center"
+            }}
+          >
+            <Link href="https://www.tkbend.co.kr/eng/main/main.php"><Image
+              src="/city/busan/sponsors/tk.png"
+              sx={{
+                maxHeight: '150px'
+              }}
+            />
+            </Link>
+          </Box>
+        </Grid>
       </Box>
 
       <Box
