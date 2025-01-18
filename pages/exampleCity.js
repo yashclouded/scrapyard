@@ -695,6 +695,7 @@ export default function ExampleCity() {
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
                 <Link href="mailto:scrapyard@hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
                   scrapyard@hackclub.com
                 </Link>{' '}
                 for questions.
@@ -702,10 +703,12 @@ export default function ExampleCity() {
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
+                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
+                Contact us! Feel free to reach out to us in the [SLACKCHANNEL]
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
                 <Link href="mailto:scrapyard@hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
                   scrapyard@hackclub.com
                 </Link>
                 .
