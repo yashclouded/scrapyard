@@ -662,7 +662,7 @@ export default function DC() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 <Link href="mailto:dc@scrapyard.hackclub.com">
-                  scrapyard@hackclub.com
+                  dc@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -672,7 +672,7 @@ export default function DC() {
                 Contact us! Feel free to reach out to us in the #scrapyard
                 channel on the Hack Club slack or email us at{' '}
                 <Link href="mailto:dc@scrapyard.hackclub.com">
-                  scrapyard@hackclub.com
+                  dc@scrapyard.hackclub.com
                 </Link>
                 .
               </>
