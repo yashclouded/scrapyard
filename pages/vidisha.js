@@ -175,7 +175,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [EXAMPLECITY] - March&nbsp;15-16
+              Vidisha - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -226,7 +226,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=[EVENTID]"
+          href="https://forms.hackclub.com/scrapyard-signup?event_id=rechm7kkztEIUui6z"
           target="_blank"
         >
           <Box
