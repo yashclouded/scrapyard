@@ -225,7 +225,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change the event id to your event's ID
+          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
           href="https://forms.hackclub.com/scrapyard-signup?event_id=[EVENTID]"
           target="_blank"
         >
@@ -758,7 +758,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change the event id to your event's ID
+          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
           href="https://forms.hackclub.com/scrapyard-signup?event_id=[EVENTID]"
           target="_blank"
         >
