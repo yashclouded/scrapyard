@@ -712,12 +712,7 @@ export default function ExampleCity() {
             ),
             'All this, for free?': (
               <>
-                Yep! Food, swag and good vibes are all included. Plus, if you’re
-                joining us from afar,{' '}
-                <Link href="https://gas.hackclub.com/">
-                  we’ll cover the cost of gas or a bus / train ticket
-                </Link>
-                .
+                Yep! Food, swag and good vibes are all included.
               </>
             ),
             'What do I need?': (
