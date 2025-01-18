@@ -788,7 +788,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change Vidisha to your event's city */}
-              SIGN UP FOR SCRAPYARD Vidisha
+              SIGN UP FOR SCRAPYARD VIDISHA
             </Heading>
           </Box>
         </Link>
