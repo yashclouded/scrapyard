@@ -223,7 +223,6 @@ export default function Calgary() {
           />
         </Box>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
           href="https://forms.hackclub.com/scrapyard-signup?event_id=rec4Rloq7j6bMF6KP"
           target="_blank"
         >
@@ -682,9 +681,8 @@ export default function Calgary() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
-                  scrapyard@hackclub.com
+                <Link href="mailto:shuflduf.calgary@scrapyard.hackclub.com">
+                  shuflduf.calgary@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -693,9 +691,8 @@ export default function Calgary() {
               <>
                 Contact us! Feel free to reach out to us in the #scrapyard
                 channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
-                  scrapyard@hackclub.com
+                <Link href="mailto:shuflduf.calgary@scrapyard.hackclub.com">
+                  shuflduf.calgary@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -747,7 +744,6 @@ export default function Calgary() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
           href="https://forms.hackclub.com/scrapyard-signup?event_id=rec4Rloq7j6bMF6KP"
           target="_blank"
         >
@@ -777,7 +773,6 @@ export default function Calgary() {
                 paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change Calgary to your event's city */}
               SIGN UP FOR SCRAPYARD Calgary
             </Heading>
           </Box>
