@@ -2,19 +2,19 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: 'March 15 - 11:00 AM', event: 'Doors open' },
+  { time: 'March 15 - 12:00 PM', event: 'Opening ceremony' },
+  { time: 'March 15 - 12:30 PM', event: 'Lunch' },
+  { time: 'March 15 - 01:00 PM', event: 'Start working on your project!' },
+  { time: 'March 15 - 02:00 PM', event: 'Workshop 1' },
+  { time: 'March 15 - 04:00 PM', event: 'Activity 1' },
+  { time: 'March 15 - 04:00 PM', event: 'Workshop 2' },
+  { time: 'March 15 - 06:00 PM', event: 'Dinner' },
+  { time: 'March 15 - 08:00 PM', event: 'Lightning talks' },
+  { time: 'March 15 - 12:00 AM', event: 'Midnight surprise' },
+  { time: 'March 16 - 08:00 AM', event: 'Breakfast' },
+  { time: 'March 16 - 10:30 AM', event: 'Demos!' },
+  { time: 'March 16 - 12:00 PM', event: 'Closing ceremony' }
 ]
 
 const Flag = () => (
@@ -705,7 +705,7 @@ export default function ExampleCity() {
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
+                All high-school aged students are welcome
                 to come! You don't have to be a member of the Hack Club
                 community or be a Hack Club leader.
               </>
@@ -717,8 +717,7 @@ export default function ExampleCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bags too.
+                Your laptop, chargers, and an open mind! Bring toiletries and sleeping bags too.
                 Additionally, if you plan to work on a hardware project, bring
                 the tools you'll need.
               </>
@@ -728,7 +727,7 @@ export default function ExampleCity() {
                 This hackathon is for creatives of all skill levels! We'll have
                 workshops and other events so join us and let's learn together.
                 If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                check out <Link href='https://workshops.hackclub.com/'>Hack Club Workshops</Link>.
               </>
             ),
             'What can I make at Scrapyard?': (
