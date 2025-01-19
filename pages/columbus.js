@@ -230,7 +230,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=[EVENTID]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=reckNLlOx3NFmyOrH"
           target="_blank"
         >
           <Box
@@ -337,7 +337,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change Columbus to your event's city */}
-              What's Scrapyard Columbus?
+              What is Scrapyard?
             </Heading>
             <p
               style={{
@@ -345,15 +345,16 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change Columbus to your event's city */}
-              Scrapyard Columbus is a hackathon for high schoolers
-              happening in Columbus, where you can make the stupidest
-              things you can think of! Anything, from a {' '}
+              Scrapyard is The Most Useless Invention
+              competition,
+              happening in Columbus. Make the stupidest
+              things you can think of and win awesome stuff. 
+              Anything, from a {' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
-              , to those useless ideas you thought of lying in bed. No
-              matter your experience, Scrapyard
-              Columbus needs you and your janky inventions!
+              , to those useless ideas you thought of lying in bed, Scrapyard
+               Columbus needs you and your janky inventions!
             </p>
           </Box>
         </Box>
@@ -731,7 +732,10 @@ export default function ExampleCity() {
             'Who can participate in Scrapyard?': (
               <>
                 All high-school aged students are welcome,
-                just fill out the registration form!
+                just fill out the  {' '}
+              <Link href="https://forms.hackclub.com/scrapyard-signup?event=reckNLlOx3NFmyOrH">
+                form
+              </Link>!
               </>
             ),
             'All this, for free?': (
@@ -748,13 +752,16 @@ export default function ExampleCity() {
               <>
                 Your laptop, chargers, and an open mind!
                 Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                the tools you'll need. 3D printers at the event are TBD.
               </>
             ),
-            'I’m not good at coding. Can I still participate?': (
+            'I dont know how to code. Can I still participate?': (
               <>
-                This hackathon is for all skill levels! Even if
-                you'll be writing your first line of code, we'll
+                Knowing how to code is NOT required. Whether 
+                your Useless Invention is on Scratch or Google Docs,
+                you'll still be eligible for epic prizes.
+                This hackathon is for all skill levels, even if
+                you'll be writing your first line of code we'll
                 have workshops and mentors to help you out.
               </>
             ),
@@ -796,7 +803,7 @@ export default function ExampleCity() {
                 for questions.
               </>
             ),
-            'What if I have more questions?': (
+            'I have more questions': (
               <>
                 Contact us! Feel free to reach out to us at{' '}
                 <Link href="mailto:columbus@scrapyard.hackclub.com">
@@ -854,7 +861,7 @@ export default function ExampleCity() {
 
         <Link
           // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=[EVENTID]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=reckNLlOx3NFmyOrH"
           target="_blank"
         >
           <Box
@@ -911,8 +918,7 @@ export default function ExampleCity() {
             }}
           />
         </Heading>
-
-     
+        
         {/* <Image
             src="/elements/organizers/meghanapfp.jpg"
             sx={{
@@ -920,9 +926,9 @@ export default function ExampleCity() {
               position: 'absolute',
               transform: 'translateY(370%)'
             }}
-          /> */}
-
-
+            /> */}
+        
+       
 
         <Heading
           as="h2"
