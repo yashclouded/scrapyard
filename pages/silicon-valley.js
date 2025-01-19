@@ -176,7 +176,7 @@ export default function SiliconValley() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="/silicon-valley/scrapyard-title.png"
             alt="Scrapyard"
           />
         </Box>
@@ -1051,65 +1051,129 @@ export default function SiliconValley() {
 
       <Box
         sx={{
-          // backgroundImage: "url(/backgrounds/confetti.png)",
+          width: '100%',
+          background: [
+            "url('/backgrounds/bulletin@vertical.svg')",
+            "url('/backgrounds/bulletin@vertical.svg')",
+            "url('/backgrounds/bulletin.svg')"
+          ],
+          backgroundSize: 'cover!important',
+          display: 'block',
+          justifyContent: 'center',
           alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          overflow: 'visible',
+          gap: '20px',
+          height: ['151.37794951vw', '151.37794951vw', '64.45447188vw'],
+          position: 'relative'
         }}
       >
         <Box
           sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            // backgroundSize: "cover!important",
-            // display: "block",
-            // width: "30vw",
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0vh',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
+            width: '100%',
+            height: '100%',
+            flexWrap: 'wrap',
+            p: '4vw',
+            position: 'relative',
+            overflow: 'visible',
+            justifyContent: ['space-around', 'space-around', null],
+            pb: '12vw'
           }}
         >
-          <Heading
-            as="h1"
+          <Box
             sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'start',
+              height: 'min-content'
             }}
           >
-            CAN'T MAKE IT TO SILICON VALLEY?
-          </Heading>
-        </Box>
-        <Heading
-          as="h2"
-          sx={{
-            fontSize: '1.5em',
-            fontFamily: 'moonblossom',
-            color: 'white',
-            textAlign: 'center',
-            mx: '5vw'
-          }}
-        >
-          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
-        </Heading>
-        <Box
-          sx={{
-            width: ['100%', '80%'],
-            height: '75vh',
-            alignItems: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            mb: '10vh',
-            mt: 5
-          }}
-        >
-          <Map />
+            <Box
+              sx={{
+                background: "url('/elements/stapled-paper.png')",
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100px',
+                width: '400px'
+              }}
+            >
+              <Heading
+                as="h2"
+                sx={{
+                  textAlign: 'center'
+                }}
+              >
+                Our last event: Counterspell
+              </Heading>
+            </Box>
+          </Box>
+          <Box
+            as="a"
+            href="https://counterspell.hackclub.com/silicon-valley"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/3polaroid1.png')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block'
+            }}
+          ></Box>
+          <Box
+            as="a"
+            href="https://counterspell.hackclub.com/silicon-valley"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/2polaroid2.png')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+              marginTop: '7vw'
+            }}
+          ></Box>
+          <Box
+            as="a"
+            href="https://counterspell.hackclub.com/silicon-valley"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/1polaroid3.png')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block'
+            }}
+          ></Box>
+          <Box
+            as="a"
+            href="https://counterspell.hackclub.com/silicon-valley"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/0polaroid4.png')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+              marginTop: '7vw'
+            }}
+          ></Box>
         </Box>
       </Box>
 
@@ -1298,7 +1362,8 @@ export default function SiliconValley() {
               },
               zIndex: 20,
               padding: 1,
-              my: 3
+              my: 3,
+              width: '24rem'
             }}
           >
             <Heading
@@ -1309,10 +1374,12 @@ export default function SiliconValley() {
                 margin: '8%',
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
-                paddingY: ['15px', '0px']
+                paddingY: ['15px', '0px'],
+                width: '100%',
+                marginLeft: '0'
               }}
             >
-              SIGN UP FOR SCRAPYARD SILICON VALLEY
+              SIGN UP FOR SCRAPYARD TODAY!
             </Heading>
           </Box>
         </Link>
