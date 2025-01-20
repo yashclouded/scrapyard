@@ -2,9 +2,7 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-const schedule = [
-  { time: 'TBD', event: 'Schedule to be determined' },
-]
+const schedule = [{ time: 'TBD', event: 'Schedule to be determined' }]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
@@ -189,7 +187,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recyvuP7jKO5zpemo"
+          href="https://forms.hackclub.com/scrapyard-signup?event=phoenix"
           target="_blank"
         >
           <Box
@@ -302,15 +300,15 @@ export default function ExampleCity() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Phoenix is a hackathon for high schoolers
-              happening in Phoenix, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              Scrapyard Phoenix is a hackathon for high schoolers happening in
+              Phoenix, where you can make the stupidest things you can think of!
+              Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              Phoenix needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Phoenix
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -420,8 +418,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Phoenix is a 12-hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Phoenix is a 12-hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -602,8 +599,8 @@ export default function ExampleCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop, chargers, and an open mind! Additionally, if you
+                plan to work on a hardware project, bring the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -654,8 +651,8 @@ export default function ExampleCity() {
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard-phoenix
-                channel on the Hack Club slack or email us at{' '}
+                Contact us! Feel free to reach out to us in the
+                #scrapyard-phoenix channel on the Hack Club slack or email us at{' '}
                 <Link href="phoenix@scrapyard.hackclub.com">
                   phoenix@scrapyard.hackclub.com
                 </Link>
@@ -709,8 +706,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=
-recyvuP7jKO5zpemo"
+          href="https://forms.hackclub.com/scrapyard-signup?event_id=phoenix"
           target="_blank"
         >
           <Box
