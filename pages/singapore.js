@@ -226,8 +226,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec7xdy4IMSG0GU0J"
+          href="https://forms.hackclub.com/scrapyard-signup?event=singapore"
           target="_blank"
         >
           <Box
@@ -344,8 +343,8 @@ export default function ExampleCity() {
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Scrapyard Singapore is a hackathon for high schoolers
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Singapore, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              happening in Singapore, where you can make the stupidest things
+              you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
@@ -465,8 +464,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Singapore is a 2-day event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Singapore is a 2-day event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -705,9 +703,9 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the #scrapyardsingapore
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
+                Contact us! Feel free to reach out to us in the
+                #scrapyardsingapore channel on the Hack Club slack or email us
+                at {/* TODO: Change this email to your event's email */}
                 <Link href="mailto:singapore.scrapyard@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
                   singapore.scrapyard@scrapyard.hackclub.com
@@ -762,8 +760,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec7xdy4IMSG0GU0J"
+          href="https://forms.hackclub.com/scrapyard-signup?event=singapore"
           target="_blank"
         >
           <Box
