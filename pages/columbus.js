@@ -7,9 +7,7 @@ import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
-const schedinprog = [
-  { time: 'XX:XX', event: 'SCHEDULE IN PROGRESS' }
-]
+const schedinprog = [{ time: 'XX:XX', event: 'SCHEDULE IN PROGRESS' }]
 
 const schedule = [
   { time: '11:00 AM', event: 'Doors open' },
@@ -19,7 +17,7 @@ const schedule = [
   { time: '2:00 PM', event: 'Workshop 1' },
   { time: '4:00 PM', event: 'Activity 1' },
   { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'dinner' },
+  { time: '6:00 PM', event: 'dinner' }
 ]
 
 const scheduleday2 = [
@@ -180,7 +178,6 @@ export default function ExampleCity() {
             >
               Venue TBA
             </Heading>
-
           </Box>
         </Box>
         <Box
@@ -230,7 +227,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event=reckNLlOx3NFmyOrH"
+          href="https://forms.hackclub.com/scrapyard-signup?event=columbus"
           target="_blank"
         >
           <Box
@@ -345,16 +342,14 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change Columbus to your event's city */}
-              Scrapyard is The Most Useless Invention
-              competition,
-              happening in Columbus. Make the stupidest
-              things you can think of and win awesome stuff. 
-              Anything, from a {' '}
+              Scrapyard is The Most Useless Invention competition, happening in
+              Columbus. Make the stupidest things you can think of and win
+              awesome stuff. Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those useless ideas you thought of lying in bed, Scrapyard
-               Columbus needs you and your janky inventions!
+              Columbus needs you and your janky inventions!
             </p>
           </Box>
         </Box>
@@ -465,8 +460,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Columbus is a 2-day event - HERE'S THE
-          SCHEDULE!
+          Scrapyard Columbus is a 2-day event - HERE'S THE SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -534,7 +528,6 @@ export default function ExampleCity() {
             </div>
           ))}
 
-
           {/* <Heading
           as="h2"
           sx={{
@@ -547,7 +540,6 @@ export default function ExampleCity() {
         >
           SLEEP (...zzz)
         </Heading> */}
-
         </Box>
 
         <Box
@@ -615,12 +607,8 @@ export default function ExampleCity() {
               <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
             </div>
           ))}
-
-
         </Box>
-
       </Box>
-
 
       <Box
         sx={{
@@ -731,11 +719,11 @@ export default function ExampleCity() {
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school aged students are welcome,
-                just fill out the  {' '}
-              <Link href="https://forms.hackclub.com/scrapyard-signup?event=reckNLlOx3NFmyOrH">
-                form
-              </Link>!
+                All high-school aged students are welcome, just fill out the{' '}
+                <Link href="https://forms.hackclub.com/scrapyard-signup?event=columbus">
+                  form
+                </Link>
+                !
               </>
             ),
             'All this, for free?': (
@@ -750,27 +738,25 @@ export default function ExampleCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind!
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need. 3D printers at the event are TBD.
+                Your laptop, chargers, and an open mind! Additionally, if you
+                plan to work on a hardware project, bring the tools you'll need.
+                3D printers at the event are TBD.
               </>
             ),
             'I dont know how to code. Can I still participate?': (
               <>
-                Knowing how to code is NOT required. Whether 
-                your Useless Invention is on Scratch or Google Docs,
-                you'll still be eligible for epic prizes.
-                This hackathon is for all skill levels, even if
-                you'll be writing your first line of code we'll
-                have workshops and mentors to help you out.
+                Knowing how to code is NOT required. Whether your Useless
+                Invention is on Scratch or Google Docs, you'll still be eligible
+                for epic prizes. This hackathon is for all skill levels, even if
+                you'll be writing your first line of code we'll have workshops
+                and mentors to help you out.
               </>
             ),
             'What can I make at Scrapyard?': (
               <>
                 The most useless thing you can imagine –- jank is encouraged.
-                Apps? Games? Websites?
-                We’ll have a bunch of resources and mentors to help
-                you fulfill your most pointless inventions.
+                Apps? Games? Websites? We’ll have a bunch of resources and
+                mentors to help you fulfill your most pointless inventions.
               </>
             ),
             'What has Hack Club done before?': (
@@ -861,7 +847,7 @@ export default function ExampleCity() {
 
         <Link
           // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event=reckNLlOx3NFmyOrH"
+          href="https://forms.hackclub.com/scrapyard-signup?event=columbus"
           target="_blank"
         >
           <Box
@@ -893,9 +879,7 @@ export default function ExampleCity() {
               {/* TODO: Change Columbus to your event's city */}
               SIGN UP FOR SCRAPYARD Columbus
             </Heading>
-
           </Box>
-
         </Link>
 
         <Heading
@@ -903,7 +887,7 @@ export default function ExampleCity() {
           sx={{
             mb: 5,
             position: 'relative',
-            paddingTop: 70,
+            paddingTop: 70
           }}
         >
           Meet the organizers
@@ -918,7 +902,7 @@ export default function ExampleCity() {
             }}
           />
         </Heading>
-        
+
         {/* <Image
             src="/elements/organizers/meghanapfp.jpg"
             sx={{
@@ -927,8 +911,6 @@ export default function ExampleCity() {
               transform: 'translateY(370%)'
             }}
             /> */}
-        
-       
 
         <Heading
           as="h2"
