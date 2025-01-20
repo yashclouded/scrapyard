@@ -2,21 +2,20 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// We are still planning the schedule
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -43,7 +42,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function QuezonCity() {
+export default function istanbul() {
   return (
     <Box
       sx={{
@@ -57,7 +56,7 @@ export default function QuezonCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Quezon City</title>
+        <title>Scrapyard İstanbul</title>
       </Head>
       <Flag />
       <Box
@@ -119,7 +118,7 @@ export default function QuezonCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Gençler için gençler tarafından!
             </Heading>
           </Box>
           <Box
@@ -152,7 +151,8 @@ export default function QuezonCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Quezon City - March&nbsp;15, 2025
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              İstanbul - 15-16&nbsp;Mart
             </Heading>
           </Box>
         </Box>
@@ -202,7 +202,7 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=istanbul"
           target="_blank"
         >
           <Box
@@ -234,7 +234,7 @@ export default function QuezonCity() {
                 width: '100%'
               }}
             >
-              SIGN&nbsp;UP
+              Kayıt ol!
             </Heading>
           </Box>
         </Link>
@@ -308,22 +308,19 @@ export default function QuezonCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Quezon City?
+              Scrapyard İstanbul nedir?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers happening
-              in Quezon City, where you can make the stupidest things you can
-              think of! Anything, from a{' '}
-              <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
-                lamp that flashes faster the slower you type
-              </Link>
-              , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Quezon
-              City needs you and your scrappy ideas!
+              Scrapyard global bir şekilde 100+ şehirde 15-16 Mart tarihleri
+              arasında aynanda düzenlenecek olan ve eğlenceli projeler
+              oluşturmaya yönelik bir hackathondur.Bu etkinlik {''}
+              Hack Club önderliğinde gerçekleştirelecektir. Hack Club dünya
+              genelinde 40.000+ liseliye ulaşan bir kar amacı gütmeyen
+              kuruluştur.
             </p>
           </Box>
         </Box>
@@ -421,7 +418,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD QUEZON CITY?
+            SCRAPYARD İSTANBUL ETKİNLİK TAKVİMİ
           </Heading>
         </Box>
         <Heading
@@ -433,7 +430,7 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          48 Saatlik Hackathon Etkinliğimizde Neler Olacak? İşte takvimimiz!
         </Heading>
         <Box
           sx={{
@@ -524,7 +521,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Quezon City?
+            Ben yurtdisinda yasiyorum.Katilamayacak miyim?
           </Heading>
         </Box>
         <Heading
@@ -537,7 +534,7 @@ export default function QuezonCity() {
             mx: '5vw'
           }}
         >
-          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
+          HAYIR! Dünya genelinde düzenlenen 100+ etkinlikte yer alabilirsiniz!
         </Heading>
         <Box
           sx={{
@@ -576,7 +573,7 @@ export default function QuezonCity() {
             position: 'relative'
           }}
         >
-          Frequently Asked Questions
+          Sık Sorulan Sorular
           <Image
             src="/elements/doodles/blue-underline.svg"
             sx={{
@@ -595,86 +592,81 @@ export default function QuezonCity() {
           }}
         >
           {Object.entries({
-            'Who can participate in Scrapyard?': (
+            'Scrapyard nedir?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
-                to come! You don't have to be a member of the Hack Club
-                community or be a Hack Club leader.
+                Scrapyard global bir şekilde 100+ şehirde 15-16 Mart tarihleri
+                arasında aynanda düzenlenecek olan ve eğlenceli projeler
+                oluşturmaya yönelik bir hackathondur. Bu etkinlik {''}
+                <Link href="https://hackclub.com" target="_blank">
+                  Hack Club{' '}
+                </Link>{' '}
+                {''}önderliğinde gerçekleştirelecektir. Hack Club dünya
+                genelinde 40.000+ liseliye ulaşan bir kar amacı gütmeyen
+                kuruluştur
               </>
             ),
-            'All this, for free?': (
+
+            'Scrapyard İstanbul nerede olacak?': (
               <>
-                Yep! Food, swag and good vibes are all included. Plus, if you’re
-                joining us from afar,{' '}
-                <Link href="https://gas.hackclub.com/">
-                  we’ll cover the cost of gas or a bus / train ticket
+                Bu bilgiyi çok yakında paylaşacağız.Takipte kalın! Etkinliğimize
+                ev sahipliği mi yapmak istiyorsunuz? {''}
+                <Link href="mailto:berke.istanbul@hackclub.com">
+                  Bizle iletişime geçin!
                 </Link>
-                .
               </>
             ),
-            'What do I need?': (
+            "Scrapyard İstanbul'a kimler katılabilir?": (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                İstanbulda yaşayan ve 18 yaşından küçük(maksimum lise 4.sınıf
+                olmak şartıyla) herkes katılabilir!
               </>
             ),
-            'I’m not good at coding. Can I still participate?': (
+            'Harika peki ya ücretli mi?': (
               <>
-                This hackathon is for creatives of all skill levels! We'll have
-                workshops and other events so join us and let's learn together.
-                If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                Hayır! Yemek,hediye ve eğlence dahil etkinliğimiz tamamen
+                ücretsizdir!
               </>
             ),
-            'What can I make at Scrapyard?': (
+            'Peki ya neler getirmeliyim?': (
               <>
-                The scrappiest thing you can imagine –- jank is encouraged.
-                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We’ll have a bunch of resources and mentors to help
-                you out.
+                Bilgisayarın,Şarj cihazı,Uyku tulumun ve yaratıcı zekan! Eğer
+                bir donanım projesi yapmayı planlıyorsanız lütfen kendi
+                malzemelerinizi getirin.
               </>
             ),
-            'What has Hack Club done before?': (
+            'Tüm bunlar harika fakat yazılıma yönelik bir tecrübem yok.Yine de katılabilir miyim?':
+              (
+                <>
+                  Evet! Etkinliğimiz her seviyeden ve her alandan katılımcıya
+                  açıktır (sadece yazılım değil donanım ve tasarım gibi
+                  alanlarda da katılım sağlayabiilirsiniz).Her seviyeden
+                  katılımcılara yönelik workshop ve etkinler düzenleyeceğiz.En
+                  önemli noktanın eğlenmek olduğunu unutmayın :)
+                </>
+              ),
+            'Bu etkinlikte neler yapabilirim?': (
               <>
-                Hack Club has run an{' '}
-                <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">
-                  overnight hackathon
+                Oyun,Web sitesi veya belki de bir programlama dili? Karar
+                senin.Herşeyi yapabilirsin - tek sınır senin hayal gücün!
+              </>
+            ),
+            'Ailem izin vermiyor/ daha fazla bilgi istiyorlar :(': (
+              <>
+                Hiç merak etme! Yakında aile rehberimizi yayınlayacağız fakat o
+                zamana kadar {''}
+                <Link href="mailto:istanbul@scrapyard.hackclub.com">
+                  istanbul@scrapyard.hackclub.com
                 </Link>{' '}
-                in San Francisco, a{' '}
-                <Link
-                  href="https://www.youtube.com/watch?v=H5RPsCMl3uM"
-                  target="_blank"
-                >
-                  Game Jam
-                </Link>{' '}
-                across 50 cities, a hackathon on a{' '}
-                <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">
-                  Train
-                </Link>{' '}
-                from Vermont to Los Angeles, and much more!
+                {''} adresimize mail atmanız yeterli! Tüm sorularınızı
+                cevaplayıp ailenizin teredütlerini gidermek için buradayız.
               </>
             ),
-            'What if my parents are concerned?': (
+            'Sponsor olmak istiyorum!': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
-                they can reach out to us at{' '}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
-                </Link>{' '}
-                for questions.
-              </>
-            ),
-            'What if I have more questions?': (
-              <>
-                Contact us! Feel free to reach out to us in the #scrapyard
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                <Link href="mailto:berke.istanbul@scrapyard.hackclub.com">
+                  berke.istanbul@scrapyard.hackclub.com {''}
                 </Link>
-                .
+                Adresimize mail atarak bizimle iletişime geçebilirsiniz.
               </>
             )
           }).map(([question, answer], i) => {
@@ -724,7 +716,7 @@ export default function QuezonCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=istanbul"
           target="_blank"
         >
           <Box
@@ -753,7 +745,7 @@ export default function QuezonCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD QUEZON CITY
+              Scrapyard İstanbul'a katil!
             </Heading>
           </Box>
         </Link>
