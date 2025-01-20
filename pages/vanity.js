@@ -760,8 +760,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=[EVENTID]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=vanity"
           target="_blank"
         >
           <Box
