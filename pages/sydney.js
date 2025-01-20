@@ -48,8 +48,7 @@ const schedule = [
   { time: '2:00 PM', event: 'Final Hour of Work' },
   { time: '3:00 PM', event: 'Submissions' },
   { time: '3:30 PM', event: 'Judging' }
-];
-
+]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
@@ -126,13 +125,9 @@ export default function ExampleCity() {
           sx={{
             display: 'flex',
             flexDirection: 'row',
-            alignItems: 'center',
-
+            alignItems: 'center'
           }}
-          >
-
-            
-          </Box>
+        ></Box>
         <Box
           sx={{
             display: 'flex',
@@ -145,69 +140,67 @@ export default function ExampleCity() {
               background: "url('/elements/ripped-paper.png')",
               backgroundSize: 'cover',
               height: 'fit-content',
-               paddingBottom: "8%",
-               paddingTop: "7%",
-              paddingLeft: "7%",
+              paddingBottom: '8%',
+              paddingTop: '7%',
+              paddingLeft: '7%',
               display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
               width: 'min(500px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
               zIndex: 20
             }}
           >
-                        <Text
-                sx={{
-                    fontFamily: 'moonblossom',
-                    fontSize: '0.9rem',
-                    marginLeft: '30px',
-                    color: 'black',
-                    fontStyle: 'italic'
-                }}
+            <Text
+              sx={{
+                fontFamily: 'moonblossom',
+                fontSize: '0.9rem',
+                marginLeft: '30px',
+                color: 'black',
+                fontStyle: 'italic'
+              }}
             >
-                Made Possible By:
+              Made Possible By:
             </Text>
             <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: '10px'
-                }}
-                >
-
-                
-            <Link
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '10px'
+              }}
+            >
+              <Link
                 href="https://www.polymaker.com/"
                 target="_blank"
-                sx={{zIndex:2,display: 'flex',justifyContent:'center'}}
-                >
-            <Image
-                sx={{
+                sx={{ zIndex: 2, display: 'flex', justifyContent: 'center' }}
+              >
+                <Image
+                  sx={{
                     width: '70%',
-                    objectFit: 'contain',
-                }}
-                src="/city/sydney/sponsors/polymaker.webp"
-                alt="Polymaker Logo"
-            />
-            </Link>
-            <Link
+                    objectFit: 'contain'
+                  }}
+                  src="/city/sydney/sponsors/polymaker.webp"
+                  alt="Polymaker Logo"
+                />
+              </Link>
+              <Link
                 href="https://www.littlebirdelectronics.com.au/"
                 target="_blank"
-                sx={{zIndex:2,display: 'flex',justifyContent:'center'}}
-                >
-            <Image
-                sx={{
+                sx={{ zIndex: 2, display: 'flex', justifyContent: 'center' }}
+              >
+                <Image
+                  sx={{
                     width: '80%',
-                    objectFit: 'contain',
-                }}
-                src="/city/sydney/sponsors/littlebirdelectronics.png"
-                alt="Little Bird Electronics Logo"
-            />
-            </Link>
+                    objectFit: 'contain'
+                  }}
+                  src="/city/sydney/sponsors/littlebirdelectronics.png"
+                  alt="Little Bird Electronics Logo"
+                />
+              </Link>
             </Box>
           </Box>
           <Box
@@ -291,8 +284,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recNuGYdFsWa8ompC"
+          href="https://forms.hackclub.com/scrapyard-signup?event=sydney"
           target="_blank"
         >
           <Box
@@ -407,15 +399,16 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Sydney is a hackathon for high schoolers 
+              Scrapyard Sydney is a hackathon for high schoolers
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Sydney, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              happening in Sydney, where you can make the stupidest things you
+              can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Sydney needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Sydney
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -528,8 +521,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Sydney is a 24 hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Sydney is a 24 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -768,8 +760,8 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the #scrapyard-sydney
-                channel on the Hack Club slack or email us at{' '}
+                Contact us! Feel free to reach out to us in the
+                #scrapyard-sydney channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
                 <Link href="mailto:sydney@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
@@ -825,8 +817,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recNuGYdFsWa8ompC"
+          href="https://forms.hackclub.com/scrapyard-signup?event=sydney"
           target="_blank"
         >
           <Box
