@@ -904,7 +904,7 @@ export default function ExampleCity() {
         </Heading>
 
         {/* <Image
-            src="/elements/organizers/meghanapfp.jpg"
+            src="/city/columbus/organizers/meghanapfp.jpg"
             sx={{
               width: [120, 128, 180],
               position: 'absolute',
