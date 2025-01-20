@@ -196,7 +196,7 @@ export default function SiliconValley() {
               // paddingLeft: "7%",
               display: 'block',
 
-              width: 'min(500px, calc(100vw - 30px))',
+              width: 'min(520px, calc(100vw - 10px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
               zIndex: 20
@@ -210,7 +210,7 @@ export default function SiliconValley() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build crazy things, get crazy prizes.
             </Heading>
           </Box>
           <Box
@@ -405,7 +405,7 @@ export default function SiliconValley() {
               }}
             >
               Scrapyard Silicon Valley is a hackathon for high schoolers
-              happening in Silicon Valley, where you can make the stupidest
+              happening in Silicon Valley, where you can make the craziest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
