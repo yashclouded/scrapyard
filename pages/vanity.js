@@ -343,8 +343,8 @@ export default function ExampleCity() {
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Scrapyard Vanity is a hackathon for high schoolers
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Alexandria, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              happening in Alexandria, where you can make the stupidest things
+              you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
@@ -464,8 +464,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Vanity is a 24hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Vanity is a 24hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -660,4 +659,185 @@ export default function ExampleCity() {
                 If you'd like to start exploring some introductory projects,
                 check out Hack Club Workshops.
               </>
-    
+            ),
+            'What can I make at Scrapyard?': (
+              <>
+                The scrappiest thing you can imagine –- jank is encouraged.
+                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
+                You name it! We’ll have a bunch of resources and mentors to help
+                you out.
+              </>
+            ),
+            'What has Hack Club done before?': (
+              <>
+                Hack Club has run an{' '}
+                <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">
+                  overnight hackathon
+                </Link>{' '}
+                in San Francisco, a{' '}
+                <Link
+                  href="https://www.youtube.com/watch?v=H5RPsCMl3uM"
+                  target="_blank"
+                >
+                  Game Jam
+                </Link>{' '}
+                across 50 cities, a hackathon on a{' '}
+                <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">
+                  Train
+                </Link>{' '}
+                from Vermont to Los Angeles, and much more!
+              </>
+            ),
+            'What if my parents are concerned?': (
+              <>
+                We’re here to help! Our parents guide will be released soon, but
+                they can reach out to us at{' '}
+                {/* TODO: Change this email to your event's email */}
+                <Link href="mailto:scrapyard@hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  scrapyard@hackclub.com
+                </Link>{' '}
+                for questions.
+              </>
+            ),
+            'What if I have more questions?': (
+              <>
+                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
+                Contact us! Feel free to reach out to us in the [SLACKCHANNEL]
+                channel on the Hack Club slack or email us at{' '}
+                {/* TODO: Change this email to your event's email */}
+                <Link href="mailto:scrapyard@hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  scrapyard@hackclub.com
+                </Link>
+                .
+              </>
+            )
+          }).map(([question, answer], i) => {
+            return (
+              <Card
+                key={question}
+                sx={{
+                  background: [
+                    'transparent',
+                    `url('/elements/doodles/boxes/${(i % 6) + 1}.svg')`
+                  ],
+                  backgroundSize: [null, '100% 100%'],
+                  backgroundRepeat: 'no-repeat',
+                  boxShadow: 'none',
+                  padding: '48px!important',
+                  border: ['2px solid black', 'none']
+                }}
+              >
+                <Heading
+                  as="h2"
+                  mb={4}
+                  sx={{
+                    position: 'relative'
+                  }}
+                >
+                  {question}
+                  <Image
+                    src="/elements/doodles/yellow-underline.svg"
+                    sx={{
+                      position: 'absolute',
+                      bottom: '0',
+                      left: '50%',
+                      transform: 'translateX(-50%) translateY(75%)'
+                    }}
+                  />
+                </Heading>
+                <Text
+                  sx={{
+                    fontSize: 3,
+                    fontWeight: 'bold'
+                  }}
+                >
+                  {answer}
+                </Text>
+              </Card>
+            )
+          })}
+        </Grid>
+        <Link
+          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
+          href="https://forms.hackclub.com/scrapyard-signup?event_id=[EVENTID]"
+          target="_blank"
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              SIGN UP FOR SCRAPYARD [EXAMPLECITY]
+            </Heading>
+          </Box>
+        </Link>
+        <Heading
+          as="h2"
+          sx={{
+            mt: 3,
+            position: 'relative'
+          }}
+        >
+          Scrapyard
+          <Image
+            src="/elements/doodles/pink-underline.svg"
+            sx={{
+              position: 'absolute',
+              bottom: '0',
+              left: '50%',
+              transform: 'translateX(-50%) translateY(75%)'
+            }}
+          />
+        </Heading>
+        <Text
+          sx={{
+            fontFamily: 'moonblossom',
+            mb: -2,
+            textAlign: 'center'
+          }}
+        >
+          Made with ♡ by teenagers, for teenagers at Hack Club
+        </Text>
+        <Text
+          sx={{
+            fontFamily: 'moonblossom',
+            mt: 0,
+            textAlign: 'center'
+          }}
+        >
+          <Link href="https://hackclub.com">Hack Club</Link>{' '}
+          <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
+          <Link href="https://hackclub.com/slack">Slack</Link>{' '}
+          <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
+          <Link href="https://hackclub.com/clubs">Clubs</Link>{' '}
+          <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
+          <Link href="https://hackclub.com/hackathons">Hackathons</Link>
+        </Text>
+      </Box>
+    </Box>
+  )
+}
