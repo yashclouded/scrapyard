@@ -37,8 +37,8 @@ const schedule = [
   { time: '19:00', event: 'Cina' },
   { time: '00:00', event: 'Activitate surpriză' },
   { time: '09:00', event: 'Micul dejun' },
-  { time: '11:30 AM', event: 'Prezentarea proiectelor' },
-  { time: '13:00 PM', event: 'Ceremonia de încheiere' }
+  { time: '11:30', event: 'Prezentarea proiectelor' },
+  { time: '13:00', event: 'Ceremonia de încheiere' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
