@@ -1,5 +1,3 @@
-
-
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
@@ -17,7 +15,7 @@ const schedule = [
   { time: '🐧', event: 'Açiklanacak' },
   { time: '🐧', event: 'Açiklanacak' },
   { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
+  { time: '🐧', event: 'Açiklanacak' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -204,8 +202,7 @@ export default function istanbul() {
           />
         </Box>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec5ESbCxcgx43hMh"
+          href="https://forms.hackclub.com/scrapyard-signup?event=istanbul"
           target="_blank"
         >
           <Box
@@ -318,10 +315,12 @@ export default function istanbul() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard global bir şekilde 100+ şehirde 15-16 Mart tarihleri arasında aynanda düzenlenecek olan ve eğlenceli projeler oluşturmaya yönelik bir hackathondur.Bu etkinlik {''}
-              Hack Club
-              önderliğinde gerçekleştirelecektir. Hack Club dünya genelinde 40.000+ liseliye ulaşan bir kar amacı gütmeyen kuruluştur.
-
+              Scrapyard global bir şekilde 100+ şehirde 15-16 Mart tarihleri
+              arasında aynanda düzenlenecek olan ve eğlenceli projeler
+              oluşturmaya yönelik bir hackathondur.Bu etkinlik {''}
+              Hack Club önderliğinde gerçekleştirelecektir. Hack Club dünya
+              genelinde 40.000+ liseliye ulaşan bir kar amacı gütmeyen
+              kuruluştur.
             </p>
           </Box>
         </Box>
@@ -595,60 +594,79 @@ export default function istanbul() {
           {Object.entries({
             'Scrapyard nedir?': (
               <>
-              Scrapyard global bir şekilde 100+ şehirde 15-16 Mart tarihleri arasında aynanda düzenlenecek olan ve eğlenceli projeler oluşturmaya yönelik bir hackathondur. Bu etkinlik {''} 
-              <Link href='https://hackclub.com' target='_blank'>Hack Club </Link> {''}önderliğinde gerçekleştirelecektir. Hack Club dünya genelinde 40.000+ liseliye ulaşan bir kar amacı gütmeyen kuruluştur
+                Scrapyard global bir şekilde 100+ şehirde 15-16 Mart tarihleri
+                arasında aynanda düzenlenecek olan ve eğlenceli projeler
+                oluşturmaya yönelik bir hackathondur. Bu etkinlik {''}
+                <Link href="https://hackclub.com" target="_blank">
+                  Hack Club{' '}
+                </Link>{' '}
+                {''}önderliğinde gerçekleştirelecektir. Hack Club dünya
+                genelinde 40.000+ liseliye ulaşan bir kar amacı gütmeyen
+                kuruluştur
               </>
             ),
 
             'Scrapyard İstanbul nerede olacak?': (
               <>
-              Bu bilgiyi çok yakında paylaşacağız.Takipte kalın! Etkinliğimize ev sahipliği mi yapmak istiyorsunuz? {''}
-              <Link href='mailto:berke.istanbul@hackclub.com'> 
-              Bizle iletişime geçin!
-              </Link>
-
+                Bu bilgiyi çok yakında paylaşacağız.Takipte kalın! Etkinliğimize
+                ev sahipliği mi yapmak istiyorsunuz? {''}
+                <Link href="mailto:berke.istanbul@hackclub.com">
+                  Bizle iletişime geçin!
+                </Link>
               </>
             ),
             "Scrapyard İstanbul'a kimler katılabilir?": (
               <>
-              İstanbulda yaşayan ve 18 yaşından küçük(maksimum lise 4.sınıf olmak şartıyla) herkes katılabilir!
+                İstanbulda yaşayan ve 18 yaşından küçük(maksimum lise 4.sınıf
+                olmak şartıyla) herkes katılabilir!
               </>
             ),
             'Harika peki ya ücretli mi?': (
               <>
-                Hayır! Yemek,hediye ve eğlence dahil etkinliğimiz tamamen ücretsizdir!
+                Hayır! Yemek,hediye ve eğlence dahil etkinliğimiz tamamen
+                ücretsizdir!
               </>
             ),
             'Peki ya neler getirmeliyim?': (
               <>
-              Bilgisayarın,Şarj cihazı,Uyku tulumun ve yaratıcı zekan! Eğer bir donanım projesi yapmayı planlıyorsanız lütfen kendi malzemelerinizi getirin.
-
+                Bilgisayarın,Şarj cihazı,Uyku tulumun ve yaratıcı zekan! Eğer
+                bir donanım projesi yapmayı planlıyorsanız lütfen kendi
+                malzemelerinizi getirin.
               </>
             ),
-            'Tüm bunlar harika fakat yazılıma yönelik bir tecrübem yok.Yine de katılabilir miyim?': (
-              <>
-              Evet! Etkinliğimiz her seviyeden ve her alandan katılımcıya açıktır (sadece yazılım değil donanım ve tasarım gibi alanlarda da katılım sağlayabiilirsiniz).Her seviyeden katılımcılara yönelik workshop ve etkinler düzenleyeceğiz.En önemli noktanın eğlenmek olduğunu unutmayın :)
-              </>
-            ),
+            'Tüm bunlar harika fakat yazılıma yönelik bir tecrübem yok.Yine de katılabilir miyim?':
+              (
+                <>
+                  Evet! Etkinliğimiz her seviyeden ve her alandan katılımcıya
+                  açıktır (sadece yazılım değil donanım ve tasarım gibi
+                  alanlarda da katılım sağlayabiilirsiniz).Her seviyeden
+                  katılımcılara yönelik workshop ve etkinler düzenleyeceğiz.En
+                  önemli noktanın eğlenmek olduğunu unutmayın :)
+                </>
+              ),
             'Bu etkinlikte neler yapabilirim?': (
               <>
-              Oyun,Web sitesi veya belki de bir programlama dili? Karar senin.Herşeyi yapabilirsin - tek sınır senin hayal gücün!
+                Oyun,Web sitesi veya belki de bir programlama dili? Karar
+                senin.Herşeyi yapabilirsin - tek sınır senin hayal gücün!
               </>
             ),
             'Ailem izin vermiyor/ daha fazla bilgi istiyorlar :(': (
               <>
-              Hiç merak etme! Yakında aile rehberimizi yayınlayacağız fakat o zamana kadar {''}
-              <Link href='mailto:istanbul@scrapyard.hackclub.com'>
-              istanbul@scrapyard.hackclub.com
-              </Link> {''} adresimize mail atmanız yeterli! Tüm sorularınızı cevaplayıp ailenizin teredütlerini gidermek için buradayız.
-
+                Hiç merak etme! Yakında aile rehberimizi yayınlayacağız fakat o
+                zamana kadar {''}
+                <Link href="mailto:istanbul@scrapyard.hackclub.com">
+                  istanbul@scrapyard.hackclub.com
+                </Link>{' '}
+                {''} adresimize mail atmanız yeterli! Tüm sorularınızı
+                cevaplayıp ailenizin teredütlerini gidermek için buradayız.
               </>
             ),
             'Sponsor olmak istiyorum!': (
               <>
-              <Link href='mailto:berke.istanbul@scrapyard.hackclub.com'>berke.istanbul@scrapyard.hackclub.com {''}</Link>
-              Adresimize mail atarak bizimle iletişime geçebilirsiniz.
-
+                <Link href="mailto:berke.istanbul@scrapyard.hackclub.com">
+                  berke.istanbul@scrapyard.hackclub.com {''}
+                </Link>
+                Adresimize mail atarak bizimle iletişime geçebilirsiniz.
               </>
             )
           }).map(([question, answer], i) => {
@@ -698,7 +716,7 @@ export default function istanbul() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec5ESbCxcgx43hMh"
+          href="https://forms.hackclub.com/scrapyard-signup?event=istanbul"
           target="_blank"
         >
           <Box
