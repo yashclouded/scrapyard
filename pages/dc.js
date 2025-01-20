@@ -202,7 +202,7 @@ export default function DC() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=reczKaFFUwpoUe2OW"
+          href="https://forms.hackclub.com/scrapyard-signup?event=dc"
           target="_blank"
         >
           <Box
@@ -315,15 +315,15 @@ export default function DC() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard DC is a hackathon for high schoolers
-              happening in Washington, DC, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              Scrapyard DC is a hackathon for high schoolers happening in
+              Washington, DC, where you can make the stupidest things you can
+              think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              DC needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard DC needs
+              you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -433,8 +433,7 @@ export default function DC() {
             textAlign: 'center'
           }}
         >
-          Scrapyard DC is a 24-hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard DC is a 24-hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -724,7 +723,7 @@ export default function DC() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=reczKaFFUwpoUe2OW"
+          href="https://forms.hackclub.com/scrapyard-signup?event=dc"
           target="_blank"
         >
           <Box

@@ -225,8 +225,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rechm7kkztEIUui6z"
+          href="https://forms.hackclub.com/scrapyard-signup?event=vidisha"
           target="_blank"
         >
           <Box
@@ -343,8 +342,8 @@ export default function ExampleCity() {
               {/* TODO: Change Vidisha to your event's city */}
               Scrapyard Vidisha is a hackathon for high schoolers
               {/* TODO: Change Vidisha to your event's city */}
-              happening in Vidisha, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              happening in Vidisha, where you can make the stupidest things you
+              can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
@@ -464,8 +463,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change Vidisha to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Vidisha is a 24 hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Vidisha is a 24 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -637,7 +635,7 @@ export default function ExampleCity() {
             ),
             'All this, for free?': (
               <>
-              {/* I removed Gas fund as it is not available in India */}
+                {/* I removed Gas fund as it is not available in India */}
                 Yep! Food, swag and good vibes are all included.
               </>
             ),
@@ -700,8 +698,8 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the #scrapyard-vidisha
-                channel on the Hack Club slack or email us at{' '}
+                Contact us! Feel free to reach out to us in the
+                #scrapyard-vidisha channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
                 <Link href="mailto:vidisha@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
@@ -757,8 +755,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rechm7kkztEIUui6z"
+          href="https://forms.hackclub.com/scrapyard-signup?event=vidisha"
           target="_blank"
         >
           <Box

@@ -223,7 +223,7 @@ export default function Calgary() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec4Rloq7j6bMF6KP"
+          href="https://forms.hackclub.com/scrapyard-signup?event=calgary"
           target="_blank"
         >
           <Box
@@ -744,7 +744,7 @@ export default function Calgary() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec4Rloq7j6bMF6KP"
+          href="https://forms.hackclub.com/scrapyard-signup?event=calgary"
           target="_blank"
         >
           <Box

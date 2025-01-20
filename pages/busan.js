@@ -202,7 +202,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec7if3GQHM9hvjPp"
+          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
           target="_blank"
         >
           <Box
@@ -705,21 +705,19 @@ export default function ExampleCity() {
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school aged students are welcome
-                to come! You don't have to be a member of the Hack Club
-                community or be a Hack Club leader.
+                All high-school aged students are welcome to come! You don't
+                have to be a member of the Hack Club community or be a Hack Club
+                leader.
               </>
             ),
             'All this, for free?': (
-              <>
-                Yep! Food, swag and good vibes are all included.
-              </>
+              <>Yep! Food, swag and good vibes are all included.</>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! Bring toiletries and sleeping bags too.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop, chargers, and an open mind! Bring toiletries and
+                sleeping bags too. Additionally, if you plan to work on a
+                hardware project, bring the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -727,7 +725,11 @@ export default function ExampleCity() {
                 This hackathon is for creatives of all skill levels! We'll have
                 workshops and other events so join us and let's learn together.
                 If you'd like to start exploring some introductory projects,
-                check out <Link href='https://workshops.hackclub.com/'>Hack Club Workshops</Link>.
+                check out{' '}
+                <Link href="https://workshops.hackclub.com/">
+                  Hack Club Workshops
+                </Link>
+                .
               </>
             ),
             'What can I make at Scrapyard?': (
@@ -825,7 +827,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec7if3GQHM9hvjPp"
+          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
           target="_blank"
         >
           <Box

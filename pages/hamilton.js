@@ -225,8 +225,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec0GYCiRLh1CWiLN"
+          href="https://forms.hackclub.com/scrapyard-signup?event=hamilton"
           target="_blank"
         >
           <Box
@@ -343,8 +342,8 @@ export default function ExampleCity() {
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Scrapyard Hamilton is a hackathon for high schoolers
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Hamilton, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              happening in Hamilton, where you can make the stupidest things you
+              can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
@@ -464,8 +463,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Hamilton is a 24 Hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Hamilton is a 24 Hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -704,9 +702,9 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the #scrapyard-hamilton
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
+                Contact us! Feel free to reach out to us in the
+                #scrapyard-hamilton channel on the Hack Club slack or email us
+                at {/* TODO: Change this email to your event's email */}
                 <Link href="mailto:hamilton@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
                   hamilton@scrapyard.hackclub.com
@@ -761,8 +759,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec0GYCiRLh1CWiLN"
+          href="https://forms.hackclub.com/scrapyard-signup?event=hamilton"
           target="_blank"
         >
           <Box
