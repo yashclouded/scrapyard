@@ -83,7 +83,13 @@ export default function ExampleCity() {
             alt="Scrapyard"
           />
         </Box>
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
           <Box
             sx={{
               background: "url('/elements/ripped-paper.png')",
@@ -179,7 +185,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recdZfXk6F40z382S"
+          href="https://forms.hackclub.com/scrapyard-signup?event=bengaluru"
           target="_blank"
         >
           <Box
@@ -291,15 +297,15 @@ export default function ExampleCity() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Bengaluru is a hackathon for high schoolers
-              happening in Bengaluru, where you can make the stupidest
-              things you can think of! Anything, from a
+              Scrapyard Bengaluru is a hackathon for high schoolers happening in
+              Bengaluru, where you can make the stupidest things you can think
+              of! Anything, from a
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 &nbsp;lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              Bengaluru needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Bengaluru
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -450,7 +456,9 @@ export default function ExampleCity() {
         }}
       />
 
-      <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+      <Box
+        sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}
+      >
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
@@ -543,7 +551,9 @@ export default function ExampleCity() {
         </Box>
       </Box>
 
-      <Box sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+      <Box
+        sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}
+      >
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
@@ -633,13 +643,19 @@ export default function ExampleCity() {
         <Grid columns={[1, 1, 1, 2]} gap={4} sx={{ maxWidth: '1200px' }}>
           {Object.entries({
             'Who can participate in Scrapyard?': (
-              <>All high-school & upper-middle-school aged students are welcome to come!</>
+              <>
+                All high-school & upper-middle-school aged students are welcome
+                to come!
+              </>
             ),
             'All this, for free?': (
               <>
                 Yep! Food, swag and good vibes are all included. If you’re
                 joining us from afar,
-                <Link href="https://gas.hackclub.com/">&nbsp;we’ll cover travel costs</Link>.
+                <Link href="https://gas.hackclub.com/">
+                  &nbsp;we’ll cover travel costs
+                </Link>
+                .
               </>
             ),
             'What do I need?': (
@@ -668,7 +684,10 @@ export default function ExampleCity() {
                   &nbsp;overnight hackathon in SF
                 </Link>
                 , a
-                <Link href="https://www.youtube.com/watch?v=H5RPsCMl3uM" target="_blank">
+                <Link
+                  href="https://www.youtube.com/watch?v=H5RPsCMl3uM"
+                  target="_blank"
+                >
                   &nbsp;Game Jam
                 </Link>
                 , a hackathon on a
@@ -735,7 +754,7 @@ export default function ExampleCity() {
           ))}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recdZfXk6F40z382S"
+          href="https://forms.hackclub.com/scrapyard-signup?event=bengaluru"
           target="_blank"
         >
           <Box
