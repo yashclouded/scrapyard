@@ -1,11 +1,21 @@
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
-import dynamic from 'next/dynamic'
-const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
-const Nonprofit501c3 = () => {
-  return <span style={{ fontVariantLigatures: 'none' }}>501(c)(3)</span>
-}
+const schedule = [
+  { time: 'March 15 - 11:00 AM', event: 'Doors open' },
+  { time: 'March 15 - 12:00 PM', event: 'Opening ceremony' },
+  { time: 'March 15 - 12:30 PM', event: 'Lunch' },
+  { time: 'March 15 - 01:00 PM', event: 'Start working on your project!' },
+  { time: 'March 15 - 02:00 PM', event: 'Workshop 1' },
+  { time: 'March 15 - 04:00 PM', event: 'Activity 1' },
+  { time: 'March 15 - 04:00 PM', event: 'Workshop 2' },
+  { time: 'March 15 - 06:00 PM', event: 'Dinner' },
+  { time: 'March 15 - 08:00 PM', event: 'Lightning talks' },
+  { time: 'March 15 - 12:00 AM', event: 'Midnight surprise' },
+  { time: 'March 16 - 08:00 AM', event: 'Breakfast' },
+  { time: 'March 16 - 10:30 AM', event: 'Demos!' },
+  { time: 'March 16 - 12:00 PM', event: 'Closing ceremony' }
+]
 
 const Flag = () => (
   <Link
@@ -29,7 +39,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function Home() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -43,7 +53,7 @@ export default function Home() {
       }}
     >
       <Head>
-        <title>Scrapyard</title>
+        <title>Scrapyard Busan</title>
       </Head>
       <Flag />
       <Box
@@ -58,17 +68,23 @@ export default function Home() {
           gap: '20px'
         }}
       >
-        <Image
+        <Box
           sx={{
-            width: '600px',
-
-            maxWidth: '70vw',
-
-            objectFit: 'contain'
+            position: 'relative'
           }}
-          src="/elements/wordmark.svg"
-          alt="Scrapyard"
-        />
+        >
+          <Image
+            sx={{
+              width: '600px',
+
+              maxWidth: '70vw',
+
+              objectFit: 'contain'
+            }}
+            src="/city/busan/Big Logo.png"
+            alt="Scrapyard"
+          />
+        </Box>
         <Box
           sx={{
             display: 'flex',
@@ -96,10 +112,11 @@ export default function Home() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%'
+                margin: '8%',
+                fontSize: '23px'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -116,7 +133,7 @@ export default function Home() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              pt: '3%',
+              py: '3%',
               filter: 'drop-shadow(5px 5px 5px #00000099)'
             }}
           >
@@ -132,22 +149,10 @@ export default function Home() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              100+&nbsp;Cities&nbsp;worldwide&nbsp;March&nbsp;15-16
-            </Heading>
-            <Heading
-              as="h2"
-              sx={{
-                fontFamily: 'p22-stanyan',
-                mx: '8%',
-                my: '3%',
-                p: 0,
-                wordBreak: 'keep-all',
-                whiteSpace: 'nowrap',
-                width: 'min-content',
-                fontSize: ['1.2em', '1.4em']
-              }}
-            >
-              Los&nbsp;Angeles&nbsp;February&nbsp;15-16
+              <Link href="https://busanforeignschool.org/" target="blank">
+                Busan Foreign School
+              </Link>{' '}
+              - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -197,7 +202,7 @@ export default function Home() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup"
+          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec7if3GQHM9hvjPp"
           target="_blank"
         >
           <Box
@@ -303,21 +308,22 @@ export default function Home() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard?
+              What's Scrapyard Busan?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard is a global hackathon organized by high schoolers. Our
-              flagship (the largest Scrapyard event) will run in Los Angeles on
-              February 15th-16th. Following the flagship, our distributed events
-              will run in 100+ cities worldwide on the weekend of March 15th.
-              Scrapyard is a hackathon with a "scrappy" theme of stupid
-              inventions! It's organized by Hack Club, a <Nonprofit501c3 />{' '}
-              nonprofit that supports a global community of over 50,000 high
-              school makers.
+              Scrapyard Busan is a hackathon for high schoolers happening in
+              Busan, where you can make the stupidest things you can think of!
+              Anything, from a{' '}
+              <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
+                lamp that flashes faster the slower you type
+              </Link>
+              , to those ideas that you wouldn't dare to consider to be useful,
+              goes at Scrapyard. No matter your experience, Scrapyard Busan
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -381,7 +387,108 @@ export default function Home() {
         }}
       ></Box>
 
-      <Box></Box>
+      <Box
+        sx={{
+          // backgroundImage: "url(/backgrounds/confetti.png)",
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center'
+            }}
+          >
+            WHAT'S HAPPENING AT SCRAPYARD BUSAN?
+          </Heading>
+        </Box>
+        <Heading
+          as="h2"
+          sx={{
+            fontSize: '1.5em',
+            fontFamily: 'moonblossom',
+            color: 'white',
+            textAlign: 'center'
+          }}
+        >
+          Scrapyard Busan is a 24-hour event - HERE'S THE ROUGH SCHEDULE!
+        </Heading>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: ['90%', '70%'],
+            fontSize: '2em',
+            gap: '0.2em',
+            color: 'black',
+            my: 5,
+            background: "url('/backgrounds/lined-paper.png')",
+            backgroundSize: ['contain', 'contain', 'cover!important'],
+            p: 4,
+            borderRadius: 1,
+            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+          }}
+        >
+          {schedule.map((item, i) => (
+            <div
+              style={{
+                display: 'flex',
+                width: '100%',
+                alignItems: 'center'
+              }}
+              key={i}
+            >
+              <Heading
+                as="p"
+                sx={{
+                  display: 'inline',
+                  width: ['min-content', 'max-content'],
+                  fontSize: '2rem',
+                  fontFamily: 'p22-stanyan'
+                }}
+              >
+                {item.event}
+              </Heading>
+              <Box
+                sx={{
+                  mx: 2,
+                  transform: 'translateY(0.75rem)',
+                  borderWidth: 0,
+                  borderBottomWidth: '0.35rem',
+                  borderStyle: 'dotted',
+                  flexGrow: '1',
+                  display: 'inline',
+                  height: 1
+                }}
+              ></Box>
+              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+            </div>
+          ))}
+        </Box>
+      </Box>
 
       <Box
         sx={{
@@ -403,175 +510,156 @@ export default function Home() {
             justifyContent: 'center',
             margin: '0vh',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
           }}
         >
           <Heading
             as="h1"
             sx={{
-              mt: '13vh',
               mx: '1vw',
               fontWeight: 'lighter',
               textAlign: 'center'
             }}
           >
-            FIND AN EVENT NEAR YOU!
+            HOW TO FIND US?
           </Heading>
         </Box>
+        <Heading
+          as="h2"
+          sx={{
+            fontSize: '1.5em',
+            fontFamily: 'moonblossom',
+            color: 'white',
+            textAlign: 'center',
+            mx: '5vw'
+          }}
+        >
+          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호
+          48084
+        </Heading>
         <Box
           sx={{
-            width: '80%',
+            width: ['100%', '80%'],
             height: '75vh',
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            mb: '10vh'
+            mb: '5vh',
+            mt: 5
           }}
         >
-          <Map />
+          <iframe
+            width="80%"
+            height="100%"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765"
+            style={{ border: '1px solid black' }}
+          ></iframe>
+          <br />
+          <small>
+            <a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a>
+          </small>{' '}
         </Box>
       </Box>
 
       <Box
         sx={{
           width: '100%',
-          background: [
-            "url('/backgrounds/bulletin@vertical.svg')",
-            "url('/backgrounds/bulletin@vertical.svg')",
-            "url('/backgrounds/bulletin.svg')"
-          ],
-          backgroundSize: 'cover!important',
-          display: 'block',
+          background: 'white',
+          backgroundSize: ['contain', 'contain', 'cover!important'],
+          display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          overflow: 'visible',
           gap: '20px',
-          height: ['151.37794951vw', '151.37794951vw', '64.45447188vw'],
+          p: [4, 4, 5],
+          pt: 6,
           position: 'relative'
         }}
       >
-        <Box
+        <Heading
+          as="h1"
           sx={{
-            display: 'flex',
-            width: '100%',
-            height: '100%',
-            flexWrap: 'wrap',
-            p: '4vw',
             position: 'relative',
-            overflow: 'visible',
-            justifyContent: ['space-around', 'space-around', null],
-            pb: '12vw'
+            mb: '-20px'
+          }}
+        >
+          OUR SPONSORS
+        </Heading>
+        <p
+          style={{
+            fontSize: '1.5em'
+          }}
+        >
+          Without their support, Scrapyard Busan wouldn't be possible.
+        </p>
+
+        <Grid
+          columns={[1, 1, 1, 2]}
+          gap={4}
+          sx={{
+            maxWidth: '1200px'
           }}
         >
           <Box
             sx={{
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'start',
-              height: 'min-content'
+              textAlign: 'center'
             }}
           >
-            <Box
-              sx={{
-                background: "url('/elements/stapled-paper.png')",
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100px',
-                width: '400px'
-              }}
-            >
-              <Heading
-                as="h2"
+            <Link href="https://busanforeignschool.org/">
+              <Image
+                src="/city/busan/sponsors/bfs.png"
                 sx={{
-                  textAlign: 'center'
+                  maxHeight: '150px'
                 }}
-              >
-                Here's what we've done in the past
-              </Heading>
-            </Box>
+              />
+            </Link>
           </Box>
           <Box
-            as="a"
-            href="https://assemble.hackclub.com"
-            target="_blank"
             sx={{
-              background: "url('/elements/polaroids/assemble.png')",
-              width: ['35.5vw', '35.5vw', '22.5vw'],
-              height: ['35.5vw', '35.5vw', '22.5vw'],
-              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              display: 'block'
+              textAlign: 'center'
             }}
-          ></Box>
+          >
+            <Link href="https://hackclub.com/">
+              <Image
+                src="/city/busan/sponsors/hackclub.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
           <Box
-            as="a"
-            href="https://outernet.hackclub.com"
-            target="_blank"
             sx={{
-              background: "url('/elements/polaroids/outernet.png')",
-              width: ['35.5vw', '35.5vw', '22.5vw'],
-              height: ['35.5vw', '35.5vw', '22.5vw'],
-              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              display: 'block',
-              marginTop: '7vw'
+              textAlign: 'center'
             }}
-          ></Box>
+          >
+            <Link href="https://algoverseairesearch.org/">
+              <Image
+                src="/city/busan/sponsors/algoverse.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
           <Box
-            as="a"
-            href="https://wonderland.hackclub.com"
-            target="_blank"
             sx={{
-              background: "url('/elements/polaroids/wonderland.png')",
-              width: ['35.5vw', '35.5vw', '22.5vw'],
-              height: ['35.5vw', '35.5vw', '22.5vw'],
-              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              display: 'block'
+              textAlign: 'center'
             }}
-          ></Box>
-          <Box
-            as="a"
-            href="https://apocalypse.hackclub.com"
-            target="_blank"
-            sx={{
-              background: "url('/elements/polaroids/apocalypse.png')",
-              width: ['35.5vw', '35.5vw', '22.5vw'],
-              height: ['35.5vw', '35.5vw', '22.5vw'],
-              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              display: 'block',
-              marginTop: '7vw'
-            }}
-          ></Box>
-          <Box
-            as="a"
-            href="https://counterspell.hackclub.com"
-            target="_blank"
-            sx={{
-              background: "url('/elements/polaroids/counterspell.png')",
-              width: ['38.5vw', '38.5vw', '25vw'],
-              height: ['38.5vw', '38.5vw', '25vw'],
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat',
-              display: 'block',
-              position: 'absolute',
-              bottom: '0',
-              right: '10vw',
-              transform: 'translateY(50%)',
-              zIndex: 10
-            }}
-          ></Box>
-        </Box>
+          >
+            <Link href="https://www.tkbend.co.kr/eng/main/main.php">
+              <Image
+                src="/city/busan/sponsors/tk.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+        </Grid>
       </Box>
 
       <Box
@@ -615,53 +703,23 @@ export default function Home() {
           }}
         >
           {Object.entries({
-            'What is Scrapyard?': (
-              <>
-                Scrapyard is a global{' '}
-                <Link href="https://hackclub.com/hackathons/" target="_blank">
-                  hackathon
-                </Link>{' '}
-                running in Los Angeles and 100+ other cities by high schoolers
-                (like{' '}
-                <Link href="https://counterspell.hackclub.com/" target="_blank">
-                  Counterspell
-                </Link>
-                ) with a “scrappy” theme of stupid inventions! It's organized by{' '}
-                <Link href="https://hackclub.com/" target="_blank">
-                  Hack Club
-                </Link>
-                , a <Nonprofit501c3 /> nonprofit that supports a global
-                community of 48k high school makers.
-              </>
-            ),
-
-            'Where is Scrapyard hosted?': (
-              <>
-                The Scrapyard flagship will be hosted in Los Angeles,
-                tentatively on February 15-16 (Location TBD). Find the closest
-                distributed event to you on March 15-16!
-              </>
-            ),
             'Who can participate in Scrapyard?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
+                All high-school aged students are welcome
                 to come! You don't have to be a member of the Hack Club
                 community or be a Hack Club leader.
               </>
             ),
             'All this, for free?': (
               <>
-                Yep! Food, swag and good vibes are all included. Plus, if you’re
-                joining us from afar, we’ll cover the cost of gas or a bus /
-                train ticket. Information about travel stipends for our Los
-                Angeles flagship will be released soon.
+                Yep! Food, swag and good vibes are all included.
               </>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, toiletries, sleeping bags, and an open
-                mind! If you plan to work on a hardware project, bring the tools
-                you'll need.
+                Your laptop, chargers, and an open mind! Bring toiletries and sleeping bags too.
+                Additionally, if you plan to work on a hardware project, bring
+                the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -669,7 +727,7 @@ export default function Home() {
                 This hackathon is for creatives of all skill levels! We'll have
                 workshops and other events so join us and let's learn together.
                 If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                check out <Link href='https://workshops.hackclub.com/'>Hack Club Workshops</Link>.
               </>
             ),
             'What can I make at Scrapyard?': (
@@ -704,18 +762,18 @@ export default function Home() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:scrapyard@hackclub.com">
-                  scrapyard@hackclub.com
+                <Link href="mailto:scrapyardbusan@bfs.or.kr">
+                  scrapyardbusan@bfs.or.kr
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
+                Contact us! Feel free to reach out to us in the #scrapyard-busan
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:scrapyard@hackclub.com">
-                  scrapyard@hackclub.com
+                <Link href="mailto:scrapyardbusan@bfs.or.kr">
+                  scrapyardbusan@bfs.or.kr
                 </Link>
                 .
               </>
@@ -766,10 +824,44 @@ export default function Home() {
             )
           })}
         </Grid>
+        <Link
+          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec7if3GQHM9hvjPp"
+          target="_blank"
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              SIGN UP FOR SCRAPYARD BUSAN
+            </Heading>
+          </Box>
+        </Link>
         <Heading
           as="h2"
           sx={{
-            mt: 6,
+            mt: 3,
             position: 'relative'
           }}
         >
