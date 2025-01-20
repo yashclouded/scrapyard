@@ -1,22 +1,53 @@
+/*
+Hello! This is the template for the city pages.
+
+To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
+E.g. if your city is Tampa, rename the copy of this file to tampa.js
+
+Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
+You do not need to use this template exactly, feel free to customize it as much as you see fit.
+
+If you want to include additional assets, please add them under public/city/your-city-name.
+
+Make a PR and we'll review it as soon as we can!
+
+If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
+
+P.S. Feel free to delete this comment block when you're done! 
+
+Note: To test your changes locally, use `yarn install` and `yarn dev`.
+*/
+
 import Head from 'next/head'
-import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
+import { Box, Button, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// We are still planning the schedule
+// TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '10:00 AM', event: 'Gates Open and Registration' },
+  { time: '11:00 AM', event: 'Opening Ceremony' },
+  { time: '11:30 AM', event: 'Ice Breakers' },
+  { time: '11:45 AM', event: 'Breakfast' },
+  { time: '12:15 PM', event: 'Workshops' },
+  { time: '1:15 PM', event: 'Lunch' },
+  { time: '2:00 PM', event: 'Working Session' },
+  { time: '4:15 PM', event: 'Workshops' },
+  { time: '5:15 PM', event: 'Working Session' },
+  { time: '6:15 PM', event: 'Workshops' },
+  { time: '7:15 PM', event: 'Dinner' },
+  { time: '8:15 PM', event: 'Lightning Talks' },
+  { time: '10:00 PM', event: 'Sleep' },
+  { time: '12:00 AM', event: 'Midnight Surprise' },
+  { time: '4:30 AM', event: 'Breakfast (Ramadan)' },
+  { time: '8:00 AM', event: 'Showers' },
+  { time: '9:00 AM', event: 'Breakfast' },
+  { time: '10:00 AM', event: 'Workshops' },
+  { time: '11:00 AM', event: 'Working Session`' },
+  { time: '12:00 PM', event: 'Side Activity' },
+  { time: '1:00 PM', event: 'Lunch' },
+  { time: '2:00 PM', event: 'Final Hour of Work' },
+  { time: '3:00 PM', event: 'Submissions' },
+  { time: '3:30 PM', event: 'Judging' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -43,7 +74,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function QuezonCity() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -57,7 +88,8 @@ export default function QuezonCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Quezon City</title>
+        {/* TODO: Change [EXAMPLECITY] to your event's city */}
+        <title>Scrapyard Sydney</title>
       </Head>
       <Flag />
       <Box
@@ -85,10 +117,17 @@ export default function QuezonCity() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="/city/sydney/wordmark.svg"
             alt="Scrapyard"
           />
         </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center'
+          }}
+        ></Box>
         <Box
           sx={{
             display: 'flex',
@@ -100,27 +139,69 @@ export default function QuezonCity() {
             sx={{
               background: "url('/elements/ripped-paper.png')",
               backgroundSize: 'cover',
-              // aspectRatio: "1080/338.4",
-              // padding: "8%",
-              // paddingLeft: "7%",
-              display: 'block',
-
+              height: 'fit-content',
+              paddingBottom: '8%',
+              paddingTop: '7%',
+              paddingLeft: '7%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
               width: 'min(500px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
               zIndex: 20
             }}
           >
-            <Heading
-              as="h2"
+            <Text
               sx={{
                 fontFamily: 'moonblossom',
-                textAlign: 'center',
-                margin: '8%'
+                fontSize: '0.9rem',
+                marginLeft: '30px',
+                color: 'black',
+                fontStyle: 'italic'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
-            </Heading>
+              Made Possible By:
+            </Text>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '10px'
+              }}
+            >
+              <Link
+                href="https://www.polymaker.com/"
+                target="_blank"
+                sx={{ zIndex: 2, display: 'flex', justifyContent: 'center' }}
+              >
+                <Image
+                  sx={{
+                    width: '70%',
+                    objectFit: 'contain'
+                  }}
+                  src="/city/sydney/sponsors/polymaker.webp"
+                  alt="Polymaker Logo"
+                />
+              </Link>
+              <Link
+                href="https://www.littlebirdelectronics.com.au/"
+                target="_blank"
+                sx={{ zIndex: 2, display: 'flex', justifyContent: 'center' }}
+              >
+                <Image
+                  sx={{
+                    width: '80%',
+                    objectFit: 'contain'
+                  }}
+                  src="/city/sydney/sponsors/littlebirdelectronics.png"
+                  alt="Little Bird Electronics Logo"
+                />
+              </Link>
+            </Box>
           </Box>
           <Box
             sx={{
@@ -152,7 +233,8 @@ export default function QuezonCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Quezon City - March&nbsp;15, 2025
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Sydney - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -202,7 +284,7 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=sydney"
           target="_blank"
         >
           <Box
@@ -308,22 +390,25 @@ export default function QuezonCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Quezon City?
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              What's Scrapyard Sydney?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers happening
-              in Quezon City, where you can make the stupidest things you can
-              think of! Anything, from a{' '}
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Scrapyard Sydney is a hackathon for high schoolers
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              happening in Sydney, where you can make the stupidest things you
+              can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Quezon
-              City needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Sydney
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -421,7 +506,8 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD QUEZON CITY?
+            {/* TODO: Change [EXAMPLECITY] to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD SYDNEY?
           </Heading>
         </Box>
         <Heading
@@ -433,7 +519,9 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          {/* TODO: Change [EXAMPLECITY] to your event's city */}
+          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
+          Scrapyard Sydney is a 24 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -524,7 +612,8 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Quezon City?
+            {/* TODO: Change [EXAMPLECITY] to your event's city */}
+            CAN'T MAKE IT TO SYDNEY?
           </Heading>
         </Box>
         <Heading
@@ -660,19 +749,23 @@ export default function QuezonCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                {/* TODO: Change this email to your event's email */}
+                <Link href="mailto:sydney@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  sydney@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
-                channel on the Hack Club slack or email us at{' '}
+                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
+                Contact us! Feel free to reach out to us in the
+                #scrapyard-sydney channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                <Link href="mailto:sydney@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  sydney@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -724,7 +817,7 @@ export default function QuezonCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=sydney"
           target="_blank"
         >
           <Box
@@ -750,10 +843,12 @@ export default function QuezonCity() {
                 margin: '8%',
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
-                paddingY: ['15px', '0px']
+                paddingY: ['2px', '0px'],
+                lineHeight: ['1.5em', '1.5em']
               }}
             >
-              SIGN UP FOR SCRAPYARD QUEZON CITY
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              SIGN UP FOR SCRAPYARD SYDNEY
             </Heading>
           </Box>
         </Link>

@@ -1,22 +1,40 @@
+'======== READ ME BEFORE EDITING ========'
+/*
+Hello! This is the template for the city pages.
+
+To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
+E.g. if your city is Tampa, rename the copy of this file to tampa.js
+
+Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
+You do not need to use this template exactly, feel free to customize it as much as you see fit.
+
+If you want to include additional assets, please add them under public/city/your-city-name.
+
+Make a PR and we'll review it as soon as we can!
+
+If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
+
+P.S. Feel free to delete this comment block when you're done! 
+
+Note: To test your changes locally, use `yarn install` and `yarn dev`.
+*/
+
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// We are still planning the schedule
+// TODO: Updated schedule for 8-hour event
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '10:00 AM', event: 'Doors open & registration' },
+  { time: '10:30 AM', event: 'Opening ceremony' },
+  { time: '11:00 AM', event: 'Icebreaker activity' },
+  { time: '11:30 AM', event: 'Workshop 1: Getting started' },
+  { time: '12:30 PM', event: 'Lunch break' },
+  { time: '1:30 PM', event: 'Project building session' },
+  { time: '3:00 PM', event: 'Workshop 2: Advanced tools' },
+  { time: '4:00 PM', event: 'Activity: Networking or fun games' },
+  { time: '5:00 PM', event: 'Demos & presentations' },
+  { time: '5:45 PM', event: 'Closing ceremony & awards' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -43,7 +61,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function QuezonCity() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -57,7 +75,8 @@ export default function QuezonCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Quezon City</title>
+        {/* TODO: Change [EXAMPLECITY] to your event's city */}
+        <title>Scrapyard New Delhi</title>
       </Head>
       <Flag />
       <Box
@@ -152,7 +171,8 @@ export default function QuezonCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Quezon City - March&nbsp;15, 2025
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              New Delhi - March&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -202,7 +222,7 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=new-delhi"
           target="_blank"
         >
           <Box
@@ -308,22 +328,26 @@ export default function QuezonCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Quezon City?
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              What's Scrapyard New Delhi?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers happening
-              in Quezon City, where you can make the stupidest things you can
-              think of! Anything, from a{' '}
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Scrapyard New Delhi is a hackathon for high schoolers
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              happening in New Delhi, where you can make the stupidest things
+              you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Quezon
-              City needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              New Delhi needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -421,7 +445,8 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD QUEZON CITY?
+            {/* TODO: Change [EXAMPLECITY] to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD NEW DELHI?
           </Heading>
         </Box>
         <Heading
@@ -433,7 +458,9 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          {/* TODO: Change [EXAMPLECITY] to your event's city */}
+          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
+          Scrapyard New Delhi is a 8 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -524,7 +551,8 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Quezon City?
+            {/* TODO: Change [EXAMPLECITY] to your event's city */}
+            CAN'T MAKE IT TO NEW DELHI?
           </Heading>
         </Box>
         <Heading
@@ -660,19 +688,23 @@ export default function QuezonCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                {/* TODO: Change this email to your event's email */}
+                <Link href="mailto:anuragmishraanuragmishra.new-delhi@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  anuragmishraanuragmishra.new-delhi@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
+                Contact us! Feel free to reach out to us in the
+                #scrapyard-new-delhi channel on the Hack Club slack or email us
+                at {/* TODO: Change this email to your event's email */}
+                <Link href="mailto:anuragmishraanuragmishra.new-delhi@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  anuragmishraanuragmishra.new-delhi@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -724,7 +756,7 @@ export default function QuezonCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=new-delhi"
           target="_blank"
         >
           <Box
@@ -753,7 +785,8 @@ export default function QuezonCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD QUEZON CITY
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              SIGN UP FOR SCRAPYARD NEW DELHI
             </Heading>
           </Box>
         </Link>

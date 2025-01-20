@@ -1,8 +1,8 @@
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
-import dynamic from 'next/dynamic'
 
-// We are still planning the schedule
+// TODO: Change this schedule to your own!
 const schedule = [
   { time: '11:00 AM', event: 'Doors open' },
   { time: '12:00 PM', event: 'Opening ceremony' },
@@ -43,7 +43,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function QuezonCity() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -57,7 +57,7 @@ export default function QuezonCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Quezon City</title>
+        <title>Scrapyard Agra</title>
       </Head>
       <Flag />
       <Box
@@ -152,7 +152,7 @@ export default function QuezonCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Quezon City - March&nbsp;15, 2025
+              Agra — March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -202,7 +202,7 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=agra"
           target="_blank"
         >
           <Box
@@ -308,22 +308,22 @@ export default function QuezonCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Quezon City?
+              What's Scrapyard Agra?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers happening
-              in Quezon City, where you can make the stupidest things you can
-              think of! Anything, from a{' '}
+              Scrapyard Agra is a hackathon for high schoolers happening in
+              Agra, where you can make the stupidest things you can think of!
+              Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Quezon
-              City needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Agra needs
+              you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -421,7 +421,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD QUEZON CITY?
+            WHAT'S HAPPENING AT SCRAPYARD Agra?
           </Heading>
         </Box>
         <Heading
@@ -433,61 +433,62 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Agra is a 24hour event - SCHEDULE COMING SOON!
         </Heading>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: ['90%', '70%'],
-            fontSize: '2em',
-            gap: '0.2em',
-            color: 'black',
-            my: 5,
-            background: "url('/backgrounds/lined-paper.png')",
-            backgroundSize: ['contain', 'contain', 'cover!important'],
-            p: 4,
-            borderRadius: 1,
-            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
-          }}
-        >
-          {schedule.map((item, i) => (
-            <div
-              style={{
-                display: 'flex',
-                width: '100%',
-                alignItems: 'center'
-              }}
-              key={i}
-            >
-              <Heading
-                as="p"
-                sx={{
-                  display: 'inline',
-                  width: ['min-content', 'max-content'],
-                  fontSize: '2rem',
-                  fontFamily: 'p22-stanyan'
-                }}
-              >
-                {item.event}
-              </Heading>
-              <Box
-                sx={{
-                  mx: 2,
-                  transform: 'translateY(0.75rem)',
-                  borderWidth: 0,
-                  borderBottomWidth: '0.35rem',
-                  borderStyle: 'dotted',
-                  flexGrow: '1',
-                  display: 'inline',
-                  height: 1
-                }}
-              ></Box>
-              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
-            </div>
-          ))}
-        </Box>
+        {/* TODO: Schedule */}
+        {/* <Box
+					sx={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+						width: ["90%", "70%"],
+						fontSize: "2em",
+						gap: "0.2em",
+						color: "black",
+						my: 5,
+						background: "url('/backgrounds/lined-paper.png')",
+						backgroundSize: ["contain", "contain", "cover!important"],
+						p: 4,
+						borderRadius: 1,
+						boxShadow: "10px 10px 5px rgba(0, 0, 0, 0.3)",
+					}}
+				>
+					{schedule.map((item, i) => (
+						<div
+							style={{
+								display: "flex",
+								width: "100%",
+								alignItems: "center",
+							}}
+							key={i}
+						>
+							<Heading
+								as="p"
+								sx={{
+									display: "inline",
+									width: ["min-content", "max-content"],
+									fontSize: "2rem",
+									fontFamily: "p22-stanyan",
+								}}
+							>
+								{item.event}
+							</Heading>
+							<Box
+								sx={{
+									mx: 2,
+									transform: "translateY(0.75rem)",
+									borderWidth: 0,
+									borderBottomWidth: "0.35rem",
+									borderStyle: "dotted",
+									flexGrow: "1",
+									display: "inline",
+									height: 1,
+								}}
+							></Box>
+							<p style={{ display: "inline", margin: 0 }}>{item.time}</p>
+						</div>
+					))}
+				</Box> */}
       </Box>
 
       <Box
@@ -524,7 +525,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Quezon City?
+            CAN'T MAKE IT TO Agra?
           </Heading>
         </Box>
         <Heading
@@ -660,19 +661,18 @@ export default function QuezonCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                <Link href="mailto:agra@scrapyard.hackclub.com">
+                  agra@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
+                Contact us! Feel free to reach out to us in the #scrapyard-agra
                 channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                <Link href="mailto:agra@scrapyard.hackclub.com">
+                  agra@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -724,7 +724,7 @@ export default function QuezonCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=agra"
           target="_blank"
         >
           <Box
@@ -753,7 +753,7 @@ export default function QuezonCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD QUEZON CITY
+              SIGN UP FOR SCRAPYARD AGRA
             </Heading>
           </Box>
         </Link>
