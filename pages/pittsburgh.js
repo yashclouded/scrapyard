@@ -224,6 +224,85 @@ export default function ExampleCity() {
             alt="Pink paper star"
           />
         </Box>
+
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              position: 'fixed',
+              right: ['40%'],
+              top: ['4%'],
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 30,
+              minWidth: '8em',
+              padding: '15px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '30px',
+              paddingRight: '30px'
+            }}
+          >
+            <Link
+              href="#about"
+            >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                padding: ['2%', '8%'],
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                width: '100%'
+              }}
+            >
+              About
+            </Heading>
+            </Link>
+
+            <Link
+              href="#schedule"
+            >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                padding: ['2%', '8%'],
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                width: '100%'
+              }}
+            >
+              Schedule
+            </Heading>
+            </Link>
+
+            <Link
+              href="#faq"
+            >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                padding: ['2%', '8%'],
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                width: '100%'
+              }}
+            >
+              FAQ
+            </Heading>
+            </Link>
+          </Box>
+        
         <Link
           // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
           href="https://forms.hackclub.com/scrapyard-signup?event_id=reczZ75m4ruzLG7Da"
@@ -315,6 +394,7 @@ export default function ExampleCity() {
             width: '100%',
             height: '100%'
           }}
+          id="about"
         >
           <Image src="/elements/orpheus-doodle.svg" />
           <Box
@@ -431,6 +511,7 @@ export default function ExampleCity() {
             flexDirection: 'column',
             alignItems: 'center'
           }}
+          id="schedule"
         >
           <Heading
             as="h1"
@@ -527,6 +608,7 @@ export default function ExampleCity() {
           pt: 6,
           position: 'relative'
         }}
+        id="faq"
       >
         <Heading
           as="h1"
