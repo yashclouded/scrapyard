@@ -118,7 +118,7 @@ export default function ExampleCity() {
               objectFit: 'contain'
             }}
             src="/city/sydney/wordmark.svg"
-            alt="Scrapyard"
+            alt="Scrapyard Sydney logo"
           />
         </Box>
         <Box
@@ -177,6 +177,7 @@ export default function ExampleCity() {
                 href="https://www.polymaker.com/"
                 target="_blank"
                 sx={{ zIndex: 2, display: 'flex', justifyContent: 'center' }}
+                draggable="false"
               >
                 <Image
                   sx={{
@@ -185,12 +186,14 @@ export default function ExampleCity() {
                   }}
                   src="/city/sydney/sponsors/polymaker.webp"
                   alt="Polymaker Logo"
+                  draggable="false"
                 />
               </Link>
               <Link
                 href="https://www.littlebirdelectronics.com.au/"
                 target="_blank"
                 sx={{ zIndex: 2, display: 'flex', justifyContent: 'center' }}
+                draggable="false"
               >
                 <Image
                   sx={{
@@ -199,6 +202,7 @@ export default function ExampleCity() {
                   }}
                   src="/city/sydney/sponsors/littlebirdelectronics.png"
                   alt="Little Bird Electronics Logo"
+                  draggable="false"
                 />
               </Link>
             </Box>
@@ -256,6 +260,7 @@ export default function ExampleCity() {
             }}
             src="/elements/stars/blue.png"
             alt="Blue paper star"
+            draggable="false"
           />
           <Image
             sx={{
@@ -268,6 +273,7 @@ export default function ExampleCity() {
             }}
             src="/elements/stars/yellow.png"
             alt="Yellow paper star"
+            draggable="false"
           />
           <Image
             sx={{
@@ -281,11 +287,13 @@ export default function ExampleCity() {
             }}
             src="/elements/stars/pink.png"
             alt="Pink paper star"
+            draggable="false"
           />
         </Box>
         <Link
           href="https://forms.hackclub.com/scrapyard-signup?event=sydney"
           target="_blank"
+          draggable="false"
         >
           <Box
             sx={{
@@ -304,6 +312,7 @@ export default function ExampleCity() {
               minWidth: '8em',
               padding: '15px'
             }}
+            draggable="false"
           >
             <Heading
               as="h2"
@@ -346,6 +355,7 @@ export default function ExampleCity() {
             transform: 'translateY(-40%)',
             zIndex: 7
           }}
+          draggable="false"
         />
       </Box>
       <Box
@@ -374,7 +384,7 @@ export default function ExampleCity() {
             height: '100%'
           }}
         >
-          <Image src="/elements/orpheus-doodle.svg" />
+          <Image src="/elements/orpheus-doodle.svg" draggable="false" />
           <Box
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
@@ -425,34 +435,42 @@ export default function ExampleCity() {
         >
           <Image
             src="/elements/doodles/arrow.svg"
+            draggable="false"
             sx={{ position: 'absolute', left: '5%', top: '0%' }}
           />
           <Image
             src="/elements/doodles/pinkcircle.svg"
+            draggable="false"
             sx={{ position: 'absolute', left: '20%', top: '0%' }}
           />
           <Image
             src="/elements/doodles/yellowcircle.svg"
+            draggable="false"
             sx={{ position: 'absolute', left: '8%', top: '70%' }}
           />
           <Image
             src="/elements/doodles/bluesquiggle.svg"
+            draggable="false"
             sx={{ position: 'absolute', left: '8%', top: '84%' }}
           />
           <Image
             src="/elements/doodles/yellowlines.svg"
+            draggable="false"
             sx={{ position: 'absolute', left: '37%', top: '80%' }}
           />
           <Image
             src="/elements/doodles/bluecircle.svg"
+            draggable="false"
             sx={{ position: 'absolute', right: '30%', top: '78%' }}
           />
           <Image
             src="/elements/doodles/pinksquiggle.svg"
+            draggable="false"
             sx={{ position: 'absolute', right: '10%', top: '80%' }}
           />
           <Image
             src="/elements/doodles/bluedrops.svg"
+            draggable="false"
             sx={{ position: 'absolute', right: '10%', top: '0%' }}
           />
         </Box>
