@@ -21,8 +21,8 @@ Note: To test your changes locally, use `yarn install` and `yarn dev`.
 import Head from 'next/head'
 import { Box, Button, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
+// import { motion } from 'motion/react'
 
-// TODO: Change this schedule to your own!
 const schedule = [
   { time: '10:00 AM', event: 'Gates Open and Registration' },
   { time: '11:00 AM', event: 'Opening Ceremony' },
@@ -418,7 +418,9 @@ export default function ExampleCity() {
             width: '100%',
             height: '100%',
             zIndex: 1,
-            display: ['none', 'none', 'block']
+            display: ['none', 'none', 'block'],
+            pointerEvents: 'none',
+            userSelect: 'none'
           }}
         >
           <Image
