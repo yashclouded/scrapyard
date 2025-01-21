@@ -316,7 +316,7 @@ export default function Home() {
               will run in 100+ cities worldwide on the weekend of March 15th.
               Scrapyard is a hackathon with a "scrappy" theme of stupid
               inventions! It's organized by Hack Club, a <Nonprofit501c3 />{' '}
-              nonprofit that supports a global community of over 48,000 high
+              nonprofit that supports a global community of over 50,000 high
               school makers.
             </p>
           </Box>

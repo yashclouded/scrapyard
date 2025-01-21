@@ -1,25 +1,32 @@
+/*
+Note: To test your changes locally use `yarn dev` and http://localhost:3000/columbus
+*/
+
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// We are still planning the schedule
+// TODO: Change this schedule to your own!
+const schedinprog = [{ time: 'XX:XX', event: 'SCHEDULE IN PROGRESS' }]
+
 const schedule = [
   { time: '11:00 AM', event: 'Doors open' },
   { time: '12:00 PM', event: 'Opening ceremony' },
   { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
+  { time: '1:00 PM', event: 'Hacking starts!' },
   { time: '2:00 PM', event: 'Workshop 1' },
   { time: '4:00 PM', event: 'Activity 1' },
   { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
+  { time: '6:00 PM', event: 'dinner' }
+]
+
+const scheduleday2 = [
   { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
+  { time: '10:30 AM', event: 'Demos w/ judges' },
   { time: '12:00 PM', event: 'Closing ceremony' }
 ]
 
-const Map = dynamic(() => import('../components/Map'), { ssr: false })
+//const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -43,7 +50,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function QuezonCity() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -57,7 +64,8 @@ export default function QuezonCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Quezon City</title>
+        {/* TODO: Change Columbus to your event's city */}
+        <title>Scrapyard Columbus</title>
       </Head>
       <Flag />
       <Box
@@ -119,7 +127,7 @@ export default function QuezonCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid s#1t, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -152,7 +160,23 @@ export default function QuezonCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Quezon City - March&nbsp;15, 2025
+              {/* TODO: Change Columbus to your event's city */}
+              Columbus, OH - March&nbsp;15-16
+            </Heading>
+
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'p22-stanyan',
+                mx: '8%',
+                p: 0,
+                wordBreak: 'keep-all',
+                whiteSpace: 'nowrap',
+                width: 'max-content',
+                fontSize: ['1.2em', '1.4em']
+              }}
+            >
+              Venue TBA
             </Heading>
           </Box>
         </Box>
@@ -202,7 +226,8 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
+          href="https://forms.hackclub.com/scrapyard-signup?event=columbus"
           target="_blank"
         >
           <Box
@@ -260,8 +285,8 @@ export default function QuezonCity() {
             position: 'absolute',
             top: '0px',
             right: '0px',
-            width: '70vw',
-            transform: 'translateY(-40%)',
+            width: '65vw',
+            transform: 'translateY(-20%)',
             zIndex: 7
           }}
         />
@@ -308,22 +333,23 @@ export default function QuezonCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Quezon City?
+              {/* TODO: Change Columbus to your event's city */}
+              What is Scrapyard?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers happening
-              in Quezon City, where you can make the stupidest things you can
-              think of! Anything, from a{' '}
+              {/* TODO: Change Columbus to your event's city */}
+              Scrapyard is The Most Useless Invention competition, happening in
+              Columbus. Make the stupidest things you can think of and win
+              awesome stuff. Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
-              , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Quezon
-              City needs you and your scrappy ideas!
+              , to those useless ideas you thought of lying in bed, Scrapyard
+              Columbus needs you and your janky inventions!
             </p>
           </Box>
         </Box>
@@ -421,7 +447,8 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD QUEZON CITY?
+            {/* TODO: Change Columbus to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD Columbus?
           </Heading>
         </Box>
         <Heading
@@ -433,7 +460,7 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Columbus is a 2-day event - HERE'S THE SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -452,7 +479,100 @@ export default function QuezonCity() {
             boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
           }}
         >
-          {schedule.map((item, i) => (
+          <Heading
+            as="h2"
+            sx={{
+              fontSize: '1.5em',
+              fontFamily: 'moonblossom',
+              color: 'black',
+              textAlign: 'center',
+              paddingBottom: 50
+            }}
+          >
+            Day 1 (SATURDAY)
+          </Heading>
+
+          {schedinprog.map((item, i) => (
+            <div
+              style={{
+                display: 'flex',
+                width: '100%',
+                alignItems: 'center'
+              }}
+              key={i}
+            >
+              <Heading
+                as="p"
+                sx={{
+                  display: 'inline',
+                  width: ['min-content', 'max-content'],
+                  fontSize: '2rem',
+                  fontFamily: 'p22-stanyan'
+                }}
+              >
+                {item.event}
+              </Heading>
+              <Box
+                sx={{
+                  mx: 2,
+                  transform: 'translateY(0.75rem)',
+                  borderWidth: 0,
+                  borderBottomWidth: '0.35rem',
+                  borderStyle: 'dotted',
+                  flexGrow: '1',
+                  display: 'inline',
+                  height: 1
+                }}
+              ></Box>
+              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+            </div>
+          ))}
+
+          {/* <Heading
+          as="h2"
+          sx={{
+            fontSize: '1.5em',
+            fontFamily: 'moonblossom',
+            color: 'black',
+            textAlign: 'center',
+            paddingTop: 30
+          }}
+        >
+          SLEEP (...zzz)
+        </Heading> */}
+        </Box>
+
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: ['90%', '70%'],
+            fontSize: '2em',
+            gap: '0.2em',
+            color: 'black',
+            my: 5,
+            background: "url('/backgrounds/lined-paper.png')",
+            backgroundSize: ['contain', 'contain', 'cover!important'],
+            p: 4,
+            borderRadius: 1,
+            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+          }}
+        >
+          <Heading
+            as="h2"
+            sx={{
+              fontSize: '1.5em',
+              fontFamily: 'moonblossom',
+              color: 'black',
+              textAlign: 'center',
+              paddingBottom: 50
+            }}
+          >
+            Day 2 (SUNDAY)
+          </Heading>
+
+          {schedinprog.map((item, i) => (
             <div
               style={{
                 display: 'flex',
@@ -521,10 +641,12 @@ export default function QuezonCity() {
             sx={{
               mx: '1vw',
               fontWeight: 'lighter',
-              textAlign: 'center'
+              textAlign: 'center',
+              paddingTop: 15
             }}
           >
-            CAN'T MAKE IT TO Quezon City?
+            {/* TODO: Change Columbus to your event's city */}
+            CAN'T MAKE IT TO Columbus?
           </Heading>
         </Box>
         <Heading
@@ -550,7 +672,7 @@ export default function QuezonCity() {
             mt: 5
           }}
         >
-          <Map />
+          {/* <Map> */}
         </Box>
       </Box>
 
@@ -597,9 +719,11 @@ export default function QuezonCity() {
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
-                to come! You don't have to be a member of the Hack Club
-                community or be a Hack Club leader.
+                All high-school aged students are welcome, just fill out the{' '}
+                <Link href="https://forms.hackclub.com/scrapyard-signup?event=columbus">
+                  form
+                </Link>
+                !
               </>
             ),
             'All this, for free?': (
@@ -614,26 +738,25 @@ export default function QuezonCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop, chargers, and an open mind! Additionally, if you
+                plan to work on a hardware project, bring the tools you'll need.
+                3D printers at the event are TBD.
               </>
             ),
-            'I’m not good at coding. Can I still participate?': (
+            'I dont know how to code. Can I still participate?': (
               <>
-                This hackathon is for creatives of all skill levels! We'll have
-                workshops and other events so join us and let's learn together.
-                If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                Knowing how to code is NOT required. Whether your Useless
+                Invention is on Scratch or Google Docs, you'll still be eligible
+                for epic prizes. This hackathon is for all skill levels, even if
+                you'll be writing your first line of code we'll have workshops
+                and mentors to help you out.
               </>
             ),
             'What can I make at Scrapyard?': (
               <>
-                The scrappiest thing you can imagine –- jank is encouraged.
-                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We’ll have a bunch of resources and mentors to help
-                you out.
+                The most useless thing you can imagine –- jank is encouraged.
+                Apps? Games? Websites? We’ll have a bunch of resources and
+                mentors to help you fulfill your most pointless inventions.
               </>
             ),
             'What has Hack Club done before?': (
@@ -649,32 +772,30 @@ export default function QuezonCity() {
                 >
                   Game Jam
                 </Link>{' '}
-                across 50 cities, a hackathon on a{' '}
+                across 50 cities, a hackathon on an{' '}
                 <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">
-                  Train
+                  Express Train
                 </Link>{' '}
                 from Vermont to Los Angeles, and much more!
               </>
             ),
-            'What if my parents are concerned?': (
+            'My parents are asking...?': (
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                <Link href="mailto:columbus@scrapyard.hackclub.com">
+                  columbus@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
             ),
-            'What if I have more questions?': (
+            'I have more questions': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
-                </Link>
-                .
+                Contact us! Feel free to reach out to us at{' '}
+                <Link href="mailto:columbus@scrapyard.hackclub.com">
+                  columbus@scrapyard.hackclub.com
+                </Link>{' '}
+                or in the #scrapyard-columbus channel on the Hack Club slack.
               </>
             )
           }).map(([question, answer], i) => {
@@ -723,8 +844,10 @@ export default function QuezonCity() {
             )
           })}
         </Grid>
+
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
+          href="https://forms.hackclub.com/scrapyard-signup?event=columbus"
           target="_blank"
         >
           <Box
@@ -753,10 +876,42 @@ export default function QuezonCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD QUEZON CITY
+              {/* TODO: Change Columbus to your event's city */}
+              SIGN UP FOR SCRAPYARD Columbus
             </Heading>
           </Box>
         </Link>
+
+        <Heading
+          as="h1"
+          sx={{
+            mb: 5,
+            position: 'relative',
+            paddingTop: 70
+          }}
+        >
+          Meet the organizers
+          <Image
+            src="/elements/doodles/pink-underline.svg"
+            sx={{
+              position: 'absolute',
+              bottom: '0',
+              left: '50%',
+              transform: 'translateX(-50%) translateY(75%)',
+              paddingTop: 10
+            }}
+          />
+        </Heading>
+
+        {/* <Image
+            src="/city/columbus/organizers/meghanapfp.jpg"
+            sx={{
+              width: [120, 128, 180],
+              position: 'absolute',
+              transform: 'translateY(370%)'
+            }}
+            /> */}
+
         <Heading
           as="h2"
           sx={{

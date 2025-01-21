@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// We are still planning the schedule
+// TODO: not finalized yet!
 const schedule = [
   { time: '11:00 AM', event: 'Doors open' },
   { time: '12:00 PM', event: 'Opening ceremony' },
@@ -43,7 +43,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function QuezonCity() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -57,7 +57,7 @@ export default function QuezonCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Quezon City</title>
+        <title>Scrapyard Bengaluru</title>
       </Head>
       <Flag />
       <Box
@@ -72,20 +72,14 @@ export default function QuezonCity() {
           gap: '20px'
         }}
       >
-        <Box
-          sx={{
-            position: 'relative'
-          }}
-        >
+        <Box sx={{ position: 'relative' }}>
           <Image
             sx={{
               width: '600px',
-
               maxWidth: '70vw',
-
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="https://i.ibb.co/R6Fn52x/blrwordmark.png"
             alt="Scrapyard"
           />
         </Box>
@@ -100,11 +94,6 @@ export default function QuezonCity() {
             sx={{
               background: "url('/elements/ripped-paper.png')",
               backgroundSize: 'cover',
-              // aspectRatio: "1080/338.4",
-              // padding: "8%",
-              // paddingLeft: "7%",
-              display: 'block',
-
               width: 'min(500px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
@@ -152,17 +141,11 @@ export default function QuezonCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Quezon City - March&nbsp;15, 2025
+              Bengaluru - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
-        <Box
-          sx={{
-            position: 'absolute',
-            width: '100%',
-            height: '100vw'
-          }}
-        >
+        <Box sx={{ position: 'absolute', width: '100%', height: '100vw' }}>
           <Image
             sx={{
               width: '10%',
@@ -202,7 +185,7 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=bengaluru"
           target="_blank"
         >
           <Box
@@ -269,7 +252,6 @@ export default function QuezonCity() {
       <Box
         sx={{
           width: '100%',
-          // background: "linear-gradient(#F5F5F5, #F2F2F2)",
           background: 'url(/backgrounds/ripped-paper.png)',
           backgroundSize: 'cover',
           display: 'flex',
@@ -308,25 +290,26 @@ export default function QuezonCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Quezon City?
+              What's Scrapyard Bengaluru?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers happening
-              in Quezon City, where you can make the stupidest things you can
-              think of! Anything, from a{' '}
+              Scrapyard Bengaluru is a hackathon for high schoolers happening in
+              Bengaluru, where you can make the stupidest things you can think
+              of! Anything, from a
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
-                lamp that flashes faster the slower you type
+                &nbsp;lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Quezon
-              City needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Bengaluru
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
+
         <Box
           sx={{
             position: 'absolute',
@@ -369,6 +352,94 @@ export default function QuezonCity() {
             sx={{ position: 'absolute', right: '10%', top: '0%' }}
           />
         </Box>
+
+        {/* SPONSORS SECTION BELOW "What's Scrapyard Bengaluru?" */}
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            my: 5
+          }}
+        >
+          <Heading as="h2" sx={{ fontFamily: 'moonblossom', mb: 3 }}>
+            Our Sponsors
+          </Heading>
+          <Grid columns={[1, 2, 3]} gap={4} sx={{ alignItems: 'center' }}>
+            <Box
+              sx={{
+                width: '200px',
+                height: '200px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '2px solid black',
+                backgroundColor: '#fff'
+              }}
+            >
+              <Link href=" https://gen.xyz/" target="_blank">
+                <Image
+                  src="https://cloud-lni8iqe2t-hack-club-bot.vercel.app/0xyz-logo-color.png"
+                  alt="Gen XYZ"
+                  sx={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain'
+                  }}
+                />
+              </Link>
+            </Box>
+            {/*
+            <Box
+              sx={{
+                width: '200px',
+                height: '200px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '2px solid black',
+                backgroundColor: '#fff'
+              }}
+            >
+              <Link href="PLACEHOLDER_SPONSOR_2_LINK" target="_blank">
+                <Image
+                  src="PLACEHOLDER_SPONSOR_2_URL"
+                  alt="Sponsor 2"
+                  sx={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain'
+                  }}
+                />
+              </Link>
+            </Box>
+            <Box
+              sx={{
+                width: '200px',
+                height: '200px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '2px solid black',
+                backgroundColor: '#fff'
+              }}
+            >
+              <Link href="PLACEHOLDER_SPONSOR_3_LINK" target="_blank">
+                <Image
+                  src="PLACEHOLDER_SPONSOR_3_URL"
+                  alt="Sponsor 3"
+                  sx={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain'
+                  }}
+                />
+              </Link>
+            </Box>
+            */}
+          </Grid>
+        </Box>
       </Box>
 
       <Box
@@ -376,31 +447,21 @@ export default function QuezonCity() {
           width: '100vw',
           background: "url('/backgrounds/ripped-paper-bottom.png')",
           backgroundSize: 'cover',
-
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-
           height: '17.03212647vw',
           position: 'relative'
         }}
-      ></Box>
+      />
 
       <Box
-        sx={{
-          // backgroundImage: "url(/backgrounds/confetti.png)",
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
+        sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}
       >
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            // backgroundSize: "cover!important",
-            // display: "block",
-            // width: "30vw",
             height: '30vh',
             width: ['90vw', '70vw', '46.8vw'],
             alignItems: 'center',
@@ -421,7 +482,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD QUEZON CITY?
+            WHAT'S HAPPENING AT SCRAPYARD BENGALURU?
           </Heading>
         </Box>
         <Heading
@@ -433,7 +494,7 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard BENGALURU is a 24-HOUR event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -483,7 +544,7 @@ export default function QuezonCity() {
                   display: 'inline',
                   height: 1
                 }}
-              ></Box>
+              />
               <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
             </div>
           ))}
@@ -491,19 +552,11 @@ export default function QuezonCity() {
       </Box>
 
       <Box
-        sx={{
-          // backgroundImage: "url(/backgrounds/confetti.png)",
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
+        sx={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}
       >
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            // backgroundSize: "cover!important",
-            // display: "block",
-            // width: "30vw",
             height: '30vh',
             width: ['90vw', '70vw', '46.8vw'],
             alignItems: 'center',
@@ -524,7 +577,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Quezon City?
+            CAN'T MAKE IT TO BENGALURU?
           </Heading>
         </Box>
         <Heading
@@ -587,144 +640,121 @@ export default function QuezonCity() {
             }}
           />
         </Heading>
-        <Grid
-          columns={[1, 1, 1, 2]}
-          gap={4}
-          sx={{
-            maxWidth: '1200px'
-          }}
-        >
+        <Grid columns={[1, 1, 1, 2]} gap={4} sx={{ maxWidth: '1200px' }}>
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
                 All high-school & upper-middle-school aged students are welcome
-                to come! You don't have to be a member of the Hack Club
-                community or be a Hack Club leader.
+                to come!
               </>
             ),
             'All this, for free?': (
               <>
-                Yep! Food, swag and good vibes are all included. Plus, if you’re
-                joining us from afar,{' '}
+                Yep! Food, swag and good vibes are all included. If you’re
+                joining us from afar,
                 <Link href="https://gas.hackclub.com/">
-                  we’ll cover the cost of gas or a bus / train ticket
+                  &nbsp;we’ll cover travel costs
                 </Link>
                 .
               </>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop, chargers, and an open mind! If it's an overnight
+                event, bring toiletries/sleeping bag, plus any hardware tools
+                you need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
               <>
-                This hackathon is for creatives of all skill levels! We'll have
-                workshops and other events so join us and let's learn together.
-                If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                This is for creatives of all skill levels! We'll have workshops
+                and events, so join us and let's learn together.
               </>
             ),
             'What can I make at Scrapyard?': (
               <>
-                The scrappiest thing you can imagine –- jank is encouraged.
-                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We’ll have a bunch of resources and mentors to help
-                you out.
+                The scrappiest thing you can imagine – jank is encouraged.
+                Games, apps, websites, hardware, anything goes!
               </>
             ),
             'What has Hack Club done before?': (
               <>
-                Hack Club has run an{' '}
+                Hack Club has run many unique events, like an
                 <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">
-                  overnight hackathon
-                </Link>{' '}
-                in San Francisco, a{' '}
+                  &nbsp;overnight hackathon in SF
+                </Link>
+                , a
                 <Link
                   href="https://www.youtube.com/watch?v=H5RPsCMl3uM"
                   target="_blank"
                 >
-                  Game Jam
-                </Link>{' '}
-                across 50 cities, a hackathon on a{' '}
+                  &nbsp;Game Jam
+                </Link>
+                , a hackathon on a
                 <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">
-                  Train
-                </Link>{' '}
-                from Vermont to Los Angeles, and much more!
+                  &nbsp;Train
+                </Link>
+                , and more.
               </>
             ),
             'What if my parents are concerned?': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
-                they can reach out to us at{' '}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
-                </Link>{' '}
-                for questions.
+                We’re here to help! A parents guide will be out soon. They can
+                also email
+                <Link href="mailto:bengaluru@scrapyard.hackclub.com">
+                  &nbsp;bengaluru@scrapyard.hackclub.com
+                </Link>
+                .
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                Reach out in #scrapyard-bengaluru on Slack or email
+                <Link href="mailto:bengaluru@scrapyard.hackclub.com">
+                  &nbsp;bengaluru@scrapyard.hackclub.com
                 </Link>
                 .
               </>
             )
-          }).map(([question, answer], i) => {
-            return (
-              <Card
-                key={question}
+          }).map(([question, answer], i) => (
+            <Card
+              key={question}
+              sx={{
+                background: [
+                  'transparent',
+                  `url('/elements/doodles/boxes/${(i % 6) + 1}.svg')`
+                ],
+                backgroundSize: [null, '100% 100%'],
+                backgroundRepeat: 'no-repeat',
+                boxShadow: 'none',
+                padding: '48px!important',
+                border: ['2px solid black', 'none']
+              }}
+            >
+              <Heading
+                as="h2"
+                mb={4}
                 sx={{
-                  background: [
-                    'transparent',
-                    `url('/elements/doodles/boxes/${(i % 6) + 1}.svg')`
-                  ],
-                  backgroundSize: [null, '100% 100%'],
-                  backgroundRepeat: 'no-repeat',
-                  boxShadow: 'none',
-                  padding: '48px!important',
-                  border: ['2px solid black', 'none']
+                  position: 'relative'
                 }}
               >
-                <Heading
-                  as="h2"
-                  mb={4}
+                {question}
+                <Image
+                  src="/elements/doodles/yellow-underline.svg"
                   sx={{
-                    position: 'relative'
+                    position: 'absolute',
+                    bottom: '0',
+                    left: '50%',
+                    transform: 'translateX(-50%) translateY(75%)'
                   }}
-                >
-                  {question}
-                  <Image
-                    src="/elements/doodles/yellow-underline.svg"
-                    sx={{
-                      position: 'absolute',
-                      bottom: '0',
-                      left: '50%',
-                      transform: 'translateX(-50%) translateY(75%)'
-                    }}
-                  />
-                </Heading>
-                <Text
-                  sx={{
-                    fontSize: 3,
-                    fontWeight: 'bold'
-                  }}
-                >
-                  {answer}
-                </Text>
-              </Card>
-            )
-          })}
+                />
+              </Heading>
+              <Text sx={{ fontSize: 3, fontWeight: 'bold' }}>{answer}</Text>
+            </Card>
+          ))}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=bengaluru"
           target="_blank"
         >
           <Box
@@ -753,7 +783,7 @@ export default function QuezonCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD QUEZON CITY
+              SIGN UP FOR SCRAPYARD BENGALURU
             </Heading>
           </Box>
         </Link>
@@ -775,28 +805,16 @@ export default function QuezonCity() {
             }}
           />
         </Heading>
-        <Text
-          sx={{
-            fontFamily: 'moonblossom',
-            mb: -2,
-            textAlign: 'center'
-          }}
-        >
+        <Text sx={{ fontFamily: 'moonblossom', mb: -2, textAlign: 'center' }}>
           Made with ♡ by teenagers, for teenagers at Hack Club
         </Text>
-        <Text
-          sx={{
-            fontFamily: 'moonblossom',
-            mt: 0,
-            textAlign: 'center'
-          }}
-        >
-          <Link href="https://hackclub.com">Hack Club</Link>{' '}
-          <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-          <Link href="https://hackclub.com/slack">Slack</Link>{' '}
-          <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
-          <Link href="https://hackclub.com/clubs">Clubs</Link>{' '}
-          <span sx={{ transform: 'scale(2)' }}>・</span>{' '}
+        <Text sx={{ fontFamily: 'moonblossom', mt: 0, textAlign: 'center' }}>
+          <Link href="https://hackclub.com">Hack Club</Link>
+          <span sx={{ transform: 'scale(2)' }}>・</span>
+          <Link href="https://hackclub.com/slack">Slack</Link>
+          <span sx={{ transform: 'scale(2)' }}>・</span>
+          <Link href="https://hackclub.com/clubs">Clubs</Link>
+          <span sx={{ transform: 'scale(2)' }}>・</span>
           <Link href="https://hackclub.com/hackathons">Hackathons</Link>
         </Text>
       </Box>

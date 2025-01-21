@@ -1,25 +1,21 @@
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
-import dynamic from 'next/dynamic'
 
-// We are still planning the schedule
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: 'March 15 - 11:00 AM', event: 'Doors open' },
+  { time: 'March 15 - 12:00 PM', event: 'Opening ceremony' },
+  { time: 'March 15 - 12:30 PM', event: 'Lunch' },
+  { time: 'March 15 - 01:00 PM', event: 'Start working on your project!' },
+  { time: 'March 15 - 02:00 PM', event: 'Workshop 1' },
+  { time: 'March 15 - 04:00 PM', event: 'Activity 1' },
+  { time: 'March 15 - 04:00 PM', event: 'Workshop 2' },
+  { time: 'March 15 - 06:00 PM', event: 'Dinner' },
+  { time: 'March 15 - 08:00 PM', event: 'Lightning talks' },
+  { time: 'March 15 - 12:00 AM', event: 'Midnight surprise' },
+  { time: 'March 16 - 08:00 AM', event: 'Breakfast' },
+  { time: 'March 16 - 10:30 AM', event: 'Demos!' },
+  { time: 'March 16 - 12:00 PM', event: 'Closing ceremony' }
 ]
-
-const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -43,7 +39,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function QuezonCity() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -57,7 +53,7 @@ export default function QuezonCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Quezon City</title>
+        <title>Scrapyard Busan</title>
       </Head>
       <Flag />
       <Box
@@ -85,7 +81,7 @@ export default function QuezonCity() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="/city/busan/Big Logo.png"
             alt="Scrapyard"
           />
         </Box>
@@ -116,10 +112,11 @@ export default function QuezonCity() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%'
+                margin: '8%',
+                fontSize: '23px'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -152,7 +149,10 @@ export default function QuezonCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Quezon City - March&nbsp;15, 2025
+              <Link href="https://busanforeignschool.org/" target="blank">
+                Busan Foreign School
+              </Link>{' '}
+              - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -202,7 +202,7 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
           target="_blank"
         >
           <Box
@@ -308,22 +308,22 @@ export default function QuezonCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Quezon City?
+              What's Scrapyard Busan?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers happening
-              in Quezon City, where you can make the stupidest things you can
-              think of! Anything, from a{' '}
+              Scrapyard Busan is a hackathon for high schoolers happening in
+              Busan, where you can make the stupidest things you can think of!
+              Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Quezon
-              City needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Busan
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -421,7 +421,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD QUEZON CITY?
+            WHAT'S HAPPENING AT SCRAPYARD BUSAN?
           </Heading>
         </Box>
         <Heading
@@ -433,7 +433,7 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Busan is a 24-hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -524,7 +524,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Quezon City?
+            HOW TO FIND US?
           </Heading>
         </Box>
         <Heading
@@ -537,7 +537,8 @@ export default function QuezonCity() {
             mx: '5vw'
           }}
         >
-          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
+          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호
+          48084
         </Heading>
         <Box
           sx={{
@@ -546,12 +547,119 @@ export default function QuezonCity() {
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            mb: '10vh',
+            mb: '5vh',
             mt: 5
           }}
         >
-          <Map />
+          <iframe
+            width="80%"
+            height="100%"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765"
+            style={{ border: '1px solid black' }}
+          ></iframe>
+          <br />
+          <small>
+            <a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a>
+          </small>{' '}
         </Box>
+      </Box>
+
+      <Box
+        sx={{
+          width: '100%',
+          background: 'white',
+          backgroundSize: ['contain', 'contain', 'cover!important'],
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          gap: '20px',
+          p: [4, 4, 5],
+          pt: 6,
+          position: 'relative'
+        }}
+      >
+        <Heading
+          as="h1"
+          sx={{
+            position: 'relative',
+            mb: '-20px'
+          }}
+        >
+          OUR SPONSORS
+        </Heading>
+        <p
+          style={{
+            fontSize: '1.5em'
+          }}
+        >
+          Without their support, Scrapyard Busan wouldn't be possible.
+        </p>
+
+        <Grid
+          columns={[1, 1, 1, 2]}
+          gap={4}
+          sx={{
+            maxWidth: '1200px'
+          }}
+        >
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://busanforeignschool.org/">
+              <Image
+                src="/city/busan/sponsors/bfs.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://hackclub.com/">
+              <Image
+                src="/city/busan/sponsors/hackclub.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://algoverseairesearch.org/">
+              <Image
+                src="/city/busan/sponsors/algoverse.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://www.tkbend.co.kr/eng/main/main.php">
+              <Image
+                src="/city/busan/sponsors/tk.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+        </Grid>
       </Box>
 
       <Box
@@ -597,27 +705,19 @@ export default function QuezonCity() {
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
-                to come! You don't have to be a member of the Hack Club
-                community or be a Hack Club leader.
+                All high-school aged students are welcome to come! You don't
+                have to be a member of the Hack Club community or be a Hack Club
+                leader.
               </>
             ),
             'All this, for free?': (
-              <>
-                Yep! Food, swag and good vibes are all included. Plus, if you’re
-                joining us from afar,{' '}
-                <Link href="https://gas.hackclub.com/">
-                  we’ll cover the cost of gas or a bus / train ticket
-                </Link>
-                .
-              </>
+              <>Yep! Food, swag and good vibes are all included.</>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop, chargers, and an open mind! Bring toiletries and
+                sleeping bags too. Additionally, if you plan to work on a
+                hardware project, bring the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -625,7 +725,11 @@ export default function QuezonCity() {
                 This hackathon is for creatives of all skill levels! We'll have
                 workshops and other events so join us and let's learn together.
                 If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                check out{' '}
+                <Link href="https://workshops.hackclub.com/">
+                  Hack Club Workshops
+                </Link>
+                .
               </>
             ),
             'What can I make at Scrapyard?': (
@@ -660,19 +764,18 @@ export default function QuezonCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                <Link href="mailto:scrapyardbusan@bfs.or.kr">
+                  scrapyardbusan@bfs.or.kr
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
+                Contact us! Feel free to reach out to us in the #scrapyard-busan
                 channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                <Link href="mailto:scrapyardbusan@bfs.or.kr">
+                  scrapyardbusan@bfs.or.kr
                 </Link>
                 .
               </>
@@ -724,7 +827,7 @@ export default function QuezonCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
           target="_blank"
         >
           <Box
@@ -753,7 +856,7 @@ export default function QuezonCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD QUEZON CITY
+              SIGN UP FOR SCRAPYARD BUSAN
             </Heading>
           </Box>
         </Link>

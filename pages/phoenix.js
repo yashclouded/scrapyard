@@ -2,22 +2,7 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// We are still planning the schedule
-const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
-]
+const schedule = [{ time: 'TBD', event: 'Schedule to be determined' }]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
@@ -43,7 +28,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function QuezonCity() {
+export default function ExampleCity() {
   return (
     <Box
       sx={{
@@ -57,7 +42,7 @@ export default function QuezonCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Quezon City</title>
+        <title>Scrapyard Phoenix</title>
       </Head>
       <Flag />
       <Box
@@ -152,7 +137,7 @@ export default function QuezonCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Quezon City - March&nbsp;15, 2025
+              Phoenix - March&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -202,7 +187,7 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=phoenix"
           target="_blank"
         >
           <Box
@@ -308,22 +293,22 @@ export default function QuezonCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Quezon City?
+              What's Scrapyard Phoenix?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers happening
-              in Quezon City, where you can make the stupidest things you can
-              think of! Anything, from a{' '}
+              Scrapyard Phoenix is a hackathon for high schoolers happening in
+              Phoenix, where you can make the stupidest things you can think of!
+              Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Quezon
-              City needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Phoenix
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -421,7 +406,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD QUEZON CITY?
+            WHAT'S HAPPENING AT SCRAPYARD Phoenix?
           </Heading>
         </Box>
         <Heading
@@ -433,7 +418,7 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Phoenix is a 12-hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -524,7 +509,7 @@ export default function QuezonCity() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Quezon City?
+            CAN'T MAKE IT TO Phoenix?
           </Heading>
         </Box>
         <Heading
@@ -614,10 +599,8 @@ export default function QuezonCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop, chargers, and an open mind! Additionally, if you
+                plan to work on a hardware project, bring the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -660,19 +643,18 @@ export default function QuezonCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                <Link href="mailto:phoenix@scrapyard.hackclub.com">
+                  phoenix@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                  carl.quezon-city@scrapyard.hackclub.com
+                Contact us! Feel free to reach out to us in the
+                #scrapyard-phoenix channel on the Hack Club slack or email us at{' '}
+                <Link href="phoenix@scrapyard.hackclub.com">
+                  phoenix@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -724,7 +706,7 @@ export default function QuezonCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
+          href="https://forms.hackclub.com/scrapyard-signup?event=phoenix"
           target="_blank"
         >
           <Box
@@ -753,7 +735,7 @@ export default function QuezonCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD QUEZON CITY
+              SIGN UP FOR SCRAPYARD Phoenix
             </Heading>
           </Box>
         </Link>
