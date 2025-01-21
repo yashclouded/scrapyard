@@ -42,7 +42,7 @@ const schedule = [
   { time: '8:00 AM', event: 'Showers' },
   { time: '9:00 AM', event: 'Breakfast' },
   { time: '10:00 AM', event: 'Workshops' },
-  { time: '11:00 AM', event: 'Working Session`' },
+  { time: '11:00 AM', event: 'Working Session' },
   { time: '12:00 PM', event: 'Side Activity' },
   { time: '1:00 PM', event: 'Lunch' },
   { time: '2:00 PM', event: 'Final Hour of Work' },
