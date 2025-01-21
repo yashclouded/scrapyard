@@ -673,8 +673,8 @@ export default function ExampleCity() {
             }}
           >
             <Image
-              src="https://placehold.co/400x400/png"
-              alt="Liv Skeete"
+              src="https://i.ibb.co/MPwkQd9/Screenshot-2025-01-17-at-8-30-24-PM.png"
+              alt="Oliva Skeete"
               sx={{
                 width: '80px',
                 height: '80px',
@@ -689,15 +689,15 @@ export default function ExampleCity() {
                 flexDirection: 'column' // Stack items vertically
               }}
             >
-              <Text sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>Liv Skeete</Text>
+              <Text sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>Olivia Skeete</Text>
               <Link
-                href="mailto:liv@example.com"
+                href="mailto:oliva@example.com"
                 sx={{
                   color: 'inherit', // Remove blue color
                   textDecoration: 'none' // Remove underline
                 }}
               >
-                liv@example.com
+                oliva@example.com
               </Link>
             </Box>
           </Box>
