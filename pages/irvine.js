@@ -77,7 +77,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="public/city/Irvine/IrvineLogo.svg"
             alt="Scrapyard"
           />
         </Box>
