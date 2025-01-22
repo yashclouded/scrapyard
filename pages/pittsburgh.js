@@ -225,32 +225,30 @@ export default function ExampleCity() {
           />
         </Box>
 
-          <Box
-            sx={{
-              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '100% 100%',
-              position: 'fixed',
-              right: ['40%'],
-              top: ['4%'],
-              filter: 'drop-shadow(5px 5px 5px #000)',
-              transition: 'transform 0.2s',
-              ':hover': {
-                transform: 'scale(1.1)'
-              },
-              zIndex: 30,
-              minWidth: '8em',
-              padding: '15px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '30px',
-              paddingRight: '30px'
-            }}
-          >
-            <Link
-              href="#about"
-            >
+        <Box
+          sx={{
+            backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
+            position: 'fixed',
+            right: ['40%'],
+            top: ['4%'],
+            filter: 'drop-shadow(5px 5px 5px #000)',
+            transition: 'transform 0.2s',
+            ':hover': {
+              transform: 'scale(1.1)'
+            },
+            zIndex: 30,
+            minWidth: '8em',
+            padding: '15px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '30px',
+            paddingRight: '30px'
+          }}
+        >
+          <Link href="#about">
             <Heading
               as="h2"
               sx={{
@@ -264,11 +262,9 @@ export default function ExampleCity() {
             >
               About
             </Heading>
-            </Link>
+          </Link>
 
-            <Link
-              href="#schedule"
-            >
+          <Link href="#schedule">
             <Heading
               as="h2"
               sx={{
@@ -282,11 +278,9 @@ export default function ExampleCity() {
             >
               Schedule
             </Heading>
-            </Link>
+          </Link>
 
-            <Link
-              href="#faq"
-            >
+          <Link href="#faq">
             <Heading
               as="h2"
               sx={{
@@ -300,12 +294,11 @@ export default function ExampleCity() {
             >
               FAQ
             </Heading>
-            </Link>
-          </Box>
-        
+          </Link>
+        </Box>
+
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=reczZ75m4ruzLG7Da"
+          href="https://forms.hackclub.com/scrapyard-signup?event=pittsburgh"
           target="_blank"
         >
           <Box
@@ -421,8 +414,9 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Pittsburgh is a hackathon for anyone in high school or middle school!
-              At Scrapyard Pittsburgh, you'll create something using code or hardware in 12 hours, then share it with others!
+              Scrapyard Pittsburgh is a hackathon for anyone in high school or
+              middle school! At Scrapyard Pittsburgh, you'll create something
+              using code or hardware in 12 hours, then share it with others!
             </p>
           </Box>
         </Box>
@@ -536,8 +530,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Pittsburgh is a 12 hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Pittsburgh is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -637,21 +630,16 @@ export default function ExampleCity() {
         >
           {Object.entries({
             'Who can participate in Scrapyard?': (
-              <>
-                All high-school & middle-school students are welcome
-                to come! 
-              </>
+              <>All high-school & middle-school students are welcome to come!</>
             ),
             'All this, for free?': (
-              <>
-                Yep! Food, swag and good vibes are all included.
-              </>
+              <>Yep! Food, swag and good vibes are all included.</>
             ),
             'What do I need?': (
               <>
-                Your laptop/iPad, chargers, and an open mind!
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop/iPad, chargers, and an open mind! Additionally, if
+                you plan to work on a hardware project, bring the tools you'll
+                need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -662,10 +650,12 @@ export default function ExampleCity() {
             ),
             'What have the organizers done before?': (
               <>
-                Previously, the organizers ran {' '}
+                Previously, the organizers ran{' '}
                 <Link href="https://hack-the-grid.vercel.app" target="_blank">
                   Hack the Grid.
-                </Link>{' '} Now, they're running Scrapyard Pittsburgh with the support of Hack Club. Hack Club has run an{' '}
+                </Link>{' '}
+                Now, they're running Scrapyard Pittsburgh with the support of
+                Hack Club. Hack Club has run an{' '}
                 <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">
                   overnight hackathon
                 </Link>{' '}
@@ -755,8 +745,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=reczZ75m4ruzLG7Da"
+          href="https://forms.hackclub.com/scrapyard-signup?event=pittsburgh"
           target="_blank"
         >
           <Box
