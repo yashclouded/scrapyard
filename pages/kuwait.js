@@ -671,7 +671,7 @@ export default function ExampleCity() {
                 {/* TODO: Change this email to your event's email */}
                 <Link href="nshah.kuwait@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  kuwait@scrapyard.hackclub.com
+                  nshah.kuwait@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -684,7 +684,7 @@ export default function ExampleCity() {
                 {/* TODO: Change this email to your event's email */}
                 <Link href="nshah.kuwait@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  kuwait@scrapyard.hackclub.com
+                  nshah.kuwait@scrapyard.hackclub.com
                 </Link>
                 .
               </>
