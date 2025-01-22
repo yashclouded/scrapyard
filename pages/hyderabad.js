@@ -201,7 +201,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec1aUYOPNfgkN6ZN"
+          href="https://forms.hackclub.com/scrapyard-signup?event=hyderabad"
           target="_blank"
         >
           <Box
@@ -723,7 +723,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec1aUYOPNfgkN6ZN"
+          href="https://forms.hackclub.com/scrapyard-signup?event=hyderabad"
           target="_blank"
         >
           <Box
