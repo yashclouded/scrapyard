@@ -1,23 +1,3 @@
-'======== READ ME BEFORE EDITING ========'
-/*
-Hello! This is the template for the city pages.
-
-To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
-E.g. if your city is Tampa, rename the copy of this file to tampa.js
-
-Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
-You do not need to use this template exactly, feel free to customize it as much as you see fit.
-
-If you want to include additional assets, please add them under public/city/your-city-name.
-
-Make a PR and we'll review it as soon as we can!
-
-If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
-
-P.S. Feel free to delete this comment block when you're done! 
-
-Note: To test your changes locally, use `yarn install` and `yarn dev`.
-*/
 
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
@@ -340,7 +320,6 @@ export default function ExampleCity() {
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
               IRVINE needs you and your scrappy ideas!
             </p>
           </Box>
@@ -657,7 +636,7 @@ export default function ExampleCity() {
                   textDecoration: 'none' // Remove underline
                 }}
               >
-                devom@example.com
+                Coming Soon
               </Link>
             </Box>
           </Box>
@@ -689,7 +668,7 @@ export default function ExampleCity() {
                 flexDirection: 'column' // Stack items vertically
               }}
             >
-              <Text sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>Olivia Skeete</Text>
+              <Text sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>Oliva Skeete</Text>
               <Link
                 href="mailto:oliva@example.com"
                 sx={{
@@ -697,7 +676,7 @@ export default function ExampleCity() {
                   textDecoration: 'none' // Remove underline
                 }}
               >
-                oliva@example.com
+                Coming Soon
               </Link>
             </Box>
           </Box>
@@ -732,7 +711,7 @@ export default function ExampleCity() {
         <Box
           sx={{
             mt: 4,
-            mb: '40px', // Added more spacing below sponsor logos
+            mb: '70px', // Added more spacing below sponsor logos
             display: 'flex',
             flexWrap: 'nowrap',
             overflowX: 'scroll',
@@ -856,7 +835,7 @@ export default function ExampleCity() {
             'What can I make at Scrapyard?': (
               <>
                 The scrappiest thing you can imagine –- jank is encouraged.
-                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
+                Games? Apps? Websites? Programming languages? Hardware? 
                 You name it! We’ll have a bunch of resources and mentors to help
                 you out.
               </>
