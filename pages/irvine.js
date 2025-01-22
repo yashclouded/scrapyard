@@ -653,7 +653,7 @@ export default function ExampleCity() {
           >
             <Image
               src="https://i.ibb.co/MPwkQd9/Screenshot-2025-01-17-at-8-30-24-PM.png"
-              alt="Oliva Skeete"
+              alt="Olivia Skeete"
               sx={{
                 width: '80px',
                 height: '80px',
@@ -668,9 +668,9 @@ export default function ExampleCity() {
                 flexDirection: 'column' // Stack items vertically
               }}
             >
-              <Text sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>Oliva Skeete</Text>
+              <Text sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>Olivia Skeete</Text>
               <Link
-                href="mailto:oliva@example.com"
+                href="mailto:olivia@example.com"
                 sx={{
                   color: 'inherit', // Remove blue color
                   textDecoration: 'none' // Remove underline
