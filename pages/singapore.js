@@ -142,7 +142,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build scrappy stuff, get scrappy prizes.
             </Heading>
           </Box>
           <Box
