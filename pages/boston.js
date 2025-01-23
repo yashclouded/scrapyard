@@ -408,7 +408,7 @@ export default function ExampleCity() {
         }}
       ></Box>
 
-      <Box
+      {/* <Box
         sx={{
           // backgroundImage: "url(/backgrounds/confetti.png)",
           alignItems: 'center',
@@ -446,7 +446,7 @@ export default function ExampleCity() {
           </Heading>
         </Box>
 
-        {/* <Heading
+        <Heading
           as="h2"
           sx={{
             fontSize: '1.5em',
@@ -510,8 +510,8 @@ export default function ExampleCity() {
               <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
             </div>
           ))}
-        </Box> */}
-      </Box>
+        </Box>
+      </Box> */}
 
       <Box
         sx={{
