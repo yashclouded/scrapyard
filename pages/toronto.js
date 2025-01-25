@@ -32,7 +32,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function ExampleCity() {
+export default function Toronto() {
   return (
     <Box
       sx={{
@@ -75,7 +75,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="/public/city/toronto/Wordmark.svg"
             alt="Scrapyard"
           />
         </Box>
