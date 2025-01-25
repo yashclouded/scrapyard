@@ -75,7 +75,7 @@ export default function Toronto() {
 
               objectFit: 'contain'
             }}
-            src="/public/city/toronto/Wordmark.svg"
+            src="/city/toronto/Wordmark.svg"
             alt="Scrapyard"
           />
         </Box>
