@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic'
 const schedule = [
   { time: '7:30 AM', event: 'Abren puertas' },
   { time: '8:00 AM', event: 'Ceremonia de iniciación' },
-  { time: '11:00 AM', event: '¡Empieza a trabajar en tu projecto!' },
+  { time: '8:30 AM', event: '¡Empieza a trabajar en tu projecto!' },
   { time: '12:00 PM', event: 'Almuerzo' },
   { time: '2:00 PM', event: 'Taller 1' },
   { time: '4:00 PM', event: 'Actividad 1' },
