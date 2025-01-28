@@ -25,19 +25,17 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '8:00 AM', event: 'Doors open' },
+  { time: '9:00 PM', event: 'Opening ceremony' },
+  { time: '9:30 PM', event: 'Breakfast' },
+  { time: '10:00 PM', event: 'Start working on your project!' },
+  { time: '11:00 PM', event: 'Workshop 1' },
+  { time: '12:00 PM', event: 'Activity 1' },
+  { time: '1:00 PM', event: 'Lunch' },
+  { time: '2:00 PM', event: 'Worksop 2' },
+  { time: '3:00 AM', event: 'Breakfast' },
+  { time: '4:30 AM', event: 'Demos!' },
+  { time: '5:00 PM', event: 'Closing ceremony' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -64,7 +62,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function ExampleCity() {
+export default function Anantnag() {
   return (
     <Box
       sx={{
@@ -78,8 +76,8 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard [EXAMPLECITY]</title>
+        {/* TODO: Change [Anantnag] to your event's city */}
+        <title>Scrapyard [Anantnag]</title>
       </Head>
       <Flag />
       <Box
@@ -174,8 +172,8 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [EXAMPLECITY] - March&nbsp;15-16
+              {/* TODO: Change [Anantnag] to your event's city */}
+              [Anantnag] - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -225,8 +223,8 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[SLUG]"
+          // TODO: Change [Scrapyard Anantnag] to your event's Scrapyard Anantnag (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=[Scrapyard Anantnag]"
           target="_blank"
         >
           <Box
@@ -332,26 +330,26 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              What's Scrapyard [EXAMPLECITY]?
+              {/* TODO: Change [Anantnag] to your event's city */}
+              What's Scrapyard [Anantnag]?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard [EXAMPLECITY] is a hackathon for high schoolers
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in [EXAMPLECITY], where you can make the stupidest
+              {/* TODO: Change [Anantnag] to your event's city */}
+              Scrapyard [Anantnag] is a hackathon for high schoolers
+              {/* TODO: Change [Anantnag] to your event's city */}
+              happening in [Anantnag], where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [EXAMPLECITY] needs you and your scrappy ideas!
+              {/* TODO: Change [Anantnag] to your event's city */}
+              [Anantnag] needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -449,8 +447,8 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD [EXAMPLECITY]?
+            {/* TODO: Change [Anantnag] to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD [Anantnag]?
           </Heading>
         </Box>
         <Heading
@@ -462,9 +460,9 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change [EXAMPLECITY] to your event's city */}
-          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard [EXAMPLECITY] is a [DURATION] event - HERE'S THE ROUGH
+          {/* TODO: Change [Anantnag] to your event's city */}
+          {/* TODO: Change [12] to your event's 12hour (12hour, 24hour, 2-day) */}
+          Scrapyard [Anantnag] is a [12hour] event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -556,8 +554,8 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO [EXAMPLECITY]?
+            {/* TODO: Change [Anantnag] to your event's city */}
+            CAN'T MAKE IT TO [Anantnag]?
           </Heading>
         </Box>
         <Heading
@@ -693,9 +691,9 @@ export default function ExampleCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                {/* TODO: Change this email to your event's email */}
+                {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
                 <Link href="mailto:scrapyard@hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
+                  {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
                   scrapyard@hackclub.com
                 </Link>{' '}
                 for questions.
@@ -703,12 +701,12 @@ export default function ExampleCity() {
             ),
             'What if I have more questions?': (
               <>
-                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the [SLACKCHANNEL]
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
+                {/* TODO: Change [scrapyard-anantnag] to the name of your event's Slack channel */}
+                Contact us! Feel free to reach out to us in the [scrapyard-anantnag]
+                channel on the Hack Club slack or nomanhassansofi.anantnag@scrapyard.hackclub.com us at{' '}
+                {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
                 <Link href="mailto:scrapyard@hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
+                  {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
                   scrapyard@hackclub.com
                 </Link>
                 .
@@ -761,8 +759,8 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[SLUG]"
+          // TODO: Change [Scrapyard Anantnag] to your event's Scrapyard Anantnag (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=[Scrapyard Anantnag]"
           target="_blank"
         >
           <Box
@@ -791,8 +789,8 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD [EXAMPLECITY]
+              {/* TODO: Change [Anantnag] to your event's city */}
+              SIGN UP FOR SCRAPYARD [Anantnag]
             </Heading>
           </Box>
         </Link>
