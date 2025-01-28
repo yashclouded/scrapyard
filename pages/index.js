@@ -147,7 +147,7 @@ export default function Home() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Los&nbsp;Angeles&nbsp;February&nbsp;15-16
+              Location&nbsp;TBD&nbsp;March&nbsp;1-2
             </Heading>
           </Box>
         </Box>
