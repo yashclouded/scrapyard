@@ -25,6 +25,7 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
+  /*
   { time: '11:00 AM', event: 'Doors open' },
   { time: '12:00 PM', event: 'Opening ceremony' },
   { time: '12:30 PM', event: 'Lunch' },
@@ -38,6 +39,8 @@ const schedule = [
   { time: '8:00 AM', event: 'Breakfast' },
   { time: '10:30 AM', event: 'Demos!' },
   { time: '12:00 PM', event: 'Closing ceremony' }
+  */
+  { time: 'tbc', event: 'tbc' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -692,9 +695,9 @@ export default function ExampleCity() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
+                <Link href="cambridge@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                  cambridge@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -705,9 +708,9 @@ export default function ExampleCity() {
                 Contact us! Feel free to reach out to us in the #scrapyard-cambridge
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
+                <Link href="cambridge@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                  cambridge@scrapyard.hackclub.com
                 </Link>
                 .
               </>
