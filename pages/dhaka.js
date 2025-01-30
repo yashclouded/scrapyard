@@ -93,8 +93,81 @@ export default function Dhaka() {
       }}
     >
       <Head>
-        {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard Dhaka</title>
+        {/* Basic SEO Meta Tags */}
+        <title>Scrapyard Dhaka - Hack Club | Build, Code & Innovate</title>
+        <meta
+          name="description"
+          content="Join Scrapyard Dhaka (Bangladesh), a Hack Club event where makers, hackers, and coders unite to build amazing projects using scrap materials. Experience hands-on creativity, coding, and teamwork!"
+        />
+        <meta name="keywords" content="Scrapyard Dhaka, Hack Club Dhaka, hackathon Dhaka, coding event Bangladesh, makers event, programming competition, innovation, tech Dhaka" />
+        <meta name="author" content="Hack Club Dhaka" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Open Graph / Facebook Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Scrapyard Dhaka - Hack Club | Build, Code & Innovate" />
+        <meta
+          property="og:description"
+          content="Scrapyard Dhaka is a unique Hack Club event in Dhaka, bringing together builders, coders, and creatives to innovate using scrap materials. Join us for an exciting hands-on experience!"
+        />
+        <meta property="og:url" content="https://scrapyard.hackclub.com/dhaka" />
+        <meta property="og:site_name" content="Hack Club Dhaka" />
+        <meta property="og:image" content="https://files.edgestore.dev/iz2sept3369gmc0f/publicFiles/_public/f6c6f8bc-dc45-4baf-b3ec-a397a145b9f5.svg" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Scrapyard Dhaka - Hack Club | Build, Code & Innovate" />
+        <meta
+          name="twitter:description"
+          content="Join Scrapyard Dhaka, a Hack Club event where makers, hackers, and coders come together to build cool projects with scrap materials. Experience hands-on creativity, coding, and teamwork!"
+        />
+        <meta name="twitter:image" content="https://files.edgestore.dev/iz2sept3369gmc0f/publicFiles/_public/f6c6f8bc-dc45-4baf-b3ec-a397a145b9f5.svg" />
+        <meta name="twitter:site" content="@HackClubDhaka" />
+        <meta name="twitter:creator" content="@HackClubDhaka" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://scrapyard.hackclub.com/dhaka" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* JSON-LD Structured Data (For Google Rich Results) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              "name": "Scrapyard Dhaka - Hack Club Event",
+              "startDate": "2024-XX-XXT09:00",  // Replace with actual date
+              "endDate": "2024-XX-XXT18:00",  // Replace with actual date
+              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "location": {
+                "@type": "Place",
+                "name": "Scrapyard Dhaka",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Dhaka, Bangladesh",
+                  "addressLocality": "Dhaka",
+                  "postalCode": "1000",
+                  "addressCountry": "BD"
+                }
+              },
+              "organizer": {
+                "@type": "Organization",
+                "name": "Hack Club Dhaka",
+                "url": "https://scrapyard.hackclub.com/dhaka"
+              },
+              "description": "Join Scrapyard Dhaka, a Hack Club event where makers, hackers, and coders unite to build amazing projects using scrap materials.",
+              "image": [
+                "https://files.edgestore.dev/iz2sept3369gmc0f/publicFiles/_public/f6c6f8bc-dc45-4baf-b3ec-a397a145b9f5.svg"
+              ],
+            })
+          }}
+        />
       </Head>
       <Flag />
       <Box
