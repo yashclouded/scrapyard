@@ -1219,26 +1219,21 @@ export default function NoVA() {
 						),
 						'What if my parents are concerned?': (
 							<>
-								{/* TODO: Change this to email */}
 								We’re here to help! Our parents guide will be released soon, but
 								they can reach out to us at{' '}
-								{/* TODO: Change this email to your event's email */}
-								<Link href="sms:7035543006">
-									{/* TODO: Change this email to your event's email */}
-									(703)-554-3006
+								<Link href="mailto:nova@scrapyard.hackclub.com">
+									nova@scrapyard.hackclub.com
 								</Link>{' '}
 								for questions.
 							</>
 						),
 						'What if I have more questions?': (
 							<>
-								{/* TODO: Change this to email */}
 								Contact us! Feel free to reach out to us in the #scrapyard-nova
-								channel on the Hack Club slack or call/text (preferably text) us
-								at {/* TODO: Change this email to your event's email */}
-								<Link href="sms:7035543006">
-									{/* TODO: Change this email to your event's email */}
-									(703)-554-3006
+								channel on the Hack Club slack or email us
+								at
+								<Link href="mailto:nova@scrapyard.hackclub.com">
+									nova@scrapyard.hackclub.com
 								</Link>
 								.
 							</>
