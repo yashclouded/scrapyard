@@ -6,57 +6,62 @@ import {
   Marker,
   Popup,
   ZoomControl,
-  Tooltip,
-  useMap
+  Tooltip
 } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 
-// Custom icons
 const starIcon = new L.Icon({
   iconUrl: `/elements/star-sticker.svg`,
+  iconAnchor: null,
+  popupAnchor: null,
+  shadowUrl: null,
+  shadowSize: null,
+  shadowAnchor: null,
   iconSize: new L.Point(60, 60),
   popupAnchor: [0, 0]
 })
 
 const pinIcon = new L.Icon({
   iconUrl: `/elements/thumbtack.png`,
+  iconAnchor: null,
+  popupAnchor: null,
+  shadowUrl: null,
+  shadowSize: null,
+  shadowAnchor: null,
   iconSize: new L.Point(30, 30),
   popupAnchor: [0, 0]
 })
-
 const StyledMapContainer = MapContainer
 
-// Component to update map center dynamically
-function UpdateMapCenter({ latitude, longitude }) {
-  const map = useMap()
-  useEffect(() => {
-    if (latitude && longitude) {
-      map.setView([latitude, longitude], 10) // Center map to new location
-    }
-  }, [latitude, longitude, map])
-  return null
+const flagshipEvent = {
+  name: 'Flagship',
+  location: 'Los Angeles',
+  lat: 34.0522,
+  lng: -118.2437,
+  description: 'yada yada yada',
+  format: '48-hour',
+  slug: '',
+  flagship: true
 }
 
-export default function Map({ full, latitude, longitude }) {
-  // Default center (only used if no lat/lng is given)
-  const defaultCenter = [35.683, -25.099]
+export default function Map({ full }) {
+  const [center, setCenter] = useState(
+    window.innerWidth > 767.98 ? [35.683, -25.099] : [55, -100]
+  )
+  const [events, setEvents] = useState([flagshipEvent])
 
-  const [events, setEvents] = useState([])
-  const [mapCenter, setMapCenter] = useState(defaultCenter)
-
-  useEffect(() => {
-    if (latitude && longitude) {
-      setMapCenter([latitude, longitude]) // Update map center dynamically
-    }
-  }, [latitude, longitude])
+  const bounds = [
+    [-85, -Infinity],
+    [85, Infinity]
+  ]
 
   useEffect(() => {
     async function fetchEvents() {
       try {
         const response = await fetch('/api/locations')
         const data = await response.json()
-        setEvents(data)
+        setEvents([flagshipEvent, ...data])
       } catch (error) {
         console.error('Error fetching events:', error)
       }
@@ -66,52 +71,53 @@ export default function Map({ full, latitude, longitude }) {
   }, [])
 
   return (
-    <StyledMapContainer
-      center={mapCenter}
-      zoom={latitude && longitude ? 10 : 2.5} // Zoom in if location is given
-      style={{
-        width: full ? '80vw' : '80%',
-        height: '100vh',
-        zIndex: 0
-      }}
-      zoomControl={!full}
-    >
-      {/* Dynamically update center */}
-      <UpdateMapCenter latitude={latitude} longitude={longitude} />
-
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-
-      {/* Show marker at user-provided location */}
-      {latitude && longitude && (
-        <Marker position={[latitude, longitude]} icon={starIcon}>
-          <Popup>You are here!</Popup>
-        </Marker>
-      )}
-
-      {/* Show event markers */}
-      {events.map((event, idx) => (
-        <Marker
-          position={[event.lat, event.lng]}
-          key={idx}
-          icon={event.flagship ? starIcon : pinIcon}
-        >
-          <Popup>
-            <IndexCard
-              id={event.id}
-              title={event.name}
-              slug={event.slug}
-              format={event.format}
-              location={event.location}
-            />
-          </Popup>
-          <Tooltip>{event.name}</Tooltip>
-        </Marker>
-      ))}
-
-      {full && <ZoomControl position="topright" />}
-    </StyledMapContainer>
+    <>
+      <StyledMapContainer
+        center={center}
+        maxBounds={bounds}
+        maxBoundsViscosity={1.0}
+        zoom={2.5}
+        minZoom={1}
+        style={{
+          width: full ? '80vw' : '80%',
+          height: full ? '100vh' : '100vh',
+          zIndex: 0
+        }}
+        worldCopyJump={true}
+        zoomControl={!full}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {events.map((event, idx) => (
+          <Marker
+            position={[event.lat, event.lng]}
+            key={idx}
+            icon={event.flagship ? starIcon : pinIcon}
+          >
+            <Popup
+              className="custom-popup"
+              style={{
+                position: 'absolute',
+                top: '0px',
+                right: '0px',
+                transform: 'none'
+              }}
+            >
+              <IndexCard
+                id={event.id}
+                title={event.name}
+                slug={event.slug}
+                format={event.format}
+                location={event.location}
+              />
+            </Popup>
+            <Tooltip>{event.name}</Tooltip>
+          </Marker>
+        ))}
+        {full && <ZoomControl position="topright" />}
+      </StyledMapContainer>
+    </>
   )
 }

@@ -47,7 +47,7 @@ const location = {
   lng: 90.4152,  // Longitude of Dhaka
 };
 
-const Map = dynamic(() => import('../components/Map'), { ssr: false })
+const Map = dynamic(() => import('../components/city/dhaka/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -73,12 +73,25 @@ const Flag = () => (
 
 export default function Dhaka() {
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.AOS) {
-      window.AOS.init({
-        duration: 1000, // Animation duration (in ms)
-        once: true // Run animation only once
-      })
+    // Inject AOS CSS dynamically
+    const aosCSS = document.createElement('link')
+    aosCSS.rel = 'stylesheet'
+    aosCSS.href = 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css'
+    document.head.appendChild(aosCSS)
+
+    // Inject AOS JS dynamically
+    const aosScript = document.createElement('script')
+    aosScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js'
+    aosScript.onload = () => {
+      if (window.AOS) {
+        window.AOS.init({
+          duration: 1000, // Animation duration
+          easing: 'ease-in-out',
+          once: true, // Only animate once
+        })
+      }
     }
+    document.body.appendChild(aosScript)
   }, [])
   return (
     <Box
@@ -343,7 +356,7 @@ export default function Dhaka() {
               minWidth: '8em',
               padding: '15px'
             }}
-            data-aos="fade-left"
+            data-aos="fade-down"
           >
             <Heading
               as="h2"
@@ -355,6 +368,7 @@ export default function Dhaka() {
                 textTransform: 'inherit!important',
                 width: '100%'
               }}
+              data-aos="fade-down"
             >
               SIGN&nbsp;UP
             </Heading>
