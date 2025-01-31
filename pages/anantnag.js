@@ -224,7 +224,7 @@ export default function Anantnag() {
         </Box>
         <Link
           // TODO: Change [Scrapyard Anantnag] to your event's Scrapyard Anantnag (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[Scrapyard Anantnag]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=anantnag"
           target="_blank"
         >
           <Box
