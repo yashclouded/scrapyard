@@ -331,7 +331,7 @@ export default function Anantnag() {
               }}
             >
               {/* TODO: Change [Anantnag] to your event's city */}
-              What's Scrapyard [Anantnag]?
+              What's Scrapyard Anantnag?
             </Heading>
             <p
               style={{
@@ -462,7 +462,7 @@ export default function Anantnag() {
         >
           {/* TODO: Change [Anantnag] to your event's city */}
           {/* TODO: Change [12] to your event's 12hour (12hour, 24hour, 2-day) */}
-          Scrapyard Anantnag is a [12hour] event - HERE'S THE ROUGH
+          Scrapyard Anantnag is a 12hour event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -790,7 +790,7 @@ export default function Anantnag() {
               }}
             >
               {/* TODO: Change [Anantnag] to your event's city */}
-              SIGN UP FOR SCRAPYARD [Anantnag]
+              SIGN UP FOR SCRAPYARD Anantnag
             </Heading>
           </Box>
         </Link>
