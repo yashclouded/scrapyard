@@ -81,7 +81,6 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        
         <title> Scrapyard Cambridge </title>
       </Head>
       <Flag />
@@ -177,7 +176,6 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-            
               Cambridge - March&nbsp;15-16
             </Heading>
           </Box>
@@ -228,8 +226,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec3X8kNpbU0Sd72k"
+          href="https://forms.hackclub.com/scrapyard-signup?event=cambridge"
           target="_blank"
         >
           <Box
@@ -335,7 +332,6 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-             
               What's Scrapyard Cambridge?
             </Heading>
             <p
@@ -343,16 +339,15 @@ export default function ExampleCity() {
                 fontSize: '1.5em'
               }}
             >
-              
-              Scrapyard Cambridge is a hackathon for high schoolers
-              happening in Cambridge, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              Scrapyard Cambridge is a hackathon for high schoolers happening in
+              Cambridge, where you can make the stupidest things you can think
+              of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              Cambridge needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Cambridge
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -450,7 +445,6 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            
             WHAT'S HAPPENING AT SCRAPYARD CAMBRIDGE?
           </Heading>
         </Box>
@@ -465,8 +459,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Cambridge is a 12 hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Cambridge is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -705,9 +698,9 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the #scrapyard-cambridge
-                channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
+                Contact us! Feel free to reach out to us in the
+                #scrapyard-cambridge channel on the Hack Club slack or email us
+                at {/* TODO: Change this email to your event's email */}
                 <Link href="cambridge@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
                   cambridge@scrapyard.hackclub.com
@@ -762,8 +755,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [EVENTID] to your event's ID (see https://airtable.com/appigKiF7GbVISAlg/shrK3OiCJs4BRBIRG)
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=rec3X8kNpbU0Sd72k"
+          href="https://forms.hackclub.com/scrapyard-signup?event=cambridge"
           target="_blank"
         >
           <Box
