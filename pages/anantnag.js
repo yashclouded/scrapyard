@@ -694,7 +694,7 @@ export default function Anantnag() {
                 {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
                 <Link href="mailto:anantnag@scrapyard.hackclub.com">
                   {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
-                  scrapyard@hackclub.com
+                  anantnag@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -707,7 +707,7 @@ export default function Anantnag() {
                 {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
                 <Link href="mailto:anantnag@scrapyard.hackclub.com">
                   {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
-                  scrapyard@hackclub.com
+                 anantnag@scrapyard.hackclub.com
                 </Link>
                 .
               </>
