@@ -77,7 +77,7 @@ export default function Anantnag() {
     >
       <Head>
         {/* TODO: Change [Anantnag] to your event's city */}
-        <title>Scrapyard [Anantnag]</title>
+        <title>Scrapyard Anantnag</title>
       </Head>
       <Flag />
       <Box
@@ -173,7 +173,7 @@ export default function Anantnag() {
               }}
             >
               {/* TODO: Change [Anantnag] to your event's city */}
-              [Anantnag] - March&nbsp;15-16
+              Anantnag - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -339,9 +339,9 @@ export default function Anantnag() {
               }}
             >
               {/* TODO: Change [Anantnag] to your event's city */}
-              Scrapyard [Anantnag] is a hackathon for high schoolers
+              Scrapyard Anantnag is a hackathon for high schoolers
               {/* TODO: Change [Anantnag] to your event's city */}
-              happening in [Anantnag], where you can make the stupidest
+              happening in Anantnag, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
@@ -349,7 +349,7 @@ export default function Anantnag() {
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
               {/* TODO: Change [Anantnag] to your event's city */}
-              [Anantnag] needs you and your scrappy ideas!
+              Anantnag needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -462,7 +462,7 @@ export default function Anantnag() {
         >
           {/* TODO: Change [Anantnag] to your event's city */}
           {/* TODO: Change [12] to your event's 12hour (12hour, 24hour, 2-day) */}
-          Scrapyard [Anantnag] is a [12hour] event - HERE'S THE ROUGH
+          Scrapyard Anantnag is a [12hour] event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -555,7 +555,7 @@ export default function Anantnag() {
             }}
           >
             {/* TODO: Change [Anantnag] to your event's city */}
-            CAN'T MAKE IT TO [Anantnag]?
+            CAN'T MAKE IT TO Anantnag?
           </Heading>
         </Box>
         <Heading
@@ -692,7 +692,7 @@ export default function Anantnag() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
-                <Link href="mailto:scrapyard@hackclub.com">
+                <Link href="mailto:anantnag@scrapyard.hackclub.com">
                   {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
                   scrapyard@hackclub.com
                 </Link>{' '}
@@ -702,10 +702,10 @@ export default function Anantnag() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [scrapyard-anantnag] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the [scrapyard-anantnag]
-                channel on the Hack Club slack or nomanhassansofi.anantnag@scrapyard.hackclub.com us at{' '}
+                Contact us! Feel free to reach out to us in the scrapyard-anantnag
+                channel on the Hack Club slack or anantnag@scrapyard.hackclub.com us at{' '}
                 {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
-                <Link href="mailto:scrapyard@hackclub.com">
+                <Link href="mailto:anantnag@scrapyard.hackclub.com">
                   {/* TODO: Change this nomanhassansofi.anantnag@scrapyard.hackclub.com to your event's nomanhassansofi.anantnag@scrapyard.hackclub.com */}
                   scrapyard@hackclub.com
                 </Link>
