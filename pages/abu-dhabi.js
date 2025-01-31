@@ -33,11 +33,12 @@ const schedule = [
   { time: '4:00 PM', event: 'Activity 1' },
   { time: '4:00 PM', event: 'Workshop 2' },
   { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '8:00 PM', event: 'Day 1 Over ' },
+  { time: '9:00 AM', event: 'Continue Working on your project' },
+  { time: '12:30 PM', event: 'Lunch' },
+  { time: '3:30 PM', event: 'Demos!' },
+  { time: '6:30 PM', event: 'Dinner!' },
+  { time: '8:00 PM', event: 'Closing ceremony' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
