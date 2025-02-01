@@ -203,7 +203,7 @@ export default function Barranquilla() {
         </Box>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=bogota"
+          href="https://forms.hackclub.com/scrapyard-signup?event=barranquilla"
           target="_blank"
         >
           <Box
@@ -668,9 +668,9 @@ export default function Barranquilla() {
                 ¡Estamos para ayudarte! Nuestra guía para padres saldrá pronto, pero
                 pueden contactarnos en{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:bogota@scrapyard.hackclub.com">
+                <Link href="mailto:barranquilla@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                    bogota@scrapyard.hackclub.com
+                    barranquilla@scrapyard.hackclub.com
                 </Link>{' '}
                 si tienen preguntas.
               </>
@@ -678,12 +678,12 @@ export default function Barranquilla() {
             '¿Qué pasa si tengo más preguntas?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                ¡Contáctanos! Siéntete libre de contactarnos en el canal #scrapyard-bogota
+                ¡Contáctanos! Siéntete libre de contactarnos en el canal #scrapyard-barranquilla
                 en el Slack de Hack Club o mándanos un email a{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:bogota@scrapyard.hackclub.com">
+                <Link href="mailto:barranquilla@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                    bogota@scrapyard.hackclub.com
+                    barranquilla@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -736,7 +736,7 @@ export default function Barranquilla() {
         </Grid>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=bogota"
+          href="https://forms.hackclub.com/scrapyard-signup?event=barranquilla"
           target="_blank"
         >
           <Box
