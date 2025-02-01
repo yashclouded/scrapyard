@@ -448,7 +448,7 @@ export default function Anantnag() {
             }}
           >
             {/* TODO: Change [Anantnag] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD [Anantnag]?
+            WHAT'S HAPPENING AT SCRAPYARD Anantnag?
           </Heading>
         </Box>
         <Heading
