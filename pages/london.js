@@ -104,7 +104,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="/city/london/london_logo.svg"
             alt="Scrapyard"
           />
         </Box>
@@ -222,7 +222,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          
           href="https://forms.hackclub.com/scrapyard-signup?event=london"
           target="_blank"
         >
@@ -444,7 +444,6 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
             WHAT'S HAPPENING AT SCRAPYARD LONDON?
           </Heading>
         </Box>
@@ -457,8 +456,6 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change [EXAMPLECITY] to your event's city */}
-          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
           SCRAPYARD LONDON IS A 9 HOUR EVENT - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
@@ -566,7 +563,7 @@ export default function ExampleCity() {
         >
           Scrapyard London will be taking place at tldraw, who have kindly loaned 
           us use of their office space, located at Finsbury Park, in London! The nearest tube station, Finsbury park, 
-          is a 3 minute walk to tldraw HQ, and lies on the same tube line as Euston and Kings Cross station for easy access!
+          is a 3 minute walk to tldraw HQ, and is on the same tube line as Euston and Kings Cross station for easy access!
           <br></br>
           <br></br>
           <i>The address is: Floor 3, The Arts Building, Morris Pl, Finsbury Park, London N4 3JG</i>
@@ -575,7 +572,17 @@ export default function ExampleCity() {
           The arts building is wheelchair accessable and DDA compliant, with a passenger and goods lift for those who need it!
         </p>
 
+        <Image
+            sx={{
+              width: '600px',
 
+              maxWidth: '70vw',
+
+              objectFit: 'contain'
+            }}
+            src="/city/london/london_bus.svg"
+            alt="Typical london red bus with an advertiserment consisting of the url of scrapyard"
+          />
 
 
 
@@ -753,11 +760,13 @@ export default function ExampleCity() {
                 >
                   Game Jam
                 </Link>{' '}
-                across 50 cities, a hackathon on a{' '}
+                across 50 cities including London, a hackathon on a{' '}
                 <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">
                   Train
                 </Link>{' '}
-                from Vermont to Los Angeles, and much more!
+                from Vermont to Los Angeles, and so much more!
+
+                
               </>
             ),
             'What if my parents are concerned?': (
@@ -879,6 +888,19 @@ export default function ExampleCity() {
             }}
           />
         </Heading>
+
+        <Image
+            sx={{
+              width: '150px',
+
+              maxWidth: '70vw',
+
+              objectFit: 'contain'
+            }}
+            src="/city/london/london_phone_booth.svg"
+            alt="Typical london red bus with an advertiserment consisting of the url of scrapyard"
+          />
+
         <Text
           sx={{
             fontFamily: 'moonblossom',
@@ -886,8 +908,13 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Made with ♡ by teenagers, for teenagers at Hack Club
+          Made with ♡ by the Scrapyard London team!
         </Text>
+
+        
+
+
+
         <Text
           sx={{
             fontFamily: 'moonblossom',
