@@ -3,7 +3,7 @@
 import Head from 'next/head'
 import { Box, Button, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
-// import { motion } from 'motion/react'
+import { motion } from 'motion/react'
 
 const schedule = [
   { time: '10:00 AM', event: 'Gates Open and Registration' },
@@ -192,46 +192,53 @@ export default function ExampleCity() {
             height: '100vw'
           }}
         >
-          <Image
-            sx={{
-              width: '10%',
-              height: '10%',
-              zIndex: 2,
-              position: 'absolute',
-              top: '50%',
-              left: '10%'
-            }}
-            src="/elements/stars/blue.png"
-            alt="Blue paper star"
-            draggable="false"
-          />
-          <Image
-            sx={{
-              width: '10%',
-              height: '10%',
-              zIndex: 2,
-              position: 'absolute',
-              top: '55%',
-              right: '15%'
-            }}
-            src="/elements/stars/yellow.png"
-            alt="Yellow paper star"
-            draggable="false"
-          />
-          <Image
-            sx={{
-              width: '10%',
-              height: '10%',
-              zIndex: 2,
-              position: 'absolute',
-              top: '70%',
-              left: '20%',
-              transform: 'rotate(180deg)'
-            }}
-            src="/elements/stars/pink.png"
-            alt="Pink paper star"
-            draggable="false"
-          />
+          <motion.div
+          transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}>
+            <Image
+              sx={{
+                width: '10%',
+                height: '10%',
+                zIndex: 2,
+                position: 'absolute',
+                top: '50%',
+                left: '10%'
+              }}
+              src="/elements/stars/blue.png"
+              alt="Blue paper star"
+              draggable="false"
+            />
+          </motion.div>
+          <motion.div>
+            <Image
+              sx={{
+                width: '10%',
+                height: '10%',
+                zIndex: 2,
+                position: 'absolute',
+                top: '55%',
+                right: '15%'
+              }}
+              src="/elements/stars/yellow.png"
+              alt="Yellow paper star"
+              draggable="false"
+            />
+          </motion.div>
+          <motion.div>
+            <Image
+              sx={{
+                width: '10%',
+                height: '10%',
+                zIndex: 2,
+                position: 'absolute',
+                top: '70%',
+                left: '20%',
+                transform: 'rotate(180deg)'
+              }}
+              src="/elements/stars/pink.png"
+              alt="Pink paper star"
+              draggable="false"
+            />
+          </motion.div>
         </Box>
         <Link
           href="https://forms.hackclub.com/scrapyard-signup?event=sydney"
@@ -548,63 +555,7 @@ export default function ExampleCity() {
           display: 'flex',
           flexDirection: 'column'
         }}
-      >
-        <Box
-          sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            // backgroundSize: "cover!important",
-            // display: "block",
-            // width: "30vw",
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0vh',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
-            }}
-          >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO SYDNEY?
-          </Heading>
-        </Box>
-        <Heading
-          as="h2"
-          sx={{
-            fontSize: '1.5em',
-            fontFamily: 'moonblossom',
-            color: 'white',
-            textAlign: 'center',
-            mx: '5vw'
-          }}
-        >
-          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
-        </Heading>
-        <Box
-          sx={{
-            width: ['100%', '80%'],
-            height: '75vh',
-            alignItems: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            mb: '10vh',
-            mt: 5
-          }}
-        >
-          <Map />
-        </Box>
-      </Box>
+      ></Box>
 
       <Box
         sx={{
