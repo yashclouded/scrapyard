@@ -125,10 +125,11 @@ export default function ExampleCity() {
               paddingBottom: '8%',
               paddingTop: '7%',
               paddingLeft: '7%',
+              paddingRight: '7%',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'space-between',
-              alignItems: 'flex-start',
+              justifyContent: 'center',
+              alignItems: 'center',
               width: 'min(500px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
@@ -137,57 +138,17 @@ export default function ExampleCity() {
           >
             <Text
               sx={{
-                fontFamily: 'moonblossom',
-                fontSize: '0.9rem',
+                fontFamily: 'p22-stanyan',
+                fontSize: '2rem',
                 marginLeft: '30px',
                 color: 'black',
-                fontStyle: 'italic'
+                fontStyle: 'italic',
+                alignText: 'center',
+                transform: 'translateY(7px)'
               }}
             >
-              Made Possible By:
+              Building happens here.
             </Text>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: '10px'
-              }}
-            >
-              <Link
-                href="https://www.polymaker.com/"
-                target="_blank"
-                sx={{ zIndex: 2, display: 'flex', justifyContent: 'center' }}
-                draggable="false"
-              >
-                <Image
-                  sx={{
-                    width: '70%',
-                    objectFit: 'contain'
-                  }}
-                  src="/city/sydney/sponsors/polymaker.webp"
-                  alt="Polymaker Logo"
-                  draggable="false"
-                />
-              </Link>
-              <Link
-                href="https://www.littlebirdelectronics.com.au/"
-                target="_blank"
-                sx={{ zIndex: 2, display: 'flex', justifyContent: 'center' }}
-                draggable="false"
-              >
-                <Image
-                  sx={{
-                    width: '80%',
-                    objectFit: 'contain'
-                  }}
-                  src="/city/sydney/sponsors/littlebirdelectronics.png"
-                  alt="Little Bird Electronics Logo"
-                  draggable="false"
-                />
-              </Link>
-            </Box>
           </Box>
           <Box
             sx={{
