@@ -3,7 +3,8 @@
 import Head from 'next/head'
 import { Box, Button, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
-import { motion } from 'motion/react'
+import { motion, useInView } from 'motion/react'
+import { useEffect, useRef } from 'react'
 
 const schedule = [
   { time: '10:00 AM', event: 'Gates Open and Registration' },
@@ -33,6 +34,80 @@ const schedule = [
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
+
+const Wayfinder = () => {
+  const ref = useRef(null)
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{
+        width: '26px',
+        height: '26px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: '50%',
+        background: '#F5F5F5',
+        color: 'var(--colour)',
+        boxShadow: '0px 2px 4px 0px'
+      }}
+      initial={{ '--colour': 'rgba(0, 0, 0, 0.25)' }}
+      whileInView={{ '--colour': '#F68887' }}
+      viewport={{ margin: '-30% 0px -30% 0px' }}
+    >
+      <motion.div
+        style={{
+          width: '13px',
+          height: '13px',
+          borderRadius: '50%',
+          background: 'var(--colour)',
+          boxShadow: '0px 0px 1px 0px rgba(0, 0, 0, 0.25) inset'
+        }}
+        initial={{ '--colour': 'rgba(0, 0, 0, 0.25)' }}
+        whileInView={{ '--colour': '#F68887' }}
+        viewport={{ margin: '-30% 0px -30% 0px' }}
+      ></motion.div>
+    </motion.div>
+  )
+}
+
+const Wayfinder1 = () => {
+  const ref1 = useRef(null)
+
+  return (
+    <motion.div
+      ref={ref1}
+      style={{
+        width: '18px',
+        height: '18px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: '50%',
+        background: '#F5F5F5',
+        color: 'var(--colour)',
+        boxShadow: '0px 2px 4px 0px'
+      }}
+      initial={{ '--colour': 'rgba(0, 0, 0, 0.25)' }}
+      whileInView={{ '--colour': '#F68887' }}
+      viewport={{ margin: '-30% 0px -30% 0px' }}
+    >
+      <motion.div
+        style={{
+          width: '9px',
+          height: '9px',
+          borderRadius: '50%',
+          background: 'var(--colour)',
+          boxShadow: '0px 0px 1px 0px rgba(0, 0, 0, 0.25) inset'
+        }}
+        initial={{ '--colour': 'rgba(0, 0, 0, 0.25)' }}
+        whileInView={{ '--colour': '#F68887' }}
+        viewport={{ margin: '-30% 0px -30% 0px' }}
+      ></motion.div>
+    </motion.div>
+  )
+}
 
 const Flag = () => (
   <Link
@@ -193,47 +268,78 @@ export default function ExampleCity() {
           }}
         >
           <motion.div
-          transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}>
+            style={{
+              position: 'absolute',
+              top: '40%',
+              left: '10%',
+              width: '10%',
+              height: '10%',
+              zIndex: 2
+            }}
+            initial={{ transform: 'translateY(0px)' }}
+            animate={{
+              transform: 'translateY(-40px)'
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut'
+            }}
+          >
             <Image
-              sx={{
-                width: '10%',
-                height: '10%',
-                zIndex: 2,
-                position: 'absolute',
-                top: '50%',
-                left: '10%'
-              }}
               src="/elements/stars/blue.png"
               alt="Blue paper star"
               draggable="false"
             />
           </motion.div>
-          <motion.div>
+          <motion.div
+            style={{
+              width: '10%',
+              height: '10%',
+              zIndex: 2,
+              position: 'absolute',
+              top: '50%',
+              right: '15%'
+            }}
+            initial={{ transform: 'translateY(0px)' }}
+            animate={{
+              transform: 'translateY(-25px)'
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut'
+            }}
+          >
             <Image
-              sx={{
-                width: '10%',
-                height: '10%',
-                zIndex: 2,
-                position: 'absolute',
-                top: '55%',
-                right: '15%'
-              }}
               src="/elements/stars/yellow.png"
               alt="Yellow paper star"
               draggable="false"
             />
           </motion.div>
-          <motion.div>
+          <motion.div
+            style={{
+              width: '10%',
+              height: '10%',
+              zIndex: 2,
+              position: 'absolute',
+              top: '65%',
+              left: '20%'
+            }}
+            initial={{ transform: 'translateY(0px)' }}
+            animate={{
+              transform: 'translateY(-40px)'
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut'
+            }}
+          >
             <Image
-              sx={{
-                width: '10%',
-                height: '10%',
-                zIndex: 2,
-                position: 'absolute',
-                top: '70%',
-                left: '20%',
-                transform: 'rotate(180deg)'
-              }}
               src="/elements/stars/pink.png"
               alt="Pink paper star"
               draggable="false"
