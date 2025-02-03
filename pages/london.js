@@ -22,6 +22,7 @@ Note: To test your changes locally, use `npm install` and `npm run dev`.
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
+import styles from './london.module.css'
 
 // TODO: Change this schedule to your own!
 const schedule = [
@@ -63,6 +64,7 @@ const Flag = () => (
 
 export default function ExampleCity() {
   return (
+    
     <Box
       sx={{
         background:
@@ -78,6 +80,9 @@ export default function ExampleCity() {
         
         <title>Scrapyard London</title>
       </Head>
+      <style>
+        
+      </style>
       <Flag />
       <Box
         sx={{
@@ -117,25 +122,28 @@ export default function ExampleCity() {
         >
           <Box
             sx={{
-              background: "url('/elements/ripped-paper.png')",
-              backgroundSize: 'cover',
+              background: 'white',
               // aspectRatio: "1080/338.4",
-              // padding: "8%",
+              //padding: "8%",
               // paddingLeft: "7%",
               display: 'block',
 
-              width: 'min(500px, calc(100vw - 30px))',
+              width: 'min(470px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
-              zIndex: 20
+              zIndex: 20,
+
+              borderRadius: '15px',
             }}
           >
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'moonblossom',
+                fontFamily: 'Phantom Sans',
+                fontWeight: '300',
                 textAlign: 'center',
                 margin: '8%'
+
               }}
             >
               Build stupid s#!t, get stupid prizes.
@@ -162,13 +170,13 @@ export default function ExampleCity() {
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'p22-stanyan',
+                fontFamily: 'moonblossom',
                 mx: '8%',
                 p: 0,
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['0.8em', '1.0em']
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
@@ -420,12 +428,12 @@ export default function ExampleCity() {
       >
         <Box
           sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            backgroundColor: 'white',
             // backgroundSize: "cover!important",
             // display: "block",
             // width: "30vw",
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
+            height: '15vh',
+            width: ['70vw', '50vw', '46.8vw'],
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0vh',
@@ -433,7 +441,10 @@ export default function ExampleCity() {
             backgroundSize: 'cover',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            borderRadius: '15px',
+            margin: '3em',
+            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
           }}
         >
           <Heading
@@ -441,10 +452,11 @@ export default function ExampleCity() {
             sx={{
               mx: '1vw',
               fontWeight: 'lighter',
-              textAlign: 'center'
+              textAlign: 'center',
+              fontFamily: 'Phantom Sans',
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD LONDON?
+            What's Happening at Scrapyard London?
           </Heading>
         </Box>
         <Heading
@@ -469,10 +481,10 @@ export default function ExampleCity() {
             gap: '0.2em',
             color: 'black',
             my: 5,
-            background: "url('/backgrounds/lined-paper.png')",
+            backgroundColor: 'white',
             backgroundSize: ['contain', 'contain', 'cover!important'],
             p: 4,
-            borderRadius: 1,
+            borderRadius: '15px',
             boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
           }}
         >
@@ -525,12 +537,12 @@ export default function ExampleCity() {
 
 <Box
           sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            backgroundColor: 'white',
             // backgroundSize: "cover!important",
-            // display: "block",
-            // width: "30vw",
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
+            display: "block",
+            width: "30vw",
+            height: '15vh',
+            width: ['70vw', '50vw', '46.8vw'],
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0vh',
@@ -538,7 +550,10 @@ export default function ExampleCity() {
             backgroundSize: 'cover',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            margin: '3em',
+            borderRadius: '15px',
+            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
           }}
         >
           <Heading
@@ -546,7 +561,8 @@ export default function ExampleCity() {
             sx={{
               mx: '1vw',
               fontWeight: 'lighter',
-              textAlign: 'center'
+              textAlign: 'center',
+              fontFamily: 'Phantom Sans',
             }}
           >
             Getting to Scrapyard London
@@ -589,12 +605,12 @@ export default function ExampleCity() {
 
         <Box
           sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            backgroundColor: 'white',
             // backgroundSize: "cover!important",
             // display: "block",
             // width: "30vw",
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
+            height: '15vh',
+            width: ['70vw', '50vw', '46.8vw'],
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0vh',
@@ -602,7 +618,10 @@ export default function ExampleCity() {
             backgroundSize: 'cover',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            margin: '3em',
+            borderRadius: '15px',
+            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
           }}
         >
           <Heading
@@ -610,10 +629,11 @@ export default function ExampleCity() {
             sx={{
               mx: '1vw',
               fontWeight: 'lighter',
-              textAlign: 'center'
+              textAlign: 'center',
+              fontFamily: 'Phantom Sans',
             }}
           >
-            CAN'T MAKE IT TO LONDON?
+            Can't Make it to London?
           </Heading>
         </Box>
         <Heading
@@ -771,7 +791,8 @@ export default function ExampleCity() {
             ),
             'What if my parents are concerned?': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
+                We’re here to help! Our parents guide will be released soon, but please contact 
+
                 <Link href="mailto:hello@scrapyard.london">
                   scrapyard@hackclub.com
                 </Link>{' '}
@@ -794,22 +815,23 @@ export default function ExampleCity() {
               <Card
                 key={question}
                 sx={{
-                  background: [
-                    'transparent',
-                    `url('/elements/doodles/boxes/${(i % 6) + 1}.svg')`
-                  ],
                   backgroundSize: [null, '100% 100%'],
                   backgroundRepeat: 'no-repeat',
                   boxShadow: 'none',
                   padding: '48px!important',
-                  border: ['2px solid black', 'none']
+                  border: ['2px solid black', 'none'],
+                  
                 }}
               >
                 <Heading
                   as="h2"
                   mb={4}
                   sx={{
-                    position: 'relative'
+                    position: 'relative',
+                    fontFamily: 'Phantom Sans',
+                    fontWeight: '600',
+                    paddingBottom: '1em',
+
                   }}
                 >
                   {question}
