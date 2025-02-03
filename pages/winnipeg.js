@@ -22,22 +22,7 @@ Note: To test your changes locally, use `npm install` and `npm run dev`.
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
-
-// TODO: Change this schedule to your own!
-const schedule = [
-  { time: "08:45", event: "Doors open" },
-  { time: "09:00", event: "Opening ceremony" },
-  { time: "09:30", event: "Introductions / Icebreakers" },
-  { time: "10:00", event: "Morning snack" },
-  { time: "11:00", event: "Workshop 1" },
-  { time: "12:30", event: "Lunch" },
-  { time: "15:00", event: "Workshop 2" },
-  { time: "18:00", event: "Dinner & Lightning talks" },
-  { time: "19:30", event: "Demos!" },
-  { time: "20:30", event: "Closing ceremony" },
-  { time: "21:00", event: "Pick-up time" },
-  { time: "21:15", event: "Doors close" }
-]
+import { useEffect, useState } from 'react'
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
@@ -64,6 +49,18 @@ const Flag = () => (
 )
 
 export default function ExampleCity() {
+  const [eventInfo, setEventInfo] = useState("Loading...");
+
+  useEffect(() => {
+    fetch("https://raw.githubusercontent.com/CyrilSLi/scrapyard-data/refs/heads/main/info.json?" + Math.round(Math.random() * 10 ** 16))
+      .then((response) => response.json())
+      .then((data) => setEventInfo(data))
+      .catch((error) => {
+        console.error("Error fetching event information:", error);
+        setEventDate("N/A");
+      });
+  }, []);
+
   return (
     <Box
       sx={{
@@ -172,8 +169,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Winnipeg - March&nbsp;15 or 16&nbsp;(Tentative)
+              {eventInfo.location} - {eventInfo.date}
             </Heading>
           </Box>
         </Box>
@@ -260,8 +256,14 @@ export default function ExampleCity() {
           </Box>
         </Link>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=winnipeg"
-          target="_blank"
+          href=""
+          target="_self"
+          onClick={(e) => {
+            e.preventDefault()
+            document
+              .getElementById('sponsors')
+              .scrollIntoView({ behavior: 'smooth' })
+          }}
         >
           <Box
             sx={{
@@ -374,9 +376,8 @@ export default function ExampleCity() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Winnipeg is a hackathon for high schoolers
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Winnipeg, where you can make the stupidest
+              Scrapyard Winnipeg is a hackathon for high schoolers 
+              happening in {eventInfo.area}, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
@@ -447,6 +448,102 @@ export default function ExampleCity() {
         }}
       ></Box>
 
+<Box
+        sx={{
+          // backgroundImage: "url(/backgrounds/confetti.png)",
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
+        <Box
+          id="sponsors"
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'bold !important',
+              textAlign: 'center',
+              fontSize: 'max(min(5vw, 5em), 2em)',
+              color: '#F1A3BA !important',
+              textShadow: '0.06em 0.06em 0.02em rgba(70, 11, 28, 0.8)'
+            }}
+          >
+            SPONSORS
+          </Heading>
+        </Box>
+        <Heading
+          as="h2"
+          sx={{
+            fontSize: '2em',
+            fontFamily: 'galindo',
+            letterSpacing: '0.05em',
+            color: 'white',
+            textAlign: 'center'
+          }}
+        >
+          Your company could be here! Sponsor Scrapyard Winnipeg today!
+        </Heading>
+        <br />
+        <Heading
+          as="p"
+          sx={{
+            fontSize: '1.5em',
+            fontFamily: 'moonblossom',
+            color: 'white',
+            textAlign: 'center'
+          }}
+        >
+          Have any questions about sponsoring? Email us at{' '}
+          <Link
+            href={"mailto:" + eventInfo.sponsor_email}
+            sx={{ color: 'white' }}
+          >
+            {eventInfo.sponsor_email}
+          </Link>
+          !
+        </Heading>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: 'min(90vh / 11 * 8.5, 90vw)', // letter aspect ratio
+            height: 'min(90vh, 90vw / 8.5 * 11)', // letter aspect ratio
+            padding: '0.5vh !important',
+            color: 'black',
+            my: 5,
+            background: "url('/backgrounds/lined-paper.png')",
+            backgroundSize: ['contain', 'contain', 'cover!important'],
+            borderRadius: 1,
+            boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+          }}
+        >
+          <iframe
+            src="https://drive.google.com/file/d/1W2uHaRpAnMIi8JbQSzo6gH6rXbskfW8d/preview"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </Box>
+      </Box>
+
       <Box
         sx={{
           // backgroundImage: "url(/backgrounds/confetti.png)",
@@ -513,7 +610,7 @@ export default function ExampleCity() {
             boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
           }}
         >
-          {schedule.map((item, i) => (
+          {(eventInfo.schedule || []).map((item, i) => (
             <div
               style={{
                 display: 'flex',
@@ -721,10 +818,8 @@ export default function ExampleCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                <Link href={"mailto:" + eventInfo.email}>
+                  {eventInfo.email}
                 </Link>{' '}
                 for questions.
               </>
@@ -733,10 +828,8 @@ export default function ExampleCity() {
               <>
                 Contact us! Feel free to reach out to us in the #scrapyard-winnipeg
                 channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                <Link href={"mailto:" + eventInfo.email}>
+                  {eventInfo.email}
                 </Link>
                 .
               </>
