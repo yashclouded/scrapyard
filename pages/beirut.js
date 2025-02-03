@@ -226,7 +226,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[SLUG]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=beirut"
           target="_blank"
         >
           <Box
