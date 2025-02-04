@@ -707,9 +707,9 @@ export default function ExampleCity() {
                 Contact us! Feel free to reach out to us in the #scrapyard-tampa
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:@tampahacks.com">
+                <Link href="mailto:tampa@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  @tampahacks.com
+                  tampa@scrapyard.hackclub.com
                 </Link>
                 .
               </>
