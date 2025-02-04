@@ -78,8 +78,8 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard [EXAMPLECITY]</title>
+        {/* TODO: Change Tampa to your event's city */}
+        <title>Scrapyard Tampa</title>
       </Head>
       <Flag />
       <Box
@@ -174,8 +174,8 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [EXAMPLECITY] - March&nbsp;15-16
+              {/* TODO: Change Tampa to your event's city */}
+              Tampa - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -225,8 +225,8 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[SLUG]"
+          // TODO: Change tampa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=tampa"
           target="_blank"
         >
           <Box
@@ -332,26 +332,26 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              What's Scrapyard [EXAMPLECITY]?
+              {/* TODO: Change Tampa to your event's city */}
+              What's Scrapyard Tampa?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard [EXAMPLECITY] is a hackathon for high schoolers
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in [EXAMPLECITY], where you can make the stupidest
+              {/* TODO: Change Tampa to your event's city */}
+              Scrapyard Tampa is a hackathon for high schoolers
+              {/* TODO: Change Tampa to your event's city */}
+              happening in Tampa, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [EXAMPLECITY] needs you and your scrappy ideas!
+              {/* TODO: Change Tampa to your event's city */}
+              Tampa needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -449,8 +449,8 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD [EXAMPLECITY]?
+            {/* TODO: Change Tampa to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD TAMPA?
           </Heading>
         </Box>
         <Heading
@@ -462,9 +462,9 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change [EXAMPLECITY] to your event's city */}
+          {/* TODO: Change Tampa to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard [EXAMPLECITY] is a [DURATION] event - HERE'S THE ROUGH
+          Scrapyard Tampa is a 24 hour event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -556,8 +556,8 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO [EXAMPLECITY]?
+            {/* TODO: Change Tampa to your event's city */}
+            CAN'T MAKE IT TO TAMPA?
           </Heading>
         </Box>
         <Heading
@@ -704,12 +704,12 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the [SLACKCHANNEL]
+                Contact us! Feel free to reach out to us in the #scrapyard-tampa
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
+                <Link href="mailto:@tampahacks.com">
                   {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                  @tampahacks.com
                 </Link>
                 .
               </>
@@ -761,8 +761,8 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[SLUG]"
+          // TODO: Change tampa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=tampa"
           target="_blank"
         >
           <Box
@@ -791,8 +791,8 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD [EXAMPLECITY]
+              {/* TODO: Change Tampa to your event's city */}
+              SIGN UP FOR SCRAPYARD TAMPA
             </Heading>
           </Box>
         </Link>
