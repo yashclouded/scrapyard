@@ -1,9 +1,7 @@
-
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// TODO: Change this schedule to your own!
 const schedule = [
   { time: '7:30 AM', event: 'Abren puertas' },
   { time: '8:00 AM', event: 'Ceremonia de iniciación' },
@@ -14,7 +12,7 @@ const schedule = [
   { time: '4:00 PM', event: 'Taller 2' },
   { time: '7:30 PM', event: 'Cena' },
   { time: '8:30 PM', event: '¡Demos!' },
-  { time: '9:00 PM', event: 'Ceremonia de cierre' },
+  { time: '9:00 PM', event: 'Ceremonia de cierre' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -23,12 +21,12 @@ const Flag = () => (
   <Link
     href="https://hackclub.com/"
     target="_blank"
-    aria-label="Hack Club's homepage"
+    aria-label="Sitio Web de Hack Club"
     sx={{ position: 'absolute', top: 4, left: 0, zIndex: 2 }}
   >
     <Image
       src="/elements/orpheus-flag.svg"
-      alt="Hack Club flag"
+      alt="Bandera de Hack Club"
       sx={{
         width: [120, 128, 180],
         transformOrigin: '0% 0%',
@@ -55,7 +53,6 @@ export default function Barranquilla() {
       }}
     >
       <Head>
-        {/* TODO: Change [EXAMPLECITY] to your event's city */}
         <title>Scrapyard Barranquilla</title>
       </Head>
       <Flag />
@@ -118,7 +115,7 @@ export default function Barranquilla() {
                 margin: '8%'
               }}
             >
-              Construye cosas estupidas, gana premios estupidos.
+              Construye cosas locas, gana premios locos.
             </Heading>
           </Box>
           <Box
@@ -151,8 +148,7 @@ export default function Barranquilla() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Barranquilla - Marzo&nbsp;15
+              Barranquilla - Sábado Marzo&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -202,8 +198,7 @@ export default function Barranquilla() {
           />
         </Box>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=barranquilla"
+          href="https://forms.hackclub.com/scrapyard-signup-es?event=barranquilla"
           target="_blank"
         >
           <Box
@@ -220,7 +215,7 @@ export default function Barranquilla() {
                 transform: 'scale(1.1)'
               },
               zIndex: 30,
-              minWidth: '8em',
+              minWidth: '10em',
               padding: '15px'
             }}
           >
@@ -235,7 +230,7 @@ export default function Barranquilla() {
                 width: '100%'
               }}
             >
-              SIGN&nbsp;UP
+              REGÍSTRATE
             </Heading>
           </Box>
         </Link>
@@ -309,7 +304,6 @@ export default function Barranquilla() {
                 textDecoration: 'underline'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
               ¿Qué es Scrapyard Barranquilla?
             </Heading>
             <p
@@ -317,16 +311,15 @@ export default function Barranquilla() {
                 fontSize: '1.5em'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Barranquilla es un hackathon para estudiantes de secundaria
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              pasando en Barranquilla, ¡donde puedes hacer las cosas más innecesarias
-              que podrías pensar! Cualquier cosa desde una{' '}
+              Scrapyard Barranquilla es un hackathon para estudiantes de colegio
+              en Barranquilla, ¡donde puedes hacer las cosas más locas que
+              puedas pensar! Cualquier cosa desde una{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lámpara que parpadea más rápido entre más lento escribas
               </Link>
               , esas ideas que no consideras útiles, van a Scrapyard. Sin
-              importar tu nivel de experiencia, ¡Scrapyard Barranquilla te necesita a ti y a tus ideas "scrappy"!
+              importar tu nivel de experiencia, ¡Scrapyard Barranquilla te
+              necesita a ti y a tus ideas "scrappy"!
             </p>
           </Box>
         </Box>
@@ -424,7 +417,6 @@ export default function Barranquilla() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
             ¿QUÉ VA A SUCEDER EN SCRAPYARD Barranquilla?
           </Heading>
         </Box>
@@ -437,10 +429,8 @@ export default function Barranquilla() {
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change [EXAMPLECITY] to your event's city */}
-          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Barranquilla es un evento de 12 horas - ¡AQUÍ ESTÁ EL HORARIO
-          APROXIMADO!
+          Scrapyard Barranquilla es un evento de 12 horas - ¡AQUÍ ESTÁ EL
+          HORARIO APROXIMADO!
         </Heading>
         <Box
           sx={{
@@ -531,7 +521,6 @@ export default function Barranquilla() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
             ¿NO PUEDES LLEGAR A Barranquilla?
           </Heading>
         </Box>
@@ -605,42 +594,37 @@ export default function Barranquilla() {
           {Object.entries({
             '¿Quién puede participar en Scrapyard?': (
               <>
-                ¡Todos los estudiantes de secundaria y finales de primaria estan bienvenidos
-                a venir! No tienes que ser miembro de la comunidad de Hack Club
-                o ser un lider de Hack Club.
+                ¡Todos los estudiantes de colegio de 18 años o menos estan
+                bienvenidos a venir! No tienes que ser miembro de la comunidad
+                de Hack Club o ser un lider de Hack Club.
               </>
             ),
             '¿Todo esto, gratis?': (
               <>
-                ¡Si! La comida, merchandising y buenas vibras estan incluidos. Además, si
-                participas desde lejos,{' '}
-                <Link href="https://gas.hackclub.com/">
-                  cubriremos el costo de la gasolina o un tiquete de bus.
-                </Link>
-                .
+                ¡Si! La comida, merchandising y buenas vibras estan incluidos.
               </>
             ),
             '¿Qué necesito?': (
               <>
-                ¡Tu laptop, cargadores y una mente abierta!
-                Adicionalmente, si planeas trabajar en un proyecto con hardware, trae
-                las herramientas que necesites.
+                ¡Un computador, tu cargador y mucha creatividad! Adicionalmente,
+                si planeas trabajar en un proyecto con hardware, trae las
+                herramientas que necesites.
               </>
             ),
             'No soy buen@ programando. ¿Igual puedo participar?': (
               <>
-                ¡Este hackathon es para creativos de todos los niveles de conocimiento! Tendremos
-                talleres y otros eventos, así que únete y aprendamos juntos.
-                Si quieres empezar a explorar algunos proyectos introductorios,
-                revisa las workshops de Hack Club.
+                ¡Este hackathon es para creativos de todos los niveles de
+                conocimiento! Tendremos talleres y otros eventos, así que únete
+                y aprendamos juntos. Si quieres empezar a explorar algunos
+                proyectos introductorios, revisa las workshops de Hack Club.
               </>
             ),
             '¿Que puedo hacer en Scrapyard?': (
               <>
-                Las cosas mas innecesarias que puedas imaginar –- incentivamos lo absurdo.
-                Juegos? Apps? Sitios web? Lenguajes de programación? <em>Hardware?</em>{' '}
-                ¡Tú decides! Tendremos varios recursos y mentores para
-                ayudarte.
+                Las cosas mas innecesarias que puedas imaginar –- incentivamos
+                lo absurdo. ¿Juegos? ¿Apps? ¿Sitios web? ¿Lenguajes de
+                programación? <em>¿Hardware?</em> ¡Tú decides! Tendremos varios
+                recursos y mentores para ayudarte.
               </>
             ),
             '¿Que ha hecho Hack Club antes?': (
@@ -665,25 +649,21 @@ export default function Barranquilla() {
             ),
             '¿Qué pasa si mis padres están preocupados?': (
               <>
-                ¡Estamos para ayudarte! Nuestra guía para padres saldrá pronto, pero
-                pueden contactarnos en{' '}
-                {/* TODO: Change this email to your event's email */}
+                ¡Estamos para ayudarte! Nuestra guía para padres saldrá pronto,
+                pero pueden contactarnos en{' '}
                 <Link href="mailto:barranquilla@scrapyard.hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                    barranquilla@scrapyard.hackclub.com
+                  barranquilla@scrapyard.hackclub.com
                 </Link>{' '}
                 si tienen preguntas.
               </>
             ),
             '¿Qué pasa si tengo más preguntas?': (
               <>
-                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                ¡Contáctanos! Siéntete libre de contactarnos en el canal #scrapyard-barranquilla
-                en el Slack de Hack Club o mándanos un email a{' '}
-                {/* TODO: Change this email to your event's email */}
+                ¡Contáctanos! Siéntete libre de contactarnos en el canal
+                #scrapyard-barranquilla en el Slack de Hack Club o mándanos un
+                email a{' '}
                 <Link href="mailto:barranquilla@scrapyard.hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                    barranquilla@scrapyard.hackclub.com
+                  barranquilla@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -735,8 +715,7 @@ export default function Barranquilla() {
           })}
         </Grid>
         <Link
-          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=barranquilla"
+          href="https://forms.hackclub.com/scrapyard-signup-es?event=barranquilla"
           target="_blank"
         >
           <Box
@@ -765,7 +744,6 @@ export default function Barranquilla() {
                 paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
               INSCRÍBETE PARA SCRAPYARD Barranquilla
             </Heading>
           </Box>
