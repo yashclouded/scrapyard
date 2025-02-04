@@ -343,8 +343,8 @@ export default function ExampleCity() {
               {/* TODO: Change Tampa to your event's city */}
               Scrapyard Tampa is a hackathon for high schoolers
               {/* TODO: Change Tampa to your event's city */}
-              happening in Tampa, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              happening in Tampa, where you can make the stupidest things you
+              can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
@@ -464,8 +464,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change Tampa to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Tampa is a 24 hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Tampa is a 24 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -694,9 +693,9 @@ export default function ExampleCity() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
+                <Link href="mailto:tampa@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                  tampa@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
