@@ -33,6 +33,37 @@ const schedule = [
   { time: '3:30 PM', event: 'Judging' }
 ]
 
+const sponsorLogos = [
+  '/city/sydney/sponsors/polymaker.webp',
+  '/city/sydney/sponsors/littlebirdelectronics.png'
+]
+const NotSoScrollingBanner = () => {
+  return (
+    <div style={{ overflow: 'hidden', whiteSpace: 'nowrap', width: '100%' }}>
+      <motion.div
+        style={{ display: 'inline-block' }}
+        // animate={{ x: ["0%", "-100%"] }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: 'linear'
+        }}
+      >
+        {/* Duplicate the logos to create a seamless loop */}
+        {/*I've disabled duplicating logos, add ", ...sponsorLogos" to the array to enable it*/}
+        {[...sponsorLogos].map((logo, index) => (
+          <img
+            key={index}
+            src={logo}
+            alt={`Sponsor ${index}`}
+            style={{ height: '80px', margin: '0 20px' }}
+          />
+        ))}
+      </motion.div>
+    </div>
+  )
+}
+
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Wayfinder = () => {
@@ -259,6 +290,35 @@ export default function ExampleCity() {
               Sydney - March&nbsp;15-16
             </Heading>
           </Box>
+        </Box>
+        <Box
+          style={{
+            // background: "url('/elements/ripped-paper.png')",
+            // backgroundSize: 'contain',
+            // backgroundRepeat: 'no-repeat',
+            // height: 'fit-content',
+            // paddingBottom: '3%',
+            // paddingTop: '0%',
+            // paddingLeft: '1%',
+            // paddingRight: '1%',
+            // marginTop: "5px",
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Text
+            style={{
+              textAlign: 'center',
+              marginBottom: '10px',
+              fontFamily: 'moonblossom',
+              fontWeight: '400',
+              color: "#f0f0f0"
+            }}
+          >
+            This event is made possible by our sponsors
+          </Text>
+          <NotSoScrollingBanner />
         </Box>
         <Box
           sx={{
