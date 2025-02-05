@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
+import Script from 'next/script'
 
 const schedule = [
   { time: '11:00 AM', event: 'Doors open' },
@@ -69,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           src="https://www.googletagmanager.com/ns.html?id=GTM-5MBXT6WG"
           height="0"
           width="0"
-          style="display:none;visibility:hidden"
+          style={{ display: 'none', visibility: 'hidden' }}
         ></iframe>
       </noscript>
       <Box
