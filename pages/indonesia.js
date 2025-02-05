@@ -1,22 +1,29 @@
 import Head from 'next/head'
-import Script from 'next/script'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
+import dynamic from 'next/dynamic'
+
+const sponsors = [
+  {
+    name: 'Hack Club',
+    link: 'https://hackclub.com/',
+    image: 'https://assets.hackclub.com/icon-rounded.svg'
+  }  
+];
 
 const schedule = [
   { time: '11:00 AM', event: 'Doors open' },
   { time: '12:00 PM', event: 'Opening ceremony' },
   { time: '12:30 PM', event: 'Lunch' },
-  { time: '01:00 PM', event: 'Start working on your project!' },
-  { time: '02:00 PM', event: 'Workshop 1' },
-  { time: '04:00 PM', event: 'Activity 1' },
-  { time: '04:00 PM', event: 'Workshop 2' },
-  { time: '06:00 PM', event: 'Dinner' },
-  { time: '08:00 PM', event: 'Lightning talks' },
+  { time: '1:00 PM', event: 'Workshop 1' },
+  { time: '4:00 PM', event: 'Workshop 2' },
+  { time: '6:30 PM', event: 'Dinner and lightning talks' },
   { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '08:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
+  { time: '7:00 AM', event: 'Breakfast' },
+  { time: '10:30 AM', event: 'Demos and judging' },
   { time: '12:00 PM', event: 'Closing ceremony' }
 ]
+
+const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -54,25 +61,10 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Busan</title>
-        <Script>
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5MBXT6WG');
-`}
-        </Script>
+        {/* TODO: Change Jakarta to your event's city */}
+        <title>Scrapyard Indonesia</title>
       </Head>
       <Flag />
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5MBXT6WG"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        ></iframe>
-      </noscript>
       <Box
         sx={{
           width: '100%',
@@ -82,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '10px'
+          gap: '20px'
         }}
       >
         <Box
@@ -98,7 +90,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
               objectFit: 'contain'
             }}
-            src="/city/busan/Big Logo.png"
+            src="/city/indonesia/wordmark.png"
             alt="Scrapyard"
           />
         </Box>
@@ -129,8 +121,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%',
-                fontSize: '23px'
+                margin: '8%'
               }}
             >
               Build stupid stuff, get stupid prizes.
@@ -166,10 +157,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              <Link href="https://busanforeignschool.org/" target="blank">
-                Busan Foreign School
-              </Link>{' '}
-              - March&nbsp;15-16
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Jakarta - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -219,7 +208,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
+          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=indonesia"
           target="_blank"
         >
           <Box
@@ -325,22 +315,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Busan?
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              What's Scrapyard Indonesia?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Busan is a hackathon for high schoolers happening in
-              Busan, where you can make the stupidest things you can think of!
-              Anything, from a{' '}
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Scrapyard Indonesia is a hackathon for high schoolers{" "}
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              happening in Jakarta, where you can make the stupidest
+              things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Busan
-              needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard{" "}
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              Indonesia needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -438,7 +432,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD BUSAN?
+            {/* TODO: Change [EXAMPLECITY] to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD INDONESIA?
           </Heading>
         </Box>
         <Heading
@@ -450,7 +445,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             textAlign: 'center'
           }}
         >
-          Scrapyard Busan is a 24-hour event - HERE'S THE ROUGH SCHEDULE!
+          {/* TODO: Change [EXAMPLECITY] to your event's city */}
+          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
+          Scrapyard Indonesia is a 24-hour event - HERE'S THE ROUGH
+          SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -541,7 +539,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               textAlign: 'center'
             }}
           >
-            HOW TO FIND US?
+            {/* TODO: Change [EXAMPLECITY] to your event's city */}
+            CAN'T MAKE IT TO JAKARTA?
           </Heading>
         </Box>
         <Heading
@@ -554,8 +553,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             mx: '5vw'
           }}
         >
-          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호
-          48084
+          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
         </Heading>
         <Box
           sx={{
@@ -564,27 +562,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            mb: '5vh',
+            mb: '10vh',
             mt: 5
           }}
         >
-          <iframe
-            width="80%"
-            height="100%"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765"
-            style={{ border: '1px solid black' }}
-          ></iframe>
-          <br />
-          <small>
-            <a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a>
-          </small>{' '}
+          <Map />
         </Box>
       </Box>
-
       <Box
         sx={{
           width: '100%',
-          background: 'white',
+          background: '#337d78',
           backgroundSize: ['contain', 'contain', 'cover!important'],
           display: 'flex',
           justifyContent: 'center',
@@ -596,117 +584,88 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           position: 'relative'
         }}
       >
-        <Heading
-          as="h1"
+        <Box
           sx={{
-            position: 'relative',
-            mb: '-20px'
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
           }}
         >
-          OUR SPONSORS
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center'
+            }}
+          >
+            SPONSORS
+          </Heading>
+        </Box>
+        <Heading
+          as="h2"
+          sx={{
+            fontSize: '1.5em',
+            fontFamily: 'moonblossom',
+            color: 'white',
+            textAlign: 'center',
+            mx: '5vw'
+          }}
+        >
+          This wouldn't be possible without their support.
         </Heading>
-        <p
-          style={{
-            fontSize: '1.5em'
-          }}
-        >
-          Without their support, Scrapyard Busan wouldn't be possible.
-        </p>
 
         <Grid
-          columns={[1, 1, 1, 2]}
+          columns={[
+            Math.min(2, sponsors.length),
+            Math.min(3, sponsors.length),
+            Math.min(4, sponsors.length)
+          ]}
           gap={4}
           sx={{
-            maxWidth: '1200px'
+            maxWidth: '1200px',
+            alignItems: 'center',
+            justifyItems: 'center',
+            justifyContent: 'center',
+            margin: 'auto'
           }}
         >
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://busanforeignschool.org/">
-              <Image
-                src="/city/busan/sponsors/bfs.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://hackclub.com/">
-              <Image
-                src="/city/busan/sponsors/hackclub.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://algoverseairesearch.org/">
-              <Image
-                src="/city/busan/sponsors/algoverse.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://www.tkbend.co.kr/eng/main/main.php">
-              <Image
-                src="/city/busan/sponsors/tk.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://www.instagram.com/bfshsstuco/">
-              <Image
-                src="/city/busan/sponsors/stuco.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://csteachers.org/cshs/">
-              <Image
-                src="/city/busan/sponsors/cshs.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
+          {sponsors.map((sponsor, index) => (
+            <Box
+              key={sponsor.name}
+              sx={{
+                textAlign: 'center',
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Link href={sponsor.link}>
+                <Image
+                  src={sponsor.image}
+                  sx={{
+                    maxHeight: '100px',
+                    width: 'auto'
+                  }}
+                />
+              </Link>
+            </Box>
+          ))}
         </Grid>
       </Box>
-
       <Box
         sx={{
           width: '100%',
@@ -750,19 +709,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school aged students are welcome to come! You don't
-                have to be a member of the Hack Club community or be a Hack Club
-                leader.
+                All high-school & upper-middle-school aged students are welcome
+                to come! You don't have to be a member of the Hack Club.
               </>
             ),
             'All this, for free?': (
-              <>Yep! Food, swag and good vibes are all included.</>
+              <>
+                Yep! Food, swag and good vibes are all included. Plus, if you’re
+                joining us from afar,{' '}
+                <Link href="https://gas.hackclub.com/">
+                  we’ll cover the cost of gas or a bus / train ticket
+                </Link>
+                .
+              </>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! Bring toiletries and
-                sleeping bags too. Additionally, if you plan to work on a
-                hardware project, bring the tools you'll need.
+                Your laptop, chargers, and an open mind! If you're going to an
+                overnight event, bring toiletries and sleeping bagstoo.
+                Additionally, if you plan to work on a hardware project, bring
+                the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -809,18 +775,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:scrapyardbusan@bfs.or.kr">
-                  scrapyardbusan@bfs.or.kr
+                {/* TODO: Change this email to your event's email */}
+                <Link href="mailto:jakarta@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  jakarta@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard-busan
+                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
+                Contact us! Feel free to reach out to us in the #scrapyard-indonesia
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:scrapyardbusan@bfs.or.kr">
-                  scrapyardbusan@bfs.or.kr
+                {/* TODO: Change this email to your event's email */}
+                <Link href="mailto:jakarta@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  jakarta@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -872,7 +843,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
+          // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=indonesia"
           target="_blank"
         >
           <Box
@@ -901,7 +873,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD BUSAN
+              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              SIGN UP FOR SCRAPYARD INDONESIA
             </Heading>
           </Box>
         </Link>
