@@ -743,12 +743,7 @@ export default function ExampleCity() {
             ),
             'Do I need team to participate?': (
               <>
-                You don’t need to have a team in advance to participate. Sign-ups are individual, so if you don’t have a team yet, you can form one at the event. Each team can have up to four members. If you already have a team, please make sure each member signs up separately. Sign-ups will close on February 23.
-              </>
-            ),
-            'What are the prizes?': (
-              <>
-                The winners of the hackathon will get Hack Club sponsored gifts — which range from T-shirts and stickers to hardware like a Raspberry Pi Zero, and some prizes by organizers that will be revealed later.
+                You don’t need to have a team in advance to participate. Sign-ups are individual, so if you don’t have a team yet, you can form one at the event. Each team can have up to four members. If you already have a team, please make sure each member signs up separately.
               </>
             ),
             'What do I need?': (
