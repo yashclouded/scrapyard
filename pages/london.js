@@ -314,14 +314,25 @@ export default function ExampleCity() {
         <Box
           sx={{
             display: 'flex',
+            background:
+            "url('/backgrounds/cutting-mat.png'), linear-gradient(#337D78, #337D78)",
+            borderRadius: '30px',
             flexDirection: ['column', 'column', 'row'],
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            height: '100%'
+            height: '100%',
+            marginTop: '7em',
+            marginBottom: '7em',
           }}
         >
-          <Image src="/elements/orpheus-doodle.svg" />
+          <Image src="/city/london/Hack_Club_Assemble_LTNJ_02688.JPG" 
+          
+          sx={{
+            maxWidth: '40vw',
+            margin: '5em',
+            borderRadius: '30px',
+          }}/>
           <Box
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
@@ -334,7 +345,8 @@ export default function ExampleCity() {
           >
             <Heading
               sx={{
-                textDecoration: 'underline'
+                textDecoration: 'none',
+                fontFamily: 'Phantom Sans',
               }}
             >
               
@@ -342,7 +354,8 @@ export default function ExampleCity() {
             </Heading>
             <p
               style={{
-                fontSize: '1.5em'
+                fontSize: '1.5em',
+                fontFamily: 'Phantom Sans'
               }}
             >
               
@@ -358,6 +371,7 @@ export default function ExampleCity() {
             </p>
           </Box>
         </Box>
+        
         <Box
           sx={{
             position: 'absolute',
@@ -503,7 +517,7 @@ export default function ExampleCity() {
                   display: 'inline',
                   width: ['min-content', 'max-content'],
                   fontSize: '2rem',
-                  fontFamily: 'p22-stanyan'
+                  fontFamily: 'Phantom Sans'
                 }}
               >
                 {item.event}
@@ -520,7 +534,7 @@ export default function ExampleCity() {
                   height: 1
                 }}
               ></Box>
-              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+              <p style={{ display: 'inline', margin: 0 , fontFamily: 'Phantom Sans'}}>{item.time}</p>
             </div>
           ))}
         </Box>
@@ -573,7 +587,8 @@ export default function ExampleCity() {
           style={{
             fontSize: '1.5em',
             color: 'white',
-            width: '60vw'
+            width: '60vw',
+            fontFamily: 'Phantom Sans'
           }}
 
         >
@@ -652,7 +667,8 @@ export default function ExampleCity() {
           style={{
             fontSize: '1.5em',
             color: 'white',
-            width: '60vw'
+            width: '60vw',
+            fontFamily: 'Phantom Sans',
           }}
 
         >
@@ -848,7 +864,8 @@ export default function ExampleCity() {
                 <Text
                   sx={{
                     fontSize: 3,
-                    fontWeight: 'bold'
+                    fontWeight: '300',
+                    fontFamily: 'Phantom Sans'
                   }}
                 >
                   {answer}
