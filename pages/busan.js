@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 
 const schedule = [
