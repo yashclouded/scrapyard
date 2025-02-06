@@ -229,7 +229,7 @@ export default function NoVA() {
 								margin: '8%'
 							}}
 						>
-							Build stupid s#!t, get stupid prizes.
+							Build stupid things, get stupid prizes.
 						</Heading>
 					</Box>
 					<Box
@@ -713,7 +713,7 @@ export default function NoVA() {
 								>
 									PARTNER SPONSORS
 								</Heading>
-							</Box>
+							<				/Box>
 							<div
 								style={{
 									display: 'flex',
@@ -1230,36 +1230,12 @@ export default function NoVA() {
 						'What if I have more questions?': (
 							<>
 								Contact us! Feel free to reach out to us in the #scrapyard-nova
-								channel on the Hack Club slack or email us
-								at
+								channel on the Hack Club slack, or email us
+								at{' '}
 								<Link href="mailto:nova@scrapyard.hackclub.com">
 									nova@scrapyard.hackclub.com
 								</Link>
 								.
-							</>
-						),
-						"What's the address?": (
-							<>
-								Scrapyard NoVA is (currently) set to take place at{' '}
-								<Link href="https://maps.app.goo.gl/6pYHWqDuNiKELZ249">
-									Grounds Central Station,
-								</Link>{' '}
-								located at 9360 Main St, Manassas, VA 20110.
-								<Embed
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.531761687434!2d-77.474364988124!3d38.751505871637725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65c75a16385dd%3A0x54738b0f2c4f379a!2sGrounds%20Central%20Station!5e0!3m2!1sen!2sus!4v1737647895635!5m2!1sen!2sus"
-									width="400"
-									height="300"
-									allowFullScreen={true}
-									loading="lazy"
-									referrerPolicy="no-referrer-when-downgrade"
-								></Embed>
-							</>
-						),
-						'What are the Ramadan accommodations?': (
-							<>
-								We will provide dinner after dark (9 PM), and we also provide
-								vegan, vegetarian, and halal options for all meals. We provide
-								separate rooms for attendees wishing to pray.
 							</>
 						)
 					}).map(([question, answer], i) => {
