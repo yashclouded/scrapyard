@@ -124,7 +124,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid stuff, get stupid prizes.
+              Build crazy things, get crazy prizes.
             </Heading>
           </Box>
           <Box
@@ -324,16 +324,15 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Indonesia is a hackathon for high schoolers{" "}
+              Scrapyard Indonesia is a hackathon for high schoolers{' '}
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Jakarta, where you can make the stupidest
+              happening in Jakarta, where you can make the craziest{' '}
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard{" "}
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
+              goes at Scrapyard. No matter your experience, Scrapyard{' '}
               Indonesia needs you and your scrappy ideas!
             </p>
           </Box>
