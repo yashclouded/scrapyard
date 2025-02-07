@@ -774,7 +774,7 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD BOSTOn
+              SIGN UP FOR SCRAPYARD ALBUQUERQUE
             </Heading>
           </Box>
         </Link>
