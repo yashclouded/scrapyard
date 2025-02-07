@@ -169,7 +169,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              BOSTON - March&nbsp;15-16
+              ALBUQUERQUE - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
