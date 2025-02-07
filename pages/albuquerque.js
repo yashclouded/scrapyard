@@ -340,7 +340,7 @@ export default function ExampleCity() {
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
-              Boston needs you and your scrappy ideas!
+              Albuquerque needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
