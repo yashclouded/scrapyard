@@ -292,8 +292,10 @@ export default function SiliconValley() {
             alt="Pink paper star"
           />
         </Box>
-        {/* TODO: INTEREST FORM */}
-        <Link href="https://forms.hackclub.com/scrapyardsv" target="_blank">
+        <Link
+          href="https://forms.hackclub.com/scrapyard-signup?event=silicon-valley"
+          target="_blank"
+        >
           <Box
             sx={{
               backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
@@ -1283,8 +1285,8 @@ export default function SiliconValley() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:silicon-valley@scrapyard.hackclub.com">
-                  silicon-valley@scrapyard.hackclub.com
+                <Link href="mailto:siliconvalley@scrapyard.hackclub.com">
+                  siliconvalley@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -1293,8 +1295,8 @@ export default function SiliconValley() {
               <>
                 Contact us! Feel free to reach out to us in the #scrapyard
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:silicon-valley@scrapyard.hackclub.com">
-                  silicon-valley@scrapyard.hackclub.com
+                <Link href="mailto:siliconvalley@scrapyard.hackclub.com">
+                  siliconvalley@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -1346,8 +1348,7 @@ export default function SiliconValley() {
           })}
         </Grid>
         <Link
-          // TODO: Interest form
-          href="https://forms.hackclub.com/scrapyardsv"
+          href="https://forms.hackclub.com/scrapyard-signup?event=silicon-valley"
           target="_blank"
         >
           <Box
