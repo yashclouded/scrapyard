@@ -34,7 +34,7 @@ const schedule = [
 ]
 
 const sponsorLogos = [
-  '/city/sydney/sponsors/polymaker.webp',
+  '/city/sydney/sponsors/polymaker.png',
   '/city/sydney/sponsors/littlebirdelectronics.png'
 ]
 const NotSoScrollingBanner = () => {
