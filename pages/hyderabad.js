@@ -66,10 +66,10 @@ const silverSponsors = [
 
 const bronzeSponsors = [
   {
-    href: '#',
-    imgSrc: '/city/hyderabad/sponsors/placeholder.png',
-    alt: 'Place Holder Sponsorship Image',
-    name: 'This Could Be You!'
+    href: 'https://www.linuxfoundation.org/',
+    imgSrc: '/city/hyderabad/sponsors/the-linux-foundation.png',
+    alt: 'The Linux Foundation',
+    name: 'The Linux Foundation'
   }
 ]
 
@@ -89,7 +89,7 @@ const ourTeam = [
     linkedInUsername: '@sannihithmadasu',
     linkedInProfile: 'https://www.linkedin.com/in/sannihithmadasu/',
     designation: 'Lead Organizer',
-    imgSrc: '/city/hyderabad/team-pictures/sannihith-madasu.jpeg'
+    imgSrc: '/city/hyderabad/team-pictures/core-team/sannihith-madasu.jpeg'
   },
   {
     name: 'Atharv Kopparthi',
@@ -97,7 +97,7 @@ const ourTeam = [
     linkedInUsername: 'N/A',
     linkedInProfile: '#',
     designation: 'Co-Organizer',
-    imgSrc: '/city/hyderabad/team-pictures/atharv-kopparthi.jpg'
+    imgSrc: '/city/hyderabad/team-pictures/core-team/atharv-kopparthi.jpg'
   },
   {
     name: 'Katta Hima Vamsi',
@@ -105,7 +105,7 @@ const ourTeam = [
     linkedInUsername: '@hima-vamsi-katta',
     linkedInProfile: 'https://www.linkedin.com/in/hima-vamsi-katta/',
     designation: 'Co-Organizer',
-    imgSrc: '/city/hyderabad/team-pictures/hima-vamsi-katta.jpg'
+    imgSrc: '/city/hyderabad/team-pictures/core-team/hima-vamsi-katta.jpg'
   },
   {
     name: 'Daksh Kaza',
@@ -113,7 +113,7 @@ const ourTeam = [
     linkedInUsername: 'N/A',
     linkedInProfile: '#',
     designation: 'Organizing Committee Head',
-    imgSrc: '/city/hyderabad/team-pictures/daksh-kaza.jpg'
+    imgSrc: '/city/hyderabad/team-pictures/core-team/daksh-kaza.jpg'
   },
   {
     name: 'Amay Bhattacharya',
@@ -121,7 +121,7 @@ const ourTeam = [
     linkedInUsername: '@amay-bhattacharya',
     linkedInProfile: 'https://www.linkedin.com/in/amay-bhattacharya/',
     designation: 'Design Lead',
-    imgSrc: '/city/hyderabad/team-pictures/amay-bhattacharya.jpeg'
+    imgSrc: '/city/hyderabad/team-pictures/core-team/amay-bhattacharya.jpeg'
   },
   {
     name: 'Arvesh Borkar',
@@ -129,7 +129,7 @@ const ourTeam = [
     linkedInUsername: '@arveshborkar',
     linkedInProfile: 'https://www.linkedin.com/in/arveshborkar/',
     designation: 'Marketing Lead',
-    imgSrc: '/city/hyderabad/team-pictures/arvesh-borkar.jpeg'
+    imgSrc: '/city/hyderabad/team-pictures/core-team/arvesh-borkar.jpeg'
   },
   {
     name: 'D.S.S. Prajwal Sarma',
@@ -137,7 +137,22 @@ const ourTeam = [
     linkedInUsername: '@prajwaldoranala',
     linkedInProfile: 'https://www.linkedin.com/in/prajwaldoranala/',
     designation: 'Sponsorship Liaison',
-    imgSrc: '/city/hyderabad/team-pictures/prajwal-doranala.jpg'
+    imgSrc: '/city/hyderabad/team-pictures/core-team/prajwal-doranala.jpg'
+  }
+]
+
+const volunteers = [
+  {
+    name: 'Akshay Lokerao',
+    linkedInUsername: '@akshay-lokerao',
+    linkedInProfile: 'https://www.linkedin.com/in/akshay-lokerao-b142112b2/',
+    imgSrc: '/city/hyderabad/team-pictures/volunteers/akshay-lokerao.jpg'
+  },
+  {
+    name: 'Avyay Lokerao',
+    linkedInUsername: '@avyay-lokerao',
+    linkedInProfile: 'https://www.linkedin.com/in/avyay-lokerao-204a4a314/',
+    imgSrc: '/city/hyderabad/team-pictures/volunteers/avyay-lokerao.jpg'
   }
 ]
 
@@ -151,7 +166,7 @@ export default function Hyderabad() {
       const timeout = setTimeout(() => {
         setText(prev => prev + fullText[index])
         setIndex(prev => prev + 1)
-      }, 100) // Adjust typing speed here
+      }, 100)
       return () => clearTimeout(timeout)
     }
   }, [index])
@@ -971,6 +986,104 @@ export default function Hyderabad() {
                       {member.email}
                     </Link>
                   </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center'
+                    }}
+                  >
+                    <Image
+                      src="/city/hyderabad/elements/linkedIn.svg"
+                      style={{ paddingRight: '5px' }}
+                    />
+                    <Link
+                      href={member.linkedInProfile}
+                      target="_blank"
+                      sx={{
+                        color: 'inherit',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      {member.linkedInUsername}
+                    </Link>
+                  </div>
+                </div>
+              </Box>
+            </Box>
+          ))}
+        </Grid>
+      </Box>
+
+      <Box
+        sx={{
+          paddingBottom: '40px',
+          background: '#337D77',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '20px'
+        }}
+      >
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            width: ['90vw', '70vw', '46.8vw'],
+            height: '30vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              textAlign: 'center',
+              mx: '5vw',
+              fontWeight: 'lighter'
+            }}
+          >
+            VOLUNTEERS
+          </Heading>
+        </Box>
+
+        <Grid columns={[1, 3]} gap="25px" sx={{ maxWidth: '1600px' }}>
+          {volunteers.map((member, index) => (
+            <Box
+              key={index}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                background:
+                  'url(/city/hyderabad/elements/crumpled-paper-background.jpg)',
+                padding: '20px',
+                borderRadius: '8px',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+              }}
+            >
+              <Image
+                src={member.imgSrc}
+                alt={member.name}
+                sx={{
+                  width: '160px',
+                  height: '160px',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  mr: '20px'
+                }}
+              />
+              <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                <Text sx={{ fontWeight: 'bold', fontSize: '1.2em' }}>
+                  {member.name}
+                </Text>
+                <div
+                  style={{
+                    display: 'flex',
+                    rowGap: '7px',
+                    flexDirection: 'column'
+                  }}
+                >
                   <div
                     style={{
                       display: 'flex',
