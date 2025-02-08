@@ -3,7 +3,7 @@
 Hello! This is the template for the city pages.
 
 To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
-E.g. if your city is Tampa, rename the copy of this file to tampa.js
+E.g. if your city is Ottawa, rename the copy of this file to Ottawa.js
 
 Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
 You do not need to use this template exactly, feel free to customize it as much as you see fit.
@@ -78,8 +78,8 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        {/* TODO: Change Tampa to your event's city */}
-        <title>Scrapyard Tampa</title>
+        {/* TODO: Change Ottawa to your event's city */}
+        <title>Scrapyard Ottawa</title>
       </Head>
       <Flag />
       <Box
@@ -174,7 +174,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change Tampa to your event's city */}
+              {/* TODO: Change Ottawa to your event's city */}
               Ottawa - March&nbsp;15-16
             </Heading>
           </Box>
@@ -225,8 +225,8 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          // TODO: Change tampa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=tampa"
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=recPrXR3TEibN0QQz"
           target="_blank"
         >
           <Box
@@ -332,7 +332,7 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-              {/* TODO: Change Tampa to your event's city */}
+              {/* TODO: Change Ottawa to your event's city */}
               What's Scrapyard Ottawa?
             </Heading>
             <p
@@ -340,9 +340,9 @@ export default function ExampleCity() {
                 fontSize: '1.5em'
               }}
             >
-              {/* TODO: Change Tampa to your event's city */}
+              {/* TODO: Change Ottawa to your event's city */}
               Scrapyard Ottawa is a hackathon for high schoolers
-              {/* TODO: Change Tampa to your event's city */}
+              {/* TODO: Change Ottawa to your event's city */}
               happening in Ottawa, where you can make the stupidest things you
               can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
@@ -350,7 +350,7 @@ export default function ExampleCity() {
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change Tampa to your event's city */}
+              {/* TODO: Change Ottawa to your event's city */}
               Ottawa needs you and your scrappy ideas!
             </p>
           </Box>
@@ -449,7 +449,7 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change Tampa to your event's city */}
+            {/* TODO: Change Ottawa to your event's city */}
             WHAT'S HAPPENING AT SCRAPYARD OTTAWA?
           </Heading>
         </Box>
@@ -462,7 +462,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change Tampa to your event's city */}
+          {/* TODO: Change Ottawa to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
           Scrapyard Ottawa is a 24 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
@@ -555,7 +555,7 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change Tampa to your event's city */}
+            {/* TODO: Change Ottawa to your event's city */}
             CAN'T MAKE IT TO OTTAWA?
           </Heading>
         </Box>
@@ -693,9 +693,9 @@ export default function ExampleCity() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:tampa@scrapyard.hackclub.com">
+                <Link href="mailto:Ottawa@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  tampa@scrapyard.hackclub.com
+                  Ottawa@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -706,9 +706,9 @@ export default function ExampleCity() {
                 Contact us! Feel free to reach out to us in the #scrapyard-ottawa
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:tampa@scrapyard.hackclub.com">
+                <Link href="mailto:Ottawa@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  tampa@scrapyard.hackclub.com
+                  Ottawa@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -760,8 +760,8 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          // TODO: Change tampa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=tampa"
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=recPrXR3TEibN0QQz"
           target="_blank"
         >
           <Box
@@ -790,7 +790,7 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change Tampa to your event's city */}
+              {/* TODO: Change Ottawa to your event's city */}
               SIGN UP FOR SCRAPYARD OTTAWA
             </Heading>
           </Box>
