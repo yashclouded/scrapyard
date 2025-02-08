@@ -693,7 +693,7 @@ export default function ExampleCity() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:Ottawa@scrapyard.hackclub.com">
+                <Link href="tishya.ottawa@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
                   Ottawa@scrapyard.hackclub.com
                 </Link>{' '}
@@ -706,9 +706,9 @@ export default function ExampleCity() {
                 Contact us! Feel free to reach out to us in the #scrapyard-ottawa
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:Ottawa@scrapyard.hackclub.com">
+                <Link href="tishya.ottawa@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  Ottawa@scrapyard.hackclub.com
+                  tishya.ottawa@scrapyard.hackclub.com
                 </Link>
                 .
               </>
