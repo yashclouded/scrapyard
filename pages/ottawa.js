@@ -25,19 +25,19 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
+  { time: '2:00 PM', event: 'Doors open' },
+  { time: '3:00 PM', event: 'Opening ceremony' },
+  { time: '4:00 PM', event: 'Start working on your project!' },
+  { time: '5:00 PM', event: 'Workshop 1' },
+  { time: '5:30 PM', event: 'Workshop 2' },
+  { time: '6:00 PM', event: 'Supper' },
+  { time: '10:00 PM', event: 'Game time!' },
   { time: '12:00 AM', event: 'Midnight surprise' },
   { time: '8:00 AM', event: 'Breakfast' },
   { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '12:00 PM', event: 'Lunch' },
+  { time: '1:00 PM', event: 'Closing ceremony' },
+  { time: '2:00 PM', event: 'Go Home :(' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -464,7 +464,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change Ottawa to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Ottawa is a 24 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Ottawa is a 24 hour event - Here's the VERY VERY TENTATIVE schedule, more details to come!
         </Heading>
         <Box
           sx={{
