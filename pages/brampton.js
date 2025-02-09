@@ -602,13 +602,118 @@ export default function ExampleCity() {
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            mb: '10vh',
+            mb: '5vh',
             mt: 5
           }}
         >
           <Map />
         </Box>
       </Box>
+
+       <Box
+         sx={{
+           // backgroundImage: "url(/backgrounds/confetti.png)",
+           alignItems: 'center',
+           display: 'flex',
+           flexDirection: 'column'
+         }}
+       >
+         <Box
+           sx={{
+             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+             // backgroundSize: "cover!important",
+             // display: "block",
+             // width: "30vw",
+             height: '30vh',
+             width: ['90vw', '70vw', '46.8vw'],
+             alignItems: 'center',
+             justifyContent: 'center',
+             margin: '0vh',
+             backgroundRepeat: 'no-repeat',
+             backgroundSize: 'cover',
+             display: 'flex',
+             flexDirection: 'column',
+             alignItems: 'center'
+           }}
+         >
+           <Heading
+             as="h1"
+             sx={{
+               mx: '1vw',
+               fontWeight: 'lighter',
+               textAlign: 'center'
+             }}
+           >
+             {/* TODO: Change Brampton to your event's city */}
+            SPONSORS
+           </Heading>
+         </Box>
+         <Box
+           sx={{
+             display: 'flex',
+             flexDirection: 'column',
+             alignItems: 'center',
+             width: ['90%', '70%'],
+             fontSize: '2em',
+             gap: '32px',
+             color: 'black',
+             mt: 3,
+             mb: 5,
+             background: "url('/backgrounds/lined-paper.png')",
+             backgroundSize: ['contain', 'contain', 'cover!important'],
+             p: 4,
+             borderRadius: 1,
+             boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+           }}
+         >
+  {
+    // Generated Code Below
+    <>
+      <h2 style={{
+        margin: '0'
+      }}>🥉 Bronze Sponsorships</h2>
+      <Box sx={{
+        borderRadius: '10px',
+        backgroundColor: "white",
+        display: 'flex',
+        justifyContent: "center",
+        alignItems: "center",
+        gap: '1.5em',
+        padding: '1rem',
+      }}>
+        <Box sx={{
+          display: 'flex',
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+          <Image src="/city/brampton/sponsors/1Password_Bronze.png" alt="1Password_Bronze.png" width={700} height={250} />
+        </Box>
+        <Box sx={{
+          display: 'flex',
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+          <Image src="/city/brampton/sponsors/Incogni_Bronze.png" alt="Incogni_Bronze.png" width={700} height={250} />
+        </Box>
+        <Box sx={{
+          display: 'flex',
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+          <Image src="/city/brampton/sponsors/NordVPN_Bronze.png" alt="NordVPN_Bronze.png" width={700} height={250} />
+        </Box>
+        <Box sx={{
+          display: 'flex',
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+          <Image src="/city/brampton/sponsors/Saily_Bronze.png" alt="Saily_Bronze.png" width={700} height={250} />
+        </Box>
+      </Box>
+    </>
+  }
+         </Box>
+       </Box>
 
       <Box
         sx={{
