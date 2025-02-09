@@ -645,7 +645,7 @@ export default function ExampleCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, toiletries, a government id, your signed constent form, a refillable water bottle, and an open mind! Since it’s a 24-hour event, you might want to bring a sleeping bag, a pillow, and some deodorant.
+                Your laptop, chargers, toiletries, any method of identification (photo preferred), your signed constent form, a refillable water bottle, and an open mind! Since it’s a 24-hour event, you might want to bring a sleeping bag, a pillow, and some deodorant.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
