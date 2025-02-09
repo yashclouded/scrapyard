@@ -141,7 +141,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -316,7 +316,7 @@ export default function ExampleCity() {
             height: '100%'
           }}
         >
-          <Image src="/elements/orpheus-doodle.svg" />
+          <Image src="/city/ottawa/ottawa-cat.png" />
           <Box
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
@@ -349,9 +349,8 @@ export default function ExampleCity() {
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              {/* TODO: Change Ottawa to your event's city */}
-              Ottawa needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience,
+              Scrapyard Ottawa needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
