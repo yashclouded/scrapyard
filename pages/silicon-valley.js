@@ -207,10 +207,11 @@ export default function SiliconValley() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%'
+                margin: '8%',
+                marginBottom: '6%'
               }}
             >
-              Build crazy things, get crazy prizes.
+              Create, Compete, Connect.
             </Heading>
           </Box>
           <Box
@@ -220,7 +221,7 @@ export default function SiliconValley() {
               backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100% 100%',
-              width: '75%',
+              width: '85%',
               position: 'relative',
               zIndex: 30,
               top: '-15%',
@@ -243,18 +244,18 @@ export default function SiliconValley() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Location TBA - March&nbsp;15-16
+              March&nbsp;15-16 • Hacker Dojo • Mountain View, CA
             </Heading>
           </Box>
         </Box>
-        <a href="https://discord.gg/32BsffvEf4">
+        <a href="https://discord.gg/32BsffvEf4" target="_blank">
           <Box
             sx={{
               backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100% 100%',
               position: 'absolute',
-              left: ['calc(50% - 100px)'],
+              left: ['calc(50% - 10em)'],
               top: ['calc(50% + 200px)'],
               filter: 'drop-shadow(5px 5px 5px #000)',
               transition: 'transform 0.2s',
@@ -262,8 +263,9 @@ export default function SiliconValley() {
                 transform: 'scale(1.1)'
               },
               zIndex: 30,
-              minWidth: '8em',
-              padding: '15px'
+              minWidth: '20em',
+              padding: '15px',
+              paddingY: '0'
             }}
           >
             <Heading
@@ -1150,64 +1152,96 @@ export default function SiliconValley() {
           </Box>
           <Box
             as="a"
-            href="https://counterspell.hackclub.com/silicon-valley"
+            href="https://assemble.hackclub.com"
             target="_blank"
             sx={{
               background:
                 "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/3polaroid1.png')",
               width: ['35.5vw', '35.5vw', '22.5vw'],
               height: ['35.5vw', '35.5vw', '22.5vw'],
-              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              transform: ['scale(1.3)', 'scale(1.3)', 'scale(1.3)'],
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
-              display: 'block'
+              display: 'block',
+              transition: 'transform 0.2s ease-in-out',
+              ':hover': {
+                transform: [
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)'
+                ]
+              }
             }}
           ></Box>
           <Box
             as="a"
-            href="https://counterspell.hackclub.com/silicon-valley"
+            href="https://outernet.hackclub.com"
             target="_blank"
             sx={{
               background:
                 "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/2polaroid2.png')",
               width: ['35.5vw', '35.5vw', '22.5vw'],
               height: ['35.5vw', '35.5vw', '22.5vw'],
-              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              transform: ['scale(1.3)', 'scale(1.3)', 'scale(1.3)'],
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               display: 'block',
-              marginTop: '7vw'
+              marginTop: '7vw',
+              transition: 'transform 0.2s ease-in-out',
+              ':hover': {
+                transform: [
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)'
+                ]
+              }
             }}
           ></Box>
           <Box
             as="a"
-            href="https://counterspell.hackclub.com/silicon-valley"
+            href="https://wonderland.hackclub.com"
             target="_blank"
             sx={{
               background:
                 "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/1polaroid3.png')",
               width: ['35.5vw', '35.5vw', '22.5vw'],
               height: ['35.5vw', '35.5vw', '22.5vw'],
-              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              transform: ['scale(1.3)', 'scale(1.3)', 'scale(1.3)'],
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
-              display: 'block'
+              display: 'block',
+              transition: 'transform 0.2s ease-in-out',
+              ':hover': {
+                transform: [
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)'
+                ]
+              }
             }}
           ></Box>
           <Box
             as="a"
-            href="https://counterspell.hackclub.com/silicon-valley"
+            href="https://apocalypse.hackclub.com"
             target="_blank"
             sx={{
               background:
                 "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/0polaroid4.png')",
               width: ['35.5vw', '35.5vw', '22.5vw'],
               height: ['35.5vw', '35.5vw', '22.5vw'],
-              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              transform: ['scale(1.3)', 'scale(1.3)', 'scale(1.3)'],
               backgroundSize: 'contain',
               backgroundRepeat: 'no-repeat',
               display: 'block',
-              marginTop: '7vw'
+              marginTop: '7vw',
+              transition: 'transform 0.2s ease-in-out',
+              ':hover': {
+                transform: [
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)'
+                ]
+              }
             }}
           ></Box>
         </Box>
