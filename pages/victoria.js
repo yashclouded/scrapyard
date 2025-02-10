@@ -173,7 +173,7 @@ export default function Victoria() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Victoria - March&nbsp;15
+              Victoria - March&nbsp;16
             </Heading>
           </Box>
         </Box>
@@ -340,7 +340,7 @@ export default function Victoria() {
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Scrapyard Victoria is a hackathon for high schoolers
-              {/* TODO: Change [EXAMPLECITY] to your event's city */} happening in Victoria, where you can make the stupidest
+              {/* TODO: Change [EXAMPLECITY] to your event's city */} happening in Victoria at "777 Fort Street", where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
@@ -460,7 +460,7 @@ export default function Victoria() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Victoria is a 13 hour event - HERE'S THE ROUGH
+          Scrapyard Victoria is a 12 hour even at 777 Fort Street - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
