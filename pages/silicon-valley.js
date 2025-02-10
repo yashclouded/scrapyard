@@ -211,7 +211,15 @@ export default function SiliconValley() {
                 marginBottom: '6%'
               }}
             >
-              Create, Compete, Connect.
+              Create. Compete.{' '}
+              <span
+                style={{
+                  WebkitTextStroke: '0.5px black'
+                }}
+              >
+                Connect
+              </span>
+              .
             </Heading>
           </Box>
           <Box
