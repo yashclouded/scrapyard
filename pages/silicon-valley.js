@@ -217,9 +217,8 @@ export default function SiliconValley() {
                   WebkitTextStroke: '0.5px black'
                 }}
               >
-                Connect
+                Connect.
               </span>
-              .
             </Heading>
           </Box>
           <Box
