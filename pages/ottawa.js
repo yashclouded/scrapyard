@@ -20,6 +20,7 @@ Note: To test your changes locally, use `npm install` and `npm run dev`.
 */
 
 import Head from 'next/head'
+
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
@@ -64,7 +65,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function ExampleCity() {
+export default function Ottawa() {
   return (
     <Box
       sx={{
@@ -421,7 +422,43 @@ export default function ExampleCity() {
           display: 'flex',
           flexDirection: 'column'
         }}
-      >
+      > 
+      <Link
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://hcb.hackclub.com/donations/start/ottawa"
+          target="_blank"
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              {/* TODO: Change Ottawa to your event's city */}
+              WANNA DONATE?
+            </Heading>
+          </Box>
+        </Link>
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
@@ -600,6 +637,69 @@ export default function ExampleCity() {
           position: 'relative'
         }}
       >
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.png)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center',
+              color: 'white',
+            }}
+          >
+            {/* TODO: Change Ottawa to your event's city */}
+            OUR SPONSORS!!
+          </Heading>
+        </Box>
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              {/* TODO: Change Ottawa to your event's city */}
+              COMING 
+              SOON!!
+            </Heading>
+          </Box>
+        
         <Heading
           as="h1"
           sx={{
