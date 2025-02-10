@@ -176,6 +176,24 @@ export default function Victoria() {
               Victoria - March&nbsp;16
             </Heading>
           </Box>
+          <Heading
+              as="h3"
+              sx={{
+                fontFamily: 'p22-stanyan',
+                mx: '8%',
+                p: 0,
+                wordBreak: 'keep-all',
+                whiteSpace: 'nowrap',
+                width: 'max-content',
+                fontSize: ['1.2em', '1.4em'],
+                color: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '20px'
+              }}
+            >
+              Powered by Viatech <img src="/city/victoria/viatech_logo.png" alt="Viatech Logo" width="85px" style={{ borderRadius: "10px" }}/>
+            </Heading>
         </Box>
         <Box
           sx={{
@@ -460,7 +478,7 @@ export default function Victoria() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Victoria is a 12 hour even at 777 Fort Street - HERE'S THE ROUGH
+          Scrapyard Victoria is a 12 hour event at 777 Fort Street - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -687,9 +705,9 @@ export default function Victoria() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:kaipereira2020@gmail.com">
+                <Link href="mailto:alhwyn.victoria@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  kaipereira2020@gmail.com
+                  alhwyn.victoria@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -699,9 +717,9 @@ export default function Victoria() {
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
                 Contact us! Feel free to email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:kaipereira2020@gmail.com">
+                <Link href="mailto:alhwyn.victoria@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  kaipereira2020@gmail.com
+                  alhwyn.victoria@scrapyard.hackclub.com
                 </Link>
                 .
               </>
