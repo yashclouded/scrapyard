@@ -460,7 +460,7 @@ export default function Victoria() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Victoria is a 12 hour even at 777 Fort Street - HERE'S THE ROUGH
+          Scrapyard Victoria is a 12 hour event at 777 Fort Street - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
