@@ -40,7 +40,7 @@ const flagshipEvent = {
   lat: 30.2672,
   lng: -97.7431,
   description: 'yada yada yada',
-  format: '48-hour',
+  format: '24-hour',
   slug: '',
   flagship: true
 }
