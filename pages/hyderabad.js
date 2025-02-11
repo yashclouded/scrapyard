@@ -295,10 +295,17 @@ export default function Hyderabad() {
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['1.2em', '1.4em'],
+                textAlign: 'center'
               }}
             >
-              Hyderabad - March&nbsp;15-16
+              Hyderabad - March&nbsp;15-16 <br />{' '}
+              <Link
+                href="https://maps.app.goo.gl/dFvAjWTmYLoAd4S37"
+                target="_blank"
+              >
+                Venue
+              </Link>
             </Heading>
           </Box>
         </Box>
