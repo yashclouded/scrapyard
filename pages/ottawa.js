@@ -1,35 +1,47 @@
+'======== READ ME BEFORE EDITING ========'
+/*
+Hello! This is the template for the city pages.
+
+To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
+E.g. if your city is Ottawa, rename the copy of this file to Ottawa.js
+
+Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
+You do not need to use this template exactly, feel free to customize it as much as you see fit.
+
+If you want to include additional assets, please add them under public/city/your-city-name.
+
+Make a PR and we'll review it as soon as we can!
+
+If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
+
+P.S. Feel free to delete this comment block when you're done! 
+
+Note: To test your changes locally, use `npm install` and `npm run dev`.
+*/
+
 import Head from 'next/head'
+
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from 'react'
-import SponsorSection from '../components/city/hyderabad/SponsorSection'
-import MemberSection from '../components/city/hyderabad/MemberSection'
-import Loading from '../components/city/hyderabad/Loading'
 
+// TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Team formation' },
-  { time: '1:30 PM', event: 'Lunch' },
-  { time: '2:15 PM', event: 'Work Session 1' },
-  { time: '3:15 PM', event: 'Workshop 1' },
-  { time: '4:15 PM', event: 'Work Session 2' },
-  { time: '7:30 PM', event: 'Workshop 2' },
-  { time: '8:30 PM', event: 'Dinner' },
-  { time: '9:15 PM', event: 'Workshop 3' },
-  { time: '10:15 PM', event: 'Work Session 3' },
+  { time: '2:00 PM', event: 'Doors open' },
+  { time: '3:00 PM', event: 'Opening ceremony' },
+  { time: '4:00 PM', event: 'Start working on your project!' },
+  { time: '5:00 PM', event: 'Workshop 1' },
+  { time: '5:30 PM', event: 'Workshop 2' },
+  { time: '6:00 PM', event: 'Supper' },
+  { time: '10:00 PM', event: 'Game time!' },
   { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '1:00 AM', event: 'Work Session 4' },
-  { time: '8:30 AM', event: 'Submission' },
-  { time: '9:30 AM', event: 'Judging' },
-  { time: '10:30 AM', event: 'Awards Ceremony & Closing Ceremony' }
+  { time: '8:00 AM', event: 'Breakfast' },
+  { time: '10:30 AM', event: 'Demos!' },
+  { time: '12:00 PM', event: 'Lunch' },
+  { time: '1:00 PM', event: 'Closing ceremony' },
+  { time: '2:00 PM', event: 'Go Home :(' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
-const VenueMap = dynamic(
-  () => import('../components/city/hyderabad/VenueMap'),
-  { ssr: false }
-)
 
 const Flag = () => (
   <Link
@@ -53,120 +65,7 @@ const Flag = () => (
   </Link>
 )
 
-const TeamGrid = ({ title, members }) => (
-  <Box
-    sx={{
-      paddingBottom: '40px',
-      background: '#337D77',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      gap: '20px'
-    }}
-  >
-    <Box
-      sx={{
-        backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        height: '30vh',
-        width: ['90vw', '70vw', '46.8vw'],
-        alignItems: 'center',
-        justifyContent: 'center',
-        display: 'flex',
-        flexDirection: 'column'
-      }}
-    >
-      <Heading
-        as="h1"
-        sx={{
-          mx: '1vw',
-          fontWeight: 'lighter',
-          textAlign: 'center'
-        }}
-      >
-        {title}
-      </Heading>
-    </Box>
-    <Grid columns={[1, 3]} gap="25px" sx={{ maxWidth: '1600px' }}>
-      {members.map((member, index) => (
-        <MemberSection key={index} member={member} />
-      ))}
-    </Grid>
-  </Box>
-)
-
-export default function Hyderabad() {
-  const [text, setText] = useState('')
-  const fullText = 'Build stupid s#!t, get stupid prizes.'
-  const [index, setIndex] = useState(0)
-  const [data, setData] = useState(null)
-
-  useEffect(() => {
-    if (index < fullText.length) {
-      const timeout = setTimeout(() => {
-        setText(prev => prev + fullText[index])
-        setIndex(prev => prev + 1)
-      }, 100)
-      return () => clearTimeout(timeout)
-    }
-  }, [index])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const url =
-        'https://raw.githubusercontent.com/Hima-Vamsi/Scrapyard-Hyderabad-Data/refs/heads/master/data.json'
-
-      try {
-        const response = await fetch(url)
-        const jsonData = await response.json()
-        setData(jsonData)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      }
-    }
-
-    fetchData()
-  }, [])
-
-  if (!data) return <Loading />
-
-  const {
-    goldSponsors,
-    silverSponsors,
-    bronzeSponsors,
-    inKindSponsors,
-    ourTeam,
-    volunteers
-  } = data
-
-  const sponsorSections = [
-    {
-      title: 'Gold Sponsors',
-      sponsors: goldSponsors,
-      color: '#FFD700',
-      underlineSrc: '/elements/doodles/yellow-underline.svg'
-    },
-    {
-      title: 'Silver Sponsors',
-      sponsors: silverSponsors,
-      color: '#C0C0C0',
-      underlineSrc: '/city/hyderabad/elements/silver-underline.svg'
-    },
-    {
-      title: 'Bronze Sponsors',
-      sponsors: bronzeSponsors,
-      color: '#F98971',
-      underlineSrc: '/city/hyderabad/elements/bronze-underline.svg'
-    },
-    {
-      title: 'In-Kind Sponsors',
-      sponsors: inKindSponsors,
-      color: 'white',
-      underlineSrc: '/elements/doodles/blue-underline.svg'
-    }
-  ]
-
+export default function Ottawa() {
   return (
     <Box
       sx={{
@@ -180,37 +79,8 @@ export default function Hyderabad() {
       }}
     >
       <Head>
-        <title>Scrapyard Hyderabad</title>
-        <style>
-          {`
-            @keyframes spin {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-
-            ::-webkit-scrollbar {
-              width: 12px;
-            }
-
-            ::-webkit-scrollbar-track {
-              background: #ffffff; 
-            }
-
-            ::-webkit-scrollbar-thumb {
-              background: #FFD700; 
-              border-radius: 10px; 
-              border: 2px solid #f1f1f1; 
-            }
-
-            ::-webkit-scrollbar-thumb:hover {
-              background: #C0C0C0; 
-            }
-          `}
-        </style>
+        {/* TODO: Change Ottawa to your event's city */}
+        <title>Scrapyard Ottawa</title>
       </Head>
       <Flag />
       <Box
@@ -233,10 +103,12 @@ export default function Hyderabad() {
           <Image
             sx={{
               width: '600px',
+
               maxWidth: '70vw',
+
               objectFit: 'contain'
             }}
-            src="/city/hyderabad/hyderabadLogo.svg"
+            src="/city/ottawa/ottawa-woodmark.png"
             alt="Scrapyard"
           />
         </Box>
@@ -251,6 +123,11 @@ export default function Hyderabad() {
             sx={{
               background: "url('/elements/ripped-paper.png')",
               backgroundSize: 'cover',
+              // aspectRatio: "1080/338.4",
+              // padding: "8%",
+              // paddingLeft: "7%",
+              display: 'block',
+
               width: 'min(500px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
@@ -265,7 +142,7 @@ export default function Hyderabad() {
                 margin: '8%'
               }}
             >
-              {text}
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -298,7 +175,8 @@ export default function Hyderabad() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Hyderabad - March&nbsp;15-16
+              {/* TODO: Change Ottawa to your event's city */}
+              Ottawa - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -316,8 +194,7 @@ export default function Hyderabad() {
               zIndex: 2,
               position: 'absolute',
               top: '50%',
-              left: '10%',
-              animation: 'spin 5s linear infinite'
+              left: '10%'
             }}
             src="/elements/stars/blue.png"
             alt="Blue paper star"
@@ -329,8 +206,7 @@ export default function Hyderabad() {
               zIndex: 2,
               position: 'absolute',
               top: '55%',
-              right: '15%',
-              animation: 'spin 5s linear infinite'
+              right: '15%'
             }}
             src="/elements/stars/yellow.png"
             alt="Yellow paper star"
@@ -343,15 +219,15 @@ export default function Hyderabad() {
               position: 'absolute',
               top: '70%',
               left: '20%',
-              transform: 'rotate(180deg)',
-              animation: 'spin 5s linear infinite'
+              transform: 'rotate(180deg)'
             }}
             src="/elements/stars/pink.png"
             alt="Pink paper star"
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=hyderabad"
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=recPrXR3TEibN0QQz"
           target="_blank"
         >
           <Box
@@ -418,6 +294,7 @@ export default function Hyderabad() {
       <Box
         sx={{
           width: '100%',
+          // background: "linear-gradient(#F5F5F5, #F2F2F2)",
           background: 'url(/backgrounds/ripped-paper.png)',
           backgroundSize: 'cover',
           display: 'flex',
@@ -440,7 +317,7 @@ export default function Hyderabad() {
             height: '100%'
           }}
         >
-          <Image src="/elements/orpheus-doodle.svg" />
+          <Image src="/city/ottawa/ottawa-cat.png" />
           <Box
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
@@ -456,22 +333,25 @@ export default function Hyderabad() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Hyderabad?
+              {/* TODO: Change Ottawa to your event's city */}
+              What's Scrapyard Ottawa?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Hyderabad is a hackathon for high schoolers happening in
-              Hyderabad, where you can make the stupidest things you can think
-              of! Anything, from a{' '}
+              {/* TODO: Change Ottawa to your event's city */}
+              Scrapyard Ottawa is a hackathon for high schoolers
+              {/* TODO: Change Ottawa to your event's city */}
+              happening in Ottawa, where you can make the stupidest things you
+              can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Hyderabad
-              needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience,
+              Scrapyard Ottawa needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -537,14 +417,54 @@ export default function Hyderabad() {
 
       <Box
         sx={{
+          // backgroundImage: "url(/backgrounds/confetti.png)",
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'column'
         }}
-      >
+      > 
+      <Link
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://hcb.hackclub.com/donations/start/ottawa"
+          target="_blank"
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              {/* TODO: Change Ottawa to your event's city */}
+              WANNA DONATE?
+            </Heading>
+          </Box>
+        </Link>
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
             height: '30vh',
             width: ['90vw', '70vw', '46.8vw'],
             alignItems: 'center',
@@ -565,96 +485,8 @@ export default function Hyderabad() {
               textAlign: 'center'
             }}
           >
-            VENUE
-          </Heading>
-        </Box>
-        <Box
-          sx={{
-            width: ['100%', '80%'],
-            height: '75vh',
-            alignItems: 'center',
-            display: 'flex',
-            flexDirection: 'column'
-          }}
-        >
-          <VenueMap />
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      >
-        <Box
-          sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0vh',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
-            }}
-          >
-            SPONSORS
-          </Heading>
-        </Box>
-        {sponsorSections.map((section, index) => (
-          <SponsorSection key={index} {...section} />
-        ))}
-      </Box>
-
-      <Image src="/elements/doodles/yellow-underline.svg" width="100%" />
-
-      <TeamGrid title="Our Team" members={ourTeam} />
-      <TeamGrid title="Volunteers" members={volunteers} />
-
-      <Box
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      >
-        <Box
-          sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0vh',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
-            }}
-          >
-            WHAT'S HAPPENING AT SCRAPYARD Hyderabad?
+            {/* TODO: Change Ottawa to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD OTTAWA?
           </Heading>
         </Box>
         <Heading
@@ -666,7 +498,9 @@ export default function Hyderabad() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Hyderabad is a 24hour event - HERE'S THE ROUGH SCHEDULE!
+          {/* TODO: Change Ottawa to your event's city */}
+          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
+          Scrapyard Ottawa is a 24 hour event - Here's the VERY VERY TENTATIVE schedule, more details to come!
         </Heading>
         <Box
           sx={{
@@ -725,6 +559,7 @@ export default function Hyderabad() {
 
       <Box
         sx={{
+          // backgroundImage: "url(/backgrounds/confetti.png)",
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'column'
@@ -733,6 +568,9 @@ export default function Hyderabad() {
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
             height: '30vh',
             width: ['90vw', '70vw', '46.8vw'],
             alignItems: 'center',
@@ -753,7 +591,8 @@ export default function Hyderabad() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Hyderabad?
+            {/* TODO: Change Ottawa to your event's city */}
+            CAN'T MAKE IT TO OTTAWA?
           </Heading>
         </Box>
         <Heading
@@ -798,6 +637,69 @@ export default function Hyderabad() {
           position: 'relative'
         }}
       >
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.png)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center',
+              color: 'white',
+            }}
+          >
+            {/* TODO: Change Ottawa to your event's city */}
+            OUR SPONSORS!!
+          </Heading>
+        </Box>
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              {/* TODO: Change Ottawa to your event's city */}
+              COMING 
+              SOON!!
+            </Heading>
+          </Box>
+        
         <Heading
           as="h1"
           sx={{
@@ -832,14 +734,18 @@ export default function Hyderabad() {
               </>
             ),
             'All this, for free?': (
-              <>Yep! Food, swag and good vibes are all included.</>
+              <>
+                Yep! Food, swag and good vibes are all included. Plus, if you’re
+                joining us from afar,{' '}
+                <Link href="https://gas.hackclub.com/">
+                  we’ll cover the cost of gas or a bus / train ticket
+                </Link>
+                .
+              </>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop, chargers, toiletries, any method of identification (photo preferred), your signed constent form, a refillable water bottle, and an open mind! Since it’s a 24-hour event, you might want to bring a sleeping bag, a pillow, and some deodorant.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -882,19 +788,23 @@ export default function Hyderabad() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:sannihith.hyderabad@scrapyard.hackclub.com">
-                  sannihith.hyderabad@scrapyard.hackclub.com
+                {/* TODO: Change this email to your event's email */}
+                <Link href="tishya.ottawa@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  tishya.ottawa@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the
-                #scrapyard-hyderabad channel on the Hack Club slack or email us
-                at{' '}
-                <Link href="mailto:sannihith.hyderabad@scrapyard.hackclub.com">
-                  sannihith.hyderabad@scrapyard.hackclub.com
+                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
+                Contact us! Feel free to reach out to us in the #scrapyard-ottawa
+                channel on the Hack Club slack or email us at{' '}
+                {/* TODO: Change this email to your event's email */}
+                <Link href="tishya.ottawa@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  tishya.ottawa@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -946,7 +856,8 @@ export default function Hyderabad() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=hyderabad"
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=recPrXR3TEibN0QQz"
           target="_blank"
         >
           <Box
@@ -972,11 +883,11 @@ export default function Hyderabad() {
                 margin: '8%',
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
-                paddingY: ['15px', '0px'],
-                lineHeight: '1.5em'
+                paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD Hyderabad
+              {/* TODO: Change Ottawa to your event's city */}
+              SIGN UP FOR SCRAPYARD OTTAWA
             </Heading>
           </Box>
         </Link>

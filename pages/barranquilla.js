@@ -1,46 +1,32 @@
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from 'react'
-import SponsorSection from '../components/city/hyderabad/SponsorSection'
-import MemberSection from '../components/city/hyderabad/MemberSection'
-import Loading from '../components/city/hyderabad/Loading'
 
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Team formation' },
-  { time: '1:30 PM', event: 'Lunch' },
-  { time: '2:15 PM', event: 'Work Session 1' },
-  { time: '3:15 PM', event: 'Workshop 1' },
-  { time: '4:15 PM', event: 'Work Session 2' },
-  { time: '7:30 PM', event: 'Workshop 2' },
-  { time: '8:30 PM', event: 'Dinner' },
-  { time: '9:15 PM', event: 'Workshop 3' },
-  { time: '10:15 PM', event: 'Work Session 3' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '1:00 AM', event: 'Work Session 4' },
-  { time: '8:30 AM', event: 'Submission' },
-  { time: '9:30 AM', event: 'Judging' },
-  { time: '10:30 AM', event: 'Awards Ceremony & Closing Ceremony' }
+  { time: '7:30 AM', event: 'Abren puertas' },
+  { time: '8:00 AM', event: 'Ceremonia de iniciación' },
+  { time: '8:30 AM', event: '¡Empieza a trabajar en tu projecto!' },
+  { time: '12:00 PM', event: 'Almuerzo' },
+  { time: '2:00 PM', event: 'Taller 1' },
+  { time: '4:00 PM', event: 'Actividad 1' },
+  { time: '4:00 PM', event: 'Taller 2' },
+  { time: '7:30 PM', event: 'Cena' },
+  { time: '8:30 PM', event: '¡Demos!' },
+  { time: '9:00 PM', event: 'Ceremonia de cierre' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
-const VenueMap = dynamic(
-  () => import('../components/city/hyderabad/VenueMap'),
-  { ssr: false }
-)
 
 const Flag = () => (
   <Link
     href="https://hackclub.com/"
     target="_blank"
-    aria-label="Hack Club's homepage"
+    aria-label="Sitio Web de Hack Club"
     sx={{ position: 'absolute', top: 4, left: 0, zIndex: 2 }}
   >
     <Image
       src="/elements/orpheus-flag.svg"
-      alt="Hack Club flag"
+      alt="Bandera de Hack Club"
       sx={{
         width: [120, 128, 180],
         transformOrigin: '0% 0%',
@@ -53,120 +39,7 @@ const Flag = () => (
   </Link>
 )
 
-const TeamGrid = ({ title, members }) => (
-  <Box
-    sx={{
-      paddingBottom: '40px',
-      background: '#337D77',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      gap: '20px'
-    }}
-  >
-    <Box
-      sx={{
-        backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        height: '30vh',
-        width: ['90vw', '70vw', '46.8vw'],
-        alignItems: 'center',
-        justifyContent: 'center',
-        display: 'flex',
-        flexDirection: 'column'
-      }}
-    >
-      <Heading
-        as="h1"
-        sx={{
-          mx: '1vw',
-          fontWeight: 'lighter',
-          textAlign: 'center'
-        }}
-      >
-        {title}
-      </Heading>
-    </Box>
-    <Grid columns={[1, 3]} gap="25px" sx={{ maxWidth: '1600px' }}>
-      {members.map((member, index) => (
-        <MemberSection key={index} member={member} />
-      ))}
-    </Grid>
-  </Box>
-)
-
-export default function Hyderabad() {
-  const [text, setText] = useState('')
-  const fullText = 'Build stupid s#!t, get stupid prizes.'
-  const [index, setIndex] = useState(0)
-  const [data, setData] = useState(null)
-
-  useEffect(() => {
-    if (index < fullText.length) {
-      const timeout = setTimeout(() => {
-        setText(prev => prev + fullText[index])
-        setIndex(prev => prev + 1)
-      }, 100)
-      return () => clearTimeout(timeout)
-    }
-  }, [index])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const url =
-        'https://raw.githubusercontent.com/Hima-Vamsi/Scrapyard-Hyderabad-Data/refs/heads/master/data.json'
-
-      try {
-        const response = await fetch(url)
-        const jsonData = await response.json()
-        setData(jsonData)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      }
-    }
-
-    fetchData()
-  }, [])
-
-  if (!data) return <Loading />
-
-  const {
-    goldSponsors,
-    silverSponsors,
-    bronzeSponsors,
-    inKindSponsors,
-    ourTeam,
-    volunteers
-  } = data
-
-  const sponsorSections = [
-    {
-      title: 'Gold Sponsors',
-      sponsors: goldSponsors,
-      color: '#FFD700',
-      underlineSrc: '/elements/doodles/yellow-underline.svg'
-    },
-    {
-      title: 'Silver Sponsors',
-      sponsors: silverSponsors,
-      color: '#C0C0C0',
-      underlineSrc: '/city/hyderabad/elements/silver-underline.svg'
-    },
-    {
-      title: 'Bronze Sponsors',
-      sponsors: bronzeSponsors,
-      color: '#F98971',
-      underlineSrc: '/city/hyderabad/elements/bronze-underline.svg'
-    },
-    {
-      title: 'In-Kind Sponsors',
-      sponsors: inKindSponsors,
-      color: 'white',
-      underlineSrc: '/elements/doodles/blue-underline.svg'
-    }
-  ]
-
+export default function Barranquilla() {
   return (
     <Box
       sx={{
@@ -180,37 +53,7 @@ export default function Hyderabad() {
       }}
     >
       <Head>
-        <title>Scrapyard Hyderabad</title>
-        <style>
-          {`
-            @keyframes spin {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-
-            ::-webkit-scrollbar {
-              width: 12px;
-            }
-
-            ::-webkit-scrollbar-track {
-              background: #ffffff; 
-            }
-
-            ::-webkit-scrollbar-thumb {
-              background: #FFD700; 
-              border-radius: 10px; 
-              border: 2px solid #f1f1f1; 
-            }
-
-            ::-webkit-scrollbar-thumb:hover {
-              background: #C0C0C0; 
-            }
-          `}
-        </style>
+        <title>Scrapyard Barranquilla</title>
       </Head>
       <Flag />
       <Box
@@ -233,10 +76,12 @@ export default function Hyderabad() {
           <Image
             sx={{
               width: '600px',
+
               maxWidth: '70vw',
+
               objectFit: 'contain'
             }}
-            src="/city/hyderabad/hyderabadLogo.svg"
+            src="/city/barranquilla/logo.png"
             alt="Scrapyard"
           />
         </Box>
@@ -251,6 +96,11 @@ export default function Hyderabad() {
             sx={{
               background: "url('/elements/ripped-paper.png')",
               backgroundSize: 'cover',
+              // aspectRatio: "1080/338.4",
+              // padding: "8%",
+              // paddingLeft: "7%",
+              display: 'block',
+
               width: 'min(500px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
@@ -265,7 +115,7 @@ export default function Hyderabad() {
                 margin: '8%'
               }}
             >
-              {text}
+              Construye cosas locas, gana premios locos.
             </Heading>
           </Box>
           <Box
@@ -298,7 +148,7 @@ export default function Hyderabad() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Hyderabad - March&nbsp;15-16
+              Barranquilla - Sábado Marzo&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -316,8 +166,7 @@ export default function Hyderabad() {
               zIndex: 2,
               position: 'absolute',
               top: '50%',
-              left: '10%',
-              animation: 'spin 5s linear infinite'
+              left: '10%'
             }}
             src="/elements/stars/blue.png"
             alt="Blue paper star"
@@ -329,8 +178,7 @@ export default function Hyderabad() {
               zIndex: 2,
               position: 'absolute',
               top: '55%',
-              right: '15%',
-              animation: 'spin 5s linear infinite'
+              right: '15%'
             }}
             src="/elements/stars/yellow.png"
             alt="Yellow paper star"
@@ -343,15 +191,14 @@ export default function Hyderabad() {
               position: 'absolute',
               top: '70%',
               left: '20%',
-              transform: 'rotate(180deg)',
-              animation: 'spin 5s linear infinite'
+              transform: 'rotate(180deg)'
             }}
             src="/elements/stars/pink.png"
             alt="Pink paper star"
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=hyderabad"
+          href="https://forms.hackclub.com/scrapyard-signup-es?event=barranquilla"
           target="_blank"
         >
           <Box
@@ -368,7 +215,7 @@ export default function Hyderabad() {
                 transform: 'scale(1.1)'
               },
               zIndex: 30,
-              minWidth: '8em',
+              minWidth: '10em',
               padding: '15px'
             }}
           >
@@ -383,7 +230,7 @@ export default function Hyderabad() {
                 width: '100%'
               }}
             >
-              SIGN&nbsp;UP
+              REGÍSTRATE
             </Heading>
           </Box>
         </Link>
@@ -418,6 +265,7 @@ export default function Hyderabad() {
       <Box
         sx={{
           width: '100%',
+          // background: "linear-gradient(#F5F5F5, #F2F2F2)",
           background: 'url(/backgrounds/ripped-paper.png)',
           backgroundSize: 'cover',
           display: 'flex',
@@ -456,22 +304,22 @@ export default function Hyderabad() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Hyderabad?
+              ¿Qué es Scrapyard Barranquilla?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Hyderabad is a hackathon for high schoolers happening in
-              Hyderabad, where you can make the stupidest things you can think
-              of! Anything, from a{' '}
+              Scrapyard Barranquilla es un hackathon para estudiantes de colegio
+              en Barranquilla, ¡donde puedes hacer las cosas más locas que
+              puedas pensar! Cualquier cosa desde una{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
-                lamp that flashes faster the slower you type
+                lámpara que parpadea más rápido entre más lento escribas
               </Link>
-              , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Hyderabad
-              needs you and your scrappy ideas!
+              , esas ideas que no consideras útiles, van a Scrapyard. Sin
+              importar tu nivel de experiencia, ¡Scrapyard Barranquilla te
+              necesita a ti y a tus ideas "scrappy"!
             </p>
           </Box>
         </Box>
@@ -537,6 +385,7 @@ export default function Hyderabad() {
 
       <Box
         sx={{
+          // backgroundImage: "url(/backgrounds/confetti.png)",
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'column'
@@ -545,6 +394,9 @@ export default function Hyderabad() {
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
             height: '30vh',
             width: ['90vw', '70vw', '46.8vw'],
             alignItems: 'center',
@@ -565,96 +417,7 @@ export default function Hyderabad() {
               textAlign: 'center'
             }}
           >
-            VENUE
-          </Heading>
-        </Box>
-        <Box
-          sx={{
-            width: ['100%', '80%'],
-            height: '75vh',
-            alignItems: 'center',
-            display: 'flex',
-            flexDirection: 'column'
-          }}
-        >
-          <VenueMap />
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      >
-        <Box
-          sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0vh',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
-            }}
-          >
-            SPONSORS
-          </Heading>
-        </Box>
-        {sponsorSections.map((section, index) => (
-          <SponsorSection key={index} {...section} />
-        ))}
-      </Box>
-
-      <Image src="/elements/doodles/yellow-underline.svg" width="100%" />
-
-      <TeamGrid title="Our Team" members={ourTeam} />
-      <TeamGrid title="Volunteers" members={volunteers} />
-
-      <Box
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      >
-        <Box
-          sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0vh',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
-          }}
-        >
-          <Heading
-            as="h1"
-            sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
-            }}
-          >
-            WHAT'S HAPPENING AT SCRAPYARD Hyderabad?
+            ¿QUÉ VA A SUCEDER EN SCRAPYARD Barranquilla?
           </Heading>
         </Box>
         <Heading
@@ -666,7 +429,8 @@ export default function Hyderabad() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Hyderabad is a 24hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Barranquilla es un evento de 12 horas - ¡AQUÍ ESTÁ EL
+          HORARIO APROXIMADO!
         </Heading>
         <Box
           sx={{
@@ -725,6 +489,7 @@ export default function Hyderabad() {
 
       <Box
         sx={{
+          // backgroundImage: "url(/backgrounds/confetti.png)",
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'column'
@@ -733,6 +498,9 @@ export default function Hyderabad() {
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
             height: '30vh',
             width: ['90vw', '70vw', '46.8vw'],
             alignItems: 'center',
@@ -753,7 +521,7 @@ export default function Hyderabad() {
               textAlign: 'center'
             }}
           >
-            CAN'T MAKE IT TO Hyderabad?
+            ¿NO PUEDES LLEGAR A Barranquilla?
           </Heading>
         </Box>
         <Heading
@@ -766,7 +534,7 @@ export default function Hyderabad() {
             mx: '5vw'
           }}
         >
-          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
+          ¡HAY +100 OTROS EVENTOS DE SCRAPYARD SUCEDIENDO ALREDEDOR DEL MUNDO!
         </Heading>
         <Box
           sx={{
@@ -805,7 +573,7 @@ export default function Hyderabad() {
             position: 'relative'
           }}
         >
-          Frequently Asked Questions
+          Preguntas frecuentes
           <Image
             src="/elements/doodles/blue-underline.svg"
             sx={{
@@ -824,77 +592,78 @@ export default function Hyderabad() {
           }}
         >
           {Object.entries({
-            'Who can participate in Scrapyard?': (
+            '¿Quién puede participar en Scrapyard?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
-                to come! You don't have to be a member of the Hack Club
-                community or be a Hack Club leader.
+                ¡Todos los estudiantes de colegio de 18 años o menos estan
+                bienvenidos a venir! No tienes que ser miembro de la comunidad
+                de Hack Club o ser un lider de Hack Club.
               </>
             ),
-            'All this, for free?': (
-              <>Yep! Food, swag and good vibes are all included.</>
-            ),
-            'What do I need?': (
+            '¿Todo esto, gratis?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                ¡Si! La comida, merchandising y buenas vibras estan incluidos.
               </>
             ),
-            'I’m not good at coding. Can I still participate?': (
+            '¿Qué necesito?': (
               <>
-                This hackathon is for creatives of all skill levels! We'll have
-                workshops and other events so join us and let's learn together.
-                If you'd like to start exploring some introductory projects,
-                check out Hack Club Workshops.
+                ¡Un computador, tu cargador y mucha creatividad! Adicionalmente,
+                si planeas trabajar en un proyecto con hardware, trae las
+                herramientas que necesites.
               </>
             ),
-            'What can I make at Scrapyard?': (
+            'No soy buen@ programando. ¿Igual puedo participar?': (
               <>
-                The scrappiest thing you can imagine –- jank is encouraged.
-                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We’ll have a bunch of resources and mentors to help
-                you out.
+                ¡Este hackathon es para creativos de todos los niveles de
+                conocimiento! Tendremos talleres y otros eventos, así que únete
+                y aprendamos juntos. Si quieres empezar a explorar algunos
+                proyectos introductorios, revisa las workshops de Hack Club.
               </>
             ),
-            'What has Hack Club done before?': (
+            '¿Que puedo hacer en Scrapyard?': (
               <>
-                Hack Club has run an{' '}
+                Las cosas mas innecesarias que puedas imaginar –- incentivamos
+                lo absurdo. ¿Juegos? ¿Apps? ¿Sitios web? ¿Lenguajes de
+                programación? <em>¿Hardware?</em> ¡Tú decides! Tendremos varios
+                recursos y mentores para ayudarte.
+              </>
+            ),
+            '¿Que ha hecho Hack Club antes?': (
+              <>
+                Hack Club ha organizado un{' '}
                 <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">
-                  overnight hackathon
+                  hackathon nocturno
                 </Link>{' '}
-                in San Francisco, a{' '}
+                en San Francisco, un{' '}
                 <Link
                   href="https://www.youtube.com/watch?v=H5RPsCMl3uM"
                   target="_blank"
                 >
                   Game Jam
                 </Link>{' '}
-                across 50 cities, a hackathon on a{' '}
+                en 50 ciudades, un hackathon en un{' '}
                 <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">
-                  Train
+                  tren
                 </Link>{' '}
-                from Vermont to Los Angeles, and much more!
+                de Vermont a Los Angeles, y mucho más!
               </>
             ),
-            'What if my parents are concerned?': (
+            '¿Qué pasa si mis padres están preocupados?': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
-                they can reach out to us at{' '}
-                <Link href="mailto:sannihith.hyderabad@scrapyard.hackclub.com">
-                  sannihith.hyderabad@scrapyard.hackclub.com
+                ¡Estamos para ayudarte! Nuestra guía para padres saldrá pronto,
+                pero pueden contactarnos en{' '}
+                <Link href="mailto:barranquilla@scrapyard.hackclub.com">
+                  barranquilla@scrapyard.hackclub.com
                 </Link>{' '}
-                for questions.
+                si tienen preguntas.
               </>
             ),
-            'What if I have more questions?': (
+            '¿Qué pasa si tengo más preguntas?': (
               <>
-                Contact us! Feel free to reach out to us in the
-                #scrapyard-hyderabad channel on the Hack Club slack or email us
-                at{' '}
-                <Link href="mailto:sannihith.hyderabad@scrapyard.hackclub.com">
-                  sannihith.hyderabad@scrapyard.hackclub.com
+                ¡Contáctanos! Siéntete libre de contactarnos en el canal
+                #scrapyard-barranquilla en el Slack de Hack Club o mándanos un
+                email a{' '}
+                <Link href="mailto:barranquilla@scrapyard.hackclub.com">
+                  barranquilla@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -946,7 +715,7 @@ export default function Hyderabad() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=hyderabad"
+          href="https://forms.hackclub.com/scrapyard-signup-es?event=barranquilla"
           target="_blank"
         >
           <Box
@@ -972,11 +741,10 @@ export default function Hyderabad() {
                 margin: '8%',
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
-                paddingY: ['15px', '0px'],
-                lineHeight: '1.5em'
+                paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD Hyderabad
+              INSCRÍBETE PARA SCRAPYARD Barranquilla
             </Heading>
           </Box>
         </Link>
@@ -1005,7 +773,7 @@ export default function Hyderabad() {
             textAlign: 'center'
           }}
         >
-          Made with ♡ by teenagers, for teenagers at Hack Club
+          Hecho con ♡ por adolescentes, para adolescentes en Hack Club
         </Text>
         <Text
           sx={{
