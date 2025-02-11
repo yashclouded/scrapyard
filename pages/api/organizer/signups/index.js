@@ -37,6 +37,9 @@ export default async function handler (req, res) {
 
     const event = events[0];
 
+    console.log({ events, authorization, eventSlug });
+    
+
     if (!event || event?.fields?.['API Password'] != authorization || event?.fields?.['Slug'] != eventSlug) {
         return res.status(401).json({
             error: "Invalid API key"
