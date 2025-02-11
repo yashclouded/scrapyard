@@ -2,7 +2,8 @@ import AirtablePlus from 'airtable-plus'
 import renderSignup from '../../../../lib/api/renderSignup';
 
 export default async function handler (req, res) {
-    const eventSlug = req.query.event; 
+    let eventSlug = req.query.event; 
+    if (Array.isArray(eventSlug)) eventSlug = eventSlug[0];
 
     if (!process.env.AIRTABLE_API_KEY) {
         return res.status(500).json({
