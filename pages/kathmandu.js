@@ -662,8 +662,8 @@ export default function Kathmandu() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:aayush.kathmandu@scrapyard@hackclub.com">
-                  aayush.kathmandu@scrapyard@hackclub.com
+                <Link href="mailto:aayush.kathmandu@scrapyard.hackclub.com">
+                   aayush.kathmandu@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -672,8 +672,8 @@ export default function Kathmandu() {
               <>
                 Contact us! Feel free to reach out to us in the #Scrapyard-Kathmandu
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:aayush.kathmandu@scrapyard@hackclub.com">
-                  aayush.kathmandu@scrapyard@hackclub.com
+                <Link href="mailto:aayush.kathmandu@scrapyard.hackclub.com">
+                  aayush.kathmandu@scrapyard.hackclub.com
                 </Link>
                 .
               </>
