@@ -1,22 +1,47 @@
-import Head from 'next/head'
-import Script from 'next/script'
-import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
+'======== READ ME BEFORE EDITING ========'
+/*
+Hello! This is the template for the city pages.
 
+To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
+E.g. if your city is Ottawa, rename the copy of this file to Ottawa.js
+
+Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
+You do not need to use this template exactly, feel free to customize it as much as you see fit.
+
+If you want to include additional assets, please add them under public/city/your-city-name.
+
+Make a PR and we'll review it as soon as we can!
+
+If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
+
+P.S. Feel free to delete this comment block when you're done! 
+
+Note: To test your changes locally, use `npm install` and `npm run dev`.
+*/
+
+import Head from 'next/head'
+
+import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
+import dynamic from 'next/dynamic'
+
+// TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '01:00 PM', event: 'Start working on your project!' },
-  { time: '02:00 PM', event: 'Workshop 1' },
-  { time: '04:00 PM', event: 'Activity 1' },
-  { time: '04:00 PM', event: 'Workshop 2' },
-  { time: '06:00 PM', event: 'Dinner' },
-  { time: '08:00 PM', event: 'Lightning talks' },
+  { time: '2:00 PM', event: 'Doors open' },
+  { time: '3:00 PM', event: 'Opening ceremony' },
+  { time: '4:00 PM', event: 'Start working on your project!' },
+  { time: '5:00 PM', event: 'Workshop 1' },
+  { time: '5:30 PM', event: 'Workshop 2' },
+  { time: '6:00 PM', event: 'Supper' },
+  { time: '10:00 PM', event: 'Game time!' },
   { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '08:00 AM', event: 'Breakfast' },
+  { time: '8:00 AM', event: 'Breakfast' },
   { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '12:00 PM', event: 'Lunch' },
+  { time: '1:00 PM', event: 'Closing ceremony' },
+  { time: '2:00 PM', event: 'Go Home :(' },
 ]
+
+const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -40,7 +65,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function ExampleCity() {
+export default function Ottawa() {
   return (
     <Box
       sx={{
@@ -54,7 +79,8 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Busan</title>
+        {/* TODO: Change Ottawa to your event's city */}
+        <title>Scrapyard Ottawa</title>
       </Head>
       <Flag />
       <Box
@@ -66,7 +92,7 @@ export default function ExampleCity() {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '10px'
+          gap: '20px'
         }}
       >
         <Box
@@ -82,7 +108,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/city/busan/Big Logo.png"
+            src="/city/ottawa/ottawa-woodmark.png"
             alt="Scrapyard"
           />
         </Box>
@@ -113,8 +139,7 @@ export default function ExampleCity() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%',
-                fontSize: '23px'
+                margin: '8%'
               }}
             >
               Build stupid stuff, get stupid prizes.
@@ -150,10 +175,8 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              <Link href="https://busanforeignschool.org/" target="blank">
-                Busan Foreign School
-              </Link>{' '}
-              - March&nbsp;15-16
+              {/* TODO: Change Ottawa to your event's city */}
+              Ottawa - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -203,7 +226,8 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=recPrXR3TEibN0QQz"
           target="_blank"
         >
           <Box
@@ -293,7 +317,7 @@ export default function ExampleCity() {
             height: '100%'
           }}
         >
-          <Image src="/elements/orpheus-doodle.svg" />
+          <Image src="/city/ottawa/ottawa-cat.png" />
           <Box
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
@@ -309,22 +333,25 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Busan?
+              {/* TODO: Change Ottawa to your event's city */}
+              What's Scrapyard Ottawa?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Busan is a hackathon for high schoolers happening in
-              Busan, where you can make the stupidest things you can think of!
-              Anything, from a{' '}
+              {/* TODO: Change Ottawa to your event's city */}
+              Scrapyard Ottawa is a hackathon for high schoolers
+              {/* TODO: Change Ottawa to your event's city */}
+              happening in Ottawa, where you can make the stupidest things you
+              can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Busan
-              needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience,
+              Scrapyard Ottawa needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -395,7 +422,43 @@ export default function ExampleCity() {
           display: 'flex',
           flexDirection: 'column'
         }}
-      >
+      > 
+      <Link
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://hcb.hackclub.com/donations/start/ottawa"
+          target="_blank"
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              {/* TODO: Change Ottawa to your event's city */}
+              WANNA DONATE?
+            </Heading>
+          </Box>
+        </Link>
         <Box
           sx={{
             backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
@@ -422,7 +485,8 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD BUSAN?
+            {/* TODO: Change Ottawa to your event's city */}
+            WHAT'S HAPPENING AT SCRAPYARD OTTAWA?
           </Heading>
         </Box>
         <Heading
@@ -434,7 +498,9 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Busan is a 24-hour event - HERE'S THE ROUGH SCHEDULE!
+          {/* TODO: Change Ottawa to your event's city */}
+          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
+          Scrapyard Ottawa is a 24 hour event - Here's the VERY VERY TENTATIVE schedule, more details to come!
         </Heading>
         <Box
           sx={{
@@ -525,7 +591,8 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            HOW TO FIND US?
+            {/* TODO: Change Ottawa to your event's city */}
+            CAN'T MAKE IT TO OTTAWA?
           </Heading>
         </Box>
         <Heading
@@ -538,8 +605,7 @@ export default function ExampleCity() {
             mx: '5vw'
           }}
         >
-          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호
-          48084
+          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
         </Heading>
         <Box
           sx={{
@@ -548,147 +614,12 @@ export default function ExampleCity() {
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            mb: '5vh',
+            mb: '10vh',
             mt: 5
           }}
         >
-          <iframe
-            width="80%"
-            height="100%"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765"
-            style={{ border: '1px solid black' }}
-          ></iframe>
-          <br />
-          <small>
-            <a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a>
-          </small>{' '}
+          <Map />
         </Box>
-      </Box>
-
-      <Box
-        sx={{
-          width: '100%',
-          background: 'white',
-          backgroundSize: ['contain', 'contain', 'cover!important'],
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-          gap: '20px',
-          p: [4, 4, 5],
-          pt: 6,
-          position: 'relative'
-        }}
-      >
-        <Heading
-          as="h1"
-          sx={{
-            position: 'relative',
-            mb: '-20px'
-          }}
-        >
-          OUR SPONSORS
-        </Heading>
-        <p
-          style={{
-            fontSize: '1.5em'
-          }}
-        >
-          Without their support, Scrapyard Busan wouldn't be possible.
-        </p>
-
-        <Grid
-          columns={[1, 1, 1, 2]}
-          gap={4}
-          sx={{
-            maxWidth: '1200px'
-          }}
-        >
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://busanforeignschool.org/">
-              <Image
-                src="/city/busan/sponsors/bfs.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://hackclub.com/">
-              <Image
-                src="/city/busan/sponsors/hackclub.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://algoverseairesearch.org/">
-              <Image
-                src="/city/busan/sponsors/algoverse.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://www.tkbend.co.kr/eng/main/main.php">
-              <Image
-                src="/city/busan/sponsors/tk.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://www.instagram.com/bfshsstuco/">
-              <Image
-                src="/city/busan/sponsors/stuco.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://csteachers.org/cshs/">
-              <Image
-                src="/city/busan/sponsors/cshs.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-        </Grid>
       </Box>
 
       <Box
@@ -706,6 +637,69 @@ export default function ExampleCity() {
           position: 'relative'
         }}
       >
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.png)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center',
+              color: 'white',
+            }}
+          >
+            {/* TODO: Change Ottawa to your event's city */}
+            OUR SPONSORS!!
+          </Heading>
+        </Box>
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              {/* TODO: Change Ottawa to your event's city */}
+              COMING 
+              SOON!!
+            </Heading>
+          </Box>
+        
         <Heading
           as="h1"
           sx={{
@@ -734,24 +728,24 @@ export default function ExampleCity() {
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school aged students are welcome to come! You don't
-                have to be a member of the Hack Club community or be a Hack Club
-                leader.
+                All high-school & upper-middle-school aged students are welcome
+                to come! You don't have to be a member of the Hack Club
+                community or be a Hack Club leader.
               </>
             ),
             'All this, for free?': (
-              <>Yep! Food, swag and good vibes are all included.</>
-            ),
-            'Do I need team to participate?': (
               <>
-                You don’t need to have a team in advance to participate. Sign-ups are individual, so if you don’t have a team yet, you can form one at the event. Each team can have up to four members. If you already have a team, please make sure each member signs up separately.
+                Yep! Food, swag and good vibes are all included. Plus, if you’re
+                joining us from afar,{' '}
+                <Link href="https://gas.hackclub.com/">
+                  we’ll cover the cost of gas or a bus / train ticket
+                </Link>
+                .
               </>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! Bring toiletries and
-                sleeping bags too. Additionally, if you plan to work on a
-                hardware project, bring the tools you'll need.
+                Your laptop, chargers, toiletries, any method of identification (photo preferred), your signed constent form, a refillable water bottle, and an open mind! Since it’s a 24-hour event, you might want to bring a sleeping bag, a pillow, and some deodorant.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -759,11 +753,7 @@ export default function ExampleCity() {
                 This hackathon is for creatives of all skill levels! We'll have
                 workshops and other events so join us and let's learn together.
                 If you'd like to start exploring some introductory projects,
-                check out{' '}
-                <Link href="https://workshops.hackclub.com/">
-                  Hack Club Workshops
-                </Link>
-                .
+                check out Hack Club Workshops.
               </>
             ),
             'What can I make at Scrapyard?': (
@@ -798,18 +788,23 @@ export default function ExampleCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:scrapyardbusan@bfs.or.kr">
-                  scrapyardbusan@bfs.or.kr
+                {/* TODO: Change this email to your event's email */}
+                <Link href="tishya.ottawa@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  tishya.ottawa@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard-busan
+                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
+                Contact us! Feel free to reach out to us in the #scrapyard-ottawa
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:scrapyardbusan@bfs.or.kr">
-                  scrapyardbusan@bfs.or.kr
+                {/* TODO: Change this email to your event's email */}
+                <Link href="tishya.ottawa@scrapyard.hackclub.com">
+                  {/* TODO: Change this email to your event's email */}
+                  tishya.ottawa@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -861,7 +856,8 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
+          // TODO: Change Ottawa to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
+          href="https://forms.hackclub.com/scrapyard-signup?event=recPrXR3TEibN0QQz"
           target="_blank"
         >
           <Box
@@ -890,7 +886,8 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD BUSAN
+              {/* TODO: Change Ottawa to your event's city */}
+              SIGN UP FOR SCRAPYARD OTTAWA
             </Heading>
           </Box>
         </Link>
