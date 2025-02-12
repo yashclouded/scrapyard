@@ -339,7 +339,7 @@ export default function Vancouver() {
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
               Scrapyard Vancouver is a hackathon for high schoolers{' '}
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              in the lower mainland, where you can make the stupidest
+              in the Lower Mainland, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
