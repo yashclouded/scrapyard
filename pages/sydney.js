@@ -34,8 +34,9 @@ const schedule = [
 ]
 
 const sponsorLogos = [
-  '/city/sydney/sponsors/polymaker.webp',
-  '/city/sydney/sponsors/littlebirdelectronics.png'
+  '/city/sydney/sponsors/polymaker.png',
+  '/city/sydney/sponsors/littlebirdelectronics.png',
+  '/city/sydney/sponsors/matrixedu.png'
 ]
 const NotSoScrollingBanner = () => {
   return (
@@ -313,7 +314,7 @@ export default function ExampleCity() {
               marginBottom: '10px',
               fontFamily: 'moonblossom',
               fontWeight: '400',
-              color: "#f0f0f0"
+              color: '#f0f0f0'
             }}
           >
             This event is made possible by our sponsors
@@ -525,15 +526,15 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Sydney is a hackathon for high schoolers
+              Scrapyard Sydney is a hackathon for high schoolers 
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Sydney, where you can make the stupidest things you
+              happening in Sydney, where you can make the stupidest things you 
               can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
-              , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Sydney
+              , to those ideas that you wouldn't dare to consider to be useful, 
+              goes at Scrapyard. No matter your experience, Scrapyard Sydney 
               needs you and your scrappy ideas!
             </p>
           </Box>
@@ -773,7 +774,7 @@ export default function ExampleCity() {
             ),
             'All this, for free?': (
               <>
-                Yep! Food, swag and good vibes are all included. Plus, if you’re
+                Yep! Food, swag and good vibes are all included. Plus, if you’re 
                 joining us from afar,{' '}
                 <Link href="https://gas.hackclub.com/">
                   we’ll cover the cost of gas or a bus / train ticket
@@ -783,25 +784,25 @@ export default function ExampleCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
-                Additionally, if you plan to work on a hardware project, bring
+                Your laptop, chargers, and an open mind! If you're going to an 
+                overnight event, bring toiletries and sleeping bags too. 
+                Additionally, if you plan to work on a hardware project, bring 
                 the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
               <>
-                This hackathon is for creatives of all skill levels! We'll have
-                workshops and other events so join us and let's learn together.
-                If you'd like to start exploring some introductory projects,
+                This hackathon is for creatives of all skill levels! We'll have 
+                workshops and other events so join us and let's learn together. 
+                If you'd like to start exploring some introductory projects, 
                 check out Hack Club Workshops.
               </>
             ),
             'What can I make at Scrapyard?': (
               <>
-                The scrappiest thing you can imagine –- jank is encouraged.
+                The scrappiest thing you can imagine –- jank is encouraged. 
                 Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We’ll have a bunch of resources and mentors to help
+                You name it! We’ll have a bunch of resources and mentors to help 
                 you out.
               </>
             ),
