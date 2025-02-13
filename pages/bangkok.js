@@ -27,20 +27,15 @@ import dynamic from 'next/dynamic'
 const schedule1 = [
   { time: '8:30 AM', event: 'Doors open' },
   { time: '9:00 AM', event: 'Opening ceremony' },
-  { time: '9:30 AM', event: '1st Working Session' },
-  { time: '10:00 AM', event: 'Workshop 1' },
-  { time: '11:00 AM', event: 'Workshop 2' },
+  { time: '9:30 AM', event: 'Working Session & Workshops' },
   { time: '12:00 PM', event: 'Lunch Break' },
-  { time: '1:00 PM', event: '2nd Working Session' },
-  { time: '2:30 PM', event: 'Workshop 3' },
-  { time: '4:00 PM', event: 'Workshop 4' },
+  { time: '1:00 PM', event: 'Working Session & Workshops' },
   { time: '5:30 PM', event: 'Lightning Talks' },
   { time: '6:00 PM', event: 'Day 1 Ends' }
 ]
 const schedule2 = [
   { time: '8:30 AM', event: 'Doors open' },
-  { time: '9:00 AM', event: '3rd Working Session' },
-  { time: '10:30 AM', event: 'Workshop 5' },
+  { time: '9:00 AM', event: 'Working Session & Workshops' },
   { time: '12:00 PM', event: 'Lunch Break' },
   { time: '1:00 PM', event: 'Final Working Session' },
   { time: '3:00 PM', event: 'Project Submissions' },
