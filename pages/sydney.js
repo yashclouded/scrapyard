@@ -305,7 +305,8 @@ export default function ExampleCity() {
             // marginTop: "5px",
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            zIndex: 9
           }}
         >
           <Text
@@ -319,7 +320,9 @@ export default function ExampleCity() {
           >
             This event is made possible by our sponsors
           </Text>
-          <NotSoScrollingBanner />
+          <NotSoScrollingBanner style={{
+            zIndex: 9
+          }}/>
         </Box>
         <Box
           sx={{
