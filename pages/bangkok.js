@@ -21,7 +21,6 @@ Note: To test your changes locally, use `npm install` and `npm run dev`.
 
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
-import { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic'
 
 const schedule1 = [
