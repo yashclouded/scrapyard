@@ -21,6 +21,7 @@ Note: To test your changes locally, use `npm install` and `npm run dev`.
 
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
+import { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
@@ -463,10 +464,10 @@ export default function ExampleCity() {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: ['column', 'column', 'column', 'column', 'row'],
             alignItems: 'center',
-            width: '90%',
-            gap: '3em'
+            width: '85%',
+            gap: '3%'
           }}
         >
           <Box
@@ -576,6 +577,159 @@ export default function ExampleCity() {
                 <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
               </div>
             ))}
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center'
+            }}
+          >
+            DON'T KNOW WHERE TO START?
+            JOIN ONE OF OUR WORKSHOPS!
+          </Heading>
+        </Box>
+        <Box
+          sx={{
+            width: '100%',
+            background: "url('/backgrounds/lined-paper.png')",
+            backgroundSize: ['contain', 'contain', 'cover!important'],
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            gap: '20px',
+            p: [4, 4, 5],
+            pt: 6,
+            position: 'relative'
+          }}
+        >
+          <Grid
+          columns={[1, 1, 1, 2]}
+          gap={4}
+          sx={{
+            maxWidth: '1200px'
+          }}
+        >
+          {Object.entries({
+              'Arduino':
+                `Learn how to hook up devices such as LEDs, motors and sensors to
+                Arduinos - small computers that will power your hardware projects`,
+              'Python':
+                `Learn to code in one of the most powerful beginner-friendly
+                languages - build anything from a Twitter automation bot to a
+                party game`,
+              'Web Development':
+                `Learn to use industry-standard frameworks to make
+                applications that anyone can use anywhere`,
+              'Machine learning':
+                `Learn to build robots that recognise people by their handwriting,
+                or chatbots that try to guess your age by having a conversation`,
+            }).map(([workshop, description], i) => {
+              return (
+                <Card
+                  key={workshop}
+                  sx={{
+                    background: 'white',
+                    zIndex: 1,
+                    boxShadow: 'none',
+                    padding: '24px!important',
+                    border: '2px solid black',
+                    transform: 'rotate('+((Math.random()-0.5)*2.5)+'deg)'
+                  }}
+                >
+                  <Heading
+                    as="h2"
+                    mb={4}
+                    sx={{
+                      position: 'relative'
+                    }}
+                  >
+                    {workshop}
+                    <Image
+                      src="/elements/doodles/yellow-underline.svg"
+                      sx={{
+                        position: 'absolute',
+                        bottom: '0',
+                        left: '50%',
+                        transform: 'translateX(-50%) translateY(75%)'
+                      }}
+                    />
+                  </Heading>
+                  <Text
+                    sx={{
+                      fontSize: 3,
+                      fontWeight: 'bold'
+                    }}
+                  >
+                    {description}
+                  </Text>
+                </Card>
+              )
+            })
+          }
+          </Grid>
+          {/* Workshop pictures */}
+          <Box
+            sx={{
+              position: 'absolute',
+              width: '100%',
+              height: '100vw'
+            }}
+          >
+            <Image
+              sx={{
+                width: ['45%', '30%', '30%', '15%'],
+                height: ['40.5%', '27%', '27%', '13.5%'],
+                position: 'absolute',
+                top: ['-10%', '10%', '20%', '33%'],
+                left: '0%'
+              }}
+              src="/city/bangkok/workshop-1.png"
+              alt="Workshop photo"
+            />
+            <Image
+              sx={{
+                width: ['45%', '30%', '30%', '15%'],
+                height: ['40.5%', '27%', '27%', '13.5%'],
+                position: 'absolute',
+                top: ['10%', '20%', '30%', '40%'],
+                right: '0%'
+              }}
+              src="/city/bangkok/workshop-2.png"
+              alt="Workshop photo"
+            />
+            <Image
+              sx={{
+                width: ['45%', '30%', '30%', '15%'],
+                height: ['40.5%', '27%', '27%', '13.5%'],
+                position: 'absolute',
+                top: ['100%', '80%', '70%', '58%'],
+                left: '0%',
+              }}
+              src="/city/bangkok/workshop-3.png"
+              alt="Workshop photo"
+            />
           </Box>
         </Box>
       </Box>
