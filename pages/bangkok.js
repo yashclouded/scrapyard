@@ -24,7 +24,6 @@ import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic'
 
-// TODO: Change this schedule to your own!
 const schedule1 = [
   { time: '8:30 AM', event: 'Doors open' },
   { time: '9:00 AM', event: 'Opening ceremony' },
