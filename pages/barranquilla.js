@@ -1,33 +1,32 @@
 import Head from 'next/head'
-import Script from 'next/script'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
+import dynamic from 'next/dynamic'
 
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '01:00 PM', event: 'Start working on your project!' },
-  { time: '02:00 PM', event: 'Workshop 1' },
-  { time: '04:00 PM', event: 'Activity 1' },
-  { time: '04:00 PM', event: 'Workshop 2' },
-  { time: '06:00 PM', event: 'Dinner' },
-  { time: '08:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '08:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '7:30 AM', event: 'Abren puertas' },
+  { time: '8:00 AM', event: 'Ceremonia de iniciación' },
+  { time: '8:30 AM', event: '¡Empieza a trabajar en tu projecto!' },
+  { time: '12:00 PM', event: 'Almuerzo' },
+  { time: '2:00 PM', event: 'Taller 1' },
+  { time: '4:00 PM', event: 'Actividad 1' },
+  { time: '4:00 PM', event: 'Taller 2' },
+  { time: '7:30 PM', event: 'Cena' },
+  { time: '8:30 PM', event: '¡Demos!' },
+  { time: '9:00 PM', event: 'Ceremonia de cierre' }
 ]
+
+const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
     href="https://hackclub.com/"
     target="_blank"
-    aria-label="Hack Club's homepage"
+    aria-label="Sitio Web de Hack Club"
     sx={{ position: 'absolute', top: 4, left: 0, zIndex: 2 }}
   >
     <Image
       src="/elements/orpheus-flag.svg"
-      alt="Hack Club flag"
+      alt="Bandera de Hack Club"
       sx={{
         width: [120, 128, 180],
         transformOrigin: '0% 0%',
@@ -40,7 +39,7 @@ const Flag = () => (
   </Link>
 )
 
-export default function ExampleCity() {
+export default function Barranquilla() {
   return (
     <Box
       sx={{
@@ -54,7 +53,7 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        <title>Scrapyard Busan</title>
+        <title>Scrapyard Barranquilla</title>
       </Head>
       <Flag />
       <Box
@@ -66,7 +65,7 @@ export default function ExampleCity() {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '10px'
+          gap: '20px'
         }}
       >
         <Box
@@ -82,7 +81,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/city/busan/Big Logo.png"
+            src="/city/barranquilla/logo.png"
             alt="Scrapyard"
           />
         </Box>
@@ -113,11 +112,10 @@ export default function ExampleCity() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%',
-                fontSize: '23px'
+                margin: '8%'
               }}
             >
-              Build stupid stuff, get stupid prizes.
+              Construye cosas locas, gana premios locos.
             </Heading>
           </Box>
           <Box
@@ -150,10 +148,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              <Link href="https://busanforeignschool.org/" target="blank">
-                Busan Foreign School
-              </Link>{' '}
-              - March&nbsp;15-16
+              Barranquilla - Sábado Marzo&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -203,7 +198,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
+          href="https://forms.hackclub.com/scrapyard-signup-es?event=barranquilla"
           target="_blank"
         >
           <Box
@@ -220,7 +215,7 @@ export default function ExampleCity() {
                 transform: 'scale(1.1)'
               },
               zIndex: 30,
-              minWidth: '8em',
+              minWidth: '10em',
               padding: '15px'
             }}
           >
@@ -235,7 +230,7 @@ export default function ExampleCity() {
                 width: '100%'
               }}
             >
-              SIGN&nbsp;UP
+              REGÍSTRATE
             </Heading>
           </Box>
         </Link>
@@ -309,22 +304,22 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-              What's Scrapyard Busan?
+              ¿Qué es Scrapyard Barranquilla?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Busan is a hackathon for high schoolers happening in
-              Busan, where you can make the stupidest things you can think of!
-              Anything, from a{' '}
+              Scrapyard Barranquilla es un hackathon para estudiantes de colegio
+              en Barranquilla, ¡donde puedes hacer las cosas más locas que
+              puedas pensar! Cualquier cosa desde una{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
-                lamp that flashes faster the slower you type
+                lámpara que parpadea más rápido entre más lento escribas
               </Link>
-              , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard Busan
-              needs you and your scrappy ideas!
+              , esas ideas que no consideras útiles, van a Scrapyard. Sin
+              importar tu nivel de experiencia, ¡Scrapyard Barranquilla te
+              necesita a ti y a tus ideas "scrappy"!
             </p>
           </Box>
         </Box>
@@ -422,7 +417,7 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD BUSAN?
+            ¿QUÉ VA A SUCEDER EN SCRAPYARD Barranquilla?
           </Heading>
         </Box>
         <Heading
@@ -434,7 +429,8 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Busan is a 24-hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Barranquilla es un evento de 12 horas - ¡AQUÍ ESTÁ EL
+          HORARIO APROXIMADO!
         </Heading>
         <Box
           sx={{
@@ -525,7 +521,7 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            HOW TO FIND US?
+            ¿NO PUEDES LLEGAR A Barranquilla?
           </Heading>
         </Box>
         <Heading
@@ -538,8 +534,7 @@ export default function ExampleCity() {
             mx: '5vw'
           }}
         >
-          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호
-          48084
+          ¡HAY +100 OTROS EVENTOS DE SCRAPYARD SUCEDIENDO ALREDEDOR DEL MUNDO!
         </Heading>
         <Box
           sx={{
@@ -548,147 +543,12 @@ export default function ExampleCity() {
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            mb: '5vh',
+            mb: '10vh',
             mt: 5
           }}
         >
-          <iframe
-            width="80%"
-            height="100%"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765"
-            style={{ border: '1px solid black' }}
-          ></iframe>
-          <br />
-          <small>
-            <a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a>
-          </small>{' '}
+          <Map />
         </Box>
-      </Box>
-
-      <Box
-        sx={{
-          width: '100%',
-          background: 'white',
-          backgroundSize: ['contain', 'contain', 'cover!important'],
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-          gap: '20px',
-          p: [4, 4, 5],
-          pt: 6,
-          position: 'relative'
-        }}
-      >
-        <Heading
-          as="h1"
-          sx={{
-            position: 'relative',
-            mb: '-20px'
-          }}
-        >
-          OUR SPONSORS
-        </Heading>
-        <p
-          style={{
-            fontSize: '1.5em'
-          }}
-        >
-          Without their support, Scrapyard Busan wouldn't be possible.
-        </p>
-
-        <Grid
-          columns={[1, 1, 1, 2]}
-          gap={4}
-          sx={{
-            maxWidth: '1200px'
-          }}
-        >
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://busanforeignschool.org/">
-              <Image
-                src="/city/busan/sponsors/bfs.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://hackclub.com/">
-              <Image
-                src="/city/busan/sponsors/hackclub.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://algoverseairesearch.org/">
-              <Image
-                src="/city/busan/sponsors/algoverse.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://www.tkbend.co.kr/eng/main/main.php">
-              <Image
-                src="/city/busan/sponsors/tk.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://www.instagram.com/bfshsstuco/">
-              <Image
-                src="/city/busan/sponsors/stuco.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              textAlign: 'center'
-            }}
-          >
-            <Link href="https://csteachers.org/cshs/">
-              <Image
-                src="/city/busan/sponsors/cshs.png"
-                sx={{
-                  maxHeight: '150px'
-                }}
-              />
-            </Link>
-          </Box>
-        </Grid>
       </Box>
 
       <Box
@@ -713,7 +573,7 @@ export default function ExampleCity() {
             position: 'relative'
           }}
         >
-          Frequently Asked Questions
+          Preguntas frecuentes
           <Image
             src="/elements/doodles/blue-underline.svg"
             sx={{
@@ -732,84 +592,78 @@ export default function ExampleCity() {
           }}
         >
           {Object.entries({
-            'Who can participate in Scrapyard?': (
+            '¿Quién puede participar en Scrapyard?': (
               <>
-                All high-school aged students are welcome to come! You don't
-                have to be a member of the Hack Club community or be a Hack Club
-                leader.
+                ¡Todos los estudiantes de colegio de 18 años o menos estan
+                bienvenidos a venir! No tienes que ser miembro de la comunidad
+                de Hack Club o ser un lider de Hack Club.
               </>
             ),
-            'All this, for free?': (
-              <>Yep! Food, swag and good vibes are all included.</>
-            ),
-            'Do I need team to participate?': (
+            '¿Todo esto, gratis?': (
               <>
-                You don’t need to have a team in advance to participate. Sign-ups are individual, so if you don’t have a team yet, you can form one at the event. Each team can have up to four members. If you already have a team, please make sure each member signs up separately.
+                ¡Si! La comida, merchandising y buenas vibras estan incluidos.
               </>
             ),
-            'What do I need?': (
+            '¿Qué necesito?': (
               <>
-                Your laptop, chargers, and an open mind! Bring toiletries and
-                sleeping bags too. Additionally, if you plan to work on a
-                hardware project, bring the tools you'll need.
+                ¡Un computador, tu cargador y mucha creatividad! Adicionalmente,
+                si planeas trabajar en un proyecto con hardware, trae las
+                herramientas que necesites.
               </>
             ),
-            'I’m not good at coding. Can I still participate?': (
+            'No soy buen@ programando. ¿Igual puedo participar?': (
               <>
-                This hackathon is for creatives of all skill levels! We'll have
-                workshops and other events so join us and let's learn together.
-                If you'd like to start exploring some introductory projects,
-                check out{' '}
-                <Link href="https://workshops.hackclub.com/">
-                  Hack Club Workshops
-                </Link>
-                .
+                ¡Este hackathon es para creativos de todos los niveles de
+                conocimiento! Tendremos talleres y otros eventos, así que únete
+                y aprendamos juntos. Si quieres empezar a explorar algunos
+                proyectos introductorios, revisa las workshops de Hack Club.
               </>
             ),
-            'What can I make at Scrapyard?': (
+            '¿Que puedo hacer en Scrapyard?': (
               <>
-                The scrappiest thing you can imagine –- jank is encouraged.
-                Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We’ll have a bunch of resources and mentors to help
-                you out.
+                Las cosas mas innecesarias que puedas imaginar –- incentivamos
+                lo absurdo. ¿Juegos? ¿Apps? ¿Sitios web? ¿Lenguajes de
+                programación? <em>¿Hardware?</em> ¡Tú decides! Tendremos varios
+                recursos y mentores para ayudarte.
               </>
             ),
-            'What has Hack Club done before?': (
+            '¿Que ha hecho Hack Club antes?': (
               <>
-                Hack Club has run an{' '}
+                Hack Club ha organizado un{' '}
                 <Link href="https://youtu.be/PnK4gzO6S3Q" target="_blank">
-                  overnight hackathon
+                  hackathon nocturno
                 </Link>{' '}
-                in San Francisco, a{' '}
+                en San Francisco, un{' '}
                 <Link
                   href="https://www.youtube.com/watch?v=H5RPsCMl3uM"
                   target="_blank"
                 >
                   Game Jam
                 </Link>{' '}
-                across 50 cities, a hackathon on a{' '}
+                en 50 ciudades, un hackathon en un{' '}
                 <Link href="https://youtu.be/2BID8_pGuqA" target="_blank">
-                  Train
+                  tren
                 </Link>{' '}
-                from Vermont to Los Angeles, and much more!
+                de Vermont a Los Angeles, y mucho más!
               </>
             ),
-            'What if my parents are concerned?': (
+            '¿Qué pasa si mis padres están preocupados?': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
-                they can reach out to us at{' '}
-                <Link href="mailto:scrapyardbusan@bfs.or.kr">
-                  scrapyardbusan@bfs.or.kr
+                ¡Estamos para ayudarte! Nuestra guía para padres saldrá pronto,
+                pero pueden contactarnos en{' '}
+                <Link href="mailto:barranquilla@scrapyard.hackclub.com">
+                  barranquilla@scrapyard.hackclub.com
                 </Link>{' '}
-                for questions.
+                si tienen preguntas.
               </>
             ),
-            'What if I have more questions?': (
+            '¿Qué pasa si tengo más preguntas?': (
               <>
-                Contact us! Feel free to reach out to us in the #scrapyard-busan
-                channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:scrapyardbusan@bfs.or.kr">
-                  scrapyardbusan@bfs.or.kr
+                ¡Contáctanos! Siéntete libre de contactarnos en el canal
+                #scrapyard-barranquilla en el Slack de Hack Club o mándanos un
+                email a{' '}
+                <Link href="mailto:barranquilla@scrapyard.hackclub.com">
+                  barranquilla@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -861,7 +715,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
+          href="https://forms.hackclub.com/scrapyard-signup-es?event=barranquilla"
           target="_blank"
         >
           <Box
@@ -890,7 +744,7 @@ export default function ExampleCity() {
                 paddingY: ['15px', '0px']
               }}
             >
-              SIGN UP FOR SCRAPYARD BUSAN
+              INSCRÍBETE PARA SCRAPYARD Barranquilla
             </Heading>
           </Box>
         </Link>
@@ -919,7 +773,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Made with ♡ by teenagers, for teenagers at Hack Club
+          Hecho con ♡ por adolescentes, para adolescentes en Hack Club
         </Text>
         <Text
           sx={{
