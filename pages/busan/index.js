@@ -1,145 +1,22 @@
-// `npm run dev` to start local server
-
 import Head from 'next/head'
-import { Box, Button, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
-import dynamic from 'next/dynamic'
-import { motion, useInView } from 'motion/react'
-import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
+import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 
 const schedule = [
-  { time: '10:00 AM', event: 'Gates Open and Registration' },
-  { time: '11:00 AM', event: 'Opening Ceremony' },
-  { time: '11:30 AM', event: 'Ice Breakers' },
-  { time: '11:45 AM', event: 'Breakfast' },
-  { time: '12:15 PM', event: 'Workshops' },
-  { time: '1:15 PM', event: 'Lunch' },
-  { time: '2:00 PM', event: 'Working Session' },
-  { time: '4:15 PM', event: 'Workshops' },
-  { time: '5:15 PM', event: 'Working Session' },
-  { time: '6:15 PM', event: 'Workshops' },
-  { time: '7:15 PM', event: 'Dinner' },
-  { time: '8:15 PM', event: 'Lightning Talks' },
-  { time: '10:00 PM', event: 'Sleep' },
-  { time: '12:00 AM', event: 'Midnight Surprise' },
-  { time: '4:30 AM', event: 'Breakfast (Ramadan)' },
-  { time: '8:00 AM', event: 'Showers' },
-  { time: '9:00 AM', event: 'Breakfast' },
-  { time: '10:00 AM', event: 'Workshops' },
-  { time: '11:00 AM', event: 'Working Session' },
-  { time: '12:00 PM', event: 'Side Activity' },
-  { time: '1:00 PM', event: 'Lunch' },
-  { time: '2:00 PM', event: 'Final Hour of Work' },
-  { time: '3:00 PM', event: 'Submissions' },
-  { time: '3:30 PM', event: 'Judging' }
+  { time: '11:00 AM', event: 'Doors open' },
+  { time: '12:00 PM', event: 'Opening ceremony' },
+  { time: '12:30 PM', event: 'Lunch' },
+  { time: '01:00 PM', event: 'Start working on your project!' },
+  { time: '02:00 PM', event: 'Workshop 1' },
+  { time: '04:00 PM', event: 'Activity 1' },
+  { time: '04:00 PM', event: 'Workshop 2' },
+  { time: '06:00 PM', event: 'Dinner' },
+  { time: '08:00 PM', event: 'Lightning talks' },
+  { time: '12:00 AM', event: 'Midnight surprise' },
+  { time: '08:00 AM', event: 'Breakfast' },
+  { time: '10:30 AM', event: 'Demos!' },
+  { time: '12:00 PM', event: 'Closing ceremony' }
 ]
-
-const sponsorLogos = [
-  '/city/sydney/sponsors/polymaker.png',
-  '/city/sydney/sponsors/littlebirdelectronics.png',
-  '/city/sydney/sponsors/matrixedu.png'
-]
-const NotSoScrollingBanner = () => {
-  return (
-    <div style={{ overflow: 'hidden', whiteSpace: 'nowrap', width: '100%' }}>
-      <motion.div
-        style={{ display: 'inline-block' }}
-        // animate={{ x: ["0%", "-100%"] }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: 'linear'
-        }}
-      >
-        {/* Duplicate the logos to create a seamless loop */}
-        {/*I've disabled duplicating logos, add ", ...sponsorLogos" to the array to enable it*/}
-        {[...sponsorLogos].map((logo, index) => (
-          <img
-            key={index}
-            src={logo}
-            alt={`Sponsor ${index}`}
-            style={{ height: '80px', margin: '0 20px' }}
-          />
-        ))}
-      </motion.div>
-    </div>
-  )
-}
-
-const Map = dynamic(() => import('../components/Map'), { ssr: false })
-
-const Wayfinder = () => {
-  const ref = useRef(null)
-
-  return (
-    <motion.div
-      ref={ref}
-      style={{
-        width: '26px',
-        height: '26px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: '50%',
-        background: '#F5F5F5',
-        color: 'var(--colour)',
-        boxShadow: '0px 2px 4px 0px'
-      }}
-      initial={{ '--colour': 'rgba(0, 0, 0, 0.25)' }}
-      whileInView={{ '--colour': '#F68887' }}
-      viewport={{ margin: '-30% 0px -30% 0px' }}
-    >
-      <motion.div
-        style={{
-          width: '13px',
-          height: '13px',
-          borderRadius: '50%',
-          background: 'var(--colour)',
-          boxShadow: '0px 0px 1px 0px rgba(0, 0, 0, 0.25) inset'
-        }}
-        initial={{ '--colour': 'rgba(0, 0, 0, 0.25)' }}
-        whileInView={{ '--colour': '#F68887' }}
-        viewport={{ margin: '-30% 0px -30% 0px' }}
-      ></motion.div>
-    </motion.div>
-  )
-}
-
-const Wayfinder1 = () => {
-  const ref1 = useRef(null)
-
-  return (
-    <motion.div
-      ref={ref1}
-      style={{
-        width: '18px',
-        height: '18px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: '50%',
-        background: '#F5F5F5',
-        color: 'var(--colour)',
-        boxShadow: '0px 2px 4px 0px'
-      }}
-      initial={{ '--colour': 'rgba(0, 0, 0, 0.25)' }}
-      whileInView={{ '--colour': '#F68887' }}
-      viewport={{ margin: '-30% 0px -30% 0px' }}
-    >
-      <motion.div
-        style={{
-          width: '9px',
-          height: '9px',
-          borderRadius: '50%',
-          background: 'var(--colour)',
-          boxShadow: '0px 0px 1px 0px rgba(0, 0, 0, 0.25) inset'
-        }}
-        initial={{ '--colour': 'rgba(0, 0, 0, 0.25)' }}
-        whileInView={{ '--colour': '#F68887' }}
-        viewport={{ margin: '-30% 0px -30% 0px' }}
-      ></motion.div>
-    </motion.div>
-  )
-}
 
 const Flag = () => (
   <Link
@@ -163,7 +40,20 @@ const Flag = () => (
   </Link>
 )
 
-export default function ExampleCity() {
+// export async function getStaticProps({ locale }) {
+//   // Load translation data based on the locale.
+//   // For instance, import the correct JSON file dynamically:
+//   const translations = await import(`../public/city/busan/locales/${locale}.json`);
+  
+//   return {
+//     props: {
+//       locale,
+//       translations: translations.default,
+//     },
+//   };
+// }
+
+export default function ExampleCity({  }) {
   return (
     <Box
       sx={{
@@ -177,8 +67,7 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard Sydney</title>
+        <title>Scrapyard Busan</title>
       </Head>
       <Flag />
       <Box
@@ -190,7 +79,7 @@ export default function ExampleCity() {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '20px'
+          gap: '10px'
         }}
       >
         <Box
@@ -206,17 +95,10 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/city/sydney/wordmark.svg"
-            alt="Scrapyard Sydney logo"
+            src="/city/busan/Big Logo.png"
+            alt="Scrapyard"
           />
         </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center'
-          }}
-        ></Box>
         <Box
           sx={{
             display: 'flex',
@@ -228,34 +110,28 @@ export default function ExampleCity() {
             sx={{
               background: "url('/elements/ripped-paper.png')",
               backgroundSize: 'cover',
-              height: 'fit-content',
-              paddingBottom: '8%',
-              paddingTop: '7%',
-              paddingLeft: '7%',
-              paddingRight: '7%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
+              // aspectRatio: "1080/338.4",
+              // padding: "8%",
+              // paddingLeft: "7%",
+              display: 'block',
+
               width: 'min(500px, calc(100vw - 30px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
               zIndex: 20
             }}
           >
-            <Text
+            <Heading
+              as="h2"
               sx={{
-                fontFamily: 'p22-stanyan',
-                fontSize: '2rem',
-                marginLeft: '30px',
-                color: 'black',
-                fontStyle: 'italic',
-                alignText: 'center',
-                transform: 'translateY(7px)'
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: '23px'
               }}
             >
-              Building happens here.
-            </Text>
+              Build stupid stuff, get stupid prizes.
+            </Heading>
           </Box>
           <Box
             sx={{
@@ -287,42 +163,12 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Sydney - March&nbsp;15-16
+              <Link href="https://busanforeignschool.org/" target="blank">
+                Busan Foreign School
+              </Link>{' '}
+              - March&nbsp;15-16
             </Heading>
           </Box>
-        </Box>
-        <Box
-          style={{
-            // background: "url('/elements/ripped-paper.png')",
-            // backgroundSize: 'contain',
-            // backgroundRepeat: 'no-repeat',
-            // height: 'fit-content',
-            // paddingBottom: '3%',
-            // paddingTop: '0%',
-            // paddingLeft: '1%',
-            // paddingRight: '1%',
-            // marginTop: "5px",
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            zIndex: 9
-          }}
-        >
-          <Text
-            style={{
-              textAlign: 'center',
-              marginBottom: '10px',
-              fontFamily: 'moonblossom',
-              fontWeight: '400',
-              color: '#f0f0f0'
-            }}
-          >
-            This event is made possible by our sponsors
-          </Text>
-          <NotSoScrollingBanner style={{
-            zIndex: 9
-          }}/>
         </Box>
         <Box
           sx={{
@@ -331,89 +177,47 @@ export default function ExampleCity() {
             height: '100vw'
           }}
         >
-          <motion.div
-            style={{
-              position: 'absolute',
-              top: '40%',
-              left: '10%',
-              width: '10%',
-              height: '10%',
-              zIndex: 2
-            }}
-            initial={{ transform: 'translateY(0px)' }}
-            animate={{
-              transform: 'translateY(-40px)'
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut'
-            }}
-          >
-            <Image
-              src="/elements/stars/blue.png"
-              alt="Blue paper star"
-              draggable="false"
-            />
-          </motion.div>
-          <motion.div
-            style={{
+          <Image
+            sx={{
               width: '10%',
               height: '10%',
               zIndex: 2,
               position: 'absolute',
               top: '50%',
-              right: '15%'
+              left: '10%'
             }}
-            initial={{ transform: 'translateY(0px)' }}
-            animate={{
-              transform: 'translateY(-25px)'
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut'
-            }}
-          >
-            <Image
-              src="/elements/stars/yellow.png"
-              alt="Yellow paper star"
-              draggable="false"
-            />
-          </motion.div>
-          <motion.div
-            style={{
+            src="/elements/stars/blue.png"
+            alt="Blue paper star"
+          />
+          <Image
+            sx={{
               width: '10%',
               height: '10%',
               zIndex: 2,
               position: 'absolute',
-              top: '65%',
-              left: '20%'
+              top: '55%',
+              right: '15%'
             }}
-            initial={{ transform: 'translateY(0px)' }}
-            animate={{
-              transform: 'translateY(-40px)'
+            src="/elements/stars/yellow.png"
+            alt="Yellow paper star"
+          />
+          <Image
+            sx={{
+              width: '10%',
+              height: '10%',
+              zIndex: 2,
+              position: 'absolute',
+              top: '70%',
+              left: '20%',
+              transform: 'rotate(180deg)'
             }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'easeInOut'
-            }}
-          >
-            <Image
-              src="/elements/stars/pink.png"
-              alt="Pink paper star"
-              draggable="false"
-            />
-          </motion.div>
+            src="/elements/stars/pink.png"
+            alt="Pink paper star"
+          />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=sydney"
+          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
           target="_blank"
-          draggable="false"
         >
           <Box
             sx={{
@@ -432,7 +236,6 @@ export default function ExampleCity() {
               minWidth: '8em',
               padding: '15px'
             }}
-            draggable="false"
           >
             <Heading
               as="h2"
@@ -475,7 +278,6 @@ export default function ExampleCity() {
             transform: 'translateY(-40%)',
             zIndex: 7
           }}
-          draggable="false"
         />
       </Box>
       <Box
@@ -504,7 +306,7 @@ export default function ExampleCity() {
             height: '100%'
           }}
         >
-          <Image src="/elements/orpheus-doodle.svg" draggable="false" />
+          <Image src="/elements/orpheus-doodle.svg" />
           <Box
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
@@ -520,24 +322,21 @@ export default function ExampleCity() {
                 textDecoration: 'underline'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              What's Scrapyard Sydney?
+              What's Scrapyard Busan?
             </Heading>
             <p
               style={{
                 fontSize: '1.5em'
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Sydney is a hackathon for high schoolers 
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Sydney, where you can make the stupidest things you 
-              can think of! Anything, from a{' '}
+              Scrapyard Busan is a hackathon for high schoolers happening in
+              Busan, where you can make the stupidest things you can think of!
+              Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
-              , to those ideas that you wouldn't dare to consider to be useful, 
-              goes at Scrapyard. No matter your experience, Scrapyard Sydney 
+              , to those ideas that you wouldn't dare to consider to be useful,
+              goes at Scrapyard. No matter your experience, Scrapyard Busan
               needs you and your scrappy ideas!
             </p>
           </Box>
@@ -548,49 +347,39 @@ export default function ExampleCity() {
             width: '100%',
             height: '100%',
             zIndex: 1,
-            display: ['none', 'none', 'block'],
-            pointerEvents: 'none',
-            userSelect: 'none'
+            display: ['none', 'none', 'block']
           }}
         >
           <Image
             src="/elements/doodles/arrow.svg"
-            draggable="false"
             sx={{ position: 'absolute', left: '5%', top: '0%' }}
           />
           <Image
             src="/elements/doodles/pinkcircle.svg"
-            draggable="false"
             sx={{ position: 'absolute', left: '20%', top: '0%' }}
           />
           <Image
             src="/elements/doodles/yellowcircle.svg"
-            draggable="false"
             sx={{ position: 'absolute', left: '8%', top: '70%' }}
           />
           <Image
             src="/elements/doodles/bluesquiggle.svg"
-            draggable="false"
             sx={{ position: 'absolute', left: '8%', top: '84%' }}
           />
           <Image
             src="/elements/doodles/yellowlines.svg"
-            draggable="false"
             sx={{ position: 'absolute', left: '37%', top: '80%' }}
           />
           <Image
             src="/elements/doodles/bluecircle.svg"
-            draggable="false"
             sx={{ position: 'absolute', right: '30%', top: '78%' }}
           />
           <Image
             src="/elements/doodles/pinksquiggle.svg"
-            draggable="false"
             sx={{ position: 'absolute', right: '10%', top: '80%' }}
           />
           <Image
             src="/elements/doodles/bluedrops.svg"
-            draggable="false"
             sx={{ position: 'absolute', right: '10%', top: '0%' }}
           />
         </Box>
@@ -646,8 +435,7 @@ export default function ExampleCity() {
               textAlign: 'center'
             }}
           >
-            {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD SYDNEY?
+            WHAT'S HAPPENING AT SCRAPYARD BUSAN?
           </Heading>
         </Box>
         <Heading
@@ -659,9 +447,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          {/* TODO: Change [EXAMPLECITY] to your event's city */}
-          {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Sydney is a 24 hour event - HERE'S THE ROUGH SCHEDULE!
+          Scrapyard Busan is a 24-hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -725,7 +511,198 @@ export default function ExampleCity() {
           display: 'flex',
           flexDirection: 'column'
         }}
-      ></Box>
+      >
+        <Box
+          sx={{
+            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
+            // backgroundSize: "cover!important",
+            // display: "block",
+            // width: "30vw",
+            height: '30vh',
+            width: ['90vw', '70vw', '46.8vw'],
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0vh',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Heading
+            as="h1"
+            sx={{
+              mx: '1vw',
+              fontWeight: 'lighter',
+              textAlign: 'center'
+            }}
+          >
+            HOW TO FIND US?
+          </Heading>
+        </Box>
+        <Heading
+          as="h2"
+          sx={{
+            fontSize: '1.5em',
+            fontFamily: 'moonblossom',
+            color: 'white',
+            textAlign: 'center',
+            mx: '5vw'
+          }}
+        >
+          BUSAN FOREIGN SCHOOL, 부산광역시 해운대구 대천로67번길 45 우편번호
+          48084
+        </Heading>
+        <Box
+          sx={{
+            width: ['100%', '80%'],
+            height: '75vh',
+            alignItems: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            mb: '5vh',
+            mt: 5
+          }}
+        >
+          <iframe
+            width="80%"
+            height="100%"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=129.163558781147%2C35.17284143740811%2C129.16595131158832%2C35.174562520727385&amp;layer=mapnik&amp;marker=35.17370198362201%2C129.16475504636765"
+            style={{ border: '1px solid black' }}
+          ></iframe>
+          <br />
+          <small>
+            <a href="https://www.openstreetmap.org/?mlat=35.173702&amp;mlon=129.164755#map=19/35.173702/129.164755"></a>
+          </small>{' '}
+        </Box>
+      </Box>
+
+      <Box
+        sx={{
+          width: '100%',
+          background: 'white',
+          backgroundSize: ['contain', 'contain', 'cover!important'],
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          gap: '20px',
+          p: [4, 4, 5],
+          pt: 6,
+          position: 'relative'
+        }}
+      >
+        <Heading
+          as="h1"
+          sx={{
+            position: 'relative',
+            mb: '-20px'
+          }}
+        >
+          OUR SPONSORS
+        </Heading>
+        <p
+          style={{
+            fontSize: '1.5em'
+          }}
+        >
+          Without their support, Scrapyard Busan wouldn't be possible.
+        </p>
+
+        <Grid
+          columns={[1, 1, 1, 2]}
+          gap={4}
+          sx={{
+            maxWidth: '1200px'
+          }}
+        >
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://busanforeignschool.org/">
+              <Image
+                src="/city/busan/sponsors/bfs.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://hackclub.com/">
+              <Image
+                src="/city/busan/sponsors/hackclub.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://algoverseairesearch.org/">
+              <Image
+                src="/city/busan/sponsors/algoverse.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://www.tkbend.co.kr/eng/main/main.php">
+              <Image
+                src="/city/busan/sponsors/tk.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://www.instagram.com/bfshsstuco/">
+              <Image
+                src="/city/busan/sponsors/stuco.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://csteachers.org/cshs/">
+              <Image
+                src="/city/busan/sponsors/cshs.png"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
+        </Grid>
+      </Box>
 
       <Box
         sx={{
@@ -770,42 +747,43 @@ export default function ExampleCity() {
           {Object.entries({
             'Who can participate in Scrapyard?': (
               <>
-                All high-school & upper-middle-school aged students are welcome
-                to come! You don't have to be a member of the Hack Club
-                community or be a Hack Club leader.
+                All high-school aged students are welcome to come! You don't
+                have to be a member of the Hack Club community or be a Hack Club
+                leader.
               </>
             ),
             'All this, for free?': (
+              <>Yep! Food, swag and good vibes are all included.</>
+            ),
+            'Do I need team to participate?': (
               <>
-                Yep! Food, swag and good vibes are all included. Plus, if you’re 
-                joining us from afar,{' '}
-                <Link href="https://gas.hackclub.com/">
-                  we’ll cover the cost of gas or a bus / train ticket
-                </Link>
-                .
+                You don’t need to have a team in advance to participate. Sign-ups are individual, so if you don’t have a team yet, you can form one at the event. Each team can have up to four members. If you already have a team, please make sure each member signs up separately.
               </>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an 
-                overnight event, bring toiletries and sleeping bags too. 
-                Additionally, if you plan to work on a hardware project, bring 
-                the tools you'll need.
+                Your laptop, chargers, and an open mind! Bring toiletries and
+                sleeping bags too. Additionally, if you plan to work on a
+                hardware project, bring the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
               <>
-                This hackathon is for creatives of all skill levels! We'll have 
-                workshops and other events so join us and let's learn together. 
-                If you'd like to start exploring some introductory projects, 
-                check out Hack Club Workshops.
+                This hackathon is for creatives of all skill levels! We'll have
+                workshops and other events so join us and let's learn together.
+                If you'd like to start exploring some introductory projects,
+                check out{' '}
+                <Link href="https://workshops.hackclub.com/">
+                  Hack Club Workshops
+                </Link>
+                .
               </>
             ),
             'What can I make at Scrapyard?': (
               <>
-                The scrappiest thing you can imagine –- jank is encouraged. 
+                The scrappiest thing you can imagine –- jank is encouraged.
                 Games? Apps? Websites? Programming languages? <em>Hardware?</em>{' '}
-                You name it! We’ll have a bunch of resources and mentors to help 
+                You name it! We’ll have a bunch of resources and mentors to help
                 you out.
               </>
             ),
@@ -833,23 +811,18 @@ export default function ExampleCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:sydney@scrapyard.hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                  sydney@scrapyard.hackclub.com
+                <Link href="mailto:scrapyardbusan@bfs.or.kr">
+                  scrapyardbusan@bfs.or.kr
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the
-                #scrapyard-sydney channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:sydney@scrapyard.hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                  sydney@scrapyard.hackclub.com
+                Contact us! Feel free to reach out to us in the #scrapyard-busan
+                channel on the Hack Club slack or email us at{' '}
+                <Link href="mailto:scrapyardbusan@bfs.or.kr">
+                  scrapyardbusan@bfs.or.kr
                 </Link>
                 .
               </>
@@ -901,7 +874,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=sydney"
+          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
           target="_blank"
         >
           <Box
@@ -927,12 +900,10 @@ export default function ExampleCity() {
                 margin: '8%',
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
-                paddingY: ['2px', '0px'],
-                lineHeight: ['1.5em', '1.5em']
+                paddingY: ['15px', '0px']
               }}
             >
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD SYDNEY
+              SIGN UP FOR SCRAPYARD BUSAN
             </Heading>
           </Box>
         </Link>
