@@ -80,7 +80,7 @@ export default function Columbus() {
     async function fetchGoldSponsors() {
       try {
         const response = await fetch(
-          'https://MeghanaM4.github.io/scrapyardCMH-data/platinum.json?t=' + Date.now()
+          'https://MeghanaM4.github.io/scrapyardCMH-data/gold.json?t=' + Date.now()
         )
         const data = await response.json()
         setGoldSponsors(data)
@@ -96,7 +96,7 @@ export default function Columbus() {
     async function fetchSilverSponsors() {
       try {
         const response = await fetch(
-          'https://MeghanaM4.github.io/scrapyardCMH-data/gold.json?t=' + Date.now()
+          'https://MeghanaM4.github.io/scrapyardCMH-data/silver.json?t=' + Date.now()
         )
         const data = await response.json()
         setSilverSponsors(data)
