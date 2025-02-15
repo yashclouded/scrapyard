@@ -61,7 +61,7 @@ export default function Columbus() {
   const [partners, setPartners] = useState([])
 
   useEffect(() => {
-    async function fetchDiamondSponsors() {
+    async function fetchDziamondSponsors() {
       try {
         const response = await fetch(
           'https://MeghanaM4.github.io/scrapyardCMH-data/diamond.json?t=' + Date.now()
