@@ -41,40 +41,42 @@ export default function IndexCard({
       >
         {format.toUpperCase()} EVENT IN {location.toUpperCase()}
       </p>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
-        <Link
-          href={`/${slug}`}
+      {id && (
+        <Box
           sx={{
-            textAlign: 'center',
-            display: 'block',
-            fontWeight: 'bold',
-            backgroundColor: 'white',
-            fontFamily: 'moonblossom'
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
         >
-          WEBSITE
-        </Link>
-        <span sx={{ transform: 'scale(2)' }}>・</span>
-        <Link
-          href={`https://forms.hackclub.com/scrapyard-signup?event=${id}`}
-          sx={{
-            textAlign: 'center',
-            display: 'block',
-            fontWeight: 'bold',
-            backgroundColor: 'white',
-            fontFamily: 'moonblossom'
-          }}
-        >
-          SIGNUP
-        </Link>
-      </Box>
+          <Link
+            href={`/${slug}`}
+            sx={{
+              textAlign: 'center',
+              display: 'block',
+              fontWeight: 'bold',
+              backgroundColor: 'white',
+              fontFamily: 'moonblossom'
+            }}
+          >
+            WEBSITE
+          </Link>
+          <span sx={{ transform: 'scale(2)' }}>・</span>
+          <Link
+            href={`https://forms.hackclub.com/scrapyard-signup?event=${slug}`}
+            sx={{
+              textAlign: 'center',
+              display: 'block',
+              fontWeight: 'bold',
+              backgroundColor: 'white',
+              fontFamily: 'moonblossom'
+            }}
+          >
+            SIGNUP
+          </Link>
+        </Box>
+      )}
       {children}
     </Box>
   )

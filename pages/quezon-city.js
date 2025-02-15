@@ -202,7 +202,7 @@ export default function QuezonCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recfKR3GeLkWdxzaB"
+          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
           target="_blank"
         >
           <Box
@@ -315,15 +315,15 @@ export default function QuezonCity() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Quezon City is a hackathon for high schoolers
-              happening in Quezon City, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              Scrapyard Quezon City is a hackathon for high schoolers happening
+              in Quezon City, where you can make the stupidest things you can
+              think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              Quezon City needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Quezon
+              City needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -433,8 +433,7 @@ export default function QuezonCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Quezon City is a 12 hour event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -662,7 +661,7 @@ export default function QuezonCity() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                carl.quezon-city@scrapyard.hackclub.com
+                  carl.quezon-city@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -673,7 +672,7 @@ export default function QuezonCity() {
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
                 <Link href="mailto:carl.quezon-city@scrapyard.hackclub.com">
-                carl.quezon-city@scrapyard.hackclub.com
+                  carl.quezon-city@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -725,7 +724,7 @@ export default function QuezonCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event_id=recfKR3GeLkWdxzaB"
+          href="https://forms.hackclub.com/scrapyard-signup?event=quezon-city"
           target="_blank"
         >
           <Box
