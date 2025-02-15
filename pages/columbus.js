@@ -29,7 +29,7 @@ const scheduleday2 = [
   { time: '12:00 PM', event: 'Closing ceremony' }
 ]
 
-//const Map = dynamic(() => import('../components/Map'), { ssr: false })
+const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -754,7 +754,7 @@ export default function Columbus() {
             mt: 5
           }}
         >
-          {/* <Map> */}
+          <Map />
         </Box>
       </Box>
 
@@ -1078,7 +1078,7 @@ export default function Columbus() {
                     mt: 2
                   }}
                 >
-                  PARTNERs
+                  PARTNERS
                 </Heading>
               </Box>
               <div
