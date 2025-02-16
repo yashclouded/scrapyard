@@ -25,19 +25,15 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+  { time: '08:00 AM - 09:00 AM', event: 'Doors open' },
+  { time: '09:00 AM - 09:30 AM', event: 'Opening ceremony' },
+  { time: '09:45 AM - 11:15 AM', event: 'Workshop 1' },
+  { time: '11:30 AM - 12:45 PM', event: 'Workshop 2' },
+  { time: '01:00 PM - 01:45 PM', event: 'Lunch' },
+  { time: '02:00 PM - 07:00 PM', event: 'Project Work' },
+  { time: '07:00 PM - 07:30 PM', event: 'Dinner and Lightning Talks' },
+  { time: '07:30 PM - 08:30 PM', event: 'Demos and Judging' },
+  { time: '08:30 PM - 09:00 PM', event: 'Closing Ceremony' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
