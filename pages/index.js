@@ -631,10 +631,11 @@ export default function Home() {
               </>
             ),
 
-            'Where is Scrapyard hosted?': (
+            'When & where is Scrapyard hosted?': (
               <>
-                The Scrapyard flagship will be hosted in Austin, Texas on March
-                1-2. Find the closest distributed event to you on March 15-16!
+                The Scrapyard flagship will be hosted in Austin, Texas from 12pm
+                on March 1st to 3pm on March 2nd. Find the closest distributed
+                event to you on March 15-16!
               </>
             ),
             'Who can participate in Scrapyard?': (
