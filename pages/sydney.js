@@ -38,7 +38,7 @@ const sponsorLogos = [
   {img:'/city/sydney/sponsors/littlebirdelectronics.png', link:'https://www.littlebird.com.au/'},
   {img:'/city/sydney/sponsors/matrixedu.png', link:'https://www.matrix.edu.au/'},
   {img:'/city/sydney/sponsors/engineersaustralia.png', link:'https://www.engineersaustralia.org.au/'},
-  {img: '/city/sydney/sponsors/scpartners.png', link: 'https://www.sccpasia.com/'},
+  // {img: '/city/sydney/sponsors/scpartners.png', link: 'https://www.sccpasia.com/'},
 ]
 const NotSoScrollingBanner = () => {
   return (
