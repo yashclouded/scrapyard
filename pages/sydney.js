@@ -34,26 +34,29 @@ const schedule = [
 ]
 
 const sponsorLogos = [
-  '/city/sydney/sponsors/polymaker.png',
-  '/city/sydney/sponsors/littlebirdelectronics.png',
-  '/city/sydney/sponsors/matrixedu.png'
+  {img:'/city/sydney/sponsors/polymaker.png', link:'https://www.polymaker.com/'},
+  {img:'/city/sydney/sponsors/littlebirdelectronics.png', link:'https://www.littlebird.com.au/'},
+  {img:'/city/sydney/sponsors/matrixedu.png', link:'https://www.matrix.edu.au/'},
+  {img:'/city/sydney/sponsors/engineersaustralia.png', link:'https://www.engineersaustralia.org.au/'},
 ]
 const NotSoScrollingBanner = () => {
   return (
-    <div style={{ overflow: 'hidden', whiteSpace: 'nowrap', width: '100%', maxWidth: '80vw' }}>
+    <div style={{ overflow: 'hidden', whiteSpace: 'nowrap', width: '80vw', maxWidth: '500px' }}>
       <motion.div
         style={{ display: 'inline-block' }}
-        animate={{ x: ["100%", "-100%"] }}
-        transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
         {/* Duplicate the logos to create a seamless loop */}
-        {[...sponsorLogos].map((logo, index) => (
+        {[...sponsorLogos,...sponsorLogos].map((logo, index) => (
+          <a href={logo.link} target="_blank" key={index}>
           <img
             key={index}
-            src={logo}
-            alt={`Sponsor ${index}`}
-            style={{ height: '80px', margin: '0 20px' }}
+            src={logo.img}
+            alt={`Sponsor ${logo.link}`}
+            style={{ height: '20vw', maxHeight: '85px', margin: '0 20px' }}
           />
+          </a>
         ))}
       </motion.div>
     </div>
