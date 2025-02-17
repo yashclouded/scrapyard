@@ -25,15 +25,15 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '08:00 AM - 09:00 AM', event: 'Doors open' },
-  { time: '09:00 AM - 09:30 AM', event: 'Opening ceremony' },
-  { time: '09:45 AM - 11:15 AM', event: 'Workshop 1' },
-  { time: '11:30 AM - 12:45 PM', event: 'Workshop 2' },
-  { time: '01:00 PM - 01:45 PM', event: 'Lunch' },
-  { time: '02:00 PM - 07:00 PM', event: 'Project Work' },
-  { time: '07:00 PM - 07:30 PM', event: 'Dinner and Lightning Talks' },
-  { time: '07:30 PM - 08:30 PM', event: 'Demos and Judging' },
-  { time: '08:30 PM - 09:00 PM', event: 'Closing Ceremony' },
+  { time: '08:00 AM-09:00 AM', event: 'Doors open' },
+  { time: '09:00 AM-09:30 AM', event: 'Opening ceremony' },
+  { time: '09:45 AM-11:15 AM', event: 'Workshop 1' },
+  { time: '11:30 AM-12:45 PM', event: 'Workshop 2' },
+  { time: '01:00 PM-01:45 PM', event: 'Lunch' },
+  { time: '02:00 PM-07:00 PM', event: 'Project Work' },
+  { time: '07:00 PM-07:30 PM', event: 'Dinner and Lightning Talks' },
+  { time: '07:30 PM-08:30 PM', event: 'Demos and Judging' },
+  { time: '08:30 PM-09:00 PM', event: 'Closing Ceremony' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -446,7 +446,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD Bristol?
+            WHAT'S HAPPENING AT SCRAPYARD BRISTOL?
           </Heading>
         </Box>
         <Heading
@@ -690,7 +690,7 @@ export default function ExampleCity() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="moe-rotimi.bristol@scrapyard.hackclub.com">
+                <Link href="mailto:moe-rotimi.bristol@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
                   moe-rotimi.bristol@scrapyard.hackclub.com
                 </Link>{' '}
@@ -700,10 +700,13 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the scrapyardbristol
-                channel on the Hack Club slack or email us at{' '}
+                Contact us! Feel free to reach out to us in the 
+                <Link href="https://hackclub.slack.com/archives/C087ZL8RE7M">
+                  #scrapyard-bristol
+                  </Link>
+                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="moe-rotimi.bristol@scrapyard.hackclub.com">
+                <Link href="mailto:moe-rotimi.bristol@scrapyard.hackclub.com">
                   {/* TODO: Change this email to your event's email */}
                   moe-rotimi.bristol@scrapyard.hackclub.com
                 </Link>
