@@ -75,7 +75,7 @@ export default function ExampleCity() {
     >
       <Head>
         {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard [Bristol]</title>
+        <title>Scrapyard Bristol</title>
       </Head>
       <Flag />
       <Box
@@ -171,7 +171,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [Bristol] - March&nbsp;15
+              Bristol - March&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -222,7 +222,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[bristol]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=bristol"
           target="_blank"
         >
           <Box
@@ -329,7 +329,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              What's Scrapyard [Bristol]?
+              What's Scrapyard Bristol?
             </Heading>
             <p
               style={{
@@ -337,9 +337,9 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard [Bristol] is a hackathon for high schoolers
+              Scrapyard Bristol is a hackathon for high schoolers
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in [Bristol], where you can make the stupidest
+              happening in Bristol, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
@@ -347,7 +347,7 @@ export default function ExampleCity() {
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              [Bristol] needs you and your scrappy ideas!
+              Bristol needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -446,7 +446,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD [Bristol]?
+            WHAT'S HAPPENING AT SCRAPYARD Bristol?
           </Heading>
         </Box>
         <Heading
@@ -460,7 +460,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard [Bristol] is a [12 Hour] event - HERE'S THE ROUGH
+          Scrapyard Bristol is a 12 Hour event - HERE'S THE ROUGH
           SCHEDULE!
         </Heading>
         <Box
@@ -553,7 +553,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO [Bristol]?
+            CAN'T MAKE IT TO BRISTOL?
           </Heading>
         </Box>
         <Heading
@@ -700,7 +700,7 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the [scrapyardbristol]
+                Contact us! Feel free to reach out to us in the scrapyardbristol
                 channel on the Hack Club slack or email us at{' '}
                 {/* TODO: Change this email to your event's email */}
                 <Link href="moe-rotimi.bristol@scrapyard.hackclub.com">
@@ -758,7 +758,7 @@ export default function ExampleCity() {
         </Grid>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=[bristol]"
+          href="https://forms.hackclub.com/scrapyard-signup?event=bristol"
           target="_blank"
         >
           <Box
@@ -788,7 +788,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD [Bristol]
+              SIGN UP FOR SCRAPYARD BRISTOL
             </Heading>
           </Box>
         </Link>
