@@ -27,12 +27,12 @@ import dynamic from 'next/dynamic'
 const schedule = [
   { time: '09:30 AM - 10:00 AM', event: 'Doors open' },
   { time: '10:00 AM - 10:15 AM', event: 'Opening ceremony' },
-  { time: '11:00 AM - 11:15 AM', event: 'Guest speaker' },
+  { time: '11:00 AM - 11:15 AM', event: 'Guest speaker/Workshop 1' },
   { time: '11:30 AM - 12:45 PM', event: 'Workshop 2' },
   { time: '01:00 PM - 01:45 PM', event: 'Lunch' },
-  { time: '02:00 PM - 3:00 PM', event: 'Project Work' },
-  { time: '04:15 PM - 08:30 PM', event: 'Demos and Judging' },
-  { time: '08:30 PM - 09:00 PM', event: 'Closing Ceremony' },
+  { time: '02:00 PM - 03:00 PM', event: 'Project Work' },
+  { time: '03:15 PM - 04:30 PM', event: 'Demos and Judging' },
+  { time: '04:30 PM - 05:00 PM', event: 'Closing Ceremony' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -74,7 +74,7 @@ export default function ExampleCity() {
     >
       <Head>
         {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard Bristol</title>
+        <title>Scrapyard Aurora</title>
       </Head>
       <Flag />
       <Box
@@ -170,7 +170,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Bristol - March&nbsp;15
+              Aurora - March&nbsp;15
             </Heading>
           </Box>
         </Box>
@@ -221,7 +221,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=bristol"
+          href="https://forms.hackclub.com/scrapyard-signup?event=aurora"
           target="_blank"
         >
           <Box
@@ -336,9 +336,9 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Bristol is a hackathon for high schoolers
+              Scrapyard Aurora is a hackathon for high schoolers
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in Bristol, where you can make the stupidest
+              happening in Aurora, where you can make the stupidest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
@@ -445,7 +445,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            WHAT'S HAPPENING AT SCRAPYARD Bristol?
+            WHAT'S HAPPENING AT SCRAPYARD Aurora?
           </Heading>
         </Box>
         <Heading
@@ -552,7 +552,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CAN'T MAKE IT TO BRISTOL?
+            CAN'T MAKE IT TO Aurora?
           </Heading>
         </Box>
         <Heading
@@ -689,9 +689,9 @@ export default function ExampleCity() {
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="moe-rotimi.bristol@scrapyard.hackclub.com">
+                <Link href="kaushalnareshkumar16@gmail.com">
                   {/* TODO: Change this email to your event's email */}
-                  moe-rotimi.bristol@scrapyard.hackclub.com
+                  Kaushalnareshkumar16@gmail.com
                 </Link>{' '}
                 for questions.
               </>
@@ -699,12 +699,12 @@ export default function ExampleCity() {
             'What if I have more questions?': (
               <>
                 {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the scrapyardbristol
-                channel on the Hack Club slack or email us at{' '}
+                Contact us! Feel free to reach out to us in the scrapyard-Aurora
+                channel on the Hack Club slack or email us at{'kaushalnareshkumar16@gmail.com'}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="moe-rotimi.bristol@scrapyard.hackclub.com">
+                <Link href="kaushalnareshkumar16@gmail.com">
                   {/* TODO: Change this email to your event's email */}
-                  moe-rotimi.bristol@scrapyard.hackclub.com
+                  kaushalnareshkumar16@gmail.com
                 </Link>
                 .
               </>
@@ -787,7 +787,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              SIGN UP FOR SCRAPYARD BRISTOL
+              SIGN UP FOR SCRAPYARD Aurora
             </Heading>
           </Box>
         </Link>
