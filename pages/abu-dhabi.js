@@ -227,7 +227,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://hackclub.tech/scrapyard"
+          href="https://hack.club/scrapyard-signup?event=abu-dhabi"
           target="_blank"
         >
           <Box
@@ -762,7 +762,7 @@ export default function ExampleCity() {
         </Grid>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://hackclub.tech/scrapyard"
+          href="https://hack.club/scrapyard-signup?event=abu-dhabi"
           target="_blank"
         >
           <Box
