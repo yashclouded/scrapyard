@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// TODO: Change this schedule to your own!
+
 const schedule = [
   Day 1
   { time: '11:00 AM - 11:30 AM', event: 'Opening Ceremony' },
@@ -61,7 +61,6 @@ export default function ExampleCity() {
       }}
     >
       <Head>
-        {/* TODO: Change [EXAMPLECITY] to your event's city */}
         <title>Scrapyard Sharjah</title>
       </Head>
       <Flag />
@@ -660,23 +659,18 @@ export default function ExampleCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                <Link href="mailto:Nirt_12023@outlook.com">
+                  Nirt_12023@outlook.com
                 </Link>{' '}
                 for questions.
               </>
             ),
             'What if I have more questions?': (
               <>
-                {/* TODO: Change [SLACKCHANNEL] to the name of your event's Slack channel */}
-                Contact us! Feel free to reach out to us in the [SLACKCHANNEL]
+                Contact us! Feel free to reach out to us in the scrapyard-shj
                 channel on the Hack Club slack or email us at{' '}
-                {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:scrapyard@hackclub.com">
-                  {/* TODO: Change this email to your event's email */}
-                  scrapyard@hackclub.com
+                <Link href="mailto:Nirt_12023@outlook.com">
+                 Nirt_12023@outlook.com
                 </Link>
                 .
               </>
