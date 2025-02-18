@@ -111,7 +111,7 @@ export default function giza() {
 
               objectFit: 'contain'
             }}
-            src="/elements/Scrapyard Giza.svg"
+            src="/elements/city/giza/Scrapyard Giza.svg"
             alt="Scrapyard"
           />
         </Box>
