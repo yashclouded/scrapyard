@@ -3,19 +3,19 @@ import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
 const schedule = [
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' },
-  { time: '🐧', event: 'Açiklanacak' }
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' },
+  { time: '🐧', event: 'Açiklanilacak' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
