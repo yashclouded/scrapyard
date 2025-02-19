@@ -2,9 +2,8 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-
 const schedule = [
-  Day 1
+  // Day 1
   { time: '11:00 AM - 11:30 AM', event: 'Opening Ceremony' },
   { time: '11:30 AM - 2:30 PM', event: 'Coding & Development' },
   { time: '2:30 PM - 3:00 PM', event: 'Break' },
@@ -12,14 +11,14 @@ const schedule = [
   { time: '5:30 PM - 6:30 PM', event: 'Bounty Challenge' },
   { time: '6:30 PM - 7:00 PM', event: 'Iftar' },
   { time: '7:00 PM - 8:00 PM', event: 'Coding & Development' },
-  Day 2
+  // Day 2
   { time: '11:00 AM - 11:15 AM', event: 'Morning Kickoff' },
   { time: '11:15 AM - 2:00 PM', event: ' Coding & Development' },
   { time: '2:00 PM - 2:30 PM', event: 'Break' },
   { time: '2:30 PM  - 4:30 PM', event: 'Polishing & Testing' },
   { time: '4:30 PM - 6:30 PM', event: 'Project Presentations & Judging' },
-  { time: '6:30 PM - 7:00 PM', event: 'Iftar' }
-  { time: '7:00 PM - 7:30 PM', event: 'Closing ceremony' }
+  { time: '6:30 PM - 7:00 PM', event: 'Iftar' },
+  { time: '7:00 PM - 7:30 PM', event: 'Closing ceremony' },
   { time: '7:30 PM - 8:00 PM', event: 'Networking & Wrap-Up' }
 ]
 
@@ -319,15 +318,15 @@ export default function ExampleCity() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Sharjah is a hackathon for high schoolers
-              happening in Sharjah, where you can make the stupidest
-              things you can think of! Anything, from a{' '}
+              Scrapyard Sharjah is a hackathon for high schoolers happening in
+              Sharjah, where you can make the stupidest things you can think of!
+              Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
               </Link>
               , to those ideas that you wouldn't dare to consider to be useful,
-              goes at Scrapyard. No matter your experience, Scrapyard
-              Sharjah needs you and your scrappy ideas!
+              goes at Scrapyard. No matter your experience, Scrapyard Sharjah
+              needs you and your scrappy ideas!
             </p>
           </Box>
         </Box>
@@ -437,8 +436,7 @@ export default function ExampleCity() {
             textAlign: 'center'
           }}
         >
-          Scrapyard Sharjah is a 2-day event - HERE'S THE ROUGH
-          SCHEDULE!
+          Scrapyard Sharjah is a 2-day event - HERE'S THE ROUGH SCHEDULE!
         </Heading>
         <Box
           sx={{
@@ -608,15 +606,12 @@ export default function ExampleCity() {
               </>
             ),
             'All this, for free?': (
-              <>
-                Yep! Food, swag and good vibes are all included.
-              </>
+              <>Yep! Food, swag and good vibes are all included.</>
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind!
-                Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need.
+                Your laptop, chargers, and an open mind! Additionally, if you
+                plan to work on a hardware project, bring the tools you'll need.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -670,7 +665,7 @@ export default function ExampleCity() {
                 Contact us! Feel free to reach out to us in the scrapyard-shj
                 channel on the Hack Club slack or email us at{' '}
                 <Link href="mailto:Nirt_12023@outlook.com">
-                 Nirt_12023@outlook.com
+                  Nirt_12023@outlook.com
                 </Link>
                 .
               </>
