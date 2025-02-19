@@ -19,11 +19,6 @@ P.S. Feel free to delete this comment block when you're done!
 Note: To test your changes locally, use `yarn install` and `yarn dev`.
 */
 
-
-
-// London => Getting to Scrapyard London
-// silicon-valley => FAQs
-
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
@@ -111,7 +106,7 @@ export default function giza() {
 
               objectFit: 'contain'
             }}
-            src="/elements/city/giza/Scrapyard Giza.svg"
+            src="/city/giza/Scrapyard Giza.svg"
             alt="Scrapyard"
           />
         </Box>
@@ -341,8 +336,7 @@ export default function giza() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Giza is a hackathon for high schoolers happening in
-              Giza, where you can make the stupidest things you can think
+              Scrapyard Giza is a hackathon for high schoolers, where you can make the stupidest things you can think
               of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
@@ -350,6 +344,20 @@ export default function giza() {
               , to those ideas that you wouldn't dare to consider to be useful,
               goes at Scrapyard. No matter your experience, Scrapyard Giza
               needs you and your scrappy ideas!
+            </p>
+            <Heading
+              sx={{
+                textDecoration: 'underline'
+              }}
+            >
+              Why to join Scrapyard Giza?
+            </Heading>
+            <p
+              style={{
+                fontSize: '1.5em'
+              }}
+            >
+              At Scrapyard Giza, you'll join a vibrant hacker community from across the governorate—and beyond! Engage in hands-on workshops led by experts, and sharpen your skills. Plus, enjoy a free <strong>T-shirt and meal</strong>, and if your project stands out, you might take some exciting scrappy prizes!
             </p>
           </Box>
         </Box>
@@ -1032,7 +1040,38 @@ export default function giza() {
               borderRadius: "20px"
             }}
           ></Box>
-
+          <Box
+            as="a"
+            href="https://www.instagram.com/hackclub.stem"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cdn.hackclubber.dev/slackcdn/6154e322446cee40f6c4af8692f4bbfb.jpg')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+              borderRadius: "20px"
+            }}
+          ></Box>
+          <Box
+            as="a"
+            href="https://codeforces.com/group/v6UJeRoDWN/contests"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cdn.hackclubber.dev/slackcdn/34c10e08135afccc9e47a9390efc8d7c.jpg')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.4)', 'scale(1.4)', 'scale(1.2)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+              borderRadius: "20px"
+            }}
+          ></Box>
         </Box>
       </Box>
 
