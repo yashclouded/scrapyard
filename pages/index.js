@@ -194,7 +194,7 @@ export default function Home() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup"
+          href="https://forms.hackclub.com/scrapyard-flagship"
           target="_blank"
         >
           <Box
