@@ -355,7 +355,7 @@ export default function SiliconValley() {
           href={
             refer !== null && refer !== undefined
               ? '#signup'
-              : 'https://forms.hackclub.com/scrapyard-signup?event=silicon-valley'
+              : 'https://forms.hackclub.com/scrapyard-signup?event=siliconvalley'
           }
           target={refer !== null && refer !== undefined ? '_self' : '_blank'}
         >
@@ -1473,7 +1473,7 @@ export default function SiliconValley() {
           </Heading>
           {!refer ? (
             <Link
-              href="https://forms.hackclub.com/scrapyard-signup?event=silicon-valley"
+              href="https://forms.hackclub.com/scrapyard-signup?event=siliconvalley"
               target="_blank"
               style={{ display: 'block', margin: 'auto', marginBottom: '2rem' }}
             >
@@ -1549,7 +1549,7 @@ export default function SiliconValley() {
                     // Continue with the form redirect
                     localStorage.removeItem('sv-refer')
                     window.open(
-                      `https://forms.hackclub.com/scrapyard-signup?event=silicon-valley&email=${email}`,
+                      `https://forms.hackclub.com/scrapyard-signup?event=siliconvalley&email=${email}`,
                       '_blank'
                     )
                   } catch (error) {
