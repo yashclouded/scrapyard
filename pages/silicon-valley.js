@@ -1562,12 +1562,9 @@ export default function SiliconValley() {
                         {
                           method: 'POST',
                           headers: {
-                            'Content-Type': 'application/json',
-                            Accept: 'text/plain',
-                            Origin: 'https://scrapyard.hackclub.com'
+                            'Content-Type': 'application/json'
                           },
-                          mode: 'cors',
-                          credentials: 'include',
+                          mode: 'no-cors',
                           body: JSON.stringify({
                             refer: refer,
                             email: email
@@ -1575,23 +1572,19 @@ export default function SiliconValley() {
                         }
                       )
 
-                      if (!response.ok) {
-                        throw new Error(
-                          `HTTP error! status: ${response.status}`
-                        )
-                      }
+                      // With no-cors mode, we can't read the response
+                      // but we know the request went through if we get here
+                      console.log('Referral request sent')
 
-                      const result = await response.text()
-                      console.log('Referral API response:', result)
+                      // Continue with the form redirect
+                      localStorage.removeItem('sv-refer')
+                      window.open(
+                        `https://forms.hackclub.com/scrapyard-signup?event=silicon-valley&email=${email}`,
+                        '_blank'
+                      )
                     } catch (error) {
                       console.error('Referral API error:', error)
                     }
-
-                    localStorage.removeItem('sv-refer')
-                    window.open(
-                      `https://forms.hackclub.com/scrapyard-signup?event=silicon-valley&email=${email}`,
-                      '_blank'
-                    )
                   }}
                 >
                   <Box
