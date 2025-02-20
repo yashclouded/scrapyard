@@ -192,7 +192,7 @@ export default function SiliconValley() {
 
               objectFit: 'contain'
             }}
-            src="/silicon-valley/scrapyard-title.png"
+            src="/city/silicon-valley/scrapyard-title.png"
             alt="Scrapyard"
           />
         </Box>
