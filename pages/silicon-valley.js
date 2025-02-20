@@ -1463,6 +1463,7 @@ export default function SiliconValley() {
               fontFamily: 'moonblossom',
               textAlign: 'center',
               margin: '8%',
+              marginBottom: '2%',
               fontSize: ['1.8em', '2.2em'],
               textTransform: 'inherit!important',
               paddingY: ['15px', '0px']
@@ -1474,13 +1475,14 @@ export default function SiliconValley() {
             <Link
               href="https://forms.hackclub.com/scrapyard-signup?event=silicon-valley"
               target="_blank"
+              style={{ display: 'block', margin: 'auto', marginBottom: '2rem' }}
             >
               <Box
                 sx={{
                   backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: '100% 100%',
-                  filter: 'drop-shadow(5px 5px 5px #000)',
+                  filter: 'drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.5))',
                   transition: 'transform 0.2s',
                   ':hover': {
                     transform: 'scale(1.1)'
@@ -1489,7 +1491,9 @@ export default function SiliconValley() {
                   padding: 1,
                   my: 3,
                   width: '16rem',
-                  display: 'inline-block'
+                  // display: 'inline-block',
+                  margin: 'auto',
+                  marginBottom: '1rem'
                 }}
               >
                 <Heading
@@ -1509,9 +1513,52 @@ export default function SiliconValley() {
             </Link>
           ) : (
             <>
-              <form onSubmit={e => e.preventDefault()}>
+              <form
+                onSubmit={async e => {
+                  e.preventDefault()
+                  const email = document.getElementById('email').value
+                  if (!email) {
+                    alert('Please enter your email address.')
+                    return
+                  }
+                  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    alert('Please enter a valid email address.')
+                    return
+                  }
+
+                  try {
+                    const response = await fetch('/api/silicon-valley/refer', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                        refer: refer,
+                        email: email
+                      })
+                    })
+
+                    if (!response.ok) {
+                      // throw new Error(`HTTP error! status: ${response.status}`)
+                      // just log the error and continue
+                      console.error('Referral API error:', response.status)
+                    } else {
+                      console.log('Referral request sent successfully')
+                    }
+
+                    // Continue with the form redirect
+                    localStorage.removeItem('sv-refer')
+                    window.open(
+                      `https://forms.hackclub.com/scrapyard-signup?event=silicon-valley&email=${email}`,
+                      '_blank'
+                    )
+                  } catch (error) {
+                    console.error('Referral API error:', error)
+                  }
+                }}
+              >
                 <label
-                  for="email"
+                  htmlFor="email"
                   style={{ marginRight: '10px', fontSize: '2em' }}
                 >
                   Email
@@ -1532,99 +1579,62 @@ export default function SiliconValley() {
                     borderRadius: '5px'
                   }}
                 />
-              </form>
-              <div
-                style={{
-                  textAlign: 'center',
-                  width: '100%',
-                  margin: 'auto',
-                  display: 'flex',
-                  justifyContent: 'center'
-                }}
-              >
-                <Link
-                  href="#"
-                  onClick={async e => {
-                    e.preventDefault()
-                    const email = document.getElementById('email').value
-                    if (!email) {
-                      alert('Please enter your email address.')
-                      return
-                    }
-                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                      alert('Please enter a valid email address.')
-                      return
-                    }
-
-                    try {
-                      const response = await fetch(
-                        '/api/silicon-valley/refer',
-                        {
-                          method: 'POST',
-                          headers: {
-                            'Content-Type': 'application/json'
-                          },
-                          body: JSON.stringify({
-                            refer: refer,
-                            email: email
-                          })
-                        }
-                      )
-
-                      if (!response.ok) {
-                        throw new Error(
-                          `HTTP error! status: ${response.status}`
-                        )
-                      }
-
-                      console.log('Referral request sent successfully')
-
-                      // Continue with the form redirect
-                      localStorage.removeItem('sv-refer')
-                      window.open(
-                        `https://forms.hackclub.com/scrapyard-signup?event=silicon-valley&email=${email}`,
-                        '_blank'
-                      )
-                    } catch (error) {
-                      console.error('Referral API error:', error)
-                    }
+                <div
+                  style={{
+                    textAlign: 'center',
+                    width: '100%',
+                    margin: 'auto',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginBottom: '1rem'
                   }}
                 >
-                  <Box
-                    sx={{
-                      backgroundImage:
-                        "url('/elements/yellow-strip@stretch.svg')",
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: '100% 100%',
-                      filter: 'drop-shadow(5px 5px 5px #000)',
-                      transition: 'transform 0.2s',
-                      ':hover': {
-                        transform: 'scale(1.1)'
-                      },
-                      zIndex: 20,
-                      padding: 1,
-                      my: 3,
+                  <button
+                    type="submit"
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      padding: 0,
+                      cursor: 'pointer',
                       width: '16rem'
                     }}
                   >
-                    <Heading
-                      as="h2"
+                    <Box
                       sx={{
-                        fontFamily: 'moonblossom',
-                        textAlign: 'center',
-                        margin: '8%',
-                        fontSize: ['1.2em', '1.4em'],
-                        textTransform: 'inherit!important',
-                        paddingY: ['15px', '0px'],
-                        width: '100%',
-                        marginLeft: '0'
+                        backgroundImage:
+                          "url('/elements/yellow-strip@stretch.svg')",
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: '100% 100%',
+                        filter: 'drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.5))',
+                        transition: 'transform 0.2s',
+                        ':hover': {
+                          transform: 'scale(1.1)'
+                        },
+                        zIndex: 20,
+                        padding: 1,
+                        my: 3,
+                        width: '16rem'
                       }}
                     >
-                      Continue Sign Up
-                    </Heading>
-                  </Box>
-                </Link>
-              </div>
+                      <Heading
+                        as="h2"
+                        sx={{
+                          fontFamily: 'moonblossom',
+                          textAlign: 'center',
+                          margin: '8%',
+                          fontSize: ['1.2em', '1.4em'],
+                          textTransform: 'inherit!important',
+                          paddingY: ['15px', '0px'],
+                          width: '100%',
+                          marginLeft: '0'
+                        }}
+                      >
+                        Continue Sign Up
+                      </Heading>
+                    </Box>
+                  </button>
+                </div>
+              </form>
             </>
           )}
         </Box>
