@@ -1558,13 +1558,12 @@ export default function SiliconValley() {
 
                     try {
                       const response = await fetch(
-                        'https://scrapyard.dev/api/refer',
+                        '/api/silicon-valley/refer',
                         {
                           method: 'POST',
                           headers: {
                             'Content-Type': 'application/json'
                           },
-                          mode: 'no-cors',
                           body: JSON.stringify({
                             refer: refer,
                             email: email
@@ -1572,9 +1571,13 @@ export default function SiliconValley() {
                         }
                       )
 
-                      // With no-cors mode, we can't read the response
-                      // but we know the request went through if we get here
-                      console.log('Referral request sent')
+                      if (!response.ok) {
+                        throw new Error(
+                          `HTTP error! status: ${response.status}`
+                        )
+                      }
+
+                      console.log('Referral request sent successfully')
 
                       // Continue with the form redirect
                       localStorage.removeItem('sv-refer')
