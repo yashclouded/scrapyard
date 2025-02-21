@@ -152,7 +152,7 @@ export default function istanbul() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              İstanbul - 15-16&nbsp;Mart
+              İstanbul - 14-16&nbsp;Mart
             </Heading>
           </Box>
         </Box>
@@ -202,7 +202,7 @@ export default function istanbul() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=istanbul"
+          href="https://forms.hackclub.com/scrapyard-signup-tr"
           target="_blank"
         >
           <Box
@@ -238,7 +238,45 @@ export default function istanbul() {
             </Heading>
           </Box>
         </Link>
+        <Link
+          href="https://www.instagram.com/scrapyard.34/"
+          target="_blank"
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              position: 'fixed',
+              right: ['10%'],
+              top: ['4%'],
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 30,
+              minWidth: '8em',
+              padding: '15px'
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                padding: ['2%', '8%'],
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                width: '100%'
+              }}
+            >
+              Sosyal Medya
+            </Heading>
+          </Box>
+        </Link>
       </Box>
+      
 
       <Box
         sx={{
@@ -747,6 +785,42 @@ export default function istanbul() {
             >
               Scrapyard İstanbul'a katil!
             </Heading>
+            
+          </Box>
+        </Link>
+        <Link
+          href="https://www.instagram.com/scrapyard.34/"
+          target="_blank"
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 20,
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              Instagramda bizi takip et!
+            </Heading>
+            
           </Box>
         </Link>
         <Heading
