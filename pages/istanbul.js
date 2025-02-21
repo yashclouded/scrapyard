@@ -151,12 +151,7 @@ GENÇLER IÇIN GENÇLER TARAFINDAN!
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-<<<<<<< HEAD
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
               İstanbul - 14-16&nbsp;Mart
-=======
-Istanbul - 15-16&nbsp;Mart
->>>>>>> 645a7f41b68dfadcfa4873ab80b7ad46de6fdbde
             </Heading>
           </Box>
         </Box>
