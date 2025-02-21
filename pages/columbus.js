@@ -29,7 +29,7 @@ const scheduleday2 = [
   { time: '12:00 PM', event: 'Closing ceremony' }
 ]
 
-const Map = dynamic(() => import('../components/Map'), { ssr: false })
+//const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
@@ -61,7 +61,7 @@ export default function Columbus() {
   const [partners, setPartners] = useState([])
 
   useEffect(() => {
-    async function fetchDziamondSponsors() {
+    async function fetchDiamondSponsors() {
       try {
         const response = await fetch(
           'https://MeghanaM4.github.io/scrapyardCMH-data/diamond.json?t=' + Date.now()
@@ -754,7 +754,7 @@ export default function Columbus() {
             mt: 5
           }}
         >
-          <Map />
+          {/* <Map /> */}
         </Box>
       </Box>
 
