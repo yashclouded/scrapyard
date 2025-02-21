@@ -14,7 +14,8 @@ module.exports = withMDX({
     },
     {
       source: '/taiwan',
-      destination: 'https://scrapyard.hackit.tw'
+      destination: 'https://scrapyard.hackit.tw',
+      permanent: true
     },
     {
       source: '/siliconvalley',
