@@ -54,6 +54,7 @@ export default function SiliconValley() {
   const [silverSponsors, setSilverSponsors] = useState([])
   const [goldSponsors, setGoldSponsors] = useState([])
   const [partnerSponsors, setPartnerSponsors] = useState([])
+  const [refer, setRefer] = useState(null)
 
   useEffect(() => {
     async function fetchSchedule() {
@@ -135,6 +136,21 @@ export default function SiliconValley() {
     fetchPartnerSponsors()
   }, [])
 
+  useEffect(() => {
+    // Move all window-related code inside useEffect
+    const urlParams = new URLSearchParams(window.location.search)
+    const referParam = urlParams.get('refer')
+
+    if (referParam) {
+      localStorage.setItem('sv-refer', referParam)
+      setRefer(referParam)
+    } else {
+      const storedRefer = localStorage.getItem('sv-refer')
+      setRefer(storedRefer)
+    }
+    console.log('refer', refer)
+  }, []) // Empty dependency array means this runs once on mount
+
   return (
     <Box
       sx={{
@@ -176,7 +192,7 @@ export default function SiliconValley() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="/city/silicon-valley/scrapyard-title.png"
             alt="Scrapyard"
           />
         </Box>
@@ -196,7 +212,7 @@ export default function SiliconValley() {
               // paddingLeft: "7%",
               display: 'block',
 
-              width: 'min(500px, calc(100vw - 30px))',
+              width: 'min(520px, calc(100vw - 10px))',
               filter: 'drop-shadow(5px 5px 5px #000000AA)',
               position: 'relative',
               zIndex: 20
@@ -207,10 +223,18 @@ export default function SiliconValley() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%'
+                margin: '8%',
+                marginBottom: '6%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Create. Compete.{' '}
+              <span
+                style={{
+                  WebkitTextStroke: '0.5px black'
+                }}
+              >
+                Connect.
+              </span>
             </Heading>
           </Box>
           <Box
@@ -220,7 +244,7 @@ export default function SiliconValley() {
               backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
               backgroundRepeat: 'no-repeat',
               backgroundSize: '100% 100%',
-              width: '75%',
+              width: '85%',
               position: 'relative',
               zIndex: 30,
               top: '-15%',
@@ -243,10 +267,45 @@ export default function SiliconValley() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Location TBA - March&nbsp;15-16
+              March&nbsp;15-16 • Hacker Dojo • Mountain View, CA
             </Heading>
           </Box>
         </Box>
+        <a href="https://discord.gg/32BsffvEf4" target="_blank">
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              position: 'absolute',
+              left: ['calc(50% - 10em)'],
+              top: ['calc(50% + 200px)'],
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              zIndex: 30,
+              minWidth: '20em',
+              padding: '15px',
+              paddingY: '0'
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                padding: ['2%', '8%'],
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                width: '100%'
+              }}
+            >
+              Join our Discord!
+            </Heading>
+          </Box>
+        </a>
         <Box
           sx={{
             position: 'absolute',
@@ -292,8 +351,14 @@ export default function SiliconValley() {
             alt="Pink paper star"
           />
         </Box>
-        {/* TODO: INTEREST FORM */}
-        <Link href="https://forms.hackclub.com/scrapyardsv" target="_blank">
+        <Link
+          href={
+            refer !== null && refer !== undefined
+              ? '#signup'
+              : 'https://forms.hackclub.com/scrapyard-signup?event=siliconvalley'
+          }
+          target={refer !== null && refer !== undefined ? '_self' : '_blank'}
+        >
           <Box
             sx={{
               backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
@@ -405,7 +470,7 @@ export default function SiliconValley() {
               }}
             >
               Scrapyard Silicon Valley is a hackathon for high schoolers
-              happening in Silicon Valley, where you can make the stupidest
+              happening in Silicon Valley, where you can make the craziest
               things you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
@@ -1051,65 +1116,161 @@ export default function SiliconValley() {
 
       <Box
         sx={{
-          // backgroundImage: "url(/backgrounds/confetti.png)",
+          width: '100%',
+          background: [
+            "url('/backgrounds/bulletin@vertical.svg')",
+            "url('/backgrounds/bulletin@vertical.svg')",
+            "url('/backgrounds/bulletin.svg')"
+          ],
+          backgroundSize: 'cover!important',
+          display: 'block',
+          justifyContent: 'center',
           alignItems: 'center',
-          display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          overflow: 'visible',
+          gap: '20px',
+          height: ['151.37794951vw', '151.37794951vw', '64.45447188vw'],
+          position: 'relative'
         }}
       >
         <Box
           sx={{
-            backgroundImage: 'url(/elements/ripped-paper-strip.svg)',
-            // backgroundSize: "cover!important",
-            // display: "block",
-            // width: "30vw",
-            height: '30vh',
-            width: ['90vw', '70vw', '46.8vw'],
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0vh',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
             display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
+            width: '100%',
+            height: '100%',
+            flexWrap: 'wrap',
+            p: '4vw',
+            position: 'relative',
+            overflow: 'visible',
+            justifyContent: ['space-around', 'space-around', null],
+            pb: '12vw'
           }}
         >
-          <Heading
-            as="h1"
+          <Box
             sx={{
-              mx: '1vw',
-              fontWeight: 'lighter',
-              textAlign: 'center'
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'start',
+              height: 'min-content'
             }}
           >
-            CAN'T MAKE IT TO SILICON VALLEY?
-          </Heading>
-        </Box>
-        <Heading
-          as="h2"
-          sx={{
-            fontSize: '1.5em',
-            fontFamily: 'moonblossom',
-            color: 'white',
-            textAlign: 'center',
-            mx: '5vw'
-          }}
-        >
-          THERE ARE 100+ OTHER SCRAPYARD EVENTS HAPPENING AROUND THE WORLD!
-        </Heading>
-        <Box
-          sx={{
-            width: ['100%', '80%'],
-            height: '75vh',
-            alignItems: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            mb: '10vh',
-            mt: 5
-          }}
-        >
-          <Map />
+            <Box
+              sx={{
+                background: "url('/elements/stapled-paper.png')",
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100px',
+                width: '400px'
+              }}
+            >
+              <Heading
+                as="h2"
+                sx={{
+                  textAlign: 'center'
+                }}
+              >
+                Our last event: Counterspell
+              </Heading>
+            </Box>
+          </Box>
+          <Box
+            as="a"
+            href="https://assemble.hackclub.com"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/3polaroid1.png')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.3)', 'scale(1.3)', 'scale(1.3)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+              transition: 'transform 0.2s ease-in-out',
+              ':hover': {
+                transform: [
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)'
+                ]
+              }
+            }}
+          ></Box>
+          <Box
+            as="a"
+            href="https://outernet.hackclub.com"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/2polaroid2.png')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.3)', 'scale(1.3)', 'scale(1.3)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+              marginTop: '7vw',
+              transition: 'transform 0.2s ease-in-out',
+              ':hover': {
+                transform: [
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)'
+                ]
+              }
+            }}
+          ></Box>
+          <Box
+            as="a"
+            href="https://wonderland.hackclub.com"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/1polaroid3.png')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.3)', 'scale(1.3)', 'scale(1.3)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+              transition: 'transform 0.2s ease-in-out',
+              ':hover': {
+                transform: [
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)'
+                ]
+              }
+            }}
+          ></Box>
+          <Box
+            as="a"
+            href="https://apocalypse.hackclub.com"
+            target="_blank"
+            sx={{
+              background:
+                "url('https://cloud-j7u7wk2yt-hack-club-bot.vercel.app/0polaroid4.png')",
+              width: ['35.5vw', '35.5vw', '22.5vw'],
+              height: ['35.5vw', '35.5vw', '22.5vw'],
+              transform: ['scale(1.3)', 'scale(1.3)', 'scale(1.3)'],
+              backgroundSize: 'contain',
+              backgroundRepeat: 'no-repeat',
+              display: 'block',
+              marginTop: '7vw',
+              transition: 'transform 0.2s ease-in-out',
+              ':hover': {
+                transform: [
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)',
+                  'scale(1.3) rotate(3deg)'
+                ]
+              }
+            }}
+          ></Box>
         </Box>
       </Box>
 
@@ -1219,8 +1380,8 @@ export default function SiliconValley() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:silicon-valley@scrapyard.hackclub.com">
-                  silicon-valley@scrapyard.hackclub.com
+                <Link href="mailto:siliconvalley@scrapyard.hackclub.com">
+                  siliconvalley@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -1229,8 +1390,8 @@ export default function SiliconValley() {
               <>
                 Contact us! Feel free to reach out to us in the #scrapyard
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:silicon-valley@scrapyard.hackclub.com">
-                  silicon-valley@scrapyard.hackclub.com
+                <Link href="mailto:siliconvalley@scrapyard.hackclub.com">
+                  siliconvalley@scrapyard.hackclub.com
                 </Link>
                 .
               </>
@@ -1281,41 +1442,202 @@ export default function SiliconValley() {
             )
           })}
         </Grid>
-        <Link
-          // TODO: Interest form
-          href="https://forms.hackclub.com/scrapyardsv"
-          target="_blank"
+        <span style={{ display: 'block', height: '100px' }} id="signup"></span>
+        <Box
+          sx={{
+            textAlign: 'center',
+            backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
+            padding: '15px',
+            paddingY: '0',
+            width: '100%',
+            maxWidth: '30rem',
+            margin: 'auto',
+            zIndex: 20
+          }}
         >
-          <Box
+          <Heading
+            as="h2"
             sx={{
-              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '100% 100%',
-              filter: 'drop-shadow(5px 5px 5px #000)',
-              transition: 'transform 0.2s',
-              ':hover': {
-                transform: 'scale(1.1)'
-              },
-              zIndex: 20,
-              padding: 1,
-              my: 3
+              fontFamily: 'moonblossom',
+              textAlign: 'center',
+              margin: '8%',
+              marginBottom: '2%',
+              fontSize: ['1.8em', '2.2em'],
+              textTransform: 'inherit!important',
+              paddingY: ['15px', '0px']
             }}
           >
-            <Heading
-              as="h2"
-              sx={{
-                fontFamily: 'moonblossom',
-                textAlign: 'center',
-                margin: '8%',
-                fontSize: ['1.2em', '1.4em'],
-                textTransform: 'inherit!important',
-                paddingY: ['15px', '0px']
-              }}
+            Sign Up for Scrapyard Silicon Valley
+          </Heading>
+          {!refer ? (
+            <Link
+              href="https://forms.hackclub.com/scrapyard-signup?event=siliconvalley"
+              target="_blank"
+              style={{ display: 'block', margin: 'auto', marginBottom: '2rem' }}
             >
-              SIGN UP FOR SCRAPYARD SILICON VALLEY
-            </Heading>
-          </Box>
-        </Link>
+              <Box
+                sx={{
+                  backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: '100% 100%',
+                  filter: 'drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.5))',
+                  transition: 'transform 0.2s',
+                  ':hover': {
+                    transform: 'scale(1.1)'
+                  },
+                  zIndex: 20,
+                  padding: 1,
+                  my: 3,
+                  width: '16rem',
+                  // display: 'inline-block',
+                  margin: 'auto',
+                  marginBottom: '1rem'
+                }}
+              >
+                <Heading
+                  as="h2"
+                  sx={{
+                    fontFamily: 'moonblossom',
+                    textAlign: 'center',
+                    margin: '8%',
+                    fontSize: ['1.2em', '1.4em'],
+                    textTransform: 'inherit!important',
+                    paddingY: ['15px', '0px']
+                  }}
+                >
+                  SIGN UP
+                </Heading>
+              </Box>
+            </Link>
+          ) : (
+            <>
+              <form
+                onSubmit={async e => {
+                  e.preventDefault()
+                  const email = document.getElementById('email').value
+                  if (!email) {
+                    alert('Please enter your email address.')
+                    return
+                  }
+                  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    alert('Please enter a valid email address.')
+                    return
+                  }
+
+                  try {
+                    const response = await fetch('/api/silicon-valley/refer', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                        refer: refer,
+                        email: email
+                      })
+                    })
+
+                    if (!response.ok) {
+                      // throw new Error(`HTTP error! status: ${response.status}`)
+                      // just log the error and continue
+                      console.error('Referral API error:', response.status)
+                    } else {
+                      console.log('Referral request sent successfully')
+                    }
+
+                    // Continue with the form redirect
+                    localStorage.removeItem('sv-refer')
+                    window.open(
+                      `https://forms.hackclub.com/scrapyard-signup?event=siliconvalley&email=${email}`,
+                      '_blank'
+                    )
+                  } catch (error) {
+                    console.error('Referral API error:', error)
+                  }
+                }}
+              >
+                <label
+                  htmlFor="email"
+                  style={{ marginRight: '10px', fontSize: '2em' }}
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="fiona@hackclub.com"
+                  style={{
+                    width: '90%',
+                    height: '30px',
+                    fontFamily: 'inherit',
+                    fontSize: '1.5em',
+                    textAlign: 'center',
+                    border: 'none',
+                    outline: 'none',
+                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                    borderRadius: '5px'
+                  }}
+                />
+                <div
+                  style={{
+                    textAlign: 'center',
+                    width: '100%',
+                    margin: 'auto',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginBottom: '1rem'
+                  }}
+                >
+                  <button
+                    type="submit"
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      padding: 0,
+                      cursor: 'pointer',
+                      width: '16rem'
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        backgroundImage:
+                          "url('/elements/yellow-strip@stretch.svg')",
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: '100% 100%',
+                        filter: 'drop-shadow(5px 5px 5px rgb(0, 0, 0, 0.5))',
+                        transition: 'transform 0.2s',
+                        ':hover': {
+                          transform: 'scale(1.1)'
+                        },
+                        zIndex: 20,
+                        padding: 1,
+                        my: 3,
+                        width: '16rem'
+                      }}
+                    >
+                      <Heading
+                        as="h2"
+                        sx={{
+                          fontFamily: 'moonblossom',
+                          textAlign: 'center',
+                          margin: '8%',
+                          fontSize: ['1.2em', '1.4em'],
+                          textTransform: 'inherit!important',
+                          paddingY: ['15px', '0px'],
+                          width: '100%',
+                          marginLeft: '0'
+                        }}
+                      >
+                        Continue Sign Up
+                      </Heading>
+                    </Box>
+                  </button>
+                </div>
+              </form>
+            </>
+          )}
+        </Box>
         <Heading
           as="h2"
           sx={{
