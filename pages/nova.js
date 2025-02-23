@@ -54,15 +54,25 @@ export default function NoVA() {
 						let times = e['time']
 						let date = new Date(times['start'])
 
-						let ampm = "AM";
-						if(date.getHours() > 12) {
-							date.setHours(date.getHours() - 12);
-							ampm = "PM";
-						}
+						let timeString = "";
 
-						console.log(date)
+						let ampm = "AM";
+						if(date.getUTCHours() > 13) {
+							timeString += date.getUTCHours() - 12;
+							ampm = "PM";	
+						} else if (date.getUTCHours() === 0) { 
+							timeString += "12";
+						} else {
+							timeString += date.getUTCHours();
+						}
+						
+
+						timeString += `:${String(date.getUTCMinutes()).padStart(2, '0')} ${ampm}`;
+
+						// ${date.getUTCHours()}:${String(date.getUTCMinutes()).padStart(2, '0')} ${ampm}
+						console.log(e.title + " : "+ date.getUTCHours());
 						return {
-							time: `${date.getUTCHours()}:${String(date.getUTCMinutes()).padStart(2, '0')} ${ampm}`, // Formats minutes with a leading 0
+							time: timeString, // Formats minutes with a leading 0
 							event: e.title || 'Untitled Event' // Fallback for missing titles
 						};
 					} catch (error) {
