@@ -41,5 +41,5 @@ export default async function handler (req, res) {
 
 
 
-    return res.redirect("https://wrapped-maps.hackclub.dev/api/annotations?latitude=39.369935&longitude=-97.384106&zoom=3&size=600x300&annotations=" + JSON.stringify(annotations));
+    return res.status(200).json({ url: "https://wrapped-maps.hackclub.dev/api/annotations?latitude=39.369935&longitude=-97.384106&zoom=3&size=600x300&annotations=" + JSON.stringify(annotations) });
 }
