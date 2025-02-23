@@ -41,6 +41,11 @@ module.exports = withMDX({
       source: '/san-francisco',
       destination: 'https://scrapyardsf.com',
       permanent: true
+    },
+    {
+      source: '/boston/home',
+      destination: 'https://scrapyard.hackclub.com/boston',
+      permanent: true
     }
   ]
 })
