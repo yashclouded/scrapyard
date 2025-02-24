@@ -40,7 +40,7 @@ import dynamic from 'next/dynamic'
 //   { time: '12:00 PM', event: 'Closing ceremony' }
 // ]
 
-const Map = dynamic(() => import('../../components/Map'), { ssr: false })
+const Map = dynamic(() => import('../components/Map'), { ssr: false })
 
 const Flag = () => (
   <Link
