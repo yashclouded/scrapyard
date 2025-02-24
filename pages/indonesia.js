@@ -209,7 +209,7 @@ export default function ExampleCity() {
         </Box>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=indonesia"
+          href="https://airtable.com/appigKiF7GbVISAlg/pagCE3QevJXzkMsx8/form"
           target="_blank"
         >
           <Box
@@ -843,7 +843,7 @@ export default function ExampleCity() {
         </Grid>
         <Link
           // TODO: Change [SLUG] to your event's slug (lowercase, dashed version of your event name), such as san-francisco for Scrapyard San Francisco
-          href="https://forms.hackclub.com/scrapyard-signup?event=indonesia"
+          href="https://airtable.com/appigKiF7GbVISAlg/pagCE3QevJXzkMsx8/form"
           target="_blank"
         >
           <Box

@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch('https://scrapyard.dev/api/refer', {
+    const response = await fetch('https://id.scrapyard.dev/api/refer', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
