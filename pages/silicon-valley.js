@@ -165,6 +165,20 @@ export default function SiliconValley() {
     >
       <Head>
         <title>Scrapyard Silicon Valley</title>
+        <meta property="og:title" content="Scrapyard Silicon Valley" />
+        <meta
+          property="og:description"
+          content="Join us March 15-16 at Hacker Dojo in Mountain View, CA for a weekend of engineering! Build projects and win prizes."
+        />
+        <meta
+          property="og:image"
+          content="https://scrapyard.hackclub.com/city/silicon-valley/preview.png"
+        />
+        <meta
+          property="og:url"
+          content="https://scrapyard.hackclub.com/silicon-valley"
+        />
+        <meta property="og:type" content="website" />
       </Head>
       <Flag />
       <Box
