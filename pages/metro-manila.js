@@ -104,7 +104,7 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
+            src="\city\manila\scrapyard-mla.png"
             alt="Scrapyard"
           />
         </Box>
