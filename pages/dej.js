@@ -22,7 +22,7 @@ Note: To test your changes locally, use `yarn install` and `yarn dev`.
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
-import styles from './cluj-napoca.module.css'
+import styles from './dej.module.css'
 
 // TODO: Change this schedule to your own!
 const schedule = [
@@ -81,7 +81,7 @@ export default function ExampleCity() {
     >
       <Head>
         {/* TODO: Change [EXAMPLECITY] to your event's city */}
-        <title>Scrapyard Cluj-Napoca</title>
+        <title>Scrapyard Dej</title>
       </Head>
       <Flag />
       <Box
@@ -109,8 +109,8 @@ export default function ExampleCity() {
 
               objectFit: 'contain'
             }}
-            src="/city/cluj-napoca/logo.png"
-            alt="Scrapyard Cluj-Napoca"
+            src="/city/dej/logo.png"
+            alt="Scrapyard Dej"
           />
         </Box>
         <Box
@@ -176,7 +176,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Cluj-Napoca - Martie&nbsp;15-16
+              Dej - Martie&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -226,7 +226,7 @@ export default function ExampleCity() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=cluj-napoca"
+          href="https://forms.hackclub.com/scrapyard-signup?event=dej"
           target="_blank"
         >
           <Box
@@ -334,7 +334,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Ce înseamnă Scrapyard Cluj-Napoca?
+              Ce înseamnă Scrapyard Dej?
             </Heading>
             <p
               style={{
@@ -342,8 +342,8 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard Cluj-Napoca este un hackathon pentru elevii de liceu
-              care va avea loc în Cluj-Napoca, unde vei crea cele mai inovative
+              Scrapyard Dej este un hackathon pentru elevii de liceu
+              care va avea loc în Dej la <a href='https://maps.app.goo.gl/tstxJ3fwrQptRYt99'>Colegiul Național Andrei Mureșanu</a>, unde vei crea cele mai inovative
               proiecte alături de alți elevi și mentori! Poți crea orice, chiar
               și{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
@@ -352,7 +352,7 @@ export default function ExampleCity() {
               </Link>
               , sau idei pe care nu le consideri a fi neapărat utile, dar sunt
               ingenioase. Indiferent de nivelul tău de experiență, Scrapyard
-              Cluj-Napoca are nevoie de tine și de ideile tale nebunești!
+              Dej are nevoie de tine și de ideile tale nebunești!
             </p>
           </Box>
         </Box>
@@ -451,7 +451,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            CE SE VA ÎNTÂMPLA LA SCRAPYARD CLUJ-NAPOCA?
+            CE SE VA ÎNTÂMPLA LA SCRAPYARD DEJ?
           </Heading>
         </Box>
         <Heading
@@ -465,7 +465,7 @@ export default function ExampleCity() {
         >
           {/* TODO: Change [EXAMPLECITY] to your event's city */}
           {/* TODO: Change [DURATION] to your event's duration (12hour, 24hour, 2-day) */}
-          Scrapyard Cluj-Napoca este un eveniment de 24 de ore - Aici este
+          Scrapyard Dej este un eveniment de 24 de ore - Aici este
           orarul estimativ!
         </Heading>
         <Box
@@ -558,7 +558,7 @@ export default function ExampleCity() {
             }}
           >
             {/* TODO: Change [EXAMPLECITY] to your event's city */}
-            Nu vei putea ajunge la CLuj-Napoca?
+            Nu vei putea ajunge la Dej?
           </Heading>
         </Box>
         <Heading
@@ -701,9 +701,9 @@ export default function ExampleCity() {
                 Suntem aici să te ajutăm! Ghidul nostru pentru părinți va fi
                 publicat în curând, dar pot să ne scrie la{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:cluj-napoca.scrapyard@hackclub.com">
+                <Link href="mailto:dej.scrapyard@hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  cluj-napoca.scrapyard@hackclub.com
+                  dej.scrapyard@hackclub.com
                 </Link>{' '}
                 pentru întrebări.
               </>
@@ -715,11 +715,11 @@ export default function ExampleCity() {
                 <Link href="https://hackclub.slack.com">
                   slack-ul Hack Club
                 </Link>{' '}
-                în canalul #scrapyard-cluj-napoca sau pe adresa de email{' '}
+                în canalul #scrapyard-dej sau pe adresa de email{' '}
                 {/* TODO: Change this email to your event's email */}
-                <Link href="mailto:cluj-napoca.scrapyard@hackclub.com">
+                <Link href="mailto:dej.scrapyard@hackclub.com">
                   {/* TODO: Change this email to your event's email */}
-                  cluj-napoca.scrapyard@hackclub.com
+                  dej.scrapyard@hackclub.com
                 </Link>
                 .
               </>
@@ -772,7 +772,7 @@ export default function ExampleCity() {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=cluj-napoca"
+          href="https://forms.hackclub.com/scrapyard-signup?event=dej"
           target="_blank"
         >
           <Box
@@ -802,7 +802,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              ÎNSCRIE-TE LA SCRAPYARD CLUJ-NAPOCA
+              ÎNSCRIE-TE LA SCRAPYARD DEJ
             </Heading>
           </Box>
         </Link>
