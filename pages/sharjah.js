@@ -2,16 +2,16 @@ import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-const schedule = [
-  // Day 1
+const schedule1 = [
   { time: '11:00 AM - 11:30 AM', event: 'Opening Ceremony' },
   { time: '11:30 AM - 2:30 PM', event: 'Coding & Development' },
   { time: '2:30 PM - 3:00 PM', event: 'Break' },
   { time: '3:00 PM - 5:30 PM', event: 'Coding & Development' },
   { time: '5:30 PM - 6:30 PM', event: 'Bounty Challenge' },
   { time: '6:30 PM - 7:00 PM', event: 'Iftar' },
-  { time: '7:00 PM - 8:00 PM', event: 'Coding & Development' },
-  // Day 2
+  { time: '7:00 PM - 8:00 PM', event: 'Coding & Development' }
+  ]
+const schedule2 = [
   { time: '11:00 AM - 11:15 AM', event: 'Morning Kickoff' },
   { time: '11:15 AM - 2:00 PM', event: ' Coding & Development' },
   { time: '2:00 PM - 2:30 PM', event: 'Break' },
@@ -444,7 +444,7 @@ export default function ExampleCity() {
             flexDirection: 'column',
             alignItems: 'center',
             width: ['90%', '70%'],
-            fontSize: '2em',
+            fontSize: '1.2em',
             gap: '0.2em',
             color: 'black',
             my: 5,
@@ -455,7 +455,41 @@ export default function ExampleCity() {
             boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
           }}
         >
-          {schedule.map((item, i) => (
+          {schedule1.map((item, i) => (
+            <div
+              style={{
+                display: 'flex',
+                width: '100%',
+                alignItems: 'center'
+              }}
+              key={i}
+            >
+              <Heading
+                as="p"
+                sx={{
+                  display: 'inline',
+                  width: ['min-content', 'max-content'],
+                  fontSize: '2rem',
+                  fontFamily: 'p22-stanyan'
+                }}
+              >
+                {item.event}
+              </Heading>
+              <Box
+                sx={{
+                  mx: 2,
+                  transform: 'translateY(0.75rem)',
+                  borderWidth: 0,
+                  borderBottomWidth: '0.35rem',
+                  borderStyle: 'dotted',
+                  flexGrow: '1',
+                  display: 'inline',
+                  height: 1
+                }}
+              ></Box>
+              <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
+            </div>
+> {schedule2.map((item, i) => (
             <div
               style={{
                 display: 'flex',
@@ -654,8 +688,8 @@ export default function ExampleCity() {
               <>
                 We’re here to help! Our parents guide will be released soon, but
                 they can reach out to us at{' '}
-                <Link href="mailto:Nirt_12023@outlook.com">
-                  Nirt_12023@outlook.com
+                <Link href="mailto:sharjah@scrapyard.hackclub.com">
+                  sharjah@scrapyard.hackclub.com
                 </Link>{' '}
                 for questions.
               </>
@@ -664,8 +698,8 @@ export default function ExampleCity() {
               <>
                 Contact us! Feel free to reach out to us in the scrapyard-shj
                 channel on the Hack Club slack or email us at{' '}
-                <Link href="mailto:Nirt_12023@outlook.com">
-                  Nirt_12023@outlook.com
+                <Link href="mailto:sharjah@scrapyard.hackclub.com">
+                  sharjah@scrapyard.hackclub.com
                 </Link>
                 .
               </>
