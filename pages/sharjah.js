@@ -10,7 +10,7 @@ const schedule1 = [
   { time: '5:30 PM - 6:30 PM', event: 'Bounty Challenge' },
   { time: '6:30 PM - 7:00 PM', event: 'Iftar' },
   { time: '7:00 PM - 8:00 PM', event: 'Coding & Development' }
-  ]
+]
 const schedule2 = [
   { time: '11:00 AM - 11:15 AM', event: 'Morning Kickoff' },
   { time: '11:15 AM - 2:00 PM', event: ' Coding & Development' },
@@ -489,7 +489,8 @@ export default function ExampleCity() {
               ></Box>
               <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
             </div>
-> {schedule2.map((item, i) => (
+          ))}
+          {schedule2.map((item, i) => (
             <div
               style={{
                 display: 'flex',
