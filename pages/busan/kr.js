@@ -217,7 +217,7 @@ export default function ExampleCity({  }) {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
+          href="https://forms.hackclub.com/scrapyard-signup-kr?event=busan"
           target="_blank"
         >
           <Box
@@ -249,7 +249,7 @@ export default function ExampleCity({  }) {
                 width: '100%'
               }}
             >
-              SIGN&nbsp;UP
+              참가하기
             </Heading>
           </Box>
         </Link>
@@ -697,6 +697,20 @@ export default function ExampleCity({  }) {
               />
             </Link>
           </Box>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <Link href="https://www.busanbank.co.kr/">
+              <Image
+                src="/city/busan/sponsors/bnk.svg"
+                sx={{
+                  maxHeight: '150px'
+                }}
+              />
+            </Link>
+          </Box>
         </Grid>
       </Box>
 
@@ -857,7 +871,7 @@ export default function ExampleCity({  }) {
           })}
         </Grid>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=busan"
+          href="https://forms.hackclub.com/scrapyard-signup-kr?event=busan"
           target="_blank"
         >
           <Box

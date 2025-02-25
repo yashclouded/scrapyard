@@ -93,10 +93,11 @@ export default function Home() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%'
+                margin: '8%',
+                fontSize: "22px"
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -129,7 +130,7 @@ export default function Home() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              100+&nbsp;Cities&nbsp;worldwide&nbsp;–&nbsp;March&nbsp;15-16
+              Austin,&nbsp;Texas&nbsp;–&nbsp;March&nbsp;1-2
             </Heading>
             <Heading
               as="h2"
@@ -144,9 +145,76 @@ export default function Home() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Austin,&nbsp;Texas&nbsp;–&nbsp;March&nbsp;1-2
+              100+&nbsp;Cities&nbsp;worldwide&nbsp;–&nbsp;March&nbsp;15-16
             </Heading>
           </Box>
+
+          <Link
+          href="https://forms.hackclub.com/scrapyard-flagship?utm_content=hero"
+          target="_blank"
+          style={{
+
+                textDecoration: "none",
+                pointerEvents: "auto"
+          }}
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.5)'
+              },
+              transform: 'scale(1.3)',
+              zIndex: 30,
+              minWidth: '8em',
+              padding: '15px',
+                textDecoration: "none",
+                pointerEvents: "auto",
+                position: "relative",
+                top: 0,
+                left: 0,
+
+
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'p22-stanyan',
+                fontWeight: "bold",
+                textAlign: 'center',
+                fontSize: ['1.4em', '1.6em'],
+                textTransform: 'inherit!important',
+                width: '100%',
+                textDecoration: "none",
+                pointerEvents: "auto"
+
+              }}
+            >
+              Sign&nbsp;up&nbsp;for&nbsp;Scrapyard 
+            </Heading>
+          </Box>
+        </Link>
+        
+        </Box>
+        <Box sx={{
+          position: "absolute",
+          bottom: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 30,
+          color: "white"
+        }}>
+            <h1 style={{
+              fontSize: "70px",fontFamily: "p22-stanyan",color: "#ffffffdd",
+              cursor: "pointer"
+            }} onClick={() => {
+              document.getElementById("about").scrollIntoView({behavior: "smooth"})
+            }}>⬇︎</h1>
         </Box>
         <Box
           sx={{
@@ -194,7 +262,7 @@ export default function Home() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-signup"
+          href="https://forms.hackclub.com/scrapyard-flagship?utm_content=corner"
           target="_blank"
         >
           <Box
@@ -298,7 +366,7 @@ export default function Home() {
             <Heading
               sx={{
                 textDecoration: 'underline'
-              }}
+              }} id="about"
             >
               What's Scrapyard?
             </Heading>
@@ -631,10 +699,11 @@ export default function Home() {
               </>
             ),
 
-            'Where is Scrapyard hosted?': (
+            'When & where is Scrapyard hosted?': (
               <>
-                The Scrapyard flagship will be hosted in Austin, Texas on March
-                1-2. Find the closest distributed event to you on March 15-16!
+                The Scrapyard flagship will be hosted in Austin, Texas from 12pm
+                on March 1st to 3pm on March 2nd. Find the closest distributed
+                event to you on March 15-16!
               </>
             ),
             'Who can participate in Scrapyard?': (
@@ -648,15 +717,17 @@ export default function Home() {
               <>
                 Yep! Food, swag and good vibes are all included. Plus, if you’re
                 joining us from afar, we’ll cover the cost of gas or a bus /
-                train ticket. Information about travel stipends for our Austin,
-                Texas flagship will be released soon.
+                train ticket. Travel stipends for our Austin, Texas flagship are
+                now closed.
               </>
             ),
             'What do I need?': (
               <>
                 Your laptop, chargers, toiletries, sleeping bags, and an open
                 mind! If you plan to work on a hardware project, bring the tools
-                you'll need.
+                you'll need. If you're travelling via plane or internationally,
+                make sure to bring any legal documents (such as a passport) as
+                well.
               </>
             ),
             'I’m not good at coding. Can I still participate?': (
@@ -697,8 +768,11 @@ export default function Home() {
             ),
             'What if my parents are concerned?': (
               <>
-                We’re here to help! Our parents guide will be released soon, but
-                they can reach out to us at{' '}
+                We’re here to help! You can see our{' '}
+                <Link href="https://drive.google.com/file/d/1yG1m5fPa2qzdKbVMtxbK7hIXexBk4uY0/view?usp=sharing">
+                  parent's guide here
+                </Link>
+                , or they can reach out to us at{' '}
                 <Link href="mailto:scrapyard@hackclub.com">
                   scrapyard@hackclub.com
                 </Link>{' '}

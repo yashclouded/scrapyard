@@ -143,7 +143,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -176,7 +176,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Cambridge - March&nbsp;15-16
+              Raspberry Pi, Cambridge - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -339,7 +339,7 @@ export default function ExampleCity() {
                 fontSize: '1.5em'
               }}
             >
-              Scrapyard Cambridge is a hackathon for high schoolers happening in
+              Scrapyard Cambridge, held at the Raspberry Pi Foundation, is a hackathon for high schoolers happening in
               Cambridge, where you can make the stupidest things you can think
               of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
