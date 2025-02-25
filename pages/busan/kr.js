@@ -125,7 +125,7 @@ export default function ExampleCity({  }) {
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'JetBrains Mono',
+                fontFamily: 'moonblossom',
                 textAlign: 'center',
                 margin: '8%',
                 fontSize: '23px'
@@ -155,7 +155,7 @@ export default function ExampleCity({  }) {
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'JetBrains Mono',
+                fontFamily: 'p22-stanyan',
                 mx: '8%',
                 p: 0,
                 wordBreak: 'keep-all',
@@ -241,15 +241,15 @@ export default function ExampleCity({  }) {
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'JetBrains Mono',
+                fontFamily: 'moonblossom',
                 textAlign: 'center',
-                padding: ['2%', '4%'],
+                padding: ['2%', '8%'],
                 fontSize: ['1.2em', '1.4em'],
                 textTransform: 'inherit!important',
                 width: '100%'
               }}
             >
-              참가하기
+              SIGN&nbsp;UP
             </Heading>
           </Box>
         </Link>
@@ -320,16 +320,14 @@ export default function ExampleCity({  }) {
           >
             <Heading
               sx={{
-                textDecoration: 'underline',
-                fontFamily: 'JetBrains Mono'
+                textDecoration: 'underline'
               }}
             >
               Scrapyard 부산이 뭐냐구요?
             </Heading>
             <p
               style={{
-                fontSize: '1.5em',
-                fontFamily: 'JetBrains Mono'
+                fontSize: '1.5em'
               }}
             >
               Scrapyard 부산은 부산에서 열리는, 당신이 생각할 수 있는 가장 엉뚱한 걸 개발할 수 있는 고등학생들을 위한 해커톤입니다. 아무거나 상관없다!{' '}
@@ -431,8 +429,7 @@ export default function ExampleCity({  }) {
             sx={{
               mx: '1vw',
               fontWeight: 'lighter',
-              textAlign: 'center',
-              fontFamily: 'JetBrains Mono',
+              textAlign: 'center'
             }}
           >
             Scrapyard 부산에서는 뭘 하나요?
@@ -442,7 +439,7 @@ export default function ExampleCity({  }) {
           as="h2"
           sx={{
             fontSize: '1.5em',
-            fontFamily: 'JetBrains Mono',
+            fontFamily: 'moonblossom',
             color: 'white',
             textAlign: 'center'
           }}
@@ -481,8 +478,7 @@ export default function ExampleCity({  }) {
                   display: 'inline',
                   width: ['min-content', 'max-content'],
                   fontSize: '2rem',
-                  fontFamily: 'JetBrains Mono',
-                  minWidth: '150px'
+                  fontFamily: 'p22-stanyan'
                 }}
               >
                 {item.event}
@@ -536,8 +532,7 @@ export default function ExampleCity({  }) {
             sx={{
               mx: '1vw',
               fontWeight: 'lighter',
-              textAlign: 'center',
-              fontFamily: 'JetBrains Mono',
+              textAlign: 'center'
             }}
           >
             오시는 법
@@ -550,8 +545,7 @@ export default function ExampleCity({  }) {
             fontFamily: 'moonblossom',
             color: 'white',
             textAlign: 'center',
-            mx: '5vw',
-            fontFamily: 'JetBrains Mono',
+            mx: '5vw'
           }}
         >
           부산외국인학교, 부산광역시 해운대구 대천로67번길 45 우편번호 49094
@@ -599,16 +593,14 @@ export default function ExampleCity({  }) {
           as="h1"
           sx={{
             position: 'relative',
-            mb: '-20px',
-            fontFamily: 'JetBrains Mono',
+            mb: '-20px'
           }}
         >
           스폰서
         </Heading>
         <p
           style={{
-            fontSize: '1.5em',
-            fontFamily: 'JetBrains Mono',
+            fontSize: '1.5em'
           }}
         >
           Scrapyard는 이분들의 후원덕분에 계최될 수 있었던 행사입니다.
@@ -734,15 +726,14 @@ export default function ExampleCity({  }) {
           gap: '20px',
           p: [4, 4, 5],
           pt: 6,
-          position: 'relative',
+          position: 'relative'
         }}
       >
         <Heading
           as="h1"
           sx={{
             mb: 5,
-            position: 'relative',
-            fontFamily: 'JetBrains Mono',
+            position: 'relative'
           }}
         >
           자주 물어보시는 질문
@@ -846,16 +837,14 @@ export default function ExampleCity({  }) {
                   backgroundRepeat: 'no-repeat',
                   boxShadow: 'none',
                   padding: '48px!important',
-                  border: ['2px solid black', 'none'],
-                  fontFamily: 'JetBrains Mono',
+                  border: ['2px solid black', 'none']
                 }}
               >
                 <Heading
                   as="h2"
                   mb={4}
                   sx={{
-                    position: 'relative',
-                    fontFamily: 'JetBrains Mono',
+                    position: 'relative'
                   }}
                 >
                   {question}
@@ -872,8 +861,7 @@ export default function ExampleCity({  }) {
                 <Text
                   sx={{
                     fontSize: 3,
-                    fontWeight: 'bold',
-                    fontFamily: 'JetBrains Mono',
+                    fontWeight: 'bold'
                   }}
                 >
                   {answer}
@@ -904,7 +892,7 @@ export default function ExampleCity({  }) {
             <Heading
               as="h2"
               sx={{
-                fontFamily: 'JetBrains Mono',
+                fontFamily: 'moonblossom',
                 textAlign: 'center',
                 margin: '8%',
                 fontSize: ['1.2em', '1.4em'],
@@ -936,7 +924,7 @@ export default function ExampleCity({  }) {
         </Heading>
         <Text
           sx={{
-            fontFamily: 'JetBrains Mono',
+            fontFamily: 'moonblossom',
             mb: -2,
             textAlign: 'center'
           }}
@@ -945,7 +933,7 @@ export default function ExampleCity({  }) {
         </Text>
         <Text
           sx={{
-            fontFamily: 'JetBrains Mono',
+            fontFamily: 'moonblossom',
             mt: 0,
             textAlign: 'center'
           }}
