@@ -93,10 +93,11 @@ export default function Home() {
               sx={{
                 fontFamily: 'moonblossom',
                 textAlign: 'center',
-                margin: '8%'
+                margin: '8%',
+                fontSize: "22px"
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -129,7 +130,7 @@ export default function Home() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              100+&nbsp;Cities&nbsp;worldwide&nbsp;–&nbsp;March&nbsp;15-16
+              Austin,&nbsp;Texas&nbsp;–&nbsp;March&nbsp;1-2
             </Heading>
             <Heading
               as="h2"
@@ -144,9 +145,76 @@ export default function Home() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Austin,&nbsp;Texas&nbsp;–&nbsp;March&nbsp;1-2
+              100+&nbsp;Cities&nbsp;worldwide&nbsp;–&nbsp;March&nbsp;15-16
             </Heading>
           </Box>
+
+          <Link
+          href="https://forms.hackclub.com/scrapyard-flagship?utm_content=hero"
+          target="_blank"
+          style={{
+
+                textDecoration: "none",
+                pointerEvents: "auto"
+          }}
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.5)'
+              },
+              transform: 'scale(1.3)',
+              zIndex: 30,
+              minWidth: '8em',
+              padding: '15px',
+                textDecoration: "none",
+                pointerEvents: "auto",
+                position: "relative",
+                top: 0,
+                left: 0,
+
+
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'p22-stanyan',
+                fontWeight: "bold",
+                textAlign: 'center',
+                fontSize: ['1.4em', '1.6em'],
+                textTransform: 'inherit!important',
+                width: '100%',
+                textDecoration: "none",
+                pointerEvents: "auto"
+
+              }}
+            >
+              Sign&nbsp;up&nbsp;for&nbsp;Scrapyard 
+            </Heading>
+          </Box>
+        </Link>
+        
+        </Box>
+        <Box sx={{
+          position: "absolute",
+          bottom: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 30,
+          color: "white"
+        }}>
+            <h1 style={{
+              fontSize: "70px",fontFamily: "p22-stanyan",color: "#ffffffdd",
+              cursor: "pointer"
+            }} onClick={() => {
+              document.getElementById("about").scrollIntoView({behavior: "smooth"})
+            }}>⬇︎</h1>
         </Box>
         <Box
           sx={{
@@ -194,7 +262,7 @@ export default function Home() {
           />
         </Box>
         <Link
-          href="https://forms.hackclub.com/scrapyard-flagship"
+          href="https://forms.hackclub.com/scrapyard-flagship?utm_content=corner"
           target="_blank"
         >
           <Box
@@ -298,7 +366,7 @@ export default function Home() {
             <Heading
               sx={{
                 textDecoration: 'underline'
-              }}
+              }} id="about"
             >
               What's Scrapyard?
             </Heading>

@@ -25,15 +25,16 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '08:00 AM-09:00 AM', event: 'Doors open' },
-  { time: '09:00 AM-09:30 AM', event: 'Opening ceremony' },
-  { time: '09:45 AM-11:15 AM', event: 'Workshop 1' },
-  { time: '11:30 AM-12:45 PM', event: 'Workshop 2' },
-  { time: '01:00 PM-01:45 PM', event: 'Lunch' },
-  { time: '02:00 PM-07:00 PM', event: 'Project Work' },
-  { time: '07:00 PM-07:30 PM', event: 'Dinner and Lightning Talks' },
-  { time: '07:30 PM-08:30 PM', event: 'Demos and Judging' },
-  { time: '08:30 PM-09:00 PM', event: 'Closing Ceremony' },
+  { time: '09:30-10:00', event: 'Doors open' },
+  { time: '10:00-10:30', event: 'Opening ceremony' },
+  { time: '10:30-12:00', event: 'Begin work on project' },
+  { time: '12:00-12:30', event: 'Workshop 1' },
+  { time: '12:30-13:30', event: 'Lunch' },
+  { time: '13:30-14:00', event: 'Workshop 2' },
+  { time: '14:00-17:30', event: 'Work on Project' },
+  { time: '17:30-18:30', event: 'Demos and Judging' },
+  { time: '18:30-18:45', event: 'Closing Ceremony' },
+  { time: '18:45', event: 'End of day' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
@@ -137,7 +138,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid s#!t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -643,8 +644,7 @@ export default function ExampleCity() {
             ),
             'What do I need?': (
               <>
-                Your laptop, chargers, and an open mind! If you're going to an
-                overnight event, bring toiletries and sleeping bagstoo.
+                Your laptop(Ideally fully charged), chargers, and an open mind!.
                 Additionally, if you plan to work on a hardware project, bring
                 the tools you'll need.
               </>
