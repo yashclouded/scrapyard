@@ -478,7 +478,8 @@ export default function ExampleCity({  }) {
                   display: 'inline',
                   width: ['min-content', 'max-content'],
                   fontSize: '2rem',
-                  fontFamily: 'p22-stanyan'
+                  fontFamily: 'p22-stanyan',
+                  minWidth: '150px'
                 }}
               >
                 {item.event}
