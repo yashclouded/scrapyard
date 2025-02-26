@@ -98,7 +98,7 @@ const TeamGrid = ({ title, members }) => (
 
 export default function Hyderabad() {
   const [text, setText] = useState('')
-  const fullText = 'Build stupid s#!t, get stupid prizes.'
+  const fullText = 'Build stupid stuff, get stupid prizes.'
   const [index, setIndex] = useState(0)
   const [data, setData] = useState(null)
 
