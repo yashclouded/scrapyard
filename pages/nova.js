@@ -57,7 +57,10 @@ export default function NoVA() {
 						let timeString = "";
 
 						let ampm = "AM";
-						if(date.getUTCHours() > 13) {
+						if (date.getUTCHours() == 12) {
+							timeString += date.getUTCHours();
+							ampm = "PM";
+						} else if (date.getUTCHours() > 12) {
 							timeString += date.getUTCHours() - 12;
 							ampm = "PM";	
 						} else if (date.getUTCHours() === 0) { 
