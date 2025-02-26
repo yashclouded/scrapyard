@@ -199,7 +199,7 @@ export default function Columbus() {
                 margin: '8%'
               }}
             >
-              Build stupid s#1t, get stupid prizes.
+              Build stupid stuff, get stupid prizes.
             </Heading>
           </Box>
           <Box
@@ -822,7 +822,7 @@ export default function Columbus() {
               <>
                 Your laptop, chargers, and an open mind!
                 Additionally, if you plan to work on a hardware project, bring
-                the tools you'll need. 3D printers at the event are TBD.
+                the tools you'll need. 3D printers will be at the event.
               </>
             ),
             'I dont know how to code. Can I still participate?': (
@@ -830,9 +830,9 @@ export default function Columbus() {
                 Knowing how to code is NOT required. Whether 
                 your Useless Invention is on Scratch or Google Docs,
                 you'll still be eligible for epic prizes.
-                This hackathon is for all skill levels, even if
+                This hackathon is for all skill levels; even if
                 you'll be writing your first line of code we'll
-                have workshops and mentors to help you out.
+                have starter projects and mentors to help you out.
               </>
             ),
             'What can I make at Scrapyard?': (
