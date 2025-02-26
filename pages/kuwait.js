@@ -118,7 +118,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build stupid stuff, get stupid prizes.
+              Where Wacky Ideas become Wonderful Innovations!
             </Heading>
           </Box>
           <Box
