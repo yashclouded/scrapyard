@@ -152,7 +152,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              KUWAIT - March&nbsp;15-16
+              KUWAIT - March&nbsp;14-15
             </Heading>
           </Box>
         </Box>
