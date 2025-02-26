@@ -147,7 +147,8 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Build weird stuff, get awesome prizes.
+              Happening at Visual Arts Center, Summit NJ
+          
             </Heading>
           </Box>
           <Box
@@ -347,9 +348,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Scrapyard New Jersey is a hackathon for high schoolers
-              {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              happening in New Jersey, where you can make the stupidest things
+              Scrapyard New Jersey is a hackathon for high schoolers happening in New Jersey, where you can make the stupidest things
               you can think of! Anything, from a{' '}
               <Link href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">
                 lamp that flashes faster the slower you type
