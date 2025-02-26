@@ -1,46 +1,23 @@
 '======== READ ME BEFORE EDITING ========'
-/*
-Hello! This is the template for the city pages.
 
-To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
-E.g. if your city is Tampa, rename the copy of this file to tampa.js
-
-Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
-You do not need to use this template exactly, feel free to customize it as much as you see fit.
-
-If you want to include additional assets, please add them under public/city/your-city-name.
-
-Make a PR and we'll review it as soon as we can!
-
-If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
-
-P.S. Feel free to delete this comment block when you're done! 
-
-Note: To test your changes locally, use `yarn install` and `yarn dev`.
-*/
 
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
 import dynamic from 'next/dynamic'
 
-// TODO: Change this schedule to your own!
+
 const schedule = [
-  /*
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
-  */
-  { time: 'tbc', event: 'tbc' }
+
+  { time: '8:45', event: 'Doors open-registration' },
+  { time: '9:00', event: 'Opening ceremony' },
+  { time: '9:30', event: 'Start working on projects!' },
+  { time: '12:00', event: 'Lunch' },
+  { time: '13:00', event: 'Continue working on the projects' },
+  { time: '17:00', event: 'Dinner' },
+  { time: '18:30', event: 'Game Demos' },
+  { time: '20:00', event: 'Closing Ceremony' },
+  { time: '20:30', event: 'Home!' }
+  
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
