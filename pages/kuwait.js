@@ -118,7 +118,7 @@ export default function ExampleCity() {
                 margin: '8%'
               }}
             >
-              Where Wacky Ideas become Wonderful Innovations!.
+              Where Wacky Ideas become Wonderful Innovations!
             </Heading>
           </Box>
           <Box
