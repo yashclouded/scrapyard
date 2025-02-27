@@ -43,6 +43,31 @@ const sponsors = [
     name: 'Hack Club',
     link: 'https://hackclub.com/',
     image: 'https://assets.hackclub.com/icon-rounded.svg'
+  },
+  {
+    name: 'Hudson River Trading',
+    link: 'https://www.hudsonrivertrading.com',
+    image: 'a'
+  },
+    {
+    name: 'Savvas Learning Company',
+    link: 'https://www.savvas.com',
+    image: 'a'
+  },
+    {
+    name: '.xyz',
+    link: 'https://gen.xyz',
+    image: 'a'
+  },
+  {
+    name: 'Interview Cake',
+    link: 'https://www.interviewcake.com',
+    image: 'a'
+  },
+  {
+    name: 'Art of Problem Solving',
+    link: 'https://artofproblemsolving.com',
+    image: 'a'
   }
 ]
 
