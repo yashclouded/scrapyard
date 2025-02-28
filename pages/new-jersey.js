@@ -38,6 +38,7 @@ const schedule = [
   { time: '8:15 PM', event: 'Closing ceremony' }
 ]
 
+const colors = ['#ffadad', '#fdffb6', '#9bf6ff', '#ffd6a5', '#caffbf'];
 const sponsors = [
   {
     name: 'Hack Club',
@@ -47,27 +48,27 @@ const sponsors = [
   {
     name: 'Hudson River Trading',
     link: 'https://www.hudsonrivertrading.com',
-    image: 'a'
+    image: 'public/city/new-jersey/HRT.png'
   },
     {
     name: 'Savvas Learning Company',
     link: 'https://www.savvas.com',
-    image: 'a'
+    image: 'public/city/new-jersey/savvaslearning.jpg'
   },
     {
     name: '.xyz',
     link: 'https://gen.xyz',
-    image: 'a'
+    image: 'public/city/new-jersey/xyz-logo-color.svg'
   },
   {
     name: 'Interview Cake',
     link: 'https://www.interviewcake.com',
-    image: 'a'
+    image: 'public/city/new-jersey/CAKE.svg'
   },
   {
     name: 'Art of Problem Solving',
     link: 'https://artofproblemsolving.com',
-    image: 'a'
+    image: 'public/city/new-jersey/AoPS.png'
   }
 ]
 
@@ -494,7 +495,7 @@ export default function ExampleCity() {
               href={sponsor.link || '#'}
               target="_blank"
               sx={{
-                backgroundColor: '#69c5f1',
+                backgroundColor: colors[i % colors.length],
                 display: 'flex',
                 flexDirection: 'column',
                 width: '200px',
