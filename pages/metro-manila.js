@@ -313,7 +313,7 @@ export default function ExampleCity() {
             height: '100%'
           }}
         >
-          <Image src="/elements/orpheus-doodle.svg" />
+          <Image src="\city\manila\scrapyard-grp-pic.png" />
           <Box
             sx={{
               maxWidth: ['80vw', '60vw', '40vw'],
