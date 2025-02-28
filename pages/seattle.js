@@ -1,19 +1,20 @@
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui';
+import { FaExclamationTriangle } from 'react-icons/fa';
 
 // Schedule remains the same
-const schedule = [
+const scheduleDay1 = [
   {
     time: '9:00 AM',
     event: 'Doors Open & Check-In',
     icon: 'https://img.icons8.com/ios-filled/50/door.png',
   },
   {
-    time: '10:00 AM',
+    time: '9:30 AM',
     event: 'Opening Ceremony',
     icon: 'https://img.icons8.com/emoji/48/partying-face.png',
   },
   {
-    time: '10:30 AM',
+    time: '10:00 AM',
     event: 'Begin Hacking!',
     icon: 'https://img.icons8.com/emoji/48/hammer-and-wrench.png',
   },
@@ -33,37 +34,49 @@ const schedule = [
     icon: 'https://img.icons8.com/emoji/48/smiling-face-with-sunglasses.png',
   },
   {
-    time: '6:00 PM',
-    event: 'Dinner',
-    icon: 'https://img.icons8.com/ios-filled/50/meal.png',
-  },
-  {
-    time: '10:00 PM',
-    event: 'Lightning Talks',
-    icon: 'https://img.icons8.com/emoji/48/high-voltage.png',
-  },
-  {
-    time: '12:00 AM',
-    event: 'Midnight Surprise',
-    icon: 'https://img.icons8.com/emoji/48/full-moon-face.png',
-  },
-  {
-    time: '8:00 AM',
-    event: 'Breakfast',
-    icon: 'https://img.icons8.com/ios-filled/50/meal.png',
-  },
-  {
-    time: '10:30 AM',
-    event: 'Project Demos',
-    icon: 'https://img.icons8.com/ios-filled/50/microphone.png',
-  },
-  {
-    time: '12:00 PM',
-    event: 'Closing Ceremony',
-    icon: 'https://img.icons8.com/emoji/48/chequered-flag.png',
+    time: '5:00 PM',
+    event: 'End of Day 1',
+    icon: 'https://img.icons8.com/emoji/48/waving-hand-medium-dark-skin-tone.png',
   },
 ];
 
+const scheduleDay2 = [
+  {
+    time: '9:00 AM',
+    event: 'Doors Open & Check-In',
+    icon: 'https://img.icons8.com/ios-filled/50/door.png',
+  },
+  {
+    time: '9:30 AM',
+    event: 'Begin Hacking!',
+    icon: 'https://img.icons8.com/emoji/48/hammer-and-wrench.png',
+  },
+  {
+    time: '12:00 AM',
+    event: 'Lunch',
+    icon: 'https://img.icons8.com/?size=100&id=CYgFsQyxgTod&format=png&color=000000',
+  },
+  {
+    time: '2:00 PM',
+    event: 'Submission Deadline',
+    icon: 'https://img.icons8.com/?size=100&id=A90XZgNDIsOE&format=png&color=000000',
+  },
+  {
+    time: '3:00 PM',
+    event: 'Workshop 2',
+    icon: 'https://img.icons8.com/?size=100&id=MmkqIRv7P6Xy&format=png&color=000000',
+  },
+  {
+    time: '5:00 PM',
+    event: 'Closing Ceremony',
+    icon: 'https://img.icons8.com/emoji/48/partying-face.png',
+  },
+  {
+    time: '6:00 PM',
+    event: 'End of Scrapyard Seattle',
+    icon: 'https://img.icons8.com/emoji/48/waving-hand-medium-dark-skin-tone.png',
+  } 
+]
 
 
 
@@ -180,6 +193,7 @@ export default function Seattle() {
                 fontSize: ['1.6rem', '2rem', '2.4rem'],
                 lineHeight: 1.2,
                 transform: 'rotate(1deg)',
+                color: '#337D78',
               }}
             >
               Build the silliest stuff & have a blast!
@@ -207,11 +221,49 @@ export default function Seattle() {
                 fontSize: ['1.3rem', '1.6rem', '1.8rem'],
                 whiteSpace: 'nowrap',
                 transform: 'rotate(-1deg)',
+                color: '#337D78',
               }}
             >
-              Seattle — April&nbsp;8-9
+              Seattle — March&nbsp;15-16
             </Heading>
           </Box>
+        </Box>
+        <Box
+            sx={{
+              backgroundImage: `url('https://raw.githubusercontent.com/hackclub/scrapyard/main/public/elements/yellow-strip%40stretch.svg')`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              width: '70%',
+              mx: 'auto',
+              mt: '-1.5rem',
+              py: [3, 4],
+              filter: 'drop-shadow(0 6px 24px rgba(0,0,0,0.2))',
+              transform: 'rotate(1deg)',
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'p22-stanyan',
+                textAlign: 'center',
+                fontSize: ['1.3rem', '1.6rem', '1.8rem'],
+                whiteSpace: 'nowrap',
+                transform: 'rotate(-1deg)',
+              }}
+            >
+              <Link
+              href="https://forms.hackclub.com/scrapyard-signup?event=seattle"
+              target="_blank"
+              sx={{
+                display: 'block',
+                width: 'fit-content',
+                mx: 'auto',
+                mb: [2, 2],
+              }}
+              >
+                Sign Up for Scrapyard Seattle
+              </Link>           
+            </Heading>
         </Box>
       </Box>
 
@@ -276,6 +328,7 @@ export default function Seattle() {
                 textUnderlineOffset: '12px',
                 transform: 'rotate(-1deg)',
                 textAlign: 'center',
+                color: '#337D78',
               }}
             >
               What's Scrapyard Seattle?
@@ -287,9 +340,10 @@ export default function Seattle() {
               textAlign: 'center',
               maxWidth: '800px',
               mx: 'auto',
+              color: '#000',
             }}>
               Scrapyard Seattle is a hackathon for high schoolers, happening in
-              the Emerald City! Over 24 hours, we'll build silly, creative
+              the Emerald City! Over 2 days, we'll build silly, creative
               projects—from blinking lamps to quirky apps—no idea is too wild.
               No experience needed! We'll have workshops, mentors, and new
               friends waiting for you.
@@ -299,112 +353,244 @@ export default function Seattle() {
       </Box>
 
       {/* Schedule Section */}
-      <Box 
-        sx={{ 
-          py: [6, 7], 
-          px: [3, 4],
-          background: 'rgba(51, 125, 120, 0.97)',
-          backdropFilter: 'blur(10px)',
-        }}
-      >
-        <Box
-          sx={{
-            backgroundImage: `url('https://raw.githubusercontent.com/hackclub/scrapyard/main/public/elements/ripped-paper-strip.svg')`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            py: [4, 5],
-            px: [4, 5],
-            maxWidth: '800px',
-            mx: 'auto',
-            textAlign: 'center',
-            mb: [4, 5],
-            filter: 'drop-shadow(0 8px 32px rgba(0,0,0,0.15))',
+        <Box 
+          sx={{ 
+            py: [6, 7], 
+            px: [3, 4],
+            background: 'rgba(51, 125, 120, 0.97)',
+            backdropFilter: 'blur(10px)',
+          
           }}
         >
-          <Heading
-            as="h1"
+          <Box
             sx={{
-              fontSize: ['1.8rem', '2.2rem', '2.6rem'],
-              fontWeight: 'normal',
-              transform: 'rotate(-1deg)',
+          backgroundImage: `url('https://raw.githubusercontent.com/hackclub/scrapyard/main/public/elements/ripped-paper-strip.svg')`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          py: [4, 5],
+          px: [4, 5],
+          maxWidth: '800px',
+          mx: 'auto',
+          textAlign: 'center',
+          mb: [4, 5],
+          filter: 'drop-shadow(0 8px 32px rgba(0,0,0,0.15))',
             }}
           >
-            WHAT'S HAPPENING AT SCRAPYARD SEATTLE?
-          </Heading>
-        </Box>
-        
-        <Box
+            <Heading
+          as="h1"
           sx={{
-            maxWidth: '900px',
-            mx: 'auto',
-            background: 'rgba(255, 255, 255, 0.97)',
-            backdropFilter: 'blur(10px)',
-            p: [4, 5],
-            borderRadius: '20px',
-            boxShadow: '0 12px 48px rgba(0,0,0,0.2)',
+            fontSize: ['1.5rem', '2.0rem', '2.2rem'],
+            fontWeight: 'normal',
+            transform: 'rotate(-1deg)',
+            color: '#337D78', // updated color to match the theme
           }}
-        >
-          {schedule.map((item, i) => (
-            <Box
-              key={i}
+            >
+          WHAT'S HAPPENING AT SCRAPYARD SEATTLE?
+            </Heading>
+          </Box>
+
+          <Box
+          sx={{
+            textAlign: 'center',
+            mb: [4, 5],
+            fontSize: ['2.0rem', '2.4rem', '2.6rem'],
+            color: 'yellow', // updated color to yellow
+            fontWeight: '',
+          }}
+          >
+          <FaExclamationTriangle style={{ marginRight: '0.5rem' }} />
+          <Text>
+            Work in Process!
+            Schedule subject to change.
+          </Text>
+        </Box>
+          
+          <Box
+            sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          maxWidth: '900px',
+          mx: 'auto',
+          background: 'rgba(255, 255, 255, 0.97)',
+          backdropFilter: 'blur(10px)',
+          p: [4, 5],
+          borderRadius: '20px',
+          boxShadow: '0 12px 48px rgba(0,0,0,0.2)',
+          marginBottom: '2rem',
+          }}
+          >
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              ':last-child': { mb: 0 },
+              fontSize: ['1.2rem', '1.4rem', '1.6rem'],
+              color: 'rgb(0, 0, 0)',
+            }}
+          >
+            <text sx={{
+              fontSize: ['1.5rem', '1.8rem', '2.0rem'],
+              fontWeight: 'bold',
+            }}>
+              Day 1: Saturday, March 15
+            </text>
+          </Box>
+
+            {scheduleDay1.map((item, i) => (
+          <Box
+            key={i}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4,
+              mb: 4,
+              ':last-child': { mb: 0 },
+              transition: 'transform 0.2s ease, background-color 0.2s ease',
+              p: 3,
+              borderRadius: '12px',
+              ':hover': {
+            transform: 'translateX(8px)',
+            backgroundColor: 'rgba(51, 125, 120, 0.1)',
+              },
+            }}
+          >
+            {item.icon && (
+              <Image
+            src={item.icon}
+            alt=""
+            sx={{
+              width: ['32px', '36px', '40px'],
+              height: ['32px', '36px', '40px'],
+              flexShrink: 0,
+            }}
+              />
+            )}
+            <Heading
+              as="p"
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 4,
-                mb: 4,
-                ':last-child': { mb: 0 },
-                transition: 'transform 0.2s ease, background-color 0.2s ease',
-                p: 3,
-                borderRadius: '12px',
-                ':hover': {
-                  transform: 'translateX(8px)',
-                  backgroundColor: 'rgba(51, 125, 120, 0.1)',
-                },
+            fontSize: ['1.1rem', '1.3rem', '1.5rem'],
+            fontFamily: 'p22-stanyan',
+            m: 0,
+            flexGrow: 1,
+            color: '#337D78',
               }}
             >
-              {item.icon && (
-                <Image
-                  src={item.icon}
-                  alt=""
-                  sx={{
-                    width: ['32px', '36px', '40px'],
-                    height: ['32px', '36px', '40px'],
-                    flexShrink: 0,
-                  }}
-                />
-              )}
-              <Heading
-                as="p"
-                sx={{
-                  fontSize: ['1.1rem', '1.3rem', '1.5rem'],
-                  fontFamily: 'p22-stanyan',
-                  m: 0,
-                  flexGrow: 1,
-                }}
-              >
-                {item.event}
-              </Heading>
-              <Box
-                sx={{
-                  borderBottom: '3px dotted black',
-                  flexGrow: 1,
-                  mx: 3,
-                }}
-              />
-              <Text sx={{ 
-                fontSize: ['1rem', '1.1rem', '1.2rem'],
-                whiteSpace: 'nowrap',
-                fontWeight: 'bold',
-                color: '#337D78',
-              }}>
-                {item.time}
-              </Text>
-            </Box>
-          ))}
-        </Box>
-      </Box>
+              {item.event}
+            </Heading>
+            <Box
+              sx={{
+            borderBottom: '3px dotted black',
+            flexGrow: 1,
+            mx: 3,
+              }}
+            />
+            <Text sx={{ 
+              fontSize: ['1rem', '1.1rem', '1.2rem'],
+              whiteSpace: 'nowrap',
+              fontWeight: 'bold',
+              color: '#337D78',
+            }}>
+              {item.time}
+            </Text>
+          </Box>
+            ))}
 
-      {/* FAQ Section */}
+          </Box>
+
+
+          <Box
+            sx={{
+          maxWidth: '900px',
+          mx: 'auto',
+          background: 'rgba(255, 255, 255, 0.97)',
+          backdropFilter: 'blur(10px)',
+          p: [4, 5],
+          borderRadius: '20px',
+          boxShadow: '0 12px 48px rgba(0,0,0,0.2)',
+            }}
+          >
+
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4,
+              ':last-child': { mb: 0 },
+              fontSize: ['1.2rem', '1.4rem', '1.6rem'],
+              color: 'rgb(0, 0, 0)',
+            }}
+          >
+            <text sx={{
+              fontSize: ['1.5rem', '1.8rem', '2.0rem'],
+              fontWeight: 'bold',
+              color: '#337D78',
+              marginBottom: '1rem',
+            }}>
+              Day 2: Sunday, March 16
+            </text>
+          </Box>
+            {scheduleDay2.map((item, i) => (
+          <Box
+            key={i}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4,
+              mb: 4,
+              ':last-child': { mb: 0 },
+              transition: 'transform 0.2s ease, background-color 0.2s ease',
+              p: 3,
+              borderRadius: '12px',
+              ':hover': {
+            transform: 'translateX(8px)',
+            backgroundColor: 'rgba(51, 125, 120, 0.1)',
+              },
+            }}
+          >
+            {item.icon && (
+              <Image
+            src={item.icon}
+            alt=""
+            sx={{
+              width: ['32px', '36px', '40px'],
+              height: ['32px', '36px', '40px'],
+              flexShrink: 0,
+            }}
+              />
+            )}
+            <Heading
+              as="p"
+              sx={{
+            fontSize: ['1.1rem', '1.3rem', '1.5rem'],
+            fontFamily: 'p22-stanyan',
+            m: 0,
+            flexGrow: 1,
+            color: '#337D78',
+              }}
+            >
+              {item.event}
+            </Heading>
+            <Box
+              sx={{
+            borderBottom: '3px dotted black',
+            flexGrow: 1,
+            mx: 3,
+              }}
+            />
+            <Text sx={{ 
+              fontSize: ['1rem', '1.1rem', '1.2rem'],
+              whiteSpace: 'nowrap',
+              fontWeight: 'bold',
+              color: '#337D78',
+            }}>
+              {item.time}
+            </Text>
+          </Box>
+            ))}
+          </Box>
+        </Box>
+
+        {/* FAQ Section */}
       <Box
         sx={{
           background: 'rgba(255, 255, 255, 0.97)',
