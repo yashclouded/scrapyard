@@ -15,11 +15,11 @@ export default async function handler (req, res) {
 
     const total = await attendeesTable.read({
         filterByFormula: `NOT({Loops - scrapyardFlagshipProjectSubmittedAt} = '')`
-    });
+    }).length;
 
     const count = await attendeesTable.read({
-        filterByFormula: `NOT({Loops - scrapyardProjectYswsEligibleAt} = '')`
-    });
+        filterByFormula: `NOT({Loops - scrapyardFlagshipProjectYswsEligibleAt} = '')`
+    }).length;
     
     return res.status(200).json({ total, count });
 }
