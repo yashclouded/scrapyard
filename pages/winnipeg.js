@@ -487,8 +487,9 @@ export default function ExampleCity() {
                 padding: '1em',
                 margin: '1em',
                 width: '300px',
-                backgroundColor: '#f1a3ba',
-                borderRadius: '20px',
+                height: '207px',
+                backgroundImage: 'url(/elements/sticky-note.svg)',
+                backgroundSize: 'cover',
                 border: 'none',
                 textDecoration: 'none',
               }}
@@ -535,8 +536,9 @@ export default function ExampleCity() {
                 padding: '1em',
                 margin: '1em',
                 width: '300px',
-                backgroundColor: '#f1a3ba',
-                borderRadius: '20px',
+                height: '207px',
+                backgroundImage: 'url(/elements/sticky-note.svg)',
+                backgroundSize: 'cover',
                 border: 'none',
                 textDecoration: 'none',
               }}
