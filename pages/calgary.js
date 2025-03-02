@@ -25,19 +25,25 @@ import dynamic from 'next/dynamic'
 
 // TODO: Change this schedule to your own!
 const schedule = [
-  { time: '11:00 AM', event: 'Doors open' },
-  { time: '12:00 PM', event: 'Opening ceremony' },
-  { time: '12:30 PM', event: 'Lunch' },
-  { time: '1:00 PM', event: 'Start working on your project!' },
-  { time: '2:00 PM', event: 'Workshop 1' },
-  { time: '4:00 PM', event: 'Activity 1' },
-  { time: '4:00 PM', event: 'Workshop 2' },
-  { time: '6:00 PM', event: 'Dinner' },
-  { time: '8:00 PM', event: 'Lightning talks' },
-  { time: '12:00 AM', event: 'Midnight surprise' },
-  { time: '8:00 AM', event: 'Breakfast' },
-  { time: '10:30 AM', event: 'Demos!' },
-  { time: '12:00 PM', event: 'Closing ceremony' }
+	{ time: '', event: 'March 15 - Day One' },
+	{ time: '8:30 AM - 9:00 AM', event: 'Check-in & Breakfast' },
+	{ time: '9:00 AM - 9:30 AM', event: 'Opening Ceremony' },
+	{ time: '9:30 AM - 10:00 AM', event: 'Team Formation & Idea Pitches' },
+	{ time: '10:00 AM - 12:30 PM', event: 'Hacking Begins!' },
+	{ time: '12:30 PM - 1:30 PM', event: 'Lunch Break' },
+	{ time: '1:30 PM - 3:00 PM', event: 'Workshop #1' },
+	{ time: '3:00 PM - 6:00 PM', event: 'Hacking Continues & Mentorship' },
+	{ time: '6:00 PM - 7:00 PM', event: 'Dinner Break' },
+	{ time: '7:00 PM - 9:00 PM', event: 'Mini Challenges & Games' },
+	{ time: '9:00 PM - 10:30 PM', event: 'Late-Night Hacking' },
+	{ time: '', event: 'March 16 - Day Two' },
+	{ time: '8:30 AM - 9:00 AM', event: 'Breakfast & Check-in' },
+	{ time: '9:00 AM - 12:00 PM', event: 'Final Hacking Sprint' },
+	{ time: '1:00 PM - 5:00 PM', event: 'More Hacking!' },
+	{ time: '5:00 PM - 6:00 PM', event: 'Dinner Break' },
+	{ time: '6:00 PM - 8:00 PM', event: 'Final Hacking Session!' },
+	{ time: '9:00 PM - 10:00 PM', event: 'Project Voting' },
+	{ time: '10:00 PM - 10:30 PM', event: 'Awards & Final Remarks' },
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
