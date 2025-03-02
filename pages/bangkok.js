@@ -168,22 +168,58 @@ export default function ExampleCity() {
               sx={{
                 fontFamily: 'p22-stanyan',
                 mx: '8%',
-                p: 0,
                 wordBreak: 'keep-all',
                 whiteSpace: 'nowrap',
                 width: 'max-content',
-                fontSize: ['1.2em', '1.4em']
+                fontSize: ['1.1em', '1.4em']
               }}
             >
-              S.P. Building, Bangkok - March&nbsp;15-16
+              S.P.&nbsp;Building, Bangkok - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
+        <Link
+          href="https://forms.hackclub.com/scrapyard-signup?event=bangkok"
+          target="_blank"
+          sx={{
+            zIndex: 10
+          }}
+        >
+          <Box
+            sx={{
+              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '100% 100%',
+              filter: 'drop-shadow(5px 5px 5px #000)',
+              transition: 'transform 0.2s',
+              ':hover': {
+                transform: 'scale(1.1)'
+              },
+              padding: 1,
+              my: 3
+            }}
+          >
+            <Heading
+              as="h2"
+              sx={{
+                fontFamily: 'moonblossom',
+                textAlign: 'center',
+                margin: '8%',
+                fontSize: ['1.2em', '1.4em'],
+                textTransform: 'inherit!important',
+                paddingY: ['15px', '0px']
+              }}
+            >
+              SIGN UP FOR SCRAPYARD BANGKOK
+            </Heading>
+          </Box>
+        </Link>
         <Box
           sx={{
             position: 'absolute',
             width: '100%',
-            height: '100vw'
+            height: '100vw',
+            zIndex: 1
           }}
         >
           <Image
@@ -227,6 +263,9 @@ export default function ExampleCity() {
         <Link
           href="https://forms.hackclub.com/scrapyard-signup?event=bangkok"
           target="_blank"
+          sx={{
+            zIndex: 10
+          }}
         >
           <Box
             sx={{
@@ -241,7 +280,6 @@ export default function ExampleCity() {
               ':hover': {
                 transform: 'scale(1.1)'
               },
-              zIndex: 30,
               minWidth: '8em',
               padding: '15px'
             }}
@@ -609,7 +647,7 @@ export default function ExampleCity() {
             <Image
               src="/city/bangkok/venue.png"
               sx={{
-                maxHeight: ['auto', 'auto', '80vh','80vh']
+                maxHeight: ['auto', 'auto', '80vh', '80vh']
               }}
             ></Image>
           </Box>
@@ -1032,40 +1070,7 @@ export default function ExampleCity() {
             )
           })}
         </Grid>
-        <Link
-          href="https://forms.hackclub.com/scrapyard-signup?event=bangkok"
-          target="_blank"
-        >
-          <Box
-            sx={{
-              backgroundImage: "url('/elements/yellow-strip@stretch.svg')",
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '100% 100%',
-              filter: 'drop-shadow(5px 5px 5px #000)',
-              transition: 'transform 0.2s',
-              ':hover': {
-                transform: 'scale(1.1)'
-              },
-              zIndex: 20,
-              padding: 1,
-              my: 3
-            }}
-          >
-            <Heading
-              as="h2"
-              sx={{
-                fontFamily: 'moonblossom',
-                textAlign: 'center',
-                margin: '8%',
-                fontSize: ['1.2em', '1.4em'],
-                textTransform: 'inherit!important',
-                paddingY: ['15px', '0px']
-              }}
-            >
-              SIGN UP FOR SCRAPYARD BANGKOK
-            </Heading>
-          </Box>
-        </Link>
+        
         <Heading
           as="h2"
           sx={{
