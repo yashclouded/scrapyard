@@ -175,7 +175,7 @@ export default function ExampleCity() {
                 fontSize: ['1.2em', '1.4em']
               }}
             >
-              Bangkok - March&nbsp;15-16
+              S.P. Building, Bangkok - March&nbsp;15-16
             </Heading>
           </Box>
         </Box>
@@ -575,6 +575,74 @@ export default function ExampleCity() {
                 <p style={{ display: 'inline', margin: 0 }}>{item.time}</p>
               </div>
             ))}
+          </Box>
+        </Box>
+        <Heading
+          as="h2"
+          sx={{
+            fontSize: '1.5em',
+            fontFamily: 'moonblossom',
+            color: 'white',
+            textAlign: 'center'
+          }}
+        >
+          OUR VENUE
+          <br></br><br></br><br></br>
+        </Heading>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: ['column', 'column', 'column', 'column', 'row'],
+            justifyContent: 'center',
+            width: '85%',
+            gap: '3%'
+          }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              width: '100%',
+              flexDirection: 'row',
+              justifyContent: 'center'
+            }}
+          >
+            <Image
+              src="/city/bangkok/venue.png"
+              sx={{
+                maxHeight: ['auto', 'auto', '80vh','80vh']
+              }}
+            ></Image>
+          </Box>
+          
+          <Box
+            sx={{
+              display: 'flex',
+              width: '100%',
+              justifyContent: 'center',
+              flexDirection: 'row'
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.5em',
+                gap: '0.2em',
+                color: 'black',
+                my: 5,
+                background: "url('/backgrounds/lined-paper.png')",
+                backgroundSize: 'cover',
+                p: 4,
+                boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.3)'
+              }}
+            >
+              <p>
+              Scrapyard Bangkok is happening at the IBM office in <Link href="https://g.co/kgs/Woq6hqS">S.P. Building</Link>.<br></br>
+              Just a 2-minute walk from BTS Ari!
+              </p>
+            </Box>
           </Box>
         </Box>
         <Box
