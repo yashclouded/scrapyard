@@ -36,9 +36,11 @@ const schedule = [
 	{ time: '6:00 PM - 7:00 PM', event: 'Dinner Break' },
 	{ time: '7:00 PM - 9:00 PM', event: 'Mini Challenges & Games' },
 	{ time: '9:00 PM - 10:30 PM', event: 'Late-Night Hacking' },
+
 	{ time: '', event: 'March 16 - Day Two' },
 	{ time: '8:30 AM - 9:00 AM', event: 'Breakfast & Check-in' },
-	{ time: '9:00 AM - 12:00 PM', event: 'Final Hacking Sprint' },
+	{ time: '9:00 AM - 12:00 PM', event: 'Hacking Rekindled!' },
+	{ time: '12:00 PM - 1:00 AM', event: 'Lunch Break' },
 	{ time: '1:00 PM - 5:00 PM', event: 'More Hacking!' },
 	{ time: '5:00 PM - 6:00 PM', event: 'Dinner Break' },
 	{ time: '6:00 PM - 8:00 PM', event: 'Final Hacking Session!' },
