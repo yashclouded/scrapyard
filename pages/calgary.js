@@ -112,8 +112,8 @@ export default function Calgary() {
 
               objectFit: 'contain'
             }}
-            src="/elements/wordmark.svg"
-            alt="Scrapyard"
+            src="/city/calgary/logo.svg"
+            alt="Scrapyard Calgary"
           />
         </Box>
         <Box
