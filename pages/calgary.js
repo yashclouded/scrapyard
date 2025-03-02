@@ -698,7 +698,11 @@ export default function Calgary() {
             'What if I have more questions?': (
               <>
                 Contact us! Feel free to reach out to us in the #scrapyard
-                channel on the Hack Club slack or email us at{' '}
+                channel on the Hack Club slack, our own{' '}
+		<Link href="https://discord.gg/4jGGcPBZbn">
+		  Discord server,
+		</Link>{' '}
+		or email us at{' '}
                 <Link href="mailto:scrapyardyyc@gmail.com">
                   scrapyardyyc@gmail.com
                 </Link>
