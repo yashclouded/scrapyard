@@ -1,23 +1,3 @@
-'======== READ ME BEFORE EDITING ========'
-/*
-Hello! This is the template for the city pages.
-
-To create a new page, make a copy of this file in the same directory (pages) and rename it for your city.
-E.g. if your city is Tampa, rename the copy of this file to tampa.js
-
-Replace all placeholder info, indicated by "TODO" comments (you can use Ctrl+F) in this file
-You do not need to use this template exactly, feel free to customize it as much as you see fit.
-
-If you want to include additional assets, please add them under public/city/your-city-name.
-
-Make a PR and we'll review it as soon as we can!
-
-If you have any questions, send a message to the #scrapyard channel on the Hack Club Slack and we'll try to help.
-
-P.S. Feel free to delete this comment block when you're done! 
-
-Note: To test your changes locally, use `npm install` and `npm run dev`.
-*/
 
 import Head from 'next/head'
 import { Box, Card, Grid, Heading, Image, Link, Text } from 'theme-ui'
@@ -32,7 +12,7 @@ const schedule = [
   { time: '11:30 AM', event: 'Workshop-1' },
   { time: '2:00 PM', event: 'Lunch' },
   { time: '2:30 PM', event: 'Continue Hacking.!' },
-  { time: '4:00 PM', event: 'Workshop 2 + snacks' },
+  { time: '4:00 PM', event: 'Workshop-2 + snacks' },
   { time: '5:00 PM', event: 'Back to work' },
   { time: '6:00 PM', event: 'Final Coding.!' },
   { time: '7:00 PM', event: 'Demos and Submissions!' },
