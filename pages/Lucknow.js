@@ -16,7 +16,7 @@ const schedule = [
   { time: '5:00 PM', event: 'Back to work' },
   { time: '6:00 PM', event: 'Final Coding.!' },
   { time: '7:00 PM', event: 'Demos and Submissions!' },
-  { time: '8:00 PM', event: 'Closing ceremony' }
+  { time: '8:00 PM', event: 'Closing ceremony & Awards' }
 ]
 
 const Map = dynamic(() => import('../components/Map'), { ssr: false })
