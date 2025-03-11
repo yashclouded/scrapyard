@@ -154,7 +154,7 @@ export default function ExampleCity() {
               }}
             >
               {/* TODO: Change [EXAMPLECITY] to your event's city */}
-              Lucknow - March&nbsp;15-16
+              Lucknow - March&nbsp;16
             </Heading>
           </Box>
         </Box>
